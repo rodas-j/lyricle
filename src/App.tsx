@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
+
+import { Select } from './components/input/Select'
+
 import { InfoModal } from './components/modals/InfoModal'
-// import { StatsModal } from './components/modals/StatsModal'
+import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
   WIN_MESSAGES,
@@ -50,6 +53,7 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow"></div>
+        <Select></Select>
         <AlertContainer />
       </div>
     </div>
