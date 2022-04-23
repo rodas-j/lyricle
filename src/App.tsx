@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { Select } from './components/input/Select'
+import { SearchSong } from './components/input/SearchSong'
 
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
@@ -53,7 +53,8 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow"></div>
-        <Select></Select>
+        <SearchSong />
+
         <AlertContainer />
       </div>
     </div>

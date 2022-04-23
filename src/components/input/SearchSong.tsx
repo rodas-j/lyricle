@@ -1,17 +1,20 @@
 import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
 import { useState, useRef } from 'react'
 
-export const Select = () => {
+export const SearchSong = () => {
   const [matchInput, setMatchInput] = useState<LyricsField[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
   const filterValidGuesses = (e): void => {
-    if (e.target.value)
+    if (e.target.value) {
       setMatchInput(
         VALID_GUESSES.filter(({ song }) =>
           song.toLowerCase().includes(e.target.value.toLowerCase())
         )
       )
+    } else {
+      setMatchInput([])
+    }
   }
 
   const changeInput = (e): void => {
