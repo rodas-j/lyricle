@@ -14,10 +14,8 @@ import {
   HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
-  MAX_WORD_LENGTH,
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  GAME_LOST_INFO_DELAY,
   WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 
@@ -40,6 +38,44 @@ function App() {
     '(prefers-color-scheme: dark)'
   ).matches
 
+  const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
+    useAlert()
+
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem('theme')
+      ? localStorage.getItem('theme') === 'dark'
+      : prefersDarkMode
+      ? true
+      : false
+  )
+  const [isHighContrastMode, setIsHighContrastMode] = useState(
+    getStoredIsHighContrastMode()
+  )
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    if (isHighContrastMode) {
+      document.documentElement.classList.add('high-contrast')
+    } else {
+      document.documentElement.classList.remove('high-contrast')
+    }
+  }, [isDarkMode, isHighContrastMode])
+
+  const handleDarkMode = (isDark: boolean) => {
+    setIsDarkMode(isDark)
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+  }
+
+  const handleHighContrastMode = (isHighContrast: boolean) => {
+    setIsHighContrastMode(isHighContrast)
+    setStoredIsHighContrastMode(isHighContrast)
+  }
+
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
@@ -54,9 +90,35 @@ function App() {
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow"></div>
         <SearchSong />
+        <ActionBar />
+        <InfoModal
+          isOpen={isInfoModalOpen}
+          handleClose={() => setIsInfoModalOpen(false)}
+        />
+        <SettingsModal
+          isOpen={isSettingsModalOpen}
+          handleClose={() => setIsSettingsModalOpen(false)}
+          isDarkMode={isDarkMode}
+          handleDarkMode={handleDarkMode}
+          isHighContrastMode={isHighContrastMode}
+          handleHighContrastMode={handleHighContrastMode}
+        />
 
         <AlertContainer />
       </div>
+    </div>
+  )
+}
+
+function ActionBar() {
+  return (
+    <div className="flex justify-end mt-3">
+      <button className="py-2 px-10 text-l font-bold tracking-widest text-gray-100">
+        SKIP
+      </button>
+      <button className="py-2 px-10 text-l font-bold bg-indigo-300 tracking-widest hover:bg-indigo-100">
+        SUBMIT
+      </button>
     </div>
   )
 }

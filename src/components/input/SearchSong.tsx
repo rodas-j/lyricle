@@ -10,7 +10,7 @@ export const SearchSong = () => {
       setMatchInput(
         VALID_GUESSES.filter(({ song }) =>
           song.toLowerCase().includes(e.target.value.toLowerCase())
-        )
+        ).slice(0, 5)
       )
     } else {
       setMatchInput([])
@@ -26,10 +26,10 @@ export const SearchSong = () => {
   }
 
   return (
-    <div className="relative bg-gray-200">
+    <div className="relative bg-gray-700">
       <input
         ref={inputRef}
-        className="p-4 w-full text-xl text-gray-800 bg-transparent focus:outline-none appearance-none"
+        className="p-4 w-full text-xl text-gray-200 bg-transparent appearance-none focus:outline-none"
         type="search"
         spellCheck="false"
         autoCorrect="false"
