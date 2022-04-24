@@ -52,7 +52,10 @@ function App() {
     getStoredIsHighContrastMode()
   )
 
+  const [stats, setStats] = useState(() => loadStats())
+
   const [isGameWon, setIsGameWon] = useState(false)
+  const [isGameLost, setIsGameLost] = useState(false)
   const [guesses, setGuesses] = useState([])
 
   useEffect(() => {
@@ -86,13 +89,11 @@ function App() {
   const onSubmit = (e) => {
     e.preventDefault()
     if (solution === e.target.search.value) {
-      // TODO
-      alert('Game Won')
+      setIsGameWon(true)
     } else if (guesses.length < MAX_CHALLENGES) {
       onSkip()
     } else {
-      // TODO
-      alert('Game Lost')
+      setIsGameLost(true)
     }
   }
 
@@ -103,6 +104,25 @@ function App() {
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
   }, [guesses])
+
+  useEffect(() => {
+    if (isGameWon) {
+      const winMessage =
+        WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
+      const delayMs = REVEAL_TIME_MS
+
+      showSuccessAlert(winMessage, {
+        delayMs,
+        onClose: () => setIsStatsModalOpen(true),
+      })
+    }
+
+    if (isGameLost) {
+      setTimeout(() => {
+        setIsStatsModalOpen(true)
+      }, REVEAL_TIME_MS)
+    }
+  }, [isGameWon, isGameLost, showSuccessAlert])
 
   return (
     <div className="h-screen flex flex-col">
@@ -125,6 +145,15 @@ function App() {
           handleDarkMode={handleDarkMode}
           isHighContrastMode={isHighContrastMode}
           handleHighContrastMode={handleHighContrastMode}
+        />
+        <StatsModal
+          isOpen={isStatsModalOpen}
+          handleClose={() => setIsStatsModalOpen(false)}
+          gameStats={stats}
+          isGameLost={isGameLost}
+          isGameWon={isGameWon}
+          isDarkMode={isDarkMode}
+          isHighContrastMode={isHighContrastMode}
         />
 
         <AlertContainer />
