@@ -18,6 +18,7 @@ import {
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
+import { isWinningSong, solution } from './lib/songs'
 
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
@@ -26,7 +27,6 @@ import {
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
 } from './lib/localStorage'
-import { default as GraphemeSplitter } from 'grapheme-splitter'
 
 import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
@@ -51,6 +51,9 @@ function App() {
   const [isHighContrastMode, setIsHighContrastMode] = useState(
     getStoredIsHighContrastMode()
   )
+
+  const [isGameWon, setIsGameWon] = useState(false)
+  const [guesses, setGuesses] = useState([])
 
   useEffect(() => {
     if (isDarkMode) {
@@ -80,6 +83,27 @@ function App() {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
 
+  const onSubmit = (e) => {
+    e.preventDefault()
+    if (solution === e.target.search.value) {
+      // TODO
+      alert('Game Won')
+    } else if (guesses.length < MAX_CHALLENGES) {
+      onSkip()
+    } else {
+      // TODO
+      alert('Game Lost')
+    }
+  }
+
+  const onSkip = () => {
+    alert('Skipping')
+  }
+
+  useEffect(() => {
+    saveGameStateToLocalStorage({ guesses, solution })
+  }, [guesses])
+
   return (
     <div className="h-screen flex flex-col">
       <Navbar
@@ -89,8 +113,7 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow"></div>
-        <SearchSong />
-        <ActionBar />
+        <SearchSong handleSubmit={onSubmit} handleSkip={onSkip} />
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
@@ -106,19 +129,6 @@ function App() {
 
         <AlertContainer />
       </div>
-    </div>
-  )
-}
-
-function ActionBar() {
-  return (
-    <div className="flex justify-end mt-3">
-      <button className="py-2 px-10 text-l font-bold tracking-widest text-gray-100">
-        SKIP
-      </button>
-      <button className="py-2 px-10 text-l font-bold bg-indigo-300 tracking-widest hover:bg-indigo-100">
-        SUBMIT
-      </button>
     </div>
   )
 }
