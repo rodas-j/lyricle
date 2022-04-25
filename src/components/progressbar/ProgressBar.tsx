@@ -11,6 +11,8 @@ export const ProgressBar = ({ guesses }) => {
               guesses[index]
                 ? guesses[index] === solution.song
                   ? 'correct'
+                  : guesses[index] === 'skip'
+                  ? 'skipped'
                   : 'wrong'
                 : ''
             }

@@ -200,7 +200,7 @@ function App() {
           window.location.reload()
         }}
       />
-      <div className="pt-2 px-1 pb-8 w-[90vw] md:w-[50vw] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+      <div className="pt-2 px-1 pb-8 w-[90vw] md:w-[60vw] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow overflow-auto">
           <LyricsCell sliceLyrics={sliceLyrics} />
         </div>

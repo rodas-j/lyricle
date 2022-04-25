@@ -99,6 +99,11 @@ svg.cursor-pointer:hover {
   width: 100%;
 }
 
+[data-check='skipped']::after {
+  background: lightslategray;
+  width: 100%;
+}
+
 [data-check='wrong']::after {
   background: red;
   width: 100%;
