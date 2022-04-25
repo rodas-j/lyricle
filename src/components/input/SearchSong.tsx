@@ -33,10 +33,10 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative bg-gray-700">
+        <div className="relative bg-gray-200 dark:bg-gray-700">
           <input
             ref={inputRef}
-            className="p-4 w-full text-xl text-gray-200 bg-transparent appearance-none focus:outline-none"
+            className="p-4 w-full text-xl text-gray-800 dark:text-gray-200 bg-transparent focus:outline-indigo-400"
             name="search"
             type="search"
             spellCheck="false"
@@ -49,17 +49,17 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
           <ul className="absolute bottom-full left-0 flex- flex-col mb-3 w-full formide-y divide-gray-500 cursor-pointer">
             {matchInput.map(({ song }, index) => {
               let classes =
-                'flex items-center p-4 bg-gray-600 text-gray-200 hover:bg-gray-700'
+                'flex items-center p-4 bg-gray-200 mb-1 last:mb-0 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
 
               classes +=
                 guesses.includes(song) && song !== solution.song
-                  ? ' pointer-events-none bg-red-300 text-red-800'
+                  ? ' cursor-not-allowed pointer-events-none bg-rose-200 text-rose-800 dark:bg-rose-300 dark:text-rose-800'
                   : ''
 
               return (
                 <li key={index} className={classes} onClick={changeInput}>
                   {guesses.includes(song) && song !== solution.song ? (
-                    <XIcon className="h-5 w-5 dark:stroke-red-800 mr-3" />
+                    <XIcon className="h-4 w-4 dark:stroke-rose-800 mr-3" />
                   ) : (
                     ''
                   )}

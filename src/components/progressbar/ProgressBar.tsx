@@ -16,7 +16,7 @@ export const ProgressBar = ({ guesses }) => {
                   : 'wrong'
                 : ''
             }
-            className="flex-grow bg-gray-800 h-2 relative cursor-pointer group"
+            className="flex-grow bg-gray-300 dark:bg-gray-800 h-2 relative cursor-pointer group"
           >
             <ToolTip guess={guesses[index]} />
           </div>
@@ -30,7 +30,7 @@ export const ToolTip = ({ guess }) => {
   if (!guess) return <></>
 
   return (
-    <div className="tooltip absolute left-0 right-0 mx-auto w-max mb-3 bottom-full p-2 rounded-md bg-gray-500 invisible group-hover:visible">
+    <div className="tooltip absolute right-[50%] translate-x-1/2 w-max mb-3 bottom-full p-2 rounded-md invisible group-hover:visible bg-slate-200 text-gray-800 dark:bg-gray-600 dark:text-gray-100">
       {guess}
     </div>
   )
