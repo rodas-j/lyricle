@@ -47,3 +47,7 @@ export const getStoredIsHighContrastMode = () => {
   const highContrast = localStorage.getItem(highContrastKey)
   return highContrast === '1'
 }
+
+export const clearGameStateFromLocalStorage = () => {
+  localStorage.clear()
+}

@@ -4,21 +4,23 @@ import { LyricsCell } from './components/lyrics/LyricsCell'
 import { SearchSong } from './components/input/SearchSong'
 import { ProgressBar } from './components/progressbar/ProgressBar'
 
+import { RefreshIcon } from '@heroicons/react/outline'
+
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
   WIN_MESSAGES,
-  GAME_COPIED_MESSAGE,
-  NOT_ENOUGH_LETTERS_MESSAGE,
-  WORD_NOT_FOUND_MESSAGE,
+  // GAME_COPIED_MESSAGE,
+  // NOT_ENOUGH_LETTERS_MESSAGE,
+  // WORD_NOT_FOUND_MESSAGE,
   CORRECT_SONG_MESSAGE,
-  HARD_MODE_ALERT_MESSAGE,
+  // HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  WELCOME_INFO_MODAL_MS,
+  // WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 import { isWinningSong, solution } from './lib/songs'
 
@@ -28,6 +30,7 @@ import {
   saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
+  clearGameStateFromLocalStorage,
 } from './lib/localStorage'
 
 import './App.css'
@@ -58,7 +61,23 @@ function App() {
 
   const [isGameWon, setIsGameWon] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
-  const [guesses, setGuesses] = useState<string[]>([])
+  const [guesses, setGuesses] = useState<string[]>(() => {
+    const loaded = loadGameStateFromLocalStorage()
+    if (loaded?.song !== solution.song) {
+      return []
+    }
+    const gameWasWon = loaded.guesses.includes(solution.song)
+    if (gameWasWon) {
+      setIsGameWon(true)
+    }
+    if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+      setIsGameLost(true)
+      showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
+        persist: true,
+      })
+    }
+    return loaded.guesses
+  })
 
   const [sliceLyrics, setSliceLyrics] = useState(1)
 
@@ -116,7 +135,8 @@ function App() {
       return
     }
 
-    if (solution.song === e.target.search.value) {
+    if (isWinningSong(e.target.search.value)) {
+      setStats(addStatsForCompletedGame(stats, guesses.length))
       revealAllLines()
       setIsGameWon(true)
     } else {
@@ -134,13 +154,12 @@ function App() {
     revealNextLine()
 
     if (guesses.length === MAX_CHALLENGES - 1) {
+      setStats(addStatsForCompletedGame(stats, guesses.length + 1))
       setIsGameLost(true)
 
       showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
         persist: true,
       })
-
-      return
     }
   }
 
@@ -174,12 +193,23 @@ function App() {
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
-      <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+      <RefreshIcon
+        className="mx-auto w-10 h-10 cursor-pointer dark:stroke-white"
+        onClick={() => {
+          clearGameStateFromLocalStorage()
+          window.location.reload()
+        }}
+      />
+      <div className="pt-2 px-1 pb-8 w-[90vw] md:w-[50vw] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow overflow-auto">
           <LyricsCell sliceLyrics={sliceLyrics} />
         </div>
         <ProgressBar guesses={guesses} />
-        <SearchSong handleSubmit={onSubmit} handleSkip={onSkip} />
+        <SearchSong
+          guesses={guesses}
+          handleSubmit={onSubmit}
+          handleSkip={onSkip}
+        />
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
@@ -200,6 +230,7 @@ function App() {
           isGameWon={isGameWon}
           isDarkMode={isDarkMode}
           isHighContrastMode={isHighContrastMode}
+          numberOfGuessesMade={guesses.length}
         />
 
         <AlertContainer />

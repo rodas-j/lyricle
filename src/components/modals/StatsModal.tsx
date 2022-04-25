@@ -2,7 +2,7 @@ import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
-import { shareStatus } from '../../lib/share'
+// import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/songs'
 import { BaseModal } from './BaseModal'
 import {
@@ -22,7 +22,7 @@ type Props = {
   // handleShareToClipboard: () => void
   isDarkMode: boolean
   isHighContrastMode: boolean
-  // numberOfGuessesMade: number
+  numberOfGuessesMade: number
 }
 
 export const StatsModal = ({
@@ -35,8 +35,8 @@ export const StatsModal = ({
   // handleShareToClipboard,
   isDarkMode,
   isHighContrastMode,
-}: // numberOfGuessesMade,
-Props) => {
+  numberOfGuessesMade,
+}: Props) => {
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal
@@ -44,7 +44,7 @@ Props) => {
         isOpen={isOpen}
         handleClose={handleClose}
       >
-        {/* <StatBar gameStats={gameStats} /> */}
+        <StatBar gameStats={gameStats} />
       </BaseModal>
     )
   }
@@ -58,10 +58,10 @@ Props) => {
       <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
         {GUESS_DISTRIBUTION_TEXT}
       </h4>
-      {/* <Histogram
+      <Histogram
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
-      /> */}
+      />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
