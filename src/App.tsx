@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { LyricsCell } from './components/lyrics/LyricsCell'
+import { LyricsLine } from './components/lyrics/LyricsLine'
 import { SearchSong } from './components/input/SearchSong'
 import { ProgressBar } from './components/progressbar/ProgressBar'
 
@@ -43,6 +43,10 @@ function App() {
     '(prefers-color-scheme: dark)'
   ).matches
 
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches
+
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
     useAlert()
 
@@ -50,6 +54,13 @@ function App() {
     localStorage.getItem('theme')
       ? localStorage.getItem('theme') === 'dark'
       : prefersDarkMode
+      ? true
+      : false
+  )
+  const [isReducedMotionMode, setIsReducedMotionMode] = useState(
+    localStorage.getItem('reducedMotion')
+      ? localStorage.getItem('reducedMotion') === 'reduce'
+      : prefersReducedMotion
       ? true
       : false
   )
@@ -93,7 +104,13 @@ function App() {
     } else {
       document.documentElement.classList.remove('high-contrast')
     }
-  }, [isDarkMode, isHighContrastMode])
+
+    if (isReducedMotionMode) {
+      document.documentElement.classList.add('reduced-motion')
+    } else {
+      document.documentElement.classList.remove('reduced-motion')
+    }
+  }, [isDarkMode, isHighContrastMode, isReducedMotionMode])
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -103,6 +120,14 @@ function App() {
   const handleHighContrastMode = (isHighContrast: boolean) => {
     setIsHighContrastMode(isHighContrast)
     setStoredIsHighContrastMode(isHighContrast)
+  }
+
+  const handleReducedMotionMode = (isReducedMotion: boolean) => {
+    setIsReducedMotionMode(isReducedMotion)
+    localStorage.setItem(
+      'reducedMotion',
+      isReducedMotion ? 'reduce' : 'no-preference'
+    )
   }
 
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -200,9 +225,9 @@ function App() {
           window.location.reload()
         }}
       />
-      <div className="pt-2 px-1 pb-8 w-[90vw] md:w-[60vw] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow overflow-auto">
-          <LyricsCell sliceLyrics={sliceLyrics} />
+      <div className="pt-2 px-1 pb-8 w-[90vw] max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+        <div className="pb-6 grow">
+          <LyricsLine sliceLyrics={sliceLyrics} />
         </div>
         <ProgressBar guesses={guesses} />
         <SearchSong
@@ -221,6 +246,8 @@ function App() {
           handleDarkMode={handleDarkMode}
           isHighContrastMode={isHighContrastMode}
           handleHighContrastMode={handleHighContrastMode}
+          isReducedMotionMode={isReducedMotionMode}
+          handleReducedMotionMode={handleReducedMotionMode}
         />
         <StatsModal
           isOpen={isStatsModalOpen}
