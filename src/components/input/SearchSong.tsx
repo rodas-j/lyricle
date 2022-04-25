@@ -44,9 +44,10 @@ export const SearchSong = ({ handleSubmit, handleSkip }) => {
             onChange={filterValidGuesses}
           />
           <ul className="absolute bottom-full left-0 flex- flex-col mb-3 w-full formide-y divide-gray-500 cursor-pointer">
-            {matchInput.map(({ song }) => {
+            {matchInput.map(({ song }, index) => {
               return (
                 <li
+                  key={index}
                   className="p-4 bg-gray-600 text-gray-200 hover:bg-gray-700"
                   onClick={changeInput}
                 >

@@ -8,7 +8,7 @@ import { BaseModal } from './BaseModal'
 import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
-  NEW_WORD_TEXT,
+  NEW_SONG_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
 
@@ -65,7 +65,7 @@ Props) => {
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT}</h5>
+            <h5>{NEW_SONG_TEXT}</h5>
             <Countdown
               className="text-lg font-medium text-gray-900 dark:text-gray-100"
               date={tomorrow}

@@ -12,7 +12,7 @@ import {
   GAME_COPIED_MESSAGE,
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
-  CORRECT_WORD_MESSAGE,
+  CORRECT_SONG_MESSAGE,
   HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
@@ -94,6 +94,10 @@ function App() {
     setSliceLyrics(sliceLyrics + 1)
   }
 
+  const revealAllLines = () => {
+    setSliceLyrics(solution.lyrics.length)
+  }
+
   const onSubmit = (e) => {
     e.preventDefault()
     if (isGameWon || isGameLost) {
@@ -102,18 +106,42 @@ function App() {
 
     setGuesses([...guesses, e.target.search.value])
 
-    if (solution.song === e.target.search.value) {
-      setIsGameWon(true)
-    } else if (guesses.length < MAX_CHALLENGES) {
-      onSkip()
-    } else {
+    if (guesses.length === MAX_CHALLENGES - 1) {
       setIsGameLost(true)
+
+      showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
+        persist: true,
+      })
+
+      return
+    }
+
+    if (solution.song === e.target.search.value) {
+      revealAllLines()
+      setIsGameWon(true)
+    } else {
+      revealNextLine()
+      e.target.search.value = ''
     }
   }
 
   const onSkip = () => {
-    alert('Skipping')
+    if (isGameWon || isGameLost) {
+      return
+    }
+
+    setGuesses([...guesses, 'skip'])
     revealNextLine()
+
+    if (guesses.length === MAX_CHALLENGES - 1) {
+      setIsGameLost(true)
+
+      showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
+        persist: true,
+      })
+
+      return
+    }
   }
 
   useEffect(() => {
@@ -147,7 +175,7 @@ function App() {
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow">
+        <div className="pb-6 grow overflow-auto">
           <LyricsCell sliceLyrics={sliceLyrics} />
         </div>
         <ProgressBar guesses={guesses} />
