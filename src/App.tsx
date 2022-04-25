@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
+import { LyricsCell } from './components/lyrics/LyricsCell'
 import { SearchSong } from './components/input/SearchSong'
+import { ProgressBar } from './components/progressbar/ProgressBar'
 
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
@@ -56,7 +58,9 @@ function App() {
 
   const [isGameWon, setIsGameWon] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
-  const [guesses, setGuesses] = useState([])
+  const [guesses, setGuesses] = useState<string[]>([])
+
+  const [sliceLyrics, setSliceLyrics] = useState(1)
 
   useEffect(() => {
     if (isDarkMode) {
@@ -86,9 +90,19 @@ function App() {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
 
+  const revealNextLine = () => {
+    setSliceLyrics(sliceLyrics + 1)
+  }
+
   const onSubmit = (e) => {
     e.preventDefault()
-    if (solution === e.target.search.value) {
+    if (isGameWon || isGameLost) {
+      return
+    }
+
+    setGuesses([...guesses, e.target.search.value])
+
+    if (solution.song === e.target.search.value) {
       setIsGameWon(true)
     } else if (guesses.length < MAX_CHALLENGES) {
       onSkip()
@@ -99,10 +113,11 @@ function App() {
 
   const onSkip = () => {
     alert('Skipping')
+    revealNextLine()
   }
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution })
+    saveGameStateToLocalStorage({ guesses, song: solution.song })
   }, [guesses])
 
   useEffect(() => {
@@ -132,7 +147,10 @@ function App() {
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow"></div>
+        <div className="pb-6 grow">
+          <LyricsCell sliceLyrics={sliceLyrics} />
+        </div>
+        <ProgressBar guesses={guesses} />
         <SearchSong handleSubmit={onSubmit} handleSkip={onSkip} />
         <InfoModal
           isOpen={isInfoModalOpen}
