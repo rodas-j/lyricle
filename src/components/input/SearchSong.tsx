@@ -1,9 +1,12 @@
-import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
 import { useState, useRef } from 'react'
+import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
+import { solution } from '../../lib/songs'
 
 import { ActionBar } from './ActionBar'
 
-export const SearchSong = ({ handleSubmit, handleSkip }) => {
+import { XIcon } from '@heroicons/react/outline'
+
+export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
   const [matchInput, setMatchInput] = useState<LyricsField[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -44,12 +47,22 @@ export const SearchSong = ({ handleSubmit, handleSkip }) => {
             onChange={filterValidGuesses}
           />
           <ul className="absolute bottom-full left-0 flex- flex-col mb-3 w-full formide-y divide-gray-500 cursor-pointer">
-            {matchInput.map(({ song }) => {
+            {matchInput.map(({ song }, index) => {
+              let classes =
+                'flex items-center p-4 bg-gray-600 text-gray-200 hover:bg-gray-700'
+
+              classes +=
+                guesses.includes(song) && song !== solution.song
+                  ? ' pointer-events-none bg-red-300 text-red-800'
+                  : ''
+
               return (
-                <li
-                  className="p-4 bg-gray-600 text-gray-200 hover:bg-gray-700"
-                  onClick={changeInput}
-                >
+                <li key={index} className={classes} onClick={changeInput}>
+                  {guesses.includes(song) && song !== solution.song ? (
+                    <XIcon className="h-5 w-5 dark:stroke-red-800 mr-3" />
+                  ) : (
+                    ''
+                  )}
                   {song}
                 </li>
               )

@@ -3,7 +3,7 @@ const highContrastKey = 'highContrast'
 
 type StoredGameState = {
   guesses: string[]
-  solution: string
+  song: string
 }
 
 export const saveGameStateToLocalStorage = (gameState: StoredGameState) => {
@@ -46,4 +46,8 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 export const getStoredIsHighContrastMode = () => {
   const highContrast = localStorage.getItem(highContrastKey)
   return highContrast === '1'
+}
+
+export const clearGameStateFromLocalStorage = () => {
+  localStorage.clear()
 }

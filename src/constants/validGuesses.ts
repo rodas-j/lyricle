@@ -43,7 +43,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'She hid around corners and she hid under beds',
       'She killed it with kisses and from it she fled',
       'With every bubble she sank with her drink',
-      'And washed it away down the kitchen sink',
     ],
   },
   {
@@ -54,7 +53,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "But who can stand when she's in demand",
       'Her schemes and plans',
       "'Cause we danced on the floor in the round",
-      'So take my strong advice, just remember to always think twice',
     ],
   },
   {
@@ -65,9 +63,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'You and me are thrifty, so go all you can eat',
       'Fill up your bag and I fill up a plate',
       'We talk for hours and hours about the sweet and the sour',
-      'And how your family is doing okay',
-      'Leave and get in a taxi, then kiss in the backseat',
-      "Tell the driver make the radio play, and I'm singing like",
     ],
   },
   {
@@ -78,7 +73,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "I know we'll be alright this time",
       'Darling, just hold my hand',
       "Be my girl, I'll be your man",
-      'I see my future in your eyes',
     ],
   },
   {
@@ -86,6 +80,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
     lyrics: [
       'Baby, I have no story to be told',
       "But I've heard one on you and I'm gonna make your head burn",
+      'Think of me in the depths of your despair',
       'Think of me in the depths of your despair',
       "Make a home down there as mine sure won't be shared",
     ],
@@ -96,6 +91,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'And anytime you feel the pain, hey Jude, refrain,',
       "Don't carry the world upon your shoulders.",
       "For well you know that it's a fool who plays it cool",
+      'By making his world a little colder.',
       'By making his world a little colder.',
     ],
   },

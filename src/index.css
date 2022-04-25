@@ -81,6 +81,29 @@ svg.cursor-pointer:hover {
   display: flex;
 }
 
+[data-check] {
+  position: relative;
+  transition: width 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+[data-check]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+[data-check='correct']::after {
+  background: lime;
+  width: 100%;
+}
+
+[data-check='wrong']::after {
+  background: red;
+  width: 100%;
+}
+
 @keyframes revealAbsentCharCell {
   0% {
     transform: rotateX(0deg);

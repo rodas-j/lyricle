@@ -1,7 +1,7 @@
 import { VALID_GUESSES } from '../constants/validGuesses'
 
 export const isWinningSong = (song: string) => {
-  return solution === song
+  return solution.song === song
 }
 
 export const getSongOfTheDay = () => {
@@ -12,7 +12,7 @@ export const getSongOfTheDay = () => {
   const nextDay = (index + 1) * msInDay + epochMs
 
   return {
-    solution: VALID_GUESSES[index % VALID_GUESSES.length].song,
+    solution: VALID_GUESSES[index % VALID_GUESSES.length],
     solutionIndex: index,
     tomorrow: nextDay,
   }
