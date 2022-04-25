@@ -81,36 +81,21 @@ function App() {
     if (gameWasWon) {
       setIsGameWon(true)
     }
+
     if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
       setIsGameLost(true)
       showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
         persist: true,
       })
     }
+
     return loaded.guesses
   })
 
   const [sliceLyrics, setSliceLyrics] = useState(1)
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-
-    if (isHighContrastMode) {
-      document.documentElement.classList.add('high-contrast')
-    } else {
-      document.documentElement.classList.remove('high-contrast')
-    }
-
-    if (isReducedMotionMode) {
-      document.documentElement.classList.add('reduced-motion')
-    } else {
-      document.documentElement.classList.remove('reduced-motion')
-    }
-  }, [isDarkMode, isHighContrastMode, isReducedMotionMode])
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
+  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -129,10 +114,6 @@ function App() {
       isReducedMotion ? 'reduce' : 'no-preference'
     )
   }
-
-  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
-  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
 
   const revealNextLine = () => {
     setSliceLyrics(sliceLyrics + 1)
@@ -162,7 +143,6 @@ function App() {
 
     if (isWinningSong(e.target.search.value)) {
       setStats(addStatsForCompletedGame(stats, guesses.length))
-      revealAllLines()
       setIsGameWon(true)
     } else {
       revealNextLine()
@@ -189,6 +169,26 @@ function App() {
   }
 
   useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    if (isHighContrastMode) {
+      document.documentElement.classList.add('high-contrast')
+    } else {
+      document.documentElement.classList.remove('high-contrast')
+    }
+
+    if (isReducedMotionMode) {
+      document.documentElement.classList.add('reduced-motion')
+    } else {
+      document.documentElement.classList.remove('reduced-motion')
+    }
+  }, [isDarkMode, isHighContrastMode, isReducedMotionMode])
+
+  useEffect(() => {
     saveGameStateToLocalStorage({ guesses, song: solution.song })
   }, [guesses])
 
@@ -208,6 +208,10 @@ function App() {
       setTimeout(() => {
         setIsStatsModalOpen(true)
       }, REVEAL_TIME_MS)
+    }
+
+    if (isGameWon || isGameLost) {
+      revealAllLines()
     }
   }, [isGameWon, isGameLost, showSuccessAlert])
 

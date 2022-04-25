@@ -51,6 +51,19 @@ svg.cursor-pointer:hover {
   display: flex;
 }
 
+.lyrics-input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lyrics-input ~ svg.cursor-pointer:hover {
+  transform: translateY(-50%);
+}
+
+.lyrics-input:focus ~ svg {
+  visibility: visible;
+}
+
 [data-check] {
   position: relative;
 }
