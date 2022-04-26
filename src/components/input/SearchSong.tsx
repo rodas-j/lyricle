@@ -68,10 +68,10 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
 
 function SongOptions({ matchInput, guesses, changeInput }) {
   return (
-    <ul className="absolute bottom-full left-0 flex flex-col mb-3 w-full formide-y divide-gray-500 cursor-pointer">
+    <ul className="absolute bottom-full left-0 flex flex-col divide-y-2 divide-gray-400 mb-3 w-full formide-y divide-gray-500 cursor-pointer">
       {matchInput.map(({ song }, index) => {
         let classes =
-          'flex items-center p-4 bg-gray-200 mb-0.5 last:mb-0 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
+          'flex items-center p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
 
         classes +=
           guesses.includes(song) && song !== solution.song
