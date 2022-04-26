@@ -12,10 +12,7 @@ import { SettingsModal } from './components/modals/SettingsModal'
 import {
   WIN_MESSAGES,
   // GAME_COPIED_MESSAGE,
-  // NOT_ENOUGH_LETTERS_MESSAGE,
-  // WORD_NOT_FOUND_MESSAGE,
   CORRECT_SONG_MESSAGE,
-  // HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
   MAX_CHALLENGES,
@@ -216,7 +213,7 @@ function App() {
   }, [isGameWon, isGameLost, showSuccessAlert])
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="absolute inset-0 flex flex-col">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
@@ -229,7 +226,7 @@ function App() {
           window.location.reload()
         }}
       />
-      <div className="pt-2 px-2 pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+      <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
           <LyricsLine sliceLyrics={sliceLyrics} />
         </div>

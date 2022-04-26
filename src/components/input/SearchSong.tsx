@@ -36,7 +36,7 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
         <div className="relative bg-gray-200 dark:bg-gray-700">
           <input
             ref={inputRef}
-            className="lyrics-input relative p-4 w-full text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
+            className="lyrics-input relative p-2 md:p-4 w-full md:text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
             name="search"
             type="search"
             spellCheck="false"
@@ -52,7 +52,7 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
             changeInput={changeInput}
           />
           <XIcon
-            className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-4 stroke-gray-400 cursor-pointer"
+            className="w-4 h-4 md:w-4 md:h-4 absolute top-[50%] translate-y-[-40%] right-2 md:right-4 stroke-gray-400 cursor-pointer"
             onClick={() => {
               if (inputRef.current) {
                 inputRef.current.value = ''
@@ -71,7 +71,7 @@ function SongOptions({ matchInput, guesses, changeInput }) {
     <ul className="absolute bottom-full left-0 flex flex-col divide-y-2 divide-gray-400 mb-3 w-full formide-y divide-gray-500 cursor-pointer">
       {matchInput.map(({ song }, index) => {
         let classes =
-          'flex items-center p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
+          'flex items-center p-2 md:p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
 
         classes +=
           guesses.includes(song) && song !== solution.song
