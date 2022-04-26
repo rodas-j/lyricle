@@ -13,6 +13,7 @@ import {
   WIN_MESSAGES,
   // GAME_COPIED_MESSAGE,
   CORRECT_SONG_MESSAGE,
+  GAME_COPIED_MESSAGE,
 } from './constants/strings'
 import {
   MAX_CHALLENGES,
@@ -253,9 +254,11 @@ function App() {
         <StatsModal
           isOpen={isStatsModalOpen}
           handleClose={() => setIsStatsModalOpen(false)}
+          guesses={guesses}
           gameStats={stats}
           isGameLost={isGameLost}
           isGameWon={isGameWon}
+          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
           isDarkMode={isDarkMode}
           isHighContrastMode={isHighContrastMode}
           numberOfGuessesMade={guesses.length}
