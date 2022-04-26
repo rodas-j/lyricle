@@ -42,9 +42,13 @@ svg.cursor-pointer:hover {
 
 .navbar-content {
   display: flex;
-  height: 3rem;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  height: 3rem;
+  max-width: 800px;
+  width: 100%;
 }
 
 .right-icons {
