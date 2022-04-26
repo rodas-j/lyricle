@@ -229,7 +229,7 @@ function App() {
           window.location.reload()
         }}
       />
-      <div className="pt-2 px-1 pb-8 w-[90vw] max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+      <div className="pt-2 px-2 pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
           <LyricsLine sliceLyrics={sliceLyrics} />
         </div>
