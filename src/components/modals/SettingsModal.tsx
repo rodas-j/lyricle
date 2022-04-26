@@ -1,40 +1,35 @@
 import { BaseModal } from './BaseModal'
 import { SettingsToggle } from './SettingsToggle'
 import {
-  HARD_MODE_DESCRIPTION,
+  // HARD_MODE_DESCRIPTION,
   HIGH_CONTRAST_MODE_DESCRIPTION,
+  REDUCED_MOTION_MODE_DESCRIPTION,
 } from '../../constants/strings'
 
 type Props = {
   isOpen: boolean
   handleClose: () => void
-  isHardMode: boolean
-  handleHardMode: Function
   isDarkMode: boolean
   handleDarkMode: Function
   isHighContrastMode: boolean
   handleHighContrastMode: Function
+  isReducedMotionMode: boolean
+  handleReducedMotionMode: Function
 }
 
 export const SettingsModal = ({
   isOpen,
   handleClose,
-  isHardMode,
-  handleHardMode,
   isDarkMode,
   handleDarkMode,
   isHighContrastMode,
   handleHighContrastMode,
+  isReducedMotionMode,
+  handleReducedMotionMode,
 }: Props) => {
   return (
     <BaseModal title="Settings" isOpen={isOpen} handleClose={handleClose}>
       <div className="flex flex-col mt-2 divide-y">
-        <SettingsToggle
-          settingName="Hard Mode"
-          flag={isHardMode}
-          handleFlag={handleHardMode}
-          description={HARD_MODE_DESCRIPTION}
-        />
         <SettingsToggle
           settingName="Dark Mode"
           flag={isDarkMode}
@@ -45,6 +40,12 @@ export const SettingsModal = ({
           flag={isHighContrastMode}
           handleFlag={handleHighContrastMode}
           description={HIGH_CONTRAST_MODE_DESCRIPTION}
+        />
+        <SettingsToggle
+          settingName="Reduced Motion"
+          flag={isReducedMotionMode}
+          handleFlag={handleReducedMotionMode}
+          description={REDUCED_MOTION_MODE_DESCRIPTION}
         />
       </div>
     </BaseModal>
