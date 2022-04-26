@@ -1,7 +1,7 @@
-import { MAX_CHALLENGES } from '../constants/settings'
 import { GAME_TITLE } from '../constants/strings'
 import { solution, solutionIndex } from './songs'
 import { UAParser } from 'ua-parser-js'
+import { MAX_CHALLENGES } from '../constants/settings'
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
@@ -10,12 +10,13 @@ const device = parser.getDevice()
 
 export const shareStatus = (
   guesses: string[],
+  isDarkMode: boolean,
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void
 ) => {
   const textToShare =
     `#${GAME_TITLE} #${solutionIndex}\n\n` +
-    generateEmojiGrid(guesses, getEmojiTiles(isHighContrastMode)) +
+    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
     `\n\nhttps://lyricle.app`
 
   const shareData = { text: textToShare }
@@ -48,6 +49,7 @@ const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
       }
     })
     .join('')
+    .padEnd(MAX_CHALLENGES, tiles[2])
 }
 
 const attemptShare = (shareData: object) => {
@@ -61,9 +63,10 @@ const attemptShare = (shareData: object) => {
   )
 }
 
-const getEmojiTiles = (isHighContrastMode: boolean) => {
+const getEmojiTiles = (isDarkMode: boolean, isHighContrastMode: boolean) => {
   let tiles: string[] = []
   tiles.push(isHighContrastMode ? '🟧' : '🟩')
   tiles.push(isHighContrastMode ? '🟦' : '🟨')
+  tiles.push(isDarkMode ? '⬛' : '⬜')
   return tiles
 }
