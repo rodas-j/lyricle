@@ -5,13 +5,13 @@ export const ActionBar = ({ handleSkip, inputRef }) => {
     <div className="flex justify-end mt-3">
       <button
         type="submit"
-        className="py-2 px-10 text-l font-bold text-gray-800 bg-indigo-300 tracking-widest hover:bg-indigo-200 order-1"
+        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold text-gray-800 bg-indigo-300 tracking-widest hover:bg-indigo-200 order-1"
       >
         SUBMIT
       </button>
       <button
         type="button"
-        className="py-2 px-10 text-l font-bold tracking-widest text-gray-800 dark:text-gray-100 flex items-center mr-2 hover:outline hover:outline-offset-[-1px] hover:outline-1 hover:outline-gray-400"
+        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold tracking-widest text-gray-800 dark:text-gray-100 flex items-center mr-0.5 md:mr-2 hover:outline hover:outline-offset-[-1px] hover:outline-1 hover:outline-gray-400"
         onClick={() => {
           handleSkip()
           inputRef.current.value = ''
