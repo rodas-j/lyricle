@@ -138,7 +138,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Mack the Knife LyricsOh the shark, babe, has such teeth, dear',
+      'Oh the shark, babe, has such teeth, dear',
       'And he shows them pearly white',
       'Just a jackknife has old Macheath, babe',
       'And he keeps it outta sight',
@@ -789,17 +789,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "But I just can't make a sound (Ayy, ayy, ayy)",
     ],
     song: 'Timbaland ─ Apologize',
-  },
-  {
-    lyrics: [
-      "Dream Album: KUZGUN LyricsAlbum Title: The Coward's Gamble",
-      'Exec. Producers: KUZGUN, Kanye West, DJ Khaled, Jay Z, Nas, & Pusha T',
-      'Label(s):',
-      'US Distribution/Marketing: GOOD Music',
-      'UK Distribution: ESGN',
-      'Rest Of World Distribution: Mass Appeal',
-    ],
-    song: 'Usher ─ Yeah! (feat. Lil Jon & Ludacris)',
   },
   {
     lyrics: [
