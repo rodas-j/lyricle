@@ -1,50 +1,66 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
-import { solution } from '../../lib/songs'
+import { isAValidGuess, solution } from '../../lib/songs'
 
-import { ActionBar } from './ActionBar'
+import { ChevronDoubleRightIcon, XIcon } from '@heroicons/react/outline'
 
-import { XIcon } from '@heroicons/react/outline'
-
-export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
+export const SearchSong = ({
+  isGameWon,
+  isGameLost,
+  handleSubmit,
+  handleSkip,
+  guesses,
+}) => {
   const [matchInput, setMatchInput] = useState<LyricsField[]>([])
+  const [currentGuess, setCurrentGuess] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const filterValidGuesses = (e): void => {
-    if (e.target.value) {
+  useEffect(() => {
+    if (currentGuess && !isAValidGuess(currentGuess)) {
       setMatchInput(
         VALID_GUESSES.filter(({ song }) =>
-          song.toLowerCase().includes(e.target.value.toLowerCase())
+          song.toLowerCase().includes(currentGuess.toLowerCase())
         ).slice(0, 5)
       )
     } else {
       setMatchInput([])
     }
-  }
+  }, [currentGuess])
 
   const changeInput = (e): void => {
-    if (inputRef.current !== null) {
-      inputRef.current.value = e.target.textContent
-      setMatchInput([])
+    setCurrentGuess(e.target.textContent)
+
+    if (inputRef.current) {
       inputRef.current.focus()
     }
+
+    setMatchInput([])
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className={
+          isGameWon || isGameLost
+            ? 'pointer-events-none cursor-not-allowed'
+            : ''
+        }
+      >
         <div className="relative bg-gray-200 dark:bg-gray-700">
           <input
             ref={inputRef}
             className="lyrics-input relative p-2 md:p-4 w-full md:text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
             name="search"
             type="search"
+            value={currentGuess}
+            required
             spellCheck="false"
             autoCorrect="off"
             autoComplete="off"
             autoCapitalize="off"
             placeholder="Know it? Search artist or the song."
-            onChange={filterValidGuesses}
+            onChange={(e) => setCurrentGuess(e.target.value)}
           />
           <SongOptions
             matchInput={matchInput}
@@ -53,11 +69,7 @@ export const SearchSong = ({ handleSubmit, handleSkip, guesses }) => {
           />
           <XIcon
             className="w-4 h-4 md:w-4 md:h-4 absolute top-[50%] translate-y-[-40%] right-2 md:right-4 stroke-gray-400 cursor-pointer"
-            onClick={() => {
-              if (inputRef.current) {
-                inputRef.current.value = ''
-              }
-            }}
+            onClick={() => setCurrentGuess('')}
           />
         </div>
         <ActionBar handleSkip={handleSkip} inputRef={inputRef} />
@@ -90,5 +102,33 @@ function SongOptions({ matchInput, guesses, changeInput }) {
         )
       })}
     </ul>
+  )
+}
+
+export const ActionBar = ({ handleSkip, inputRef }) => {
+  return (
+    <div className="flex justify-end mt-3">
+      <button
+        type="submit"
+        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold text-gray-100 bg-indigo-600 tracking-widest hover:bg-indigo-700 order-1 disabled:bg-indigo-900 disabled:opacity-60"
+        disabled={
+          !inputRef.current ||
+          (inputRef.current && !isAValidGuess(inputRef.current.value))
+        }
+      >
+        SUBMIT
+      </button>
+      <button
+        type="button"
+        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold tracking-widest text-gray-800 dark:text-gray-100 flex items-center mr-0.5 md:mr-2 hover:outline hover:outline-offset-[-1px] hover:outline-1 hover:outline-gray-400"
+        onClick={() => {
+          handleSkip()
+          inputRef.current.value = ''
+        }}
+      >
+        SKIP
+        <ChevronDoubleRightIcon className="w-3 h-3 ml-1" />
+      </button>
+    </div>
   )
 }

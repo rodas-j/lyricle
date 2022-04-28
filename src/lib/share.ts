@@ -14,6 +14,11 @@ export const shareStatus = (
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void
 ) => {
+  // To add ⬛/⬜ at the end if song solved in under MAX_CHALLENGES guesses
+  while (guesses.length < MAX_CHALLENGES) {
+    guesses.push('skip')
+  }
+
   const textToShare =
     `#${GAME_TITLE} #${solutionIndex}\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
@@ -41,15 +46,15 @@ export const shareStatus = (
 const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
   return guesses
     .map((guess) => {
-      switch (guess === solution.song) {
-        case true:
-          return tiles[0]
-        default:
-          return tiles[1]
+      if (guess === solution.song) {
+        return tiles[0]
+      } else if (guess !== 'skip') {
+        return tiles[1]
+      } else {
+        return tiles[2]
       }
     })
     .join('')
-    .padEnd(MAX_CHALLENGES, tiles[2])
 }
 
 const attemptShare = (shareData: object) => {
@@ -66,7 +71,7 @@ const attemptShare = (shareData: object) => {
 const getEmojiTiles = (isDarkMode: boolean, isHighContrastMode: boolean) => {
   let tiles: string[] = []
   tiles.push(isHighContrastMode ? '🟧' : '🟩')
-  tiles.push(isHighContrastMode ? '🟦' : '🟨')
+  tiles.push(isHighContrastMode ? '🟦' : '🟥')
   tiles.push(isDarkMode ? '⬛' : '⬜')
   return tiles
 }
