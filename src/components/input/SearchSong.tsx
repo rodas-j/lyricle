@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+
 import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
 import { isAValidGuess, solution } from '../../lib/songs'
 
@@ -37,6 +38,10 @@ export const SearchSong = ({
     setMatchInput([])
   }
 
+  useEffect(() => {
+    if (!isGameWon) setCurrentGuess('')
+  }, [handleSubmit, isGameWon])
+
   return (
     <>
       <form
@@ -72,7 +77,13 @@ export const SearchSong = ({
             onClick={() => setCurrentGuess('')}
           />
         </div>
-        <ActionBar handleSkip={handleSkip} inputRef={inputRef} />
+        <ActionBar
+          isGameWon={isGameWon}
+          isGameLost={isGameLost}
+          currentGuess={currentGuess}
+          handleSkip={handleSkip}
+          inputRef={inputRef}
+        />
       </form>
     </>
   )
@@ -105,26 +116,30 @@ function SongOptions({ matchInput, guesses, changeInput }) {
   )
 }
 
-export const ActionBar = ({ handleSkip, inputRef }) => {
+export const ActionBar = ({
+  isGameWon,
+  isGameLost,
+  currentGuess,
+  handleSkip,
+  inputRef,
+}) => {
   return (
     <div className="flex justify-end mt-3">
       <button
         type="submit"
         className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold text-gray-100 bg-indigo-600 tracking-widest hover:bg-indigo-700 order-1 disabled:bg-indigo-900 disabled:opacity-60"
-        disabled={
-          !inputRef.current ||
-          (inputRef.current && !isAValidGuess(inputRef.current.value))
-        }
+        disabled={!isAValidGuess(currentGuess) || isGameWon || isGameLost}
       >
         SUBMIT
       </button>
       <button
         type="button"
-        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold tracking-widest text-gray-800 dark:text-gray-100 flex items-center mr-0.5 md:mr-2 hover:outline hover:outline-offset-[-1px] hover:outline-1 hover:outline-gray-400"
+        className="py-1 md:py-2 px-4 md:px-10 md:text-l font-bold tracking-widest text-gray-800 dark:text-gray-100 flex items-center mr-0.5 md:mr-2 hover:outline hover:outline-offset-[-1px] hover:outline-1 hover:outline-gray-400 disabled:opacity-60"
         onClick={() => {
           handleSkip()
           inputRef.current.value = ''
         }}
+        disabled={isGameWon || isGameLost}
       >
         SKIP
         <ChevronDoubleRightIcon className="w-3 h-3 ml-1" />
