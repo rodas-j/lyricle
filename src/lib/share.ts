@@ -1,8 +1,7 @@
-import { getGuessStatuses } from './statuses'
-import { solutionIndex, unicodeSplit } from './words'
 import { GAME_TITLE } from '../constants/strings'
-import { MAX_CHALLENGES } from '../constants/settings'
+import { solution, solutionIndex } from './songs'
 import { UAParser } from 'ua-parser-js'
+import { MAX_CHALLENGES } from '../constants/settings'
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
@@ -11,17 +10,19 @@ const device = parser.getDevice()
 
 export const shareStatus = (
   guesses: string[],
-  lost: boolean,
-  isHardMode: boolean,
   isDarkMode: boolean,
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void
 ) => {
+  // To add ⬛/⬜ at the end if song solved in under MAX_CHALLENGES guesses
+  while (guesses.length < MAX_CHALLENGES) {
+    guesses.push('skip')
+  }
+
   const textToShare =
-    `${GAME_TITLE} ${solutionIndex} ${
-      lost ? 'X' : guesses.length
-    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
-    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode))
+    `#${GAME_TITLE} #${solutionIndex}\n\n` +
+    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
+    `\n\nhttps://lyricle.app`
 
   const shareData = { text: textToShare }
 
@@ -42,26 +43,18 @@ export const shareStatus = (
   }
 }
 
-export const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
+const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
   return guesses
     .map((guess) => {
-      const status = getGuessStatuses(guess)
-      const splitGuess = unicodeSplit(guess)
-
-      return splitGuess
-        .map((_, i) => {
-          switch (status[i]) {
-            case 'correct':
-              return tiles[0]
-            case 'present':
-              return tiles[1]
-            default:
-              return tiles[2]
-          }
-        })
-        .join('')
+      if (guess === solution.song) {
+        return tiles[0]
+      } else if (guess !== 'skip') {
+        return tiles[1]
+      } else {
+        return tiles[2]
+      }
     })
-    .join('\n')
+    .join('')
 }
 
 const attemptShare = (shareData: object) => {
@@ -78,7 +71,7 @@ const attemptShare = (shareData: object) => {
 const getEmojiTiles = (isDarkMode: boolean, isHighContrastMode: boolean) => {
   let tiles: string[] = []
   tiles.push(isHighContrastMode ? '🟧' : '🟩')
-  tiles.push(isHighContrastMode ? '🟦' : '🟨')
+  tiles.push(isHighContrastMode ? '🟦' : '🟥')
   tiles.push(isDarkMode ? '⬛' : '⬜')
   return tiles
 }
