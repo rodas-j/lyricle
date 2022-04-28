@@ -4,6 +4,10 @@ export const isWinningSong = (song: string) => {
   return solution.song === song
 }
 
+export const isAValidGuess = (query: string) => {
+  return VALID_GUESSES.find(({ song }) => song === query)
+}
+
 export const getSongOfTheDay = () => {
   const epochMs = new Date('April 24, 2022').valueOf()
   const now = Date.now()

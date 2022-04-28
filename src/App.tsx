@@ -20,7 +20,7 @@ import {
   REVEAL_TIME_MS,
   // WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
-import { isWinningSong, solution } from './lib/songs'
+import { isWinningSong, isAValidGuess, solution } from './lib/songs'
 
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
@@ -124,6 +124,10 @@ function App() {
   const onSubmit = (e) => {
     e.preventDefault()
     if (isGameWon || isGameLost) {
+      return
+    }
+
+    if (!isAValidGuess(e.target.search.value)) {
       return
     }
 
@@ -233,6 +237,8 @@ function App() {
         </div>
         <ProgressBar guesses={guesses} />
         <SearchSong
+          isGameWon={isGameWon}
+          isGameLost={isGameLost}
           guesses={guesses}
           handleSubmit={onSubmit}
           handleSkip={onSkip}
