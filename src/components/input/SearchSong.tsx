@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
 import { isAValidGuess, solution } from '../../lib/songs'
 
@@ -12,33 +12,40 @@ export const SearchSong = ({
   guesses,
 }) => {
   const [matchInput, setMatchInput] = useState<LyricsField[]>([])
+  const [currentGuess, setCurrentGuess] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const filterValidGuesses = (e): void => {
-    if (e.target.value) {
+  useEffect(() => {
+    if (currentGuess && !isAValidGuess(currentGuess)) {
       setMatchInput(
         VALID_GUESSES.filter(({ song }) =>
-          song.toLowerCase().includes(e.target.value.toLowerCase())
+          song.toLowerCase().includes(currentGuess.toLowerCase())
         ).slice(0, 5)
       )
     } else {
       setMatchInput([])
     }
-  }
+  }, [currentGuess])
 
   const changeInput = (e): void => {
-    if (inputRef.current !== null) {
-      inputRef.current.value = e.target.textContent
-      setMatchInput([])
+    setCurrentGuess(e.target.textContent)
+
+    if (inputRef.current) {
       inputRef.current.focus()
     }
+
+    setMatchInput([])
   }
 
   return (
     <>
       <form
         onSubmit={handleSubmit}
-        className={isGameWon || isGameLost ? 'pointer-events-none' : ''}
+        className={
+          isGameWon || isGameLost
+            ? 'pointer-events-none cursor-not-allowed'
+            : ''
+        }
       >
         <div className="relative bg-gray-200 dark:bg-gray-700">
           <input
@@ -46,13 +53,14 @@ export const SearchSong = ({
             className="lyrics-input relative p-2 md:p-4 w-full md:text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
             name="search"
             type="search"
+            value={currentGuess}
             required
             spellCheck="false"
             autoCorrect="off"
             autoComplete="off"
             autoCapitalize="off"
             placeholder="Know it? Search artist or the song."
-            onChange={filterValidGuesses}
+            onChange={(e) => setCurrentGuess(e.target.value)}
           />
           <SongOptions
             matchInput={matchInput}
@@ -61,11 +69,7 @@ export const SearchSong = ({
           />
           <XIcon
             className="w-4 h-4 md:w-4 md:h-4 absolute top-[50%] translate-y-[-40%] right-2 md:right-4 stroke-gray-400 cursor-pointer"
-            onClick={() => {
-              if (inputRef.current) {
-                inputRef.current.value = ''
-              }
-            }}
+            onClick={() => setCurrentGuess('')}
           />
         </div>
         <ActionBar handleSkip={handleSkip} inputRef={inputRef} />
