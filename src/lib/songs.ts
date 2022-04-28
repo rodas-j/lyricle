@@ -22,11 +22,6 @@ export const getSongOfTheDay = () => {
   }
 }
 
-export const randomizeSongOfTheDay = () => {
-  return {
-    solution: VALID_GUESSES[Math.trunc(Math.random() * VALID_GUESSES.length)],
-  }
-}
 
-export const { solutionIndex, tomorrow } = getSongOfTheDay()
-export const { solution } = randomizeSongOfTheDay()
+export const { solution, solutionIndex, tomorrow } = getSongOfTheDay()
+

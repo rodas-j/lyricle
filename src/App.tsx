@@ -4,14 +4,11 @@ import { LyricsLine } from './components/lyrics/LyricsLine'
 import { SearchSong } from './components/input/SearchSong'
 import { ProgressBar } from './components/progressbar/ProgressBar'
 
-import { RefreshIcon } from '@heroicons/react/outline'
-
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
   WIN_MESSAGES,
-  // GAME_COPIED_MESSAGE,
   CORRECT_SONG_MESSAGE,
   GAME_COPIED_MESSAGE,
 } from './constants/strings'
@@ -28,7 +25,6 @@ import {
   saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
-  clearGameStateFromLocalStorage,
 } from './lib/localStorage'
 
 import './App.css'
@@ -223,13 +219,6 @@ function App() {
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
-      />
-      <RefreshIcon
-        className="mx-auto w-10 h-10 cursor-pointer dark:stroke-white"
-        onClick={() => {
-          clearGameStateFromLocalStorage()
-          window.location.reload()
-        }}
       />
       <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
