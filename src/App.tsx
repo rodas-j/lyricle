@@ -15,6 +15,7 @@ import {
 import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
+  WELCOME_INFO_MODAL_MS,
   // WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 import { isWinningSong, isAValidGuess, solution } from './lib/songs'
@@ -189,6 +190,14 @@ function App() {
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, song: solution.song })
   }, [guesses])
+
+  useEffect(() => {
+    if (!loadGameStateFromLocalStorage()) {
+      setTimeout(() => {
+        setIsInfoModalOpen(true)
+      }, WELCOME_INFO_MODAL_MS)
+    }
+  }, [])
 
   useEffect(() => {
     if (isGameWon) {
