@@ -58,7 +58,7 @@ export const SearchSong = ({
             className="lyrics-input relative p-2 md:p-4 w-full md:text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
             name="search"
             type="search"
-            value={currentGuess}
+            value={isGameWon ? solution.song : currentGuess}
             required
             spellCheck="false"
             autoCorrect="off"
