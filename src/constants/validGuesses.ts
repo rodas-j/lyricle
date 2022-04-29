@@ -6,7 +6,7 @@ export type LyricsField = {
 export const VALID_GUESSES: Array<LyricsField> = [
   {
     lyrics: [
-      'Jai Ho! (You Are My Destiny) LyricsJai Ho!',
+      'Jai Ho!',
       'Jai Ho',
       'I got shivers',
       'When you touch my face',
@@ -94,7 +94,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Original Rock N’ Roll LyricsSister Rosetta Tharpe - Strange Things Happening Every Day',
+      'Sister Rosetta Tharpe - Strange Things Happening Every Day',
       'Chuck Berry - Johnny B. Goode',
       'Little Richard - Tutti Frutti',
       'Elvis Presley - Blue Suede Shoes',
@@ -105,7 +105,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      "White Christmas LyricsI'm dreaming of a white Christmas",
+      "I'm dreaming of a white Christmas",
       'Just like the ones I used to know',
       'Where the tree-tops glisten and children listen',
       'To hear sleigh bells in the snow',
@@ -248,7 +248,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Take the A Train LyricsYou must take the "A"-Train',
+      'You must take the "A"-Train',
       'To go to sugar hill way up in Harlem',
       'If you miss the "A"-Train',
       "You'll find you missed the quickest way to Harlem",
@@ -259,7 +259,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Take Me Out To The Ball Game LyricsKatie Casey was baseball mad',
+      'Katie Casey was baseball mad',
       'Had the fever and had it bad',
       'Just to root for the home town crew',
       "Ev'ry sou",
@@ -267,17 +267,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'On a Saturday her young beau',
     ],
     song: 'Edward Meeker ─ Take Me Out To The Ball Game',
-  },
-  {
-    lyrics: [
-      'This Is Kanye West Lyrics1. Kanye West- Praise God',
-      '2. JAY-Z & Kanye West- Ni**as In Paris',
-      '3. Kanye West- Stronger',
-      '4. The Game & Kanye West - Eazy',
-      '5. Kanye West- Heartless',
-      '6. Kanye West- Hurricane',
-    ],
-    song: 'Estelle ─ American Boy (feat. Kanye West)',
   },
   {
     lyrics: [
@@ -333,10 +322,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "In his dad's closet with a box of fun things",
     ],
     song: 'Foster The People ─ Pumped Up Kicks',
-  },
-  {
-    lyrics: ['None'],
-    song: 'Glenn Miller Orchestra ─ In The Mood',
   },
   {
     lyrics: [
@@ -405,10 +390,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     song: 'John Mayer ─ Slow Dancing in a Burning Room',
   },
   {
-    lyrics: ['None'],
-    song: 'John Philip Sousa ─ The Stars and Stripes Forever',
-  },
-  {
     lyrics: [
       'I hurt myself today',
       'To see if I still feel',
@@ -432,7 +413,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Hayley Kiyoko: My Pride Playlist LyricsHayley Kiyoko - What I Need (feat. Kehlani)',
+      'Hayley Kiyoko - What I Need (feat. Kehlani)',
       "Hayley Kiyoko - He'll Never Love You (HNLY)",
       'Camila Cabello - She Loves Control',
       'Demi Lovato - Heart Attack',
@@ -542,7 +523,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      "Men Of Soul Playlist LyricsJames Brown - It's A Man's, Man's, Man's World",
+      "James Brown - It's A Man's, Man's, Man's World",
       "David Ruffin - Everything's Coming Up Love",
       "Ray Charles - I've Got A Woman",
       'Billy Stewart - I Do Love You',
@@ -695,10 +676,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     song: 'Sara Bareilles ─ Love Song',
   },
   {
-    lyrics: ['None'],
-    song: 'Scott Joplin ─ The Entertainer',
-  },
-  {
     lyrics: [
       'Shake dat ting, miss Cana, Cana',
       'Shake dat ting, miss Annabella',
@@ -732,10 +709,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     song: 'Taio Cruz ─ Dynamite',
   },
   {
-    lyrics: ['None'],
-    song: 'The Andrews Sisters ─ Boogie Woogie Bugle Boy - Single Version',
-  },
-  {
     lyrics: [
       "Boys call you sexy (What's up, sexy?)",
       "And you don't care what they say (Ha, ha)",
@@ -748,7 +721,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'You’ve Lost That Lovin’ Feelin’ (single version) LyricsYou never close your eyes anymore when I kiss your lips',
+      'You never close your eyes anymore when I kiss your lips',
       "And there's no tenderness like before in your fingertips",
       "You're trying hard not to show it, (baby)",
       'But baby, baby I know it',
