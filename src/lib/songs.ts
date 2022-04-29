@@ -22,6 +22,4 @@ export const getSongOfTheDay = () => {
   }
 }
 
-
 export const { solution, solutionIndex, tomorrow } = getSongOfTheDay()
-
