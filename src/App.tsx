@@ -188,16 +188,16 @@ function App() {
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode])
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, song: solution.song })
-  }, [guesses])
-
-  useEffect(() => {
     if (!loadGameStateFromLocalStorage()) {
       setTimeout(() => {
         setIsInfoModalOpen(true)
       }, WELCOME_INFO_MODAL_MS)
     }
   }, [])
+  
+  useEffect(() => {
+    saveGameStateToLocalStorage({ guesses, song: solution.song })
+  }, [guesses])
 
   useEffect(() => {
     if (isGameWon) {
