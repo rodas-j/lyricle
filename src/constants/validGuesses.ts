@@ -105,28 +105,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      "I'm dreaming of a white Christmas",
-      'Just like the ones I used to know',
-      'Where the tree-tops glisten and children listen',
-      'To hear sleigh bells in the snow',
-      "I'm dreaming of a white Christmas",
-      'With every Christmas card I write',
-    ],
-    song: 'Bing Crosby ─ White Christmas',
-  },
-  {
-    lyrics: [
-      'I got a feeling',
-      "That tonight's gonna be a good night",
-      "That tonight's gonna be a good night",
-      "That tonight's gonna be a good, good night",
-      'A feeling',
-      "That tonight's gonna be a good night",
-    ],
-    song: 'Black Eyed Peas ─ I Gotta Feeling',
-  },
-  {
-    lyrics: [
       "I'll seek you out",
       'Flay you alive',
       "One more word and you won't survive",
