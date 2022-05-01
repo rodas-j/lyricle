@@ -92,16 +92,27 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Beyoncé ─ If I Were a Boy',
   },
-  {
+    {
     lyrics: [
-      'Sister Rosetta Tharpe - Strange Things Happening Every Day',
-      'Chuck Berry - Johnny B. Goode',
-      'Little Richard - Tutti Frutti',
-      'Elvis Presley - Blue Suede Shoes',
-      'Sister Rosetta Tharpe - Rock Daniel',
-      'Johnny Cash - Ring of Fire',
+      "Baby, can't you see I'm calling?",
+      'A guy like you should wear a warning',
+      "It's dangerous, I'm falling",
+      "There's no escape, I can't wait",
+      'I need a hit, baby, give me it',
+      "You're dangerous, I'm lovin' it",
     ],
-    song: "Bill Haley & His Comets ─ (We're Gonna) Rock Around The Clock - Single Version",
+    song: 'Britney Spears ─ Toxic',
+  },
+    {
+    lyrics: [
+      'I threw a wish in the well',
+      "Don't ask me, I'll never tell",
+      'I looked to you as it fell',
+      "And now you're in my way",
+      'I trade my soul for a wish',
+      'Pennies and dimes for a kiss',
+    ],
+    song: 'Carly Rae Jepsen ─ Call Me Maybe',
   },
   {
     lyrics: [
@@ -124,39 +135,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Scarlet billows start to spread',
     ],
     song: 'Bobby Darin ─ Mack the Knife',
-  },
-  {
-    lyrics: [
-      "Baby, can't you see I'm calling?",
-      'A guy like you should wear a warning',
-      "It's dangerous, I'm falling",
-      "There's no escape, I can't wait",
-      'I need a hit, baby, give me it',
-      "You're dangerous, I'm lovin' it",
-    ],
-    song: 'Britney Spears ─ Toxic',
-  },
-  {
-    lyrics: [
-      'Oh, oh-oh-oh',
-      'Oh-oh-oh-oh',
-      'Oh-oh-oh',
-      'Oh, her eyes, her eyes',
-      "Make the stars look like they're not shinin'",
-      'Her hair, her hair',
-    ],
-    song: 'Bruno Mars ─ Just The Way You Are',
-  },
-  {
-    lyrics: [
-      'I threw a wish in the well',
-      "Don't ask me, I'll never tell",
-      'I looked to you as it fell',
-      "And now you're in my way",
-      'I trade my soul for a wish',
-      'Pennies and dimes for a kiss',
-    ],
-    song: 'Carly Rae Jepsen ─ Call Me Maybe',
   },
   {
     lyrics: [
