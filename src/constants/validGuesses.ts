@@ -369,17 +369,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Hayley Kiyoko - What I Need (feat. Kehlani)',
-      "Hayley Kiyoko - He'll Never Love You (HNLY)",
-      'Camila Cabello - She Loves Control',
-      'Demi Lovato - Heart Attack',
-      'Charlie Puth - Done For Me (feat. Kehlani)',
-      'Calvin Harris & Dua Lipa - One Kiss',
-    ],
-    song: 'Justin Timberlake ─ SexyBack (feat. Timbaland)',
-  },
-  {
-    lyrics: [
       '"While the storm clouds gather far across the sea',
       "Let us swear allegiance to a land that's free",
       'Let us all be grateful for a land so fair',
@@ -586,17 +575,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'And they burn from all the tears',
     ],
     song: 'P!nk ─ Blow Me (One Last Kiss)',
-  },
-  {
-    lyrics: [
-      "It's like you're screaming, and no one can hear",
-      'You almost feel ashamed, that someone could be that important',
-      'That without them, you feel like nothing',
-      'No one will ever understand how much it hurts',
-      'You feel hopeless, like nothing can save you',
-      "And when it's over and it's gone",
-    ],
-    song: 'Rihanna ─ We Found Love',
   },
   {
     lyrics: [
