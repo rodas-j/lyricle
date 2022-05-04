@@ -92,7 +92,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Beyoncé ─ If I Were a Boy',
   },
-    {
+  {
     lyrics: [
       "Baby, can't you see I'm calling?",
       'A guy like you should wear a warning',
@@ -103,7 +103,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Britney Spears ─ Toxic',
   },
-    {
+  {
     lyrics: [
       'I threw a wish in the well',
       "Don't ask me, I'll never tell",
