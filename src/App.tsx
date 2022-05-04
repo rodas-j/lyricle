@@ -88,7 +88,9 @@ function App() {
     return loaded.guesses
   })
 
-  const [sliceLyrics, setSliceLyrics] = useState(1)
+  const [sliceLyrics, setSliceLyrics] = useState(
+    guesses.length ? guesses.length + 1 : 1
+  )
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
@@ -192,7 +194,7 @@ function App() {
   useEffect(() => {
     if (!loadGameStateFromLocalStorage()) {
       setTimeout(() => {
-        setIsInfoModalOpen(true)
+        setIsHowToPlayModalOpen(true)
       }, WELCOME_INFO_MODAL_MS)
     }
   }, [])
