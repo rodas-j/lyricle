@@ -51,10 +51,6 @@ svg.cursor-pointer:hover {
   width: 100%;
 }
 
-.right-icons {
-  display: flex;
-}
-
 .lyrics-input,
 .lyrics-input:hover {
   appearance: none;
@@ -116,4 +112,8 @@ svg.cursor-pointer:hover {
   to {
     transform: rotateX(0deg);
   }
+}
+
+.demo .tooltip {
+  visibility: visible;
 }

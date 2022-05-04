@@ -7,6 +7,7 @@ import { ProgressBar } from './components/progressbar/ProgressBar'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { HowToPlayModal } from './components/modals/HowToPlayModal'
 import {
   WIN_MESSAGES,
   CORRECT_SONG_MESSAGE,
@@ -91,6 +92,7 @@ function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
+  const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false)
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -194,7 +196,7 @@ function App() {
       }, WELCOME_INFO_MODAL_MS)
     }
   }, [])
-  
+
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, song: solution.song })
   }, [guesses])
@@ -226,6 +228,7 @@ function App() {
     <div className="absolute inset-0 flex flex-col">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
+        setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
@@ -244,6 +247,10 @@ function App() {
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
+        />
+        <HowToPlayModal
+          isOpen={isHowToPlayModalOpen}
+          handleClose={() => setIsHowToPlayModalOpen(false)}
         />
         <SettingsModal
           isOpen={isSettingsModalOpen}
