@@ -137,6 +137,28 @@ export const VALID_GUESSES: Array<LyricsField> = [
     song: 'Bobby Darin ─ Mack the Knife',
   },
   {
+  lyrics: [
+    'The sun goes down, the stars come out',
+    'And all that counts is here and now',
+    'My universe will never be the same',
+    "I'm glad you came (Came, came, came)",
+    'You cast a spell on me, spell on me',
+    'You hit me like the sky fell on me, fell on me',
+  ],
+  song: 'The Wanted ─ Glad You Came',
+},
+  {
+  lyrics: [
+    'Well you done done me in; you bet I felt it',
+    "I tried to be chill but you're so hot that I melted",
+    'I fell right through the cracks',
+    "Now I'm trying to get back",
+    'Before the cool done run out',
+    "I'll be giving it my bestest",
+  ],
+  song: "Jason Mraz ─ I'm Yours",
+},
+  {
     lyrics: [
       "Right now, he's probably slow dancing",
       'With a bleached-blonde tramp',
@@ -300,17 +322,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'When you get down, they doubt ya',
     ],
     song: 'Janelle Monáe ─ Tightrope',
-  },
-  {
-    lyrics: [
-      'Well you done done me in; you bet I felt it',
-      "I tried to be chill but you're so hot that I melted",
-      'I fell right through the cracks',
-      "Now I'm trying to get back",
-      'Before the cool done run out',
-      "I'll be giving it my bestest",
-    ],
-    song: "Jason Mraz ─ I'm Yours",
   },
   {
     lyrics: [
@@ -663,17 +674,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Whoa, that lovin' feelin'",
     ],
     song: "The Righteous Brothers ─ You've Lost That Lovin' Feelin' - Single Version",
-  },
-  {
-    lyrics: [
-      'The sun goes down, the stars come out',
-      'And all that counts is here and now',
-      'My universe will never be the same',
-      "I'm glad you came (Came, came, came)",
-      'You cast a spell on me, spell on me',
-      'You hit me like the sky fell on me, fell on me',
-    ],
-    song: 'The Wanted ─ Glad You Came',
   },
   {
     lyrics: [
