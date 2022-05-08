@@ -30,7 +30,7 @@ export const ToolTip = ({ guess }) => {
   if (!guess) return <></>
 
   return (
-    <div className="tooltip absolute right-[50%] translate-x-1/2 w-max mb-3 bottom-full p-2 rounded-md invisible group-hover:visible bg-slate-200 text-gray-800 dark:bg-gray-600 dark:text-gray-100">
+    <div className="tooltip absolute right-[50%] translate-x-1/2 w-max mb-3 bottom-full p-2 rounded-md invisible group-hover:visible text-sm md:text-md bg-slate-200 text-gray-800 dark:bg-gray-600 dark:text-gray-100">
       {guess}
     </div>
   )

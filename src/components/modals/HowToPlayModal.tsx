@@ -22,8 +22,8 @@ export const HowToPlayModal = ({ isOpen, handleClose }: Props) => {
       <div className="wrapper flex justify-between items-center mb-6">
         <Two className="w-8 h-8 stroke-gray-400 mr-3" />
         <p className="w-[45ch] text-justify text-sm dark:text-gray-200">
-          Click the small boxes on top of the search bar to see your previous
-          attempts.
+          Each guess will reaveal more lines. Click the small boxes on top of
+          the search bar to see your previous attempts.
         </p>
       </div>
       <div className="flex w-1/2 mx-auto mt-16 mb-6 space-x-1">

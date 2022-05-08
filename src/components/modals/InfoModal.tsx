@@ -1,5 +1,7 @@
 import { BaseModal } from './BaseModal'
 
+import { HeartIcon } from '@heroicons/react/solid'
+
 import { ReactComponent as Twitter } from '../../assets/twitter.svg'
 import { ReactComponent as Instagram } from '../../assets/instagram.svg'
 
@@ -46,19 +48,36 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         to create Lyricle.
       </p>
 
-      <p className="text-sm dark:text-gray-200 mb-6">Hope you enjoy!</p>
+      <p className="flex justify-center text-sm dark:text-gray-200 mb-6">
+        <span>We hope you</span>
+        <HeartIcon className="w-6 h-6 fill-red-500 mx-1" />
+        <span>it!</span>
+      </p>
 
-      <div className="flex justify-center">
-        <div className="icon flex mr-3">
+      <div className="flex justify-center ">
+        <div className="icon flex items-center mr-3">
           <a href="https://twitter.com/lyricle_app">
-            <Twitter className="w-6 h-6 mx-1 grayscale hover:grayscale-0" />
+            <Twitter className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100" />
           </a>
           <a href="https://www.instagram.com/lyricle_app/">
-            <Instagram className="w-6 h-6 mx-1 grayscale hover:grayscale-0" />
+            <Instagram className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100" />
           </a>
         </div>
         <p className="dark:text-gray-200">@lyricle_app</p>
       </div>
+
+      <p className="text-sm text-gray-600 dark:text-gray-400 mt-6">
+        Lyricle was built on top of an open-source project on github, check it
+        out at&nbsp;
+        <a
+          className="underline text-gray-800 dark:text-gray-300"
+          href="https://github.com/cwackerfuss/react-wordle"
+          target="_blank"
+          rel="noreferrer"
+        >
+          react-wordle.
+        </a>
+      </p>
     </BaseModal>
   )
 }
