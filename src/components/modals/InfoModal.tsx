@@ -49,7 +49,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <p className="flex justify-center text-sm dark:text-gray-200 mb-6">
-        <span>He hope you</span>
+        <span>We hope you</span>
         <HeartIcon className="w-6 h-6 fill-red-500 mx-1" />
         <span>it!</span>
       </p>
