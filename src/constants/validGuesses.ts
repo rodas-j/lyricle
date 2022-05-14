@@ -214,16 +214,27 @@ export const VALID_GUESSES: Array<LyricsField> = [
     song: 'Lady Gaga ─ Born This Way',
   },
   {
-    lyrics: [
-      "Closed off from love, I didn't need the pain",
-      'Once or twice was enough and it was all in vain',
-      "Time starts to pass, before you know it you're frozen",
-      "But somethin' happened for the very first time with you",
-      "My heart melted to the ground, found somethin' true",
-      "And everyone's lookin' 'round thinkin' I'm goin' crazy",
-    ],
-    song: 'Leona Lewis ─ Bleeding Love',
-  },
+  lyrics: [
+    'I need to get my story straight',
+    'My friends are in the bathroom',
+    'Getting higher than the empire state',
+    'My lover she is waiting for me',
+    'Just across the bar',
+    "My seat's been taken by some sunglasses",
+  ],
+  song: 'fun. ─ We Are Young (feat. Janelle Monáe)',
+},
+  {
+  lyrics: [
+    'Here we go again',
+    'I kinda wanna be more than friends',
+    'So take it easy on me',
+    "I'm afraid you're never satisfied",
+    'Here we go again',
+    "We're sick like animals, we play pretend",
+  ],
+  song: 'Neon Trees ─ Animal',
+},
   {
     lyrics: [
       'Well, sometimes, I go out by myself',
@@ -234,6 +245,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Well, my body's been a mess",
     ],
     song: 'Mark Ronson ─ Valerie (feat. Amy Winehouse) - Version Revisited',
+  },
+  {
+    lyrics: [
+      "Closed off from love, I didn't need the pain",
+      'Once or twice was enough and it was all in vain',
+      "Time starts to pass, before you know it you're frozen",
+      "But somethin' happened for the very first time with you",
+      "My heart melted to the ground, found somethin' true",
+      "And everyone's lookin' 'round thinkin' I'm goin' crazy",
+    ],
+    song: 'Leona Lewis ─ Bleeding Love',
   },
   {
     lyrics: [
@@ -311,17 +333,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Though my love is true',
     ],
     song: "Nelly Furtado ─ I'm Like A Bird",
-  },
-  {
-    lyrics: [
-      'Here we go again',
-      'I kinda wanna be more than friends',
-      'So take it easy on me',
-      "I'm afraid you're never satisfied",
-      'Here we go again',
-      "We're sick like animals, we play pretend",
-    ],
-    song: 'Neon Trees ─ Animal',
   },
   {
     lyrics: [
@@ -499,18 +510,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Yolanda Be Cool ─ We No Speak Americano',
   },
-  {
-    lyrics: [
-      'I need to get my story straight',
-      'My friends are in the bathroom',
-      'Getting higher than the empire state',
-      'My lover she is waiting for me',
-      'Just across the bar',
-      "My seat's been taken by some sunglasses",
-    ],
-    song: 'fun. ─ We Are Young (feat. Janelle Monáe)',
-  },
-  
   {
     lyrics: [
       "Young girl, don't cry",
