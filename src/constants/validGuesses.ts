@@ -257,6 +257,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Leona Lewis ─ Bleeding Love',
   },
+  {
+    lyrics: [
+      'I came to dance, dance, dance, dance (Yeah)',
+      "I hit the floor 'cause that's my plans, plans, plans, plans (Yeah)",
+      "I'm wearing all my favorite brands, brands, brands, brands (Yeah)",
+      'Give me some space for both my hands, hands, hands, hands, yeah, yeah',
+      "'Cause it goes on and on and on",
+      'And it goes on and on and on, yeah',
+    ],
+    song: 'Taio Cruz ─ Dynamite',
+  },
     {
     lyrics: [
       'Ladies up in here tonight',
@@ -311,17 +322,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'We gonna rough it up before we take it slow',
     ],
     song: 'Mohombi ─ Bumpy Ride',
-  },
-  {
-    lyrics: [
-      'I came to dance, dance, dance, dance (Yeah)',
-      "I hit the floor 'cause that's my plans, plans, plans, plans (Yeah)",
-      "I'm wearing all my favorite brands, brands, brands, brands (Yeah)",
-      'Give me some space for both my hands, hands, hands, hands, yeah, yeah',
-      "'Cause it goes on and on and on",
-      'And it goes on and on and on, yeah',
-    ],
-    song: 'Taio Cruz ─ Dynamite',
   },
   {
     lyrics: [
