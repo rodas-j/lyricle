@@ -259,6 +259,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
     {
     lyrics: [
+      'Ladies up in here tonight',
+      'No fighting (We got the refugees up in here)',
+      'No fighting',
+      'No fighting',
+      'Shakira, Shakira',
+      'I never really knew that she could dance like this (Hey)',
+    ],
+    song: "Shakira ─ Hips Don't Lie (feat. Wyclef Jean)",
+  },
+    {
+    lyrics: [
       "Robert's got a quick hand",
       "He'll look around the room, he won't tell you his plan",
       "He's got a rolled cigarette",
@@ -300,17 +311,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'We gonna rough it up before we take it slow',
     ],
     song: 'Mohombi ─ Bumpy Ride',
-  },
-  {
-    lyrics: [
-      'Ladies up in here tonight',
-      'No fighting (We got the refugees up in here)',
-      'No fighting',
-      'No fighting',
-      'Shakira, Shakira',
-      'I never really knew that she could dance like this (Hey)',
-    ],
-    song: "Shakira ─ Hips Don't Lie (feat. Wyclef Jean)",
   },
   {
     lyrics: [
