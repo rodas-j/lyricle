@@ -257,6 +257,72 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: 'Leona Lewis ─ Bleeding Love',
   },
+    {
+    lyrics: [
+      "Robert's got a quick hand",
+      "He'll look around the room, he won't tell you his plan",
+      "He's got a rolled cigarette",
+      "Hanging out his mouth, he's a cowboy kid",
+      'Yeah, he found a six-shooter gun',
+      "In his dad's closet with a box of fun things",
+    ],
+    song: 'Foster The People ─ Pumped Up Kicks',
+  },
+  {
+    lyrics: [
+      'Head underwater and they tell me',
+      'To breathe easy for a while',
+      'The breathing gets harder, even I know that',
+      "Made room for me but it's too soon to see",
+      "If I'm happy in your hands",
+      "I'm unusually hard to hold onto",
+    ],
+    song: 'Sara Bareilles ─ Love Song',
+  },
+  {
+    lyrics: [
+      'I hopped off the plane at LAX',
+      'With a dream and my cardigan',
+      'Welcome to the land of fame excess (Woah)',
+      'Am I gonna fit in?',
+      'Jumped in the cab, here I am for the first time',
+      'Look to my right, and I see the Hollywood sign',
+    ],
+    song: 'Miley Cyrus ─ Party In The U.S.A.',
+  },
+  {
+    lyrics: [
+      'I wanna boom bang bang with your body-o',
+      'We gonna rough it up before we take it slow',
+      'Girl, let me rock you rock you like a rodeo',
+      '(it’s gonna be a bumpy ride)',
+      'I wanna boom bang bang with your body-o',
+      'We gonna rough it up before we take it slow',
+    ],
+    song: 'Mohombi ─ Bumpy Ride',
+  },
+  {
+    lyrics: [
+      'Ladies up in here tonight',
+      'No fighting (We got the refugees up in here)',
+      'No fighting',
+      'No fighting',
+      'Shakira, Shakira',
+      'I never really knew that she could dance like this (Hey)',
+    ],
+    song: "Shakira ─ Hips Don't Lie (feat. Wyclef Jean)",
+  },
+  {
+    lyrics: [
+      'I came to dance, dance, dance, dance (Yeah)',
+      "I hit the floor 'cause that's my plans, plans, plans, plans (Yeah)",
+      "I'm wearing all my favorite brands, brands, brands, brands (Yeah)",
+      'Give me some space for both my hands, hands, hands, hands, yeah, yeah',
+      "'Cause it goes on and on and on",
+      'And it goes on and on and on, yeah',
+    ],
+    song: 'Taio Cruz ─ Dynamite',
+  },
   {
     lyrics: [
       'Wake up, blood-shot eye',
@@ -289,28 +355,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'And I was thinking of ways that I could get inside (Get inside)',
     ],
     song: 'Metro Station ─ Shake It',
-  },
-  {
-    lyrics: [
-      'I hopped off the plane at LAX',
-      'With a dream and my cardigan',
-      'Welcome to the land of fame excess (Woah)',
-      'Am I gonna fit in?',
-      'Jumped in the cab, here I am for the first time',
-      'Look to my right, and I see the Hollywood sign',
-    ],
-    song: 'Miley Cyrus ─ Party In The U.S.A.',
-  },
-  {
-    lyrics: [
-      'I wanna boom bang bang with your body-o',
-      'We gonna rough it up before we take it slow',
-      'Girl, let me rock you rock you like a rodeo',
-      '(it’s gonna be a bumpy ride)',
-      'I wanna boom bang bang with your body-o',
-      'We gonna rough it up before we take it slow',
-    ],
-    song: 'Mohombi ─ Bumpy Ride',
   },
   {
     lyrics: [
@@ -391,17 +435,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Head underwater and they tell me',
-      'To breathe easy for a while',
-      'The breathing gets harder, even I know that',
-      "Made room for me but it's too soon to see",
-      "If I'm happy in your hands",
-      "I'm unusually hard to hold onto",
-    ],
-    song: 'Sara Bareilles ─ Love Song',
-  },
-  {
-    lyrics: [
       'Shake dat ting, miss Cana, Cana',
       'Shake dat ting, miss Annabella',
       'Shake dat ting, yo, Donna Donna',
@@ -410,28 +443,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "When di beat drop, jus keep swingin' it",
     ],
     song: 'Sean Paul ─ Get Busy',
-  },
-  {
-    lyrics: [
-      'Ladies up in here tonight',
-      'No fighting (We got the refugees up in here)',
-      'No fighting',
-      'No fighting',
-      'Shakira, Shakira',
-      'I never really knew that she could dance like this (Hey)',
-    ],
-    song: "Shakira ─ Hips Don't Lie (feat. Wyclef Jean)",
-  },
-  {
-    lyrics: [
-      'I came to dance, dance, dance, dance (Yeah)',
-      "I hit the floor 'cause that's my plans, plans, plans, plans (Yeah)",
-      "I'm wearing all my favorite brands, brands, brands, brands (Yeah)",
-      'Give me some space for both my hands, hands, hands, hands, yeah, yeah',
-      "'Cause it goes on and on and on",
-      'And it goes on and on and on, yeah',
-    ],
-    song: 'Taio Cruz ─ Dynamite',
   },
   {
     lyrics: [
@@ -630,17 +641,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'And washed it away down the kitchen sink',
     ],
     song: 'Florence + The Machine ─ Dog Days Are Over',
-  },
-  {
-    lyrics: [
-      "Robert's got a quick hand",
-      "He'll look around the room, he won't tell you his plan",
-      "He's got a rolled cigarette",
-      "Hanging out his mouth, he's a cowboy kid",
-      'Yeah, he found a six-shooter gun',
-      "In his dad's closet with a box of fun things",
-    ],
-    song: 'Foster The People ─ Pumped Up Kicks',
   },
   {
     lyrics: [
