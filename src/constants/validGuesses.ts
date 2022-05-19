@@ -279,17 +279,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     ],
     song: "Shakira ─ Hips Don't Lie (feat. Wyclef Jean)",
   },
-    {
-    lyrics: [
-      "Robert's got a quick hand",
-      "He'll look around the room, he won't tell you his plan",
-      "He's got a rolled cigarette",
-      "Hanging out his mouth, he's a cowboy kid",
-      'Yeah, he found a six-shooter gun',
-      "In his dad's closet with a box of fun things",
-    ],
-    song: 'Foster The People ─ Pumped Up Kicks',
-  },
   {
     lyrics: [
       'Head underwater and they tell me',
@@ -377,6 +366,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Though my love is true',
     ],
     song: "Nelly Furtado ─ I'm Like A Bird",
+  },
+    {
+    lyrics: [
+      "Robert's got a quick hand",
+      "He'll look around the room, he won't tell you his plan",
+      "He's got a rolled cigarette",
+      "Hanging out his mouth, he's a cowboy kid",
+      'Yeah, he found a six-shooter gun',
+      "In his dad's closet with a box of fun things",
+    ],
+    song: 'Foster The People ─ Pumped Up Kicks',
   },
   {
     lyrics: [
