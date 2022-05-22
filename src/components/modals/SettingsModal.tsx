@@ -1,5 +1,6 @@
 import { BaseModal } from './BaseModal'
 import { SettingsToggle } from './SettingsToggle'
+import { SettingsEntry } from './SettingsEntry'
 import {
   // HARD_MODE_DESCRIPTION,
   HIGH_CONTRAST_MODE_DESCRIPTION,
@@ -46,6 +47,10 @@ export const SettingsModal = ({
           flag={isReducedMotionMode}
           handleFlag={handleReducedMotionMode}
           description={REDUCED_MOTION_MODE_DESCRIPTION}
+        />
+        <SettingsEntry
+          settingName="Feedback"
+          description="Send us a feedback through our email!"
         />
       </div>
     </BaseModal>
