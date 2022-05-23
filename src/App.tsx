@@ -134,6 +134,14 @@ function App() {
 
     setGuesses([...guesses, e.target.search.value])
 
+    if (isWinningSong(e.target.search.value)) {
+      setStats(addStatsForCompletedGame(stats, guesses.length))
+      setIsGameWon(true)
+      return
+    } else {
+      revealNextLine()
+      e.target.search.value = ''
+    }
     if (guesses.length === MAX_CHALLENGES - 1) {
       setIsGameLost(true)
 
@@ -142,14 +150,6 @@ function App() {
       })
 
       return
-    }
-
-    if (isWinningSong(e.target.search.value)) {
-      setStats(addStatsForCompletedGame(stats, guesses.length))
-      setIsGameWon(true)
-    } else {
-      revealNextLine()
-      e.target.search.value = ''
     }
   }
 

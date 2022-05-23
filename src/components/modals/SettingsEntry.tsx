@@ -15,10 +15,10 @@ export const SettingsEntry = ({ settingName, description }: Props) => {
             </p>
           )}
         </div>
-        <div className="flex justify-end mt-3">
+        <div className="flex  mt-3">
           <a
             href="mailto:lyricleadmineth@gmail.com"
-            className="md:text-l text-gray-100 underline underline-offset-1"
+            className="md:text-l text-gray-100 underline underline-offset-1 ring-transparent ring-0"
           >
             Email
           </a>
