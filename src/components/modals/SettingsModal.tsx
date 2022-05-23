@@ -50,7 +50,7 @@ export const SettingsModal = ({
         />
         <SettingsEntry
           settingName="Feedback"
-          description="Send us a feedback through our email!"
+          description="Send us feedback through our email!"
         />
       </div>
     </BaseModal>

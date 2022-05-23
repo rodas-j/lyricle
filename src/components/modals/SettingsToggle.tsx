@@ -20,7 +20,7 @@ export const SettingsToggle = ({
     }
   )
   const toggleButton = classnames(
-    'bg-white w-6 h-6 rounded-full shadow-md transform duration-300 ease-in-out cursor-pointer',
+    'bg-white w-6 h-6 rounded-full shadow-md transform duration-300 ease-in-out cursor-default md:cursor-pointer',
     {
       'translate-x-6': flag,
     }

@@ -1,3 +1,5 @@
+import { MailIcon } from '@heroicons/react/solid'
+
 type Props = {
   settingName: string
   description?: string
@@ -15,12 +17,12 @@ export const SettingsEntry = ({ settingName, description }: Props) => {
             </p>
           )}
         </div>
-        <div className="flex  mt-3">
+        <div className="flex mt-3">
           <a
             href="mailto:lyricleadmineth@gmail.com"
-            className="md:text-l text-gray-100 underline underline-offset-1 ring-transparent ring-0"
+            className="rounded-full p-1 bg-gray-300 dark:bg-gray-700 text-white focus-visible:outline-none"
           >
-            Email
+            <MailIcon className="h-8 w-8" />
           </a>
         </div>
       </div>
