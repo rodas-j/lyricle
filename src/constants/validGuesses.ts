@@ -567,6 +567,83 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
+      "You could never know what it's like",
+      'Your blood, like winter, freezes just like ice',
+      "And there's a cold, lonely light that shines from you",
+      "You'll wind up like the wreck you hide behind that mask you use",
+      'And did you think this fool could never win?',
+      "Well look at me, I'm a-coming back again",
+    ],
+    song: "Elton John ─ I'm Still Standing",
+  },
+  {
+    lyrics: [
+      'Load up on guns, bring your friends',
+      "It's fun to lose and to pretend",
+      "She's over-bored and self-assured",
+      'Oh no, I know a dirty word',
+      'Hello, hello, hello, how low',
+      'Hello, hello, hello, how low',
+    ],
+    song: 'Nirvana ─ Smells Like Teen Spirit',
+  },
+  {
+    lyrics: [
+      'Now and then I think of when we were together',
+      'Like when you said you felt so happy you could die',
+      'I told myself that you were right for me',
+      'But felt so lonely in your company',
+      "But that was love, and it's an ache I still remember",
+      'You can get addicted to a certain kind of sadness',
+    ],
+    song: 'Gotye ─ Somebody That I Used To Know',
+  },
+  {
+    lyrics: [
+      "Get your motor runnin'",
+      'Head out on the highway',
+      'Looking for adventure',
+      'In whatever comes our way',
+      "Yeah, darlin', go and make it happen",
+      'Take the world in a love embrace',
+    ],
+    song: 'Steppenwolf ─ Born To Be Wild',
+  },
+  {
+    lyrics: [
+      'Once upon a time you dressed so fine',
+      "Threw the bums a dime in your prime, didn't you?",
+      'People call, say "Beware doll, you\'re bound to fall"',
+      "You thought they were all a-kiddin' you",
+      'You used to laugh about',
+      "Everybody that was hangin' out",
+    ],
+    song: 'Bob Dylan ─ Like a Rolling Stone',
+  },
+  {
+    lyrics: [
+      'Traveling in a fried-out Kombi',
+      'On a hippie trail, head full of zombie',
+      'I met a strange lady, she made me nervous',
+      'She took me in and gave me breakfast',
+      'And she said',
+      'Do you come from a land down under?',
+    ],
+    song: 'Men At Work ─ Down Under',
+  },
+  {
+    lyrics: [
+      "I call you when I need you, my heart's on fire",
+      'You come to me, come to me, wild and wired',
+      'Ooh, you come to me, give me everything I need',
+      'Give me a lifetime of promises and a world of dreams',
+      'Speak the language of love like you know what it means',
+      "Mm, and it can't be wrong",
+    ],
+    song: 'Tina Turner ─ The Best',
+  },
+  {
+    lyrics: [
       "What I want, you've got",
       'And it might be hard to handle',
       'But like a flame that burns the candle',
@@ -578,14 +655,91 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      "But I can't hear a word you say",
-      "I'm talking loud not saying much",
-      "I'm criticized but all your bullets ricochet",
-      'You shoot me down, but I get up',
-      "I'm bulletproof, nothing to lose",
-      'Fire away, fire away',
+      'I follow the Moskva',
+      'Down to Gorky Park',
+      'Listening to the wind of change',
+      'An August summer night',
+      'Soldiers passing by',
+      'Listening to the wind of change',
     ],
-    song: 'David Guetta ─ Titanium (feat. Sia)',
+    song: 'Scorpions ─ Wind Of Change',
+  },
+  {
+    lyrics: [
+      "I've been cheated by you since I don't know when",
+      'So I made up my mind: it must come to an end',
+      'Look at me now, will I ever learn?',
+      "I don't know how, but I suddenly lose control",
+      "There's a fire within my soul",
+      'Just one look and I can hear a bell ring',
+    ],
+    song: 'ABBA ─ Mamma Mia',
+  },
+  {
+    lyrics: [
+      'Another lonely day, no one here but me-o',
+      'More loneliness than any man could bear',
+      'Rescue me before I fall into despair-o',
+      "I'll send an S.O.S. to the world",
+      "I'll send an S.O.S. to the world",
+      'I hope that someone gets my',
+    ],
+    song: 'The Police ─ Message In A Bottle - Remastered 2003',
+  },
+  {
+    lyrics: [
+      'Let me introduce you to my party people in the club (Hey)',
+      'Dale',
+      'If you go hard, you gotta get on the floor (Hey)',
+      "If you're a party freak, then step on the floor",
+      "If you're an animal, then tear up the floor",
+      'Break a sweat on the floor, yeah, we work on the floor',
+    ],
+    song: 'Jennifer Lopez ─ On The Floor - Radio Edit',
+  },
+  {
+    lyrics: [
+      'Truth!',
+      'RedOne',
+      'Konvict',
+      'Gaga (Oh-oh, eh)',
+      "I've had a little bit too much, much (Oh, oh, oh-oh)",
+      'All of the people start to rush (Start to rush by)',
+    ],
+    song: 'Lady Gaga ─ Just Dance',
+  },
+  {
+    lyrics: [
+      "There was a time I used to look into my father's eyes",
+      'In a happy home, I was a king, I had a golden throne',
+      'Those days are gone, now the memories on the wall',
+      'I hear the songs from the places where I was born',
+      'Up on the hill across the blue lake',
+      "That's where I had my first heartbreak",
+    ],
+    song: "Swedish House Mafia ─ Don't You Worry Child - Radio Edit",
+  },
+  {
+    lyrics: [
+      'She shot me, she shot me',
+      'Bang, bang - she shot me',
+      'Ahh, there she goes again, the dopest Ethiopian',
+      'In other words, she came through explodin in the podium',
+      'Dynamite Napoleon like sodium mixed with petroleum',
+      'Slowly but surely, she was walking toward me',
+    ],
+    song: "K'NAAN ─ Bang Bang",
+  },
+  {
+    lyrics: [
+      'Do you ever feel like a plastic bag',
+      'Drifting through the wind, wanting to start again?',
+      'Do you ever feel, feel so paper-thin',
+      "Like a house of cards, one blow from cavin' in?",
+      'Do you ever feel already buried deep?',
+      'Six feet under screams, but no one seems to hear a thing',
+    ],
+    song: 'Katy Perry ─ Firework',
   },
   {
     lyrics: [
@@ -949,6 +1103,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Deeper than the eyes can find it',
     ],
     song: 'Alessia Cara ─ Scars To Your Beautiful',
+  },
+  {
+    lyrics: [
+      'Woke up in London yesterday',
+      'Found myself in the city near Piccadilly',
+      "Don't really know how I got here",
+      'I got some pictures on my phone',
+      "New names and numbers that I don't know",
+      'Address to places like Abbey Road',
+    ],
+    song: 'OneRepublic ─ Good Life',
   },
   {
     lyrics: [
@@ -3636,17 +3801,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Now and then I think of when we were together',
-      'Like when you said you felt so happy you could die',
-      'I told myself that you were right for me',
-      'But felt so lonely in your company',
-      "But that was love, and it's an ache I still remember",
-      'You can get addicted to a certain kind of sadness',
-    ],
-    song: 'Gotye ─ Somebody That I Used To Know',
-  },
-  {
-    lyrics: [
       "I heard you told your friends that I'm just not your type",
       "If that's how you really feel, then why'd you call last night?",
       'You say all I ever do is just control your life',
@@ -5613,6 +5767,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Maybe you left your mark, reminding me to forget',
     ],
     song: 'Kygo ─ Remind Me to Forget',
+  },
+  {
+    lyrics: [
+      '(Radio)',
+      '(Radio)',
+      "I'd sit alone and watch your light",
+      'My only friend through teenage nights',
+      'And everything I had to know',
+      'I heard it on my radio',
+    ],
+    song: 'Queen ─ Radio Ga Ga - Remastered 2011',
   },
   {
     lyrics: [
@@ -7915,6 +8080,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
+      "Hot sun beatin' down",
+      "Burnin' my feet just walkin' around",
+      "Hot sun makin' me sweat",
+      "Gator's gettin' close, hasn't got me yet",
+      "I can't dance, I can't talk",
+      'Only thing about me is the way I walk',
+    ],
+    song: "Genesis ─ I Can't Dance - Remastered 2007",
+  },
+  {
+    lyrics: [
       'J Grooves on the track',
       'Baby',
       'I just want to see you smile',
@@ -7967,17 +8143,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'If you wanted to, girl, we could cross that line',
     ],
     song: 'Lauv ─ Feelings',
-  },
-  {
-    lyrics: [
-      'Woke up in London yesterday',
-      'Found myself in the city near Piccadilly',
-      "Don't really know how I got here",
-      'I got some pictures on my phone',
-      "New names and numbers that I don't know",
-      'Address to places like Abbey Road',
-    ],
-    song: 'OneRepublic ─ Good Life',
   },
   {
     lyrics: [
