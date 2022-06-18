@@ -1,6 +1,8 @@
 export type LyricsField = {
   song: string
   lyrics: Array<string>
+  soundcloudLink?: string
+  artworkLink?: string
 }
 
 export const VALID_GUESSES: Array<LyricsField> = [
@@ -619,6 +621,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Everybody that was hangin' out",
     ],
     song: 'Bob Dylan ─ Like a Rolling Stone',
+    soundcloudLink: 'https://soundcloud.com/bobdylan/like-a-rolling-stone-1',
+    artworkLink: 'https://i1.sndcdn.com/artworks-aUBuyDkg7ai8-0-large.jpg',
   },
   {
     lyrics: [

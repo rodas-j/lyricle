@@ -1,3 +1,5 @@
+import { solution } from '../lib/songs'
+
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 
 export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
@@ -21,9 +23,15 @@ export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
-export const NEW_SONG_TEXT = 'Next song in'
+export const NEW_SONG_TEXT = 'Next Lyricle in'
 export const SHARE_TEXT = 'Share'
 export const TOTAL_TRIES_TEXT = 'Total tries'
 export const SUCCESS_RATE_TEXT = 'Success rate'
 export const CURRENT_STREAK_TEXT = 'Current streak'
 export const BEST_STREAK_TEXT = 'Best streak'
+export const LISTEN_TO_TITLE = (solution: string) => {
+  return `Listen to ${solution} on SoundCloud`
+}
+export const SOUNDCLOUD_WIDGET_BACKGROUND = (artworkUrl: string) => {
+  return 'w-20 bg-cover bg-center bg-[url(' + artworkUrl + ')]'
+}
