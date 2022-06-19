@@ -72,7 +72,10 @@ export const SongModal = ({
         <div className="absolute right-2 top-2">
           <XCircleIcon
             className="h-6 w-6 cursor-pointer"
-            onClick={() => setIsWidgetOpen(false)}
+            onClick={() => {
+              setIsPlaying(false)
+              setIsWidgetOpen(false)
+            }}
           />
         </div>
         <div>
