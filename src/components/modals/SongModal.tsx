@@ -1,10 +1,8 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
-import {
-  LISTEN_TO_TITLE,
-  SOUNDCLOUD_WIDGET_BACKGROUND,
-} from '../../constants/strings'
+import { useAlert } from '../../context/AlertContext'
+import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from '../../constants/strings'
 import { LyricsField } from '../../constants/validGuesses'
 import ReactPlayer from 'react-player/soundcloud'
 import { PauseIcon, PlayIcon } from '@heroicons/react/solid'
@@ -24,6 +22,7 @@ export const SongModal = ({
 }: Props) => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isWidgetOpen, setIsWidgetOpen] = useState(false)
+  const { showError: showErrorAlert } = useAlert()
   useEffect(() => {
     if (isOpen) {
       setIsWidgetOpen(true)
@@ -56,7 +55,6 @@ export const SongModal = ({
   if (solution?.artworkLink !== undefined) {
     artwork_url = solution.artworkLink
   }
-  console.log(SOUNDCLOUD_WIDGET_BACKGROUND(artwork_url))
   return (
     <Transition
       show={isWidgetOpen}
@@ -87,13 +85,14 @@ export const SongModal = ({
               url={solution.soundcloudLink}
               playing={isPlaying}
               onEnded={() => setIsPlaying(false)}
+              onError={() => showErrorAlert(REGION_NOT_SUPPORTED)}
             />
           </div>
           <div className="pb-0 flex-col items-evenly">
             <div className="flex items-stretch rounded-md overflow-hidden bg-custom-positive">
               <div
                 style={{
-                  backgroundImage: `url(${solution.artworkLink})`,
+                  backgroundImage: `url(${artwork_url})`,
                 }}
                 className="w-20 bg-cover bg-center"
               ></div>{' '}
