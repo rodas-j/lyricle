@@ -967,17 +967,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'I threw a wish in the well',
-      "Don't ask me, I'll never tell",
-      'I looked to you as it fell',
-      "And now you're in my way",
-      'I trade my soul for a wish',
-      'Pennies and dimes for a kiss',
-    ],
-    song: 'Carly Rae Jepsen ─ Call Me Maybe',
-  },
-  {
-    lyrics: [
       "You gotta help me, I'm losing my mind",
       'Keep getting the feeling you wanna leave this all behind',
       'Thought we were going strong',
