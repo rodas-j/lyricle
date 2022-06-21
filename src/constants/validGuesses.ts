@@ -1,6 +1,8 @@
 export type LyricsField = {
   song: string
   lyrics: Array<string>
+  soundcloudLink?: string
+  artworkLink?: string
 }
 
 export const VALID_GUESSES: Array<LyricsField> = [
@@ -619,6 +621,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Everybody that was hangin' out",
     ],
     song: 'Bob Dylan ─ Like a Rolling Stone',
+    soundcloudLink: 'https://soundcloud.com/bobdylan/like-a-rolling-stone-1',
+    artworkLink: 'https://i1.sndcdn.com/artworks-aUBuyDkg7ai8-0-large.jpg',
   },
   {
     lyrics: [
@@ -630,6 +634,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Do you come from a land down under?',
     ],
     song: 'Men At Work ─ Down Under',
+    soundcloudLink: 'https://soundcloud.com/men-at-work-official/down-under-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-8axDzrKB8QOQ-0-large.jpg',
   },
   {
     lyrics: [
@@ -641,6 +647,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Mm, and it can't be wrong",
     ],
     song: 'Tina Turner ─ The Best',
+    soundcloudLink: 'https://soundcloud.com/tina-turner-official/the-best',
+    artworkLink: 'https://i1.sndcdn.com/artworks-gvuS63sMsLRT-0-large.jpg',
   },
   {
     lyrics: [
@@ -652,6 +660,9 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Of thoughts and dreams that scatter',
     ],
     song: 'Daryl Hall & John Oates ─ You Make My Dreams (Come True)',
+    soundcloudLink:
+      'https://soundcloud.com/daryl-hall-john-oates/you-make-my-dreams-remastered',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Owj4VsB1ieS1-0-large.jpg',
   },
   {
     lyrics: [
@@ -663,6 +674,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Listening to the wind of change',
     ],
     song: 'Scorpions ─ Wind Of Change',
+    soundcloudLink: 'https://soundcloud.com/scorpions-official/wind-of-change',
+    artworkLink: 'https://i1.sndcdn.com/artworks-3ywJekV60OLP-0-large.jpg',
   },
   {
     lyrics: [
@@ -674,6 +687,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Just one look and I can hear a bell ring',
     ],
     song: 'ABBA ─ Mamma Mia',
+    soundcloudLink: 'https://soundcloud.com/abba-official/mamma-mia-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-BdND4oBXuCnK-0-large.jpg',
   },
   {
     lyrics: [
@@ -685,6 +700,9 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'I hope that someone gets my',
     ],
     song: 'The Police ─ Message In A Bottle - Remastered 2003',
+    soundcloudLink:
+      'https://soundcloud.com/the-police-official/message-in-a-bottle-2003',
+    artworkLink: 'https://i1.sndcdn.com/artworks-ktvGJ5nrT9C4-0-large.jpg',
   },
   {
     lyrics: [
@@ -696,6 +714,9 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Break a sweat on the floor, yeah, we work on the floor',
     ],
     song: 'Jennifer Lopez ─ On The Floor - Radio Edit',
+    soundcloudLink:
+      'https://soundcloud.com/jenniferlopez/on-the-floor-low-sunday-on-the',
+    artworkLink: 'https://i1.sndcdn.com/artworks-hCr1P1wBCVPI-0-large.jpg',
   },
   {
     lyrics: [
@@ -707,6 +728,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'All of the people start to rush (Start to rush by)',
     ],
     song: 'Lady Gaga ─ Just Dance',
+    soundcloudLink: 'https://soundcloud.com/ladygaga/just-dance',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Z3beQmdYlJoD-0-large.jpg',
   },
   {
     lyrics: [
@@ -718,6 +741,9 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "That's where I had my first heartbreak",
     ],
     song: "Swedish House Mafia ─ Don't You Worry Child - Radio Edit",
+    soundcloudLink:
+      'https://soundcloud.com/officialswedishhousemafia/dont-you-worry-child-radio',
+    artworkLink: 'https://i1.sndcdn.com/artworks-JJN01a1oB0L9-0-large.jpg',
   },
   {
     lyrics: [
@@ -729,6 +755,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Slowly but surely, she was walking toward me',
     ],
     song: "K'NAAN ─ Bang Bang",
+    soundcloudLink: 'https://soundcloud.com/knaan-official/bang-bang',
+    artworkLink: 'https://i1.sndcdn.com/artworks-BNpJtkOEOyiB-0-large.jpg',
   },
   {
     lyrics: [
@@ -740,6 +768,8 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Six feet under screams, but no one seems to hear a thing',
     ],
     song: 'Katy Perry ─ Firework',
+    soundcloudLink: 'https://soundcloud.com/katyperry/firework',
+    artworkLink: 'https://i1.sndcdn.com/artworks-4vCAcnMWDx6P-0-large.jpg',
   },
   {
     lyrics: [
@@ -960,17 +990,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'Having no regrets is all that she really wants',
     ],
     song: 'One Direction ─ Night Changes',
-  },
-  {
-    lyrics: [
-      'I threw a wish in the well',
-      "Don't ask me, I'll never tell",
-      'I looked to you as it fell',
-      "And now you're in my way",
-      'I trade my soul for a wish',
-      'Pennies and dimes for a kiss',
-    ],
-    song: 'Carly Rae Jepsen ─ Call Me Maybe',
   },
   {
     lyrics: [

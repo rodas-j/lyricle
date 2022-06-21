@@ -81,7 +81,7 @@ function App() {
     if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
       setIsGameLost(true)
       showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
-        persist: true,
+        persist: false,
       })
     }
 
@@ -146,7 +146,7 @@ function App() {
       setIsGameLost(true)
 
       showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
-        persist: true,
+        persist: false,
       })
 
       return
@@ -166,7 +166,7 @@ function App() {
       setIsGameLost(true)
 
       showErrorAlert(CORRECT_SONG_MESSAGE(solution.song), {
-        persist: true,
+        persist: false,
       })
     }
   }
