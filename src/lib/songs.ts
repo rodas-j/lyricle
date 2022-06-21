@@ -12,7 +12,7 @@ export const getSongOfTheDay = () => {
   const epochMs = new Date('April 24, 2022').valueOf()
   const now = Date.now()
   const msInDay = 86400000
-  const index = Math.floor((now - epochMs) / msInDay)
+  const index = Math.floor((now - epochMs) / msInDay) + 1
   const nextDay = (index + 1) * msInDay + epochMs
 
   return {
