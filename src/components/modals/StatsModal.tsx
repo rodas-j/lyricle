@@ -103,7 +103,7 @@ export const StatsModal = ({
                 href="https://forms.gle/RHr92nrSnRKVVuMt8"
                 className="cursor-pointer"
               >
-                <p className="text-white underline text-sm">
+                <p className="text-black underline text-sm dark:text-white">
                   {' '}
                   📨 Wanna Improve Lyricle?
                 </p>
