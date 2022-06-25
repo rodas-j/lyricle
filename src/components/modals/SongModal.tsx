@@ -6,7 +6,6 @@ import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from '../../constants/strings'
 import { LyricsField } from '../../constants/validGuesses'
 import ReactPlayer from 'react-player/soundcloud'
 import { PauseIcon, PlayIcon } from '@heroicons/react/solid'
-import XCircleIcon from '@heroicons/react/solid/XCircleIcon'
 type Props = {
   isOpen: boolean
   solution: LyricsField
