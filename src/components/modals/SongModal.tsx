@@ -6,7 +6,6 @@ import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from '../../constants/strings'
 import { LyricsField } from '../../constants/validGuesses'
 import ReactPlayer from 'react-player/soundcloud'
 import { PauseIcon, PlayIcon } from '@heroicons/react/solid'
-import XCircleIcon from '@heroicons/react/solid/XCircleIcon'
 type Props = {
   isOpen: boolean
   solution: LyricsField
@@ -45,7 +44,7 @@ export const SongModal = ({
     )
   }
   const classes = classNames(
-    'fixed z-20 p-2 top-14 left-0 right-0 max-w-sm mx-auto shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 ',
+    ' z-20 p-2 mt-5 left-0 right-0 max-w-sm mx-auto shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 ',
     {
       'bg-rose-500 text-white': variant === 'error',
       'bg-blue-500 text-white': variant === 'success',
@@ -67,15 +66,7 @@ export const SongModal = ({
       leaveTo="opacity-0"
     >
       <div className={classes}>
-        <div className="absolute right-2 top-2">
-          <XCircleIcon
-            className="h-6 w-6 cursor-pointer"
-            onClick={() => {
-              setIsPlaying(false)
-              setIsWidgetOpen(false)
-            }}
-          />
-        </div>
+        <div className="absolute right-2 top-2"></div>
         <div>
           {/* <p className="text-sm text-center font-medium">{message}</p> */}
           <div className="invisible">
@@ -100,8 +91,8 @@ export const SongModal = ({
                 {mediaButton}
               </div>
               <div className="flex-1 m-2 text-white truncate ">
-                <p>{solution.song.split('─')[0]}</p>{' '}
-                <p className="text-sm  overflow-x-scroll webkit opacity-75">
+                <p className="text-left">{solution.song.split('─')[0]}</p>{' '}
+                <p className="text-left text-sm  overflow-x-scroll webkit opacity-75">
                   {solution.song.split('─')[1]}
                 </p>{' '}
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">

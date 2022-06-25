@@ -885,17 +885,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Years & Years - Ties',
-      "Cheat Codes - Don't Say No feat. Dresses",
-      'Demi Lovato - Cool for the Summer',
-      'Future - Real Sisters',
-      'Eminem - Kings Never Die feat. Gwen Stefani',
-      'Peking Duk - Take Me Over feat. SAFIA',
-    ],
-    song: 'R. City ─ Locked Away (feat. Adam Levine)',
-  },
-  {
-    lyrics: [
       "Hey, girl, I'm waitin' on ya, I'm waitin' on ya",
       'Come on and let me sneak you out',
       'And have a celebration, a celebration',

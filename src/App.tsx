@@ -27,6 +27,8 @@ import {
   saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
+  getUUID,
+  setUUID,
 } from './lib/localStorage'
 
 import './App.css'
@@ -35,6 +37,10 @@ import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
 
 function App() {
+  if (!getUUID()) {
+    setUUID()
+  }
+
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
