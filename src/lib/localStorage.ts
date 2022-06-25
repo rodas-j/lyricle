@@ -1,5 +1,8 @@
+import { v4 as uuidv4 } from 'uuid'
+
 const gameStateKey = 'gameState'
 const highContrastKey = 'highContrast'
+const profileKey = 'profile'
 
 type StoredGameState = {
   guesses: string[]
@@ -46,4 +49,13 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 export const getStoredIsHighContrastMode = () => {
   const highContrast = localStorage.getItem(highContrastKey)
   return highContrast === '1'
+}
+
+export const setUUID = () => {
+  localStorage.setItem(profileKey, uuidv4())
+}
+
+export const getUUID = () => {
+  const id = localStorage.getItem(profileKey)
+  return id ? id : null
 }
