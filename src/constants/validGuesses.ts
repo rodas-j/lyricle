@@ -720,6 +720,19 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
+      'Tell me something I need to know',
+      'Then take my breath and never let it go',
+      'If you just let me invade your space',
+      'I’ll take the pleasure, take it with the pain',
+      'And if in the moment, I bite my lip',
+      'Baby, in that moment, you’ll know this is',
+    ],
+    song: 'Ariana Grande ─ Love Me Harder',
+    soundcloudLink: 'https://soundcloud.com/arianagrande/love-me-harder',
+    artworkLink: 'https://i1.sndcdn.com/artworks-VwczzbQomfJ7-0-large.jpg',
+  },
+  {
+    lyrics: [
       'Truth!',
       'RedOne',
       'Konvict',
