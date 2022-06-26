@@ -100,7 +100,7 @@ export const StatsModal = ({
 
             <div className="mt-2">
               <a
-                href="https://forms.gle/RHr92nrSnRKVVuMt8"
+                href="https://forms.gle/C8EoeJQ2vzArGVnb7"
                 className="cursor-pointer"
               >
                 <p className="text-black underline text-sm dark:text-white">
