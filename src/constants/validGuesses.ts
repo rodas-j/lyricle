@@ -786,17 +786,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Rising up, back on the street',
-      'Did my time, took my chances',
-      "Went the distance, now I'm back on my feet",
-      'Just a man and his will to survive',
-      'So many times, it happens too fast',
-      'You trade your passion for glory',
-    ],
-    song: 'Survivor ─ Eye of the Tiger',
-  },
-  {
-    lyrics: [
       "I'm at a payphone, trying to call home",
       'All of my change, I spent on you',
       "Where have the times gone? Baby, it's all wrong",
@@ -805,6 +794,19 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'The people we used to be',
     ],
     song: 'Maroon 5 ─ Payphone',
+    soundcloudLink: 'https://soundcloud.com/maroon-5/payphone',
+    artworkLink: 'https://i1.sndcdn.com/artworks-rMfxw2KiOFiq-0-large.jpg',
+  },
+  {
+    lyrics: [
+      'Rising up, back on the street',
+      'Did my time, took my chances',
+      "Went the distance, now I'm back on my feet",
+      'Just a man and his will to survive',
+      'So many times, it happens too fast',
+      'You trade your passion for glory',
+    ],
+    song: 'Survivor ─ Eye of the Tiger',
   },
   {
     lyrics: [
