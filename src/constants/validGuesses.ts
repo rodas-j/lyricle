@@ -5650,17 +5650,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'Do you ever feel like a plastic bag',
-      'Drifting through the wind, wanting to start again?',
-      'Do you ever feel, feel so paper-thin',
-      "Like a house of cards, one blow from cavin' in?",
-      'Do you ever feel already buried deep?',
-      'Six feet under screams, but no one seems to hear a thing',
-    ],
-    song: 'Katy Perry ─ Firework',
-  },
-  {
-    lyrics: [
       'Focus on you in the light, it helps me fill my emotions',
       'Why are we at such a distance? Find ourselves so out of frame',
       'This love stays calm in the night, yeah, help me heal and reopen',
