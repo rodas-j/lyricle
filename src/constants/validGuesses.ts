@@ -798,6 +798,48 @@ export const VALID_GUESSES: Array<LyricsField> = [
     artworkLink: 'https://i1.sndcdn.com/artworks-rMfxw2KiOFiq-0-large.jpg',
   },
   {
+    song: 'Phil Collins ─ In The Air Tonight',
+    lyrics: [
+      'I can feel it coming in the air tonight, oh Lord',
+      "And I've been waiting for this moment for all my life, oh Lord",
+      'Can you feel it coming in the air tonight? oh Lord, oh Lord',
+      'Well, if you told me you were drowning',
+      'I would not lend a hand',
+      "I've seen your face before, my friend",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/phil-collins-official/in-the-air-tonight-2015',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Y8ZWfwPiv5dA-0-large.jpg',
+  },
+  {
+    song: "Otis Redding ─ (Sittin' On) the Dock of the Bay",
+    lyrics: [
+      "Sittin' in the mornin' sun",
+      "I'll be sittin' when the evenin' come",
+      'Watching the ships roll in',
+      "And then I watch 'em roll away again, yeah",
+      "I'm sittin' on the dock of the bay",
+      'Watching the tide roll away',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/otisredding/otis-redding-stories-raphael-saddiq-on-sittin-on-the-dock-of-the-bay',
+    artworkLink: 'https://i1.sndcdn.com/artworks-hYGDL0z5NvIq-0-large.jpg',
+  },
+  {
+    song: 'Ray Charles ─ Georgia On My Mind',
+    lyrics: [
+      'Georgia',
+      'Georgia',
+      'The whole day through',
+      '(The whole day through)',
+      'Just an old, sweet song',
+      'Keeps Georgia on my mind',
+    ],
+    soundcloudLink: 'https://soundcloud.com/raycharles/georgia-on-my-mind-65',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Bx8RRZWE7nn8-0-large.jpg',
+  },
+  {
+    song: 'Survivor ─ Eye of The Tiger',
     lyrics: [
       'Rising up, back on the street',
       'Did my time, took my chances',
@@ -806,7 +848,9 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'So many times, it happens too fast',
       'You trade your passion for glory',
     ],
-    song: 'Survivor ─ Eye of the Tiger',
+    soundcloudLink:
+      'https://soundcloud.com/survivor─official/eye─of─the─tiger─2',
+    artworkLink: 'https://i1.sndcdn.com/artworks─Hhuzajmrf7Sj─0─large.jpg',
   },
   {
     lyrics: [
