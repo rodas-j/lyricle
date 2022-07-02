@@ -798,20 +798,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
     artworkLink: 'https://i1.sndcdn.com/artworks-rMfxw2KiOFiq-0-large.jpg',
   },
   {
-    song: 'Phil Collins ─ In The Air Tonight',
-    lyrics: [
-      'I can feel it coming in the air tonight, oh Lord',
-      "And I've been waiting for this moment for all my life, oh Lord",
-      'Can you feel it coming in the air tonight? oh Lord, oh Lord',
-      'Well, if you told me you were drowning',
-      'I would not lend a hand',
-      "I've seen your face before, my friend",
-    ],
-    soundcloudLink:
-      'https://soundcloud.com/phil-collins-official/in-the-air-tonight-2015',
-    artworkLink: 'https://i1.sndcdn.com/artworks-Y8ZWfwPiv5dA-0-large.jpg',
-  },
-  {
     song: "Otis Redding ─ (Sittin' On) the Dock of the Bay",
     lyrics: [
       "Sittin' in the mornin' sun",
@@ -826,20 +812,7 @@ export const VALID_GUESSES: Array<LyricsField> = [
     artworkLink: 'https://i1.sndcdn.com/artworks-hYGDL0z5NvIq-0-large.jpg',
   },
   {
-    song: 'Ray Charles ─ Georgia On My Mind',
-    lyrics: [
-      'Georgia',
-      'Georgia',
-      'The whole day through',
-      '(The whole day through)',
-      'Just an old, sweet song',
-      'Keeps Georgia on my mind',
-    ],
-    soundcloudLink: 'https://soundcloud.com/raycharles/georgia-on-my-mind-65',
-    artworkLink: 'https://i1.sndcdn.com/artworks-Bx8RRZWE7nn8-0-large.jpg',
-  },
-  {
-    song: 'Survivor ─ Eye of The Tiger',
+    song: 'Survivor ─ Eye of the Tiger',
     lyrics: [
       'Rising up, back on the street',
       'Did my time, took my chances',
@@ -849,32 +822,24 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'You trade your passion for glory',
     ],
     soundcloudLink:
-      'https://soundcloud.com/survivor─official/eye─of─the─tiger─2',
-    artworkLink: 'https://i1.sndcdn.com/artworks─Hhuzajmrf7Sj─0─large.jpg',
+      'https://soundcloud.com/survivor-official/eye-of-the-tiger-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-9od5YI7SNVUy-0-large.jpg',
   },
   {
-    lyrics: [
-      'When I find myself in times of trouble, Mother Mary comes to me',
-      'Speaking words of wisdom, "Let it be"',
-      'And in my hour of darkness, she is standing right in front of me',
-      'Speaking words of wisdom, "Let it be"',
-      'Let it be, let it be, let it be, let it be',
-      'Whisper words of wisdom, let it be',
-    ],
-    song: 'The Beatles ─ Let It Be - Remastered',
-  },
-  {
+    song: 'Bruno Mars ─ The Lazy Song',
     lyrics: [
       "Today, I don't feel like doing anything",
       'I just wanna lay in my bed',
       "Don't feel like picking up my phone",
       'So leave a message at the tone',
-      "'Cause today, I swear, I'm not doing anything",
+      "'Cause today, I swear, I'm not doing anything, uh",
       "I'm gonna kick my feet up, then stare at the fan",
     ],
-    song: 'Bruno Mars ─ The Lazy Song',
+    soundcloudLink: 'https://soundcloud.com/brunomars/the-lazy-song',
+    artworkLink: 'https://i1.sndcdn.com/artworks-L6C6udg7bO9r-0-large.jpg',
   },
   {
+    song: 'Whitney Houston ─ I Will Always Love You',
     lyrics: [
       'If I should stay',
       'I would only be in your way',
@@ -883,9 +848,12 @@ export const VALID_GUESSES: Array<LyricsField> = [
       'And I will always love you',
       'I will always love you',
     ],
-    song: 'Whitney Houston ─ I Will Always Love You',
+    soundcloudLink:
+      'https://soundcloud.com/whitneyhouston/i-will-always-love-you',
+    artworkLink: 'https://i1.sndcdn.com/artworks-mpXhyvKgCSId-0-large.jpg',
   },
   {
+    song: 'Bob Marley & The Wailers ─ Is This Love',
     lyrics: [
       'I wanna love you',
       'And treat you right',
@@ -894,9 +862,39 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "We'll be together",
       'With a roof right over our heads',
     ],
-    song: 'Bob Marley & The Wailers ─ Is This Love',
+    soundcloudLink:
+      'https://soundcloud.com/bob-marley-the-wailers/is-this-love-album-version',
+    artworkLink: 'https://i1.sndcdn.com/artworks-D5cIc2Zu8pml-0-large.jpg',
   },
   {
+    song: 'Phil Collins ─ In The Air Tonight',
+    lyrics: [
+      'I can feel it coming in the air tonight, oh Lord',
+      "And I've been waiting for this moment for all my life, oh Lord",
+      'Can you feel it coming in the air tonight? oh Lord, oh Lord',
+      'Well, if you told me you were drowning',
+      'I would not lend a hand',
+      "I've seen your face before, my friend",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/phil-collins-official/in-the-air-tonight-2015',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Y8ZWfwPiv5dA-0-large.jpg',
+  },
+  {
+    song: 'Blondie ─ Call Me',
+    lyrics: [
+      'Colour me your colour, baby',
+      'Colour me your car',
+      'Colour me your colour, darling',
+      'I know who you are',
+      'Come up off your colour chart',
+      'I know where you are coming from',
+    ],
+    soundcloudLink: 'https://soundcloud.com/blondie/call-me-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-xhdaT5KBbbzQ-0-large.jpg',
+  },
+  {
+    song: "Destiny's Child ─ Survivor",
     lyrics: [
       "Now that you're out of my life I'm so much better",
       "You thought that I'd be weak without you, but I'm stronger",
@@ -905,7 +903,129 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Thought I wouldn't grow without you, now I'm wiser",
       "Thought that I'd be helpless without you, but I'm smarter",
     ],
-    song: "Destiny's Child ─ Survivor",
+    soundcloudLink: 'https://soundcloud.com/destinys-child-official/survivor',
+    artworkLink: 'https://i1.sndcdn.com/artworks-68WnWuWs0JwI-0-large.jpg',
+  },
+  {
+    song: 'The Cure ─ Pictures Of You',
+    lyrics: [
+      "I've been looking so long at these pictures of you",
+      "That I almost believe that they're real",
+      "I've been living so long with my pictures of you",
+      'That I almost believe that the pictures are all I can feel',
+      'Remembering you standing quiet in the rain',
+      'As I ran to your heart to be near',
+    ],
+    soundcloudLink: 'https://soundcloud.com/thecureofficial/pictures-of-you',
+    artworkLink: 'https://i1.sndcdn.com/artworks-06j1GWv7s94y-0-large.jpg',
+  },
+  {
+    song: 'Twenty One Pilots ─ Ride',
+    lyrics: [
+      'I just wanna stay in the sun where I find',
+      "I know it's hard sometimes",
+      "Pieces of peace in the sun's peace of mind",
+      "I know it's hard sometimes",
+      'Yeah, I think about the end just way too much',
+      "But it's fun to fantasize",
+    ],
+    soundcloudLink: 'https://soundcloud.com/twentyonepilots/ride',
+    artworkLink: 'https://i1.sndcdn.com/artworks-hnq3cxAN6qID-0-large.jpg',
+  },
+  {
+    song: 'Coldplay ─ Fix You',
+    lyrics: [
+      "When you try your best, but you don't succeed",
+      'When you get what you want, but not what you need',
+      "When you feel so tired, but you can't sleep",
+      'Stuck in reverse',
+      'And the tears come streaming down your face',
+      "When you lose something you can't replace",
+    ],
+    soundcloudLink: 'https://soundcloud.com/user-956334953/coldplay-fix-you',
+    artworkLink: 'https://i1.sndcdn.com/artworks-000601612264-35cire-large.jpg',
+  },
+  {
+    song: 'Madonna ─ Material Girl',
+    lyrics: [
+      'Some boys kiss me, some boys hug me',
+      "I think they're okay",
+      "If they don't give me proper credit, I just walk away",
+      'They can beg and they can plead',
+      "But they can't see the light (That's right)",
+      "'Cause the boy with the cold hard cash is always Mister Right",
+    ],
+    soundcloudLink: 'https://soundcloud.com/madonna/material-girl',
+    artworkLink: 'https://i1.sndcdn.com/artworks-vpcaLSfNAVif-0-large.jpg',
+  },
+  {
+    song: 'Stevie Wonder ─ Higher Ground',
+    lyrics: [
+      'People keep on learning',
+      'Soldiers keep on warring',
+      'World keep on turning',
+      "'Cause it won't be too long",
+      'Powers keep on lying',
+      'While your people keep on dying',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/stevie-wonder-official/higher-ground-album-version',
+    artworkLink: 'https://i1.sndcdn.com/artworks-zzP2vPoiq1Cf-0-large.jpg',
+  },
+  {
+    song: 'Jeff Buckley ─ Hallelujah',
+    lyrics: [
+      'Well I heard there was a secret chord',
+      'That David played, and it pleased the Lord',
+      "But you don't really care for music, do ya?",
+      'Well it goes like this, the fourth, the fifth',
+      'The minor fall and the major lift',
+      'The baffled king composing "Hallelujah"',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/jeff-buckley-official/hallelujah-radio-edit',
+    artworkLink: 'https://i1.sndcdn.com/artworks-XY4FjubiYQFZ-0-large.jpg',
+  },
+  {
+    song: 'Radiohead ─ Paranoid Android',
+    lyrics: [
+      'Please, could you stop the noise?',
+      "I'm trying to get some rest",
+      'From all the unborn chicken voices',
+      'In my head',
+      "What's that?",
+      '(I may be paranoid, but not an android)',
+    ],
+    soundcloudLink: 'https://soundcloud.com/radiohead/paranoid-android',
+    artworkLink: 'https://i1.sndcdn.com/artworks-AX4RVT4FT1LX-0-large.png',
+  },
+  {
+    song: "Elton John ─ Rocket Man (I Think It's Going To Be A Long Long Time)",
+    lyrics: [
+      'She packed my bags last night, pre-flight',
+      'Zero hour, 9 a.m.​​',
+      "And I'm gonna be high as a kite by then",
+      'I miss the Earth so much, I miss my wife',
+      "It's lonely out in space",
+      'On such a timeless flight',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/elton-john/rocket-man-i-think-its-going-1',
+    artworkLink: 'https://i1.sndcdn.com/artworks-UYNEzk0hgHzY-0-large.jpg',
+  },
+  {
+    song: 'Dusty Springfield ─ Son Of A Preacher Man',
+    lyrics: [
+      "Billy Ray was the preacher's son",
+      "And when his daddy would visit he'd come along",
+      "When they gathered ´round and started talkin'",
+      "That's when Billy would take me walkin'",
+      "Out through the back yard we'd go walkin'",
+      "Then he'd look into my eyes",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/dustyspringfield/dusty-springfield-son-of-a',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Emn9QqH98OKb-0-large.jpg',
   },
   {
     lyrics: [
@@ -1261,17 +1381,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      "Charlie Puth - We Don't Talk Anymore feat. Selena Gomez",
-      'Bishop - River',
-      'Tory Lanez - LA Confidential',
-      'Sia - Cheap Thrills',
-      "Travis Mills - Don't Need Much",
-      'Akon - Hypnotized',
-    ],
-    song: "Charlie Puth ─ We Don't Talk Anymore (feat. Selena Gomez)",
-  },
-  {
-    lyrics: [
       'Climb on board',
       "We'll go slow and high tempo",
       'Light and dark',
@@ -1360,6 +1469,17 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
+      'When I find myself in times of trouble, Mother Mary comes to me',
+      'Speaking words of wisdom, "Let it be"',
+      'And in my hour of darkness, she is standing right in front of me',
+      'Speaking words of wisdom, "Let it be"',
+      'Let it be, let it be, let it be, let it be',
+      'Whisper words of wisdom, let it be',
+    ],
+    song: 'The Beatles ─ Let It Be - Remastered',
+  },
+  {
+    lyrics: [
       'Everybody gets high sometimes, you know',
       "What else can we do when we're feelin' low?",
       'So take a deep breath and let it go',
@@ -1423,17 +1543,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "I'm in the corner, watching you kiss her, oh oh oh",
     ],
     song: 'Calum Scott ─ Dancing On My Own',
-  },
-  {
-    lyrics: [
-      'I just wanna stay in the sun where I find',
-      "I know it's hard sometimes",
-      "Pieces of peace in the sun's peace of mind",
-      "I know it's hard sometimes",
-      'Yeah, I think about the end just way too much',
-      "But it's fun to fantasize",
-    ],
-    song: 'Twenty One Pilots ─ Ride',
   },
   {
     lyrics: [
@@ -2248,17 +2357,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "I like me better when I'm with you",
     ],
     song: 'Lauv ─ I Like Me Better',
-  },
-  {
-    lyrics: [
-      "When you try your best, but you don't succeed",
-      'When you get what you want, but not what you need',
-      "When you feel so tired, but you can't sleep",
-      'Stuck in reverse',
-      'And the tears come streaming down your face',
-      "When you lose something you can't replace",
-    ],
-    song: 'Coldplay ─ Fix You',
   },
   {
     lyrics: [
