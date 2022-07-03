@@ -92,7 +92,7 @@ export const SongModal = ({
               </div>
               <div className="flex-1 m-2 text-white truncate ">
                 <p className="text-left">{solution.song.split('─')[0]}</p>{' '}
-                <p className="text-left text-sm  overflow-x-scroll webkit opacity-75">
+                <p className="text-left text-sm  overflow-x-auto webkit opacity-75">
                   {solution.song.split('─')[1]}
                 </p>{' '}
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">
