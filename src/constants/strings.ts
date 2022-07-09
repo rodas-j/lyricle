@@ -12,8 +12,6 @@ export const REGION_NOT_SUPPORTED = 'This song is not supported in your region'
 export const CORRECT_SONG_MESSAGE = (solution: string) => {
   return `The song was ${solution.split('─')[1]} by ${solution.split('─')[0]}`
 }
-export const ENTER_TEXT = 'Enter'
-export const DELETE_TEXT = 'Delete'
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_SONG_TEXT = 'Next Lyricle in'
