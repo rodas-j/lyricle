@@ -1028,6 +1028,127 @@ export const VALID_GUESSES: Array<LyricsField> = [
     artworkLink: 'https://i1.sndcdn.com/artworks-Emn9QqH98OKb-0-large.jpg',
   },
   {
+    song: 'Eagles ─ Hotel California',
+    lyrics: [
+      'On a dark desert highway',
+      'Cool wind in my hair',
+      'Warm smell of colitas',
+      'Rising up through the air',
+      'Up ahead in the distance',
+      'I saw a shimmering light',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/eaglesofficial/eagles-hotel-california',
+    artworkLink: 'https://i1.sndcdn.com/artworks-7zmcPf887RsB-0-large.jpg',
+  },
+  {
+    song: 'Steve Harley ─ Make Me Smile',
+    lyrics: [
+      'And pulled the rebel to the floor',
+      'You spoilt the game, no matter what you say',
+      'For only metal, what a bore',
+      'Blue eyes, blue eyes, how come you tell so many lies?',
+      'Come up and see me, make me smile',
+      "Or do what you want, runnin' wild",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/steve-harley-official/make-me-smile-come-up-and-6',
+    artworkLink: 'https://i1.sndcdn.com/artworks-FbOJEHxAlQgP-0-large.png',
+  },
+  {
+    song: 'Blondie ─ Heart Of Glass',
+    lyrics: [
+      'Once I had a love and it was a gas',
+      'Soon turned out had a heart of glass',
+      'Seemed like the real thing, only to find',
+      "Mucho mistrust, love's gone behind",
+      'Once I had a love and it was divine',
+      'Soon found out I was losing my mind',
+    ],
+    soundcloudLink: 'https://soundcloud.com/blondie/heart-of-glass',
+    artworkLink: 'https://i1.sndcdn.com/artworks-MjmZt1lMLj8v-0-large.jpg',
+  },
+  {
+    song: 'Jessie J ─ Domino',
+    lyrics: [
+      "I'm feeling sexy and free",
+      "Like glitter's raining on me",
+      "You're like a shot of pure gold",
+      "I think I'm 'bout to explode",
+      'I can taste the tension like a cloud of smoke in the air',
+      "Now I'm breathing like I'm running 'cause you're taking me there",
+    ],
+    soundcloudLink: 'https://soundcloud.com/jessiejofficial/domino-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-gixWi26TEPp6-0-large.jpg',
+  },
+  {
+    song: 'Sam Cooke ─ Wonderful World',
+    lyrics: [
+      "Don't know much about history",
+      "Don't know much biology",
+      "Don't know much about a science book",
+      "Don't know much about the French I took",
+      'But I do know that I love you',
+      'And I know that if you love me, too',
+    ],
+    soundcloudLink: 'https://soundcloud.com/samcooke/what-a-wonderful-world',
+    artworkLink: 'https://i1.sndcdn.com/artworks-Ytk2bw16HxJr-0-large.jpg',
+  },
+  {
+    song: 'Eminem ─ Lose Yourself',
+    lyrics: [
+      'Look, if you had one shot or one opportunity',
+      'To seize everything you ever wanted in one moment',
+      'Would you capture it, or just let it slip? Yo',
+      'His palms are sweaty, knees weak, arms are heavy',
+      "There's vomit on his sweater already, mom's spaghetti",
+      "He's nervous, but on the surface he looks calm and ready",
+    ],
+    soundcloudLink: 'https://soundcloud.com/eminemofficial/lose-yourself',
+    artworkLink: 'https://i1.sndcdn.com/artworks-IWrpcZmJQJiS-0-large.jpg',
+  },
+  {
+    song: 'Supergrass ─ Alright',
+    lyrics: [
+      'We are young, we run green',
+      'Keep our teeth nice and clean',
+      'See our friends, see the sights',
+      'And feel alright',
+      'We wake up, we go out',
+      'Smoke a fag, put it out',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/supergrass-official/alright-2015-remastered',
+    artworkLink: 'https://i1.sndcdn.com/artworks-yu4c0RPuLOdH-0-large.jpg',
+  },
+  {
+    song: 'Taylor Swift ─ Shake It Off',
+    lyrics: [
+      'I stay out too late',
+      'Got nothing in my brain',
+      "That's what people say, mmm-mmm",
+      "That's what people say, mmm-mmm",
+      'I go on too many dates',
+      "But I can't make them stay",
+    ],
+    soundcloudLink: 'https://soundcloud.com/taylorswiftofficial/shake-it-off',
+    artworkLink: 'https://i1.sndcdn.com/artworks-pbjrCcJsCxnN-0-large.jpg',
+  },
+  {
+    song: 'Nickelback ─ How You Remind Me',
+    lyrics: [
+      'Never made it as a wise man',
+      "I couldn't cut it as a poor man stealing",
+      "Tired of livin' like a blind man",
+      "I'm sick of sight without a sense of feeling",
+      'And this is how you remind me',
+      'This is how you remind me of what I really am',
+    ],
+    soundcloudLink: 'https://soundcloud.com/nickelback/how-you-remind-me',
+    artworkLink: 'https://i1.sndcdn.com/artworks-lgBcgGU1uVb1-0-large.jpg',
+  },
+  {
+    song: 'Shawn Mendes ─ Stitches',
     lyrics: [
       "I thought that I've been hurt before",
       "But no one's ever left me quite this sore",
@@ -1036,7 +1157,22 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "Got a feeling that I'm going under",
       "But I know that I'll make it out alive",
     ],
-    song: 'Shawn Mendes ─ Stitches',
+    soundcloudLink: 'https://soundcloud.com/officialshawnmendes/stitches',
+    artworkLink: 'https://i1.sndcdn.com/artworks-ibJlqcUgJvFl-0-large.jpg',
+  },
+  {
+    song: 'Elton John ─ Goodbye Yellow Brick Road',
+    lyrics: [
+      'When are you gonna come down?',
+      'When are you going to land?',
+      'I should have stayed on the farm',
+      'I should have listened to my old man',
+      "You know you can't hold me forever",
+      "I didn't sign up with you",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/elton-john/goodbye-yellow-brick-road-4',
+    artworkLink: 'https://i1.sndcdn.com/artworks-2H2vkAIyPjpL-0-large.jpg',
   },
   {
     lyrics: [
@@ -8583,16 +8719,5 @@ export const VALID_GUESSES: Array<LyricsField> = [
       "And I won't start to crumble",
     ],
     song: 'Naomi Scott ─ Speechless (Full)',
-  },
-  {
-    lyrics: [
-      "I'm feeling sexy and free",
-      "Like glitter's raining on me",
-      "You're like a shot of pure gold",
-      "I think I'm 'bout to explode",
-      'I can taste the tension like a cloud of smoke in the air',
-      "Now I'm breathing like I'm running 'cause you're taking me there",
-    ],
-    song: 'Jessie J ─ Domino',
   },
 ]
