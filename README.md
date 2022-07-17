@@ -7,7 +7,7 @@
 Clone the repository and perform the following command line actions:
 
 ```bash
-$> cd react-wordle
+$> cd react-lyricle
 $> npm install
 $> npm run start
 ```
