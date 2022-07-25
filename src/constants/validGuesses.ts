@@ -1135,6 +1135,184 @@ export const VALID_GUESSES: Array<LyricsField> = [
     artworkLink: 'https://i1.sndcdn.com/artworks-pbjrCcJsCxnN-0-large.jpg',
   },
   {
+    song: 'B.o.B ─ Airplanes',
+    lyrics: [
+      'Can we pretend that airplanes',
+      'In the night sky are like shooting stars?',
+      'I could really use a wish right now',
+      'Wish right now, wish right now',
+      'Can we pretend that airplanes',
+      'In the night sky are like shooting stars?',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/bobatl/airplanes-pt-ii-feat-eminem-hayley-williams-of-paramore',
+    artworkLink: 'https://i1.sndcdn.com/artworks-ccPabjM9Z0MF-0-large.jpg',
+  },
+  {
+    song: "Journey ─ Don't Stop Believin'",
+    lyrics: [
+      "Just a small-town girl, livin' in a lonely world",
+      "She took the midnight train goin' anywhere",
+      'Just a city boy, born and raised in South Detroit',
+      "He took the midnight train goin' anywhere",
+      'A singer in a smoky room',
+      'The smell of wine and cheap perfume',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/journey-official/dont-stop-believin-3',
+    artworkLink: 'https://i1.sndcdn.com/artworks-dgvK3fmlEL8N-0-large.jpg',
+  },
+  {
+    song: 'Van Morrison ─ Into the Mystic',
+    lyrics: [
+      'We were born before the wind',
+      'Also younger than the sun',
+      'Ere the bonnie boat was won',
+      'As we sailed into the mystic',
+      'Hark, now hear the sailors cry',
+      'Smell the sea and feel the sky',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/vanmorrisonofficial/into-the-mystic',
+    artworkLink: 'https://i1.sndcdn.com/artworks-iP2K3Lqt5E0f-0-large.jpg',
+  },
+  {
+    song: 'Black Eyed Peas ─ Meet Me Halfway',
+    lyrics: [
+      "Ooh, I can't go any further than this",
+      "Ooh, I want you so badly, it's my biggest wish",
+      'Cool, I spend my time just thinking',
+      "Thinking, thinking 'bout you",
+      "Every single day, yes, I'm really missing, missing you",
+      'And all those things we used to',
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/black-eyed-peas-official/meet-me-halfway-album-version',
+    artworkLink: 'https://i1.sndcdn.com/artworks-DksoaGacIOoj-0-large.jpg',
+  },
+  {
+    song: 'The Rolling Stones ─ Sympathy For The Devil',
+    lyrics: [
+      'Yow....yow....yow',
+      'Huh, huh, huh',
+      'Please allow me to introduce myself',
+      "I'm a man of wealth and taste",
+      "I've been around for a long, long year",
+      "Stole many a man's soul and faith",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/rolling-stones-official/sympathy-for-the-devil',
+    artworkLink: 'https://i1.sndcdn.com/artworks-zWkoGRn4mmmx-0-large.jpg',
+  },
+  {
+    song: 'John Legend ─ All of Me',
+    lyrics: [
+      'What would I do without your smart mouth?',
+      'Drawing me in and you kicking me out',
+      "You've got my head spinning, no kidding",
+      "I can't pin you down",
+      "What's goin' on in that beautiful mind?",
+      "I'm on your magical mystery ride",
+    ],
+    soundcloudLink: 'https://soundcloud.com/johnlegend/all-of-me-3',
+    artworkLink: 'https://i1.sndcdn.com/artworks-000059238351-5cg93w-large.jpg',
+  },
+  {
+    song: 'Solomon Burke ─ Everybody Needs Somebody to Love',
+    lyrics: [
+      "I'm so happy to be here tonight",
+      'So glad to be in your wonderful city',
+      'I have a little message for you',
+      'And I want to tell every woman and every man tonight',
+      "That's ever needed someone to love",
+      "That's ever had somebody to love them",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/solomonburke/everybody-needs-somebody-to-2',
+    artworkLink: 'https://i1.sndcdn.com/artworks-QxWl71uTbK2y-0-large.jpg',
+  },
+  {
+    song: 'Frank Sinatra ─ My Way',
+    lyrics: [
+      'And now, the end is near',
+      'And so I face the final curtain',
+      "My friend, I'll say it clear",
+      "I'll state my case, of which I'm certain",
+      "I've lived a life that's full",
+      'I traveled each and every highway',
+    ],
+    soundcloudLink: 'https://soundcloud.com/frank-sinatra/my-way-1',
+    artworkLink: 'https://i1.sndcdn.com/artworks-fJ9XR9SSZs5c-0-large.jpg',
+  },
+  {
+    song: 'Elvis Presley ─ Blue Suede Shoes',
+    lyrics: [
+      "Well, it's one for the money, two for the show",
+      'Three to get ready, now go, cat, go',
+      "But don't you step on my blue suede shoes",
+      'Well, you can do anything, but stay off of my blue suede shoes',
+      'Well, you can knock me down, step in my face',
+      'Slander my name all over the place',
+    ],
+    soundcloudLink: 'https://soundcloud.com/elvissonymusic/blue-suede-shoes-35',
+    artworkLink: 'https://i1.sndcdn.com/artworks-zHbb7lCKHPhK-0-large.jpg',
+  },
+  {
+    song: 'Lynyrd Skynyrd ─ Sweet Home Alabama',
+    lyrics: [
+      'One, two, three',
+      'Turn it up',
+      "Big wheels keep on turnin'",
+      'Carry me home to see my kin',
+      "Singin' songs about the southland",
+      'I miss Alabamy once again',
+    ],
+    soundcloudLink: 'https://soundcloud.com/lynyrdskynyrd/sweet-home-alabama-3',
+    artworkLink: 'https://i1.sndcdn.com/artworks-n19vkAd8kNzX-0-large.jpg',
+  },
+  {
+    song: 'Justin Timberlake ─ Mirrors',
+    lyrics: [
+      "Aren't you somethin' to admire?",
+      "'Cause your shine is somethin' like a mirror",
+      "And I can't help but notice",
+      'You reflect in this heart of mine',
+      'If you ever feel alone and',
+      'The glare makes me hard to find',
+    ],
+    soundcloudLink: 'https://soundcloud.com/justintimberlake/mirrors-1',
+    artworkLink: 'https://i1.sndcdn.com/artworks-yfJzFqIaQEV7-0-large.jpg',
+  },
+  {
+    song: 'Backstreet Boys ─ I Want It That Way',
+    lyrics: [
+      'You are my fire',
+      'The one desire',
+      'Believe when I say',
+      'I want it that way',
+      'But we are two worlds apart',
+      "Can't reach to your heart",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/thebackstreetboys/i-want-it-that-way',
+    artworkLink: 'https://i1.sndcdn.com/artworks-ceSkw2rejXjO-0-large.jpg',
+  },
+  {
+    song: 'Christina Aguilera ─ Genie In a Bottle',
+    lyrics: [
+      '(Come on, come on, uh, yeah)',
+      'Oh-ooh, whoa-oh (Come on, come on, uh)',
+      "I feel like I've been locked up tight",
+      'For a century of lonely nights',
+      'Waiting for someone to release me',
+      "You're lickin' your lips and blowin' kisses my way",
+      "But that don't mean I'm gonna give it away",
+    ],
+    soundcloudLink:
+      'https://soundcloud.com/christinaaguilera/genie-in-a-bottle',
+    artworkLink: 'https://i1.sndcdn.com/artworks-nNhrG7CZ1K5q-0-large.jpg',
+  },
+  {
     song: 'Nickelback ─ How You Remind Me',
     lyrics: [
       'Never made it as a wise man',
