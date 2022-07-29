@@ -5886,17 +5886,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'I stay out too late',
-      'Got nothing in my brain',
-      "That's what people say, mmm-mmm",
-      "That's what people say, mmm-mmm",
-      'I go on too many dates',
-      "But I can't make them stay",
-    ],
-    song: 'Taylor Swift ─ Shake It Off',
-  },
-  {
-    lyrics: [
       'Travis Scott - SICKO MODE',
       'Travis Scott - WAKE UP',
       'Ella Mai - Trip',
