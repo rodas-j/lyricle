@@ -44,7 +44,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           rel="noreferrer"
         >
           Wordle
-        </a>{' '}
+        </a>
         , we wanted to shed light on the often unappreciated part of a song - the lyrics.
       </p>
 
