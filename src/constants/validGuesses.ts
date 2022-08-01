@@ -1563,17 +1563,6 @@ export const VALID_GUESSES: Array<LyricsField> = [
   },
   {
     lyrics: [
-      'What would I do without your smart mouth?',
-      "Drawin' me in and you kickin' me out",
-      "You've got my head spinnin', no kiddin'",
-      "I can't pin you down",
-      "What's goin' on in that beautiful mind?",
-      "I'm on your magical mystery ride",
-    ],
-    song: 'John Legend ─ All of Me',
-  },
-  {
-    lyrics: [
       "This is my heartbeat song and I'm gonna play it",
       'Been so long, I forgot how to turn it',
       'Up, up, up, up all night long',
