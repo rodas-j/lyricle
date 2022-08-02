@@ -1,9 +1,16 @@
 import { useState, useRef, useEffect } from 'react'
 
-import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
+import { LyricsField } from '../../constants/validGuesses'
 import { isAValidGuess, solution } from '../../lib/songs'
 
+import VALID_GUESSES from '../../constants/all_validGuesses.json'
+
 import { ChevronDoubleRightIcon, XIcon } from '@heroicons/react/outline'
+
+type VGuess = {
+  artist: string
+  songs: string[]
+}
 
 export const SearchSong = ({
   isGameWon,
@@ -12,15 +19,15 @@ export const SearchSong = ({
   handleSkip,
   guesses,
 }) => {
-  const [matchInput, setMatchInput] = useState<LyricsField[]>([])
+  const [matchInput, setMatchInput] = useState<VGuess[]>([])
   const [currentGuess, setCurrentGuess] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (currentGuess && !isAValidGuess(currentGuess)) {
       setMatchInput(
-        VALID_GUESSES.filter(({ song }) =>
-          song.toLowerCase().includes(currentGuess.toLowerCase())
+        VALID_GUESSES.filter(({ artist, songs }) =>
+          artist.toLowerCase().includes(currentGuess.toLowerCase())
         ).slice(0, 5)
       )
     } else {

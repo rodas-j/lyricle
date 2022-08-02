@@ -3,7 +3,6 @@ import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
 import { useAlert } from '../../context/AlertContext'
 import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from '../../constants/strings'
-import { LyricsField } from '../../constants/validGuesses'
 import ReactPlayer from 'react-player/soundcloud'
 import { PauseIcon, PlayIcon } from '@heroicons/react/solid'
 
@@ -12,7 +11,15 @@ import { ReactComponent as ArrowLeft } from '../../assets/arrowleft.svg'
 
 type Props = {
   isOpen: boolean
-  solution: LyricsField
+  solution: {
+    id: number
+    title: string
+    artist: string
+    song: string
+    lyrics: Array<string>
+    soundcloudLink?: string
+    artworkLink?: string
+  }
   variant?: 'success' | 'error'
   topMost?: boolean
 }
@@ -95,15 +102,15 @@ export const SongModal = ({
                 {mediaButton}
               </div>
               <div className="flex-1 m-2 text-white truncate ">
-                <p className="text-left">{solution.song.split('─')[0]}</p>{' '}
+                <p className="text-left">{solution?.song.split('─')[0]}</p>{' '}
                 <p className="text-left text-sm  overflow-x-auto webkit opacity-75">
-                  {solution.song.split('─')[1]}
+                  {solution?.song.split('─')[1]}
                 </p>{' '}
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">
                   <span className="text-xs uppercase opacity-50 font-bold "></span>{' '}
                   <a
                     href={solution.soundcloudLink}
-                    title={LISTEN_TO_TITLE(solution.song)}
+                    title={LISTEN_TO_TITLE(solution?.song)}
                     className="no-underline focus-visible:outline-none"
                   >
                     <span className="flex focus:outline-none ">
