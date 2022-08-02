@@ -27,7 +27,6 @@ export const SearchSong = ({
           )
           .slice(0, 5)
       )
-      // setMatchInput()
     } else {
       setMatchInput([])
     }
@@ -95,8 +94,6 @@ export const SearchSong = ({
 }
 
 function SongOptions({ matchInput, guesses, changeInput }) {
-  console.log(matchInput)
-
   return (
     <ul className="absolute bottom-full left-0 flex flex-col divide-y-2  mb-3 w-full formide-y divide-gray-500 cursor-pointer">
       {matchInput.map((song, index) => {

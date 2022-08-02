@@ -10,12 +10,10 @@ export type LyricsField = {
   artworkLink?: string
 }
 
-export const mapArtistToSongs: string[] = ARTISTS_AND_SONGS.map(
-  ({ artist, songs }) => {
-    for (let song of songs) {
-      return `${artist} ─ ${song}`
-    }
+export const mapArtistToSongs: string[] = []
 
-    return ''
+ARTISTS_AND_SONGS.forEach(({ artist, songs }) => {
+  for (let song of songs) {
+    mapArtistToSongs.push(`${artist} ─ ${song}`)
   }
-)
+})
