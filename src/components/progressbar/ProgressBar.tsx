@@ -9,11 +9,13 @@ export const ProgressBar = ({ guesses }) => {
             key={index}
             data-check={
               guesses[index]
-                ? guesses[index] === solution.song
+                ? guesses[index] === solution.song // Correct guess
                   ? 'correct'
-                  : guesses[index] === 'skip'
+                  : guesses[index].split('─')[0] === solution.song.split('─')[0] // Correct artist, wrong song
+                  ? 'close'
+                  : guesses[index] === 'skip' // Skipped
                   ? 'skipped'
-                  : 'wrong'
+                  : 'wrong' //incorrect guess
                 : ''
             }
             className="flex-grow bg-gray-300 dark:bg-gray-800 h-2 relative cursor-pointer group"

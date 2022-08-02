@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 
-import { VALID_GUESSES, LyricsField } from '../../constants/validGuesses'
+import { mapArtistToSongs } from '../../constants/validGuesses'
 import { isAValidGuess, solution } from '../../lib/songs'
+
+// import VALID_GUESSES from '../../constants/all_validGuesses.json'
 
 import { ChevronDoubleRightIcon, XIcon } from '@heroicons/react/outline'
 
@@ -12,16 +14,18 @@ export const SearchSong = ({
   handleSkip,
   guesses,
 }) => {
-  const [matchInput, setMatchInput] = useState<LyricsField[]>([])
+  const [matchInput, setMatchInput] = useState<string[]>([])
   const [currentGuess, setCurrentGuess] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (currentGuess && !isAValidGuess(currentGuess)) {
       setMatchInput(
-        VALID_GUESSES.filter(({ song }) =>
-          song.toLowerCase().includes(currentGuess.toLowerCase())
-        ).slice(0, 5)
+        mapArtistToSongs
+          .filter((song) =>
+            song.toLowerCase().includes(currentGuess.toLowerCase())
+          )
+          .slice(0, 5)
       )
     } else {
       setMatchInput([])
@@ -91,8 +95,8 @@ export const SearchSong = ({
 
 function SongOptions({ matchInput, guesses, changeInput }) {
   return (
-    <ul className="absolute bottom-full left-0 flex flex-col divide-y-2 divide-gray-400 mb-3 w-full formide-y divide-gray-500 cursor-pointer">
-      {matchInput.map(({ song }, index) => {
+    <ul className="absolute bottom-full left-0 flex flex-col divide-y-2  mb-3 w-full formide-y divide-gray-500 cursor-pointer">
+      {matchInput.map((song, index) => {
         let classes =
           'flex items-center p-2 md:p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
 

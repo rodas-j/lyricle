@@ -5,11 +5,18 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AlertProvider } from './context/AlertContext'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 ReactDOM.render(
   <React.StrictMode>
-    <AlertProvider>
-      <App />
-    </AlertProvider>
+    <BrowserRouter>
+      <AlertProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/80s" element={<App />} />
+        </Routes>
+      </AlertProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

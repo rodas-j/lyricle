@@ -10,6 +10,7 @@
   --default-answer-bg-color: theme('colors.slate.400');
   --correct-answer-bg-color: theme('colors.emerald.400');
   --wrong-answer-bg-color: theme('colors.red.400');
+  --close-answer-bg-color: theme('colors.yellow.400');
   --tooltip-bg-color: theme('colors.slate.200');
 }
 
@@ -87,6 +88,11 @@ svg.cursor-pointer:hover {
 
 [data-check='wrong']::after {
   background-color: var(--wrong-answer-bg-color);
+  width: 100%;
+}
+
+[data-check='close']::after {
+  background-color: var(--close-answer-bg-color);
   width: 100%;
 }
 
