@@ -2,7 +2,6 @@ import SONG_CHOICES_ALL from '../constants/lyricle.json'
 import SONG_CHOICES_80S from '../constants/80s.json'
 import { mapArtistToSongs } from '../constants/validGuesses'
 
-console.log(window.location.href)
 let SONG_CHOICES = SONG_CHOICES_ALL
 if (window.location.href.endsWith('/80s')) {
   SONG_CHOICES = SONG_CHOICES_80S

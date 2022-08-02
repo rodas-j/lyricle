@@ -1,4 +1,6 @@
-export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
+export const GAME_TITLE = window.location.href.endsWith('/80s')
+  ? 'Lyricle 80s'
+  : process.env.REACT_APP_GAME_NAME!
 
 export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
