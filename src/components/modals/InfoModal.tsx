@@ -38,14 +38,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
         and{' '}
         <a
-          className="underline decoration-dashed decoration-green-400 dark:decoration-green-200 decoration-2 hover:bg-green-200 hover:text-gray-900 px-1"
+          className="underline decoration-dashed decoration-green-400 dark:decoration-green-200 decoration-2 hover:bg-green-200 hover:text-gray-900 pl-1"
           href="https://www.nytimes.com/games/wordle/index.html"
           target="_blank"
           rel="noreferrer"
         >
           Wordle
-        </a>{' '}
-        to create Lyricle.
+        </a>
+        , we wanted to shed light on the often unappreciated part of a song - the lyrics.
       </p>
 
       <p className="flex justify-center text-sm dark:text-gray-200 mb-6">
