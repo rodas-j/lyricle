@@ -1,14 +1,14 @@
-import VALID_GUESSES from '../constants/all_validGuesses.json'
 import SONG_CHOICES_ALL from '../constants/lyricle.json'
+import SONG_CHOICES_80S from '../constants/80s.json'
+
+import { mapArtistToSongs } from '../constants/validGuesses'
 
 export const isWinningSong = (song: string) => {
   return solution.song === song
 }
 
 export const isAValidGuess = (query: string) => {
-  return VALID_GUESSES.find(
-    ({ artist, songs }) => artist === query || songs.includes(query)
-  )
+  return mapArtistToSongs.find((song) => song === query)
 }
 
 export const getSongOfTheDay = () => {

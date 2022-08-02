@@ -1,3 +1,5 @@
+import ARTISTS_AND_SONGS from './all_validGuesses.json'
+
 export type LyricsField = {
   id: number
   title: string
@@ -7,3 +9,13 @@ export type LyricsField = {
   soundcloudLink?: string
   artworkLink?: string
 }
+
+export const mapArtistToSongs: string[] = ARTISTS_AND_SONGS.map(
+  ({ artist, songs }) => {
+    for (let song of songs) {
+      return `${artist} ─ ${song}`
+    }
+
+    return ''
+  }
+)

@@ -1,16 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
 
-import { LyricsField } from '../../constants/validGuesses'
+import { mapArtistToSongs } from '../../constants/validGuesses'
 import { isAValidGuess, solution } from '../../lib/songs'
 
-import VALID_GUESSES from '../../constants/all_validGuesses.json'
+// import VALID_GUESSES from '../../constants/all_validGuesses.json'
 
 import { ChevronDoubleRightIcon, XIcon } from '@heroicons/react/outline'
-
-type VGuess = {
-  artist: string
-  songs: string[]
-}
 
 export const SearchSong = ({
   isGameWon,
@@ -19,17 +14,20 @@ export const SearchSong = ({
   handleSkip,
   guesses,
 }) => {
-  const [matchInput, setMatchInput] = useState<VGuess[]>([])
+  const [matchInput, setMatchInput] = useState<string[]>([])
   const [currentGuess, setCurrentGuess] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (currentGuess && !isAValidGuess(currentGuess)) {
       setMatchInput(
-        VALID_GUESSES.filter(({ artist, songs }) =>
-          artist.toLowerCase().includes(currentGuess.toLowerCase())
-        ).slice(0, 5)
+        mapArtistToSongs
+          .filter((song) =>
+            song.toLowerCase().includes(currentGuess.toLowerCase())
+          )
+          .slice(0, 5)
       )
+      // setMatchInput()
     } else {
       setMatchInput([])
     }
@@ -97,9 +95,11 @@ export const SearchSong = ({
 }
 
 function SongOptions({ matchInput, guesses, changeInput }) {
+  console.log(matchInput)
+
   return (
     <ul className="absolute bottom-full left-0 flex flex-col divide-y-2  mb-3 w-full formide-y divide-gray-500 cursor-pointer">
-      {matchInput.map(({ song }, index) => {
+      {matchInput.map((song, index) => {
         let classes =
           'flex items-center p-2 md:p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
 
