@@ -1,5 +1,5 @@
 import SONG_CHOICES_ALL from '../constants/lyricle.json'
-import SONG_CHOICES_80S from '../constants/80s.json'
+// import SONG_CHOICES_80S from '../constants/80s.json'
 
 import { mapArtistToSongs } from '../constants/validGuesses'
 

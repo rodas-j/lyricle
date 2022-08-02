@@ -16,4 +16,4 @@ ARTISTS_AND_SONGS.forEach(({ artist, songs }) => {
   for (let song of songs) {
     mapArtistToSongs.push(`${artist} ─ ${song}`)
   }
-}
+})
