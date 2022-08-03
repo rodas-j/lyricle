@@ -17,7 +17,7 @@ type Props = {
     artist: string
     song: string
     lyrics: Array<string>
-    soundcloudLink?: string
+    songLink?: string
     artworkLink?: string
   }
   variant?: 'success' | 'error'
@@ -84,7 +84,7 @@ export const SongModal = ({
             <ReactPlayer
               height="0px"
               width="0px"
-              url={solution.soundcloudLink}
+              url={solution.songLink}
               playing={isPlaying}
               onEnded={() => setIsPlaying(false)}
               onError={() => showErrorAlert(REGION_NOT_SUPPORTED)}
@@ -109,7 +109,7 @@ export const SongModal = ({
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">
                   <span className="text-xs uppercase opacity-50 font-bold "></span>{' '}
                   <a
-                    href={solution.soundcloudLink}
+                    href={solution.songLink}
                     title={LISTEN_TO_TITLE(solution?.song)}
                     className="no-underline focus-visible:outline-none"
                   >

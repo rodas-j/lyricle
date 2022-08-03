@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
+import { decadesConfig } from './config'
 
-const gameStateKey = 'gameState'
+const gameStateKey = decadesConfig.gameState
 const highContrastKey = 'highContrast'
 const profileKey = 'profile'
 
@@ -18,7 +19,7 @@ export const loadGameStateFromLocalStorage = () => {
   return state ? (JSON.parse(state) as StoredGameState) : null
 }
 
-const gameStatKey = 'gameStats'
+const gameStatKey = decadesConfig.gameStats
 
 export type GameStats = {
   winDistribution: number[]
