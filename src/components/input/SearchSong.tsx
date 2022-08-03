@@ -23,7 +23,12 @@ export const SearchSong = ({
       setMatchInput(
         mapArtistToSongs
           .filter((song) =>
-            song.toLowerCase().includes(currentGuess.toLowerCase())
+            song
+              .split('─')
+              .join('')
+              .replace('  ', ' ')
+              .toLowerCase()
+              .includes(currentGuess.toLowerCase())
           )
           .slice(0, 5)
       )
