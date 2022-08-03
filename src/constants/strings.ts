@@ -1,6 +1,5 @@
-export const GAME_TITLE = window.location.href.endsWith('/80s')
-  ? 'Lyricle 80s'
-  : process.env.REACT_APP_GAME_NAME!
+import { decadesConfig } from '../lib/config'
+export const GAME_TITLE = decadesConfig.name
 
 export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'

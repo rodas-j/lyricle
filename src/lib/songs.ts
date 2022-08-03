@@ -1,14 +1,18 @@
 import SONG_CHOICES_ALL from '../constants/lyricle.json'
 import SONG_CHOICES_80S from '../constants/80s.json'
+import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
 
 let SONG_CHOICES = SONG_CHOICES_ALL
-if (window.location.href.endsWith('/80s')) {
-  SONG_CHOICES = SONG_CHOICES_80S
-} else {
-  SONG_CHOICES = SONG_CHOICES_ALL
-}
 
+switch (decadesConfig.key) {
+  case '80s':
+    SONG_CHOICES = SONG_CHOICES_80S
+    break
+
+  default:
+    SONG_CHOICES = SONG_CHOICES_ALL
+}
 export const isWinningSong = (song: string) => {
   return solution.song === song
 }
