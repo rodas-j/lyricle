@@ -20,7 +20,7 @@ export const Links = () => {
       </article>
       <Link to="/70s">
         <article className="p-4 bg-indigo-600 w-64 aspect-video rounded-md">
-          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 90s</h1>
+          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 70s</h1>
         </article>
       </Link>
     </div>
