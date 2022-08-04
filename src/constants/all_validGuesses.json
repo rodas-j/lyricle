@@ -20,7 +20,7 @@
   { "artist": "Avril Lavigne", "songs": ["Girlfriend"] },
   { "artist": "Basement Jaxx", "songs": ["Do Your Thing"] },
   { "artist": "Beyoncé", "songs": ["If I Were a Boy"] },
-  { "artist": "Britney Spears", "songs": ["Toxic"] },
+  { "artist": "Britney Spears", "songs": ["Toxic", "...Baby One More Time"] },
   { "artist": "Carly Rae Jepsen", "songs": ["Call Me Maybe"] },
   { "artist": "Blue Foundation", "songs": ["Eyes on Fire"] },
   { "artist": "Bobby Darin", "songs": ["Mack the Knife"] },
@@ -57,7 +57,7 @@
     "songs": ["Don't Let Me Down", "Something Just Like This"]
   },
   { "artist": "Outkast", "songs": ["Ms. Jackson", "Hey Ya!"] },
-  { "artist": "Oasis", "songs": ["Wonderwall"] },
+  { "artist": "Oasis", "songs": ["Wonderwall", "Don't Look Back In Anger"] },
   {
     "artist": "Michael Jackson",
     "songs": [
@@ -70,7 +70,8 @@
       "Bad",
       "Man in the Mirror",
       "Dirty Diana",
-      "Don't Stop 'Til You Get Enough"
+      "Don't Stop 'Til You Get Enough",
+      "They Don't Care About Us"
     ]
   },
   { "artist": "Coldplay", "songs": ["Viva La Vida", "Fix You"] },
@@ -104,7 +105,13 @@
   { "artist": "Iyaz", "songs": ["Replay"] },
   {
     "artist": "Bon Jovi",
-    "songs": ["It's My Life", "Livin' On A Prayer", "Bad Medicine"]
+    "songs": [
+      "It's My Life",
+      "Livin' On A Prayer",
+      "Bad Medicine",
+      "Always",
+      "Bed Of Roses"
+    ]
   },
   { "artist": "Gnarls Barkley", "songs": ["Crazy"] },
   { "artist": "OneRepublic", "songs": ["Counting Stars"] },
@@ -131,7 +138,9 @@
       "Smells Like Teen Spirit",
       "In Bloom",
       "Come As You Are",
-      "All Apologies"
+      "All Apologies",
+      "Heart-Shaped Box",
+      "The Man Who Sold The World"
     ]
   },
   { "artist": "Gotye", "songs": ["Somebody That I Used To Know"] },
@@ -234,7 +243,8 @@
       "Something Happened On The Way To Heaven",
       "Do You Remember",
       "Take Me Home",
-      "You Can't Hurry Love"
+      "You Can't Hurry Love",
+      "You'll Be In My Heart"
     ]
   },
   {
@@ -283,7 +293,13 @@
   { "artist": "Jeff Buckley", "songs": ["Hallelujah"] },
   {
     "artist": "Radiohead",
-    "songs": ["Paranoid Android", "Creep", "Fake Plastic Trees"]
+    "songs": [
+      "Paranoid Android",
+      "Creep",
+      "Fake Plastic Trees",
+      "Karma Police",
+      "High and Dry"
+    ]
   },
   {
     "artist": "Dusty Springfield",
@@ -309,7 +325,7 @@
       "Cupid"
     ]
   },
-  { "artist": "Eminem", "songs": ["Lose Yourself"] },
+  { "artist": "Eminem", "songs": ["Lose Yourself", "My Name Is"] },
   { "artist": "Supergrass", "songs": ["Alright"] },
   { "artist": "Taylor Swift", "songs": ["Shake It Off"] },
   { "artist": "B.o.B", "songs": ["Airplanes"] },
@@ -534,7 +550,8 @@
       "Thunder Road",
       "Born In The U.S.A.",
       "Dancing In the Dark",
-      "Born in the U.S.A."
+      "Born in the U.S.A.",
+      "Streets of Philadelphia"
     ]
   },
   {
@@ -596,7 +613,12 @@
   },
   {
     "artist": "Pretenders",
-    "songs": ["Brass in Pocket", "Don't Get Me Wrong", "Back on the Chain Gang"]
+    "songs": [
+      "Brass in Pocket",
+      "Don't Get Me Wrong",
+      "Back on the Chain Gang",
+      "I'll Stand by You"
+    ]
   },
   {
     "artist": "Buddy Holly",
@@ -778,7 +800,10 @@
       "Janie's Got A Gun",
       "Dude",
       "Rag Doll",
-      "Sweet Emotion"
+      "Sweet Emotion",
+      "Crazy",
+      "I Don't Want to Miss a Thing",
+      "Cryin'"
     ]
   },
   {
@@ -1187,7 +1212,10 @@
   { "artist": "Falco", "songs": ["Rock Me Amadeus"] },
   { "artist": "Natalie Cole", "songs": ["Pink Cadillac", "This Will Be"] },
   { "artist": "Corey Hart", "songs": ["Sunglasses At Night"] },
-  { "artist": "Wet Wet Wet", "songs": ["Sweet Little Mystery"] },
+  {
+    "artist": "Wet Wet Wet",
+    "songs": ["Sweet Little Mystery", "Love Is All Around"]
+  },
   { "artist": "Taylor Dayne", "songs": ["Tell It to My Heart"] },
   {
     "artist": "Don Henley",
@@ -1288,7 +1316,12 @@
   { "artist": "Poison", "songs": ["Every Rose Has Its Thorn"] },
   {
     "artist": "Roxette",
-    "songs": ["The Look", "Listen To Your Heart", "Dressed For Success"]
+    "songs": [
+      "The Look",
+      "Listen To Your Heart",
+      "Dressed For Success",
+      "It Must Have Been Love"
+    ]
   },
   {
     "artist": "Richard Marx",
@@ -1449,9 +1482,9 @@
   { "artist": "David Lee Roth", "songs": ["Just Like Paradise"] },
   { "artist": "The Psychedelic Furs", "songs": ["Love My Way"] },
   { "artist": "The Outfield", "songs": ["Your Love"] },
-  { "artist": "Cher", "songs": ["If I Could Turn Back Time"] },
+  { "artist": "Cher", "songs": ["If I Could Turn Back Time", "Believe"] },
   { "artist": "The Weather Girls", "songs": ["It's Raining Men"] },
-  { "artist": "Inner Circle", "songs": ["Bad Boys"] },
+  { "artist": "Inner Circle", "songs": ["Bad Boys", "Sweat"] },
   { "artist": "Kenny Rogers", "songs": ["Islands In The Stream"] },
   { "artist": "Eric Carmen", "songs": ["Hungry Eyes"] },
   { "artist": "Mike Oldfield", "songs": ["Moonlight Shadow"] },
@@ -1464,7 +1497,10 @@
   { "artist": "Yazz", "songs": ["The Only Way Is Up"] },
   { "artist": "Commodores", "songs": ["Easy"] },
   { "artist": "Meat Loaf", "songs": ["Paradise By the Dashboard Light"] },
-  { "artist": "AC/DC", "songs": ["Highway to Hell", "T.N.T."] },
+  {
+    "artist": "AC/DC",
+    "songs": ["Highway to Hell", "T.N.T.", "Thunderstruck"]
+  },
   {
     "artist": "KISS",
     "songs": [
@@ -1507,5 +1543,97 @@
   { "artist": "Boney M.", "songs": ["Daddy Cool"] },
   { "artist": "10cc", "songs": ["I'm Not In Love"] },
   { "artist": "The Marshall Tucker Band", "songs": ["Can't You See"] },
-  { "artist": "The Emotions", "songs": ["Best of My Love"] }
+  { "artist": "The Emotions", "songs": ["Best of My Love"] },
+  { "artist": "4 Non Blondes", "songs": ["What's Up?"] },
+  { "artist": "Coolio", "songs": ["Gangsta's Paradise"] },
+  { "artist": "Mariah Carey", "songs": ["Fantasy", "Always Be My Baby"] },
+  { "artist": "Spice Girls", "songs": ["Wannabe"] },
+  {
+    "artist": "Shania Twain",
+    "songs": ["Man! I Feel Like A Woman!", "You're Still The One"]
+  },
+  { "artist": "2Pac", "songs": ["California Love", "Changes"] },
+  { "artist": "Dr. Dre", "songs": ["Still D.R.E."] },
+  {
+    "artist": "Red Hot Chili Peppers",
+    "songs": ["Californication", "Otherside", "Scar Tissue", "Give It Away"]
+  },
+  { "artist": "The Cranberries", "songs": ["Zombie", "Linger"] },
+  {
+    "artist": "blink-182",
+    "songs": ["All The Small Things", "What's My Age Again?"]
+  },
+  {
+    "artist": "Green Day",
+    "songs": ["Basket Case", "Good Riddance", "When I Come Around"]
+  },
+  { "artist": "Smash Mouth", "songs": ["All Star"] },
+  { "artist": "TLC", "songs": ["No Scrubs", "Waterfalls"] },
+  {
+    "artist": "The Offspring",
+    "songs": ["The Kids Aren't Alright", "Self Esteem"]
+  },
+  { "artist": "Shaggy", "songs": ["It Wasn't Me"] },
+  { "artist": "Sublime", "songs": ["Santeria"] },
+  { "artist": "Counting Crows", "songs": ["Mr. Jones"] },
+  { "artist": "Gala", "songs": ["Freed From Desire"] },
+  { "artist": "Blackstreet", "songs": ["No Diggity"] },
+  {
+    "artist": "Metallica",
+    "songs": ["Enter Sandman", "Nothing Else Matters"]
+  },
+  {
+    "artist": "Fugees",
+    "songs": ["Killing Me Softly With His Song", "Ready or Not"]
+  },
+  { "artist": "Soundgarden", "songs": ["Black Hole Sun"] },
+  { "artist": "Sixpence None The Richer", "songs": ["Kiss Me"] },
+  { "artist": "Foo Fighters", "songs": ["Learn to Fly"] },
+  { "artist": "No Doubt", "songs": ["Don't Speak"] },
+  { "artist": "Mazzy Star", "songs": ["Fade Into You"] },
+  { "artist": "Pearl Jam", "songs": ["Even Flow", "Alive"] },
+  { "artist": "Blind Melon", "songs": ["No Rain"] },
+  { "artist": "Semisonic", "songs": ["Closing Time"] },
+  {
+    "artist": "Lenny Kravitz",
+    "songs": [
+      "Are You Gonna Go My Way",
+      "Fly Away",
+      "It Ain't Over 'Til It's Over"
+    ]
+  },
+  { "artist": "Mark Morrison", "songs": ["Return of the Mack"] },
+  { "artist": "Ricky Martin", "songs": ["Livin' la Vida Loca"] },
+  { "artist": "Third Eye Blind", "songs": ["Semi-Charmed Life"] },
+  { "artist": "Daft Punk", "songs": ["Around the World"] },
+  { "artist": "New Radicals", "songs": ["You Get What You Give"] },
+  { "artist": "Natalie Imbruglia", "songs": ["Torn"] },
+  { "artist": "Dido", "songs": ["Thank You"] },
+  { "artist": "Cypress Hill", "songs": ["Insane in the Brain"] },
+  { "artist": "Ace of Base", "songs": ["All That She Wants", "The Sign"] },
+  { "artist": "Luniz", "songs": ["I Got 5 On It"] },
+  { "artist": "Aqua", "songs": ["Barbie Girl"] },
+  { "artist": "Savage Garden", "songs": ["Truly Madly Deeply"] },
+  { "artist": "The Cardigans", "songs": ["Lovefool"] },
+  { "artist": "Ginuwine", "songs": ["Pony"] },
+  { "artist": "Crazy Town", "songs": ["Butterfly"] },
+  { "artist": "Mr. President", "songs": ["Coco Jamboo"] },
+  { "artist": "The Wallflowers", "songs": ["One Headlight"] },
+  { "artist": "Tal Bachman", "songs": ["She's so High"] },
+  { "artist": "Ronan Keating", "songs": ["When You Say Nothing At All"] },
+  { "artist": "Will Smith", "songs": ["Miami", "Gettin' Jiggy Wit It"] },
+  { "artist": "Macy Gray", "songs": ["I Try"] },
+  { "artist": "Haddaway", "songs": ["What Is Love"] },
+  { "artist": "Deep Blue Something", "songs": ["Breakfast At Tiffany's"] },
+  { "artist": "Vengaboys", "songs": ["Boom, Boom, Boom, Boom!!"] },
+  { "artist": "Hootie & The Blowfish", "songs": ["Only Wanna Be with You"] },
+  { "artist": "Soul Asylum", "songs": ["Runaway Train"] },
+  { "artist": "Everclear", "songs": ["Santa Monica"] },
+  { "artist": "Rednex", "songs": ["Cotton Eye Joe"] },
+  { "artist": "Brandy", "songs": ["The Boy Is Mine"] },
+  { "artist": "Gabrielle", "songs": ["Out Of Reach"] },
+  { "artist": "Bloodhound Gang", "songs": ["The Bad Touch"] },
+  { "artist": "K-Ci & JoJo", "songs": ["All My Life"] },
+  { "artist": "Boyz II Men", "songs": ["End Of The Road"] },
+  { "artist": "Matchbox Twenty", "songs": ["Push"] }
 ]

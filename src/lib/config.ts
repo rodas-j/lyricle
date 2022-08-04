@@ -7,12 +7,16 @@ switch (pathName) {
   case '/70s':
     key = '70s'
     name = 'Lyricle 70s'
-
     break
+
   case '/80s':
     key = '80s'
     name = 'Lyricle 80s'
+    break
 
+  case '/90s':
+    key = '90s'
+    name = 'Lyricle 90s'
     break
 
   default:
