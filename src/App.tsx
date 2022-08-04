@@ -4,6 +4,8 @@ import { LyricsLine } from './components/lyrics/LyricsLine'
 import { SearchSong } from './components/input/SearchSong'
 import { ProgressBar } from './components/progressbar/ProgressBar'
 
+import { Links } from './components/links/Links'
+
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
@@ -36,7 +38,11 @@ import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
 
-function App() {
+type Props = {
+  showHome?: boolean
+}
+
+function App({ showHome = true }: Props) {
   if (!getUUID()) {
     setUUID()
   }
@@ -128,7 +134,10 @@ function App() {
     setSliceLyrics(solution.lyrics.length)
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: {
+    preventDefault: () => void
+    target: { search: { value: string } }
+  }) => {
     e.preventDefault()
     if (isGameWon || isGameLost) {
       return
@@ -239,19 +248,26 @@ function App() {
         setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
+        shouldHideStatsModalButton={showHome}
       />
       <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow">
-          <LyricsLine sliceLyrics={sliceLyrics} />
-        </div>
-        <ProgressBar guesses={guesses} />
-        <SearchSong
-          isGameWon={isGameWon}
-          isGameLost={isGameLost}
-          guesses={guesses}
-          handleSubmit={onSubmit}
-          handleSkip={onSkip}
-        />
+        {showHome ? (
+          <Links />
+        ) : (
+          <>
+            <div className="pb-6 grow">
+              <LyricsLine sliceLyrics={sliceLyrics} />
+            </div>
+            <ProgressBar guesses={guesses} />
+            <SearchSong
+              isGameWon={isGameWon}
+              isGameLost={isGameLost}
+              guesses={guesses}
+              handleSubmit={onSubmit}
+              handleSkip={onSkip}
+            />
+          </>
+        )}
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}

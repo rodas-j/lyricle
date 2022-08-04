@@ -11,6 +11,8 @@ type Props = {
   setIsHowToPlayModalOpen: (value: boolean) => void
   setIsStatsModalOpen: (value: boolean) => void
   setIsSettingsModalOpen: (value: boolean) => void
+
+  shouldHideStatsModalButton: boolean
 }
 
 export const Navbar = ({
@@ -18,6 +20,7 @@ export const Navbar = ({
   setIsHowToPlayModalOpen,
   setIsStatsModalOpen,
   setIsSettingsModalOpen,
+  shouldHideStatsModalButton,
 }: Props) => {
   return (
     <div className="navbar">
@@ -34,10 +37,14 @@ export const Navbar = ({
         </div>
         <p className="text-xl ml-2.5 font-bold dark:text-white">{GAME_TITLE}</p>
         <div className="flex">
-          <ChartBarIcon
-            className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
-            onClick={() => setIsStatsModalOpen(true)}
-          />
+          {shouldHideStatsModalButton ? (
+            <></>
+          ) : (
+            <ChartBarIcon
+              className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+              onClick={() => setIsStatsModalOpen(true)}
+            />
+          )}
           <CogIcon
             className="h-6 w-6 cursor-pointer dark:stroke-white"
             onClick={() => setIsSettingsModalOpen(true)}
