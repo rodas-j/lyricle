@@ -13,12 +13,12 @@ export const Links = () => {
           alt=""
         />
         <Link to="/80s" className="">
-          <p className="p-2 bg-indigo-100 rounded-full font-bold mt-3 text-center">
-            Play
+          <p className="p-2 bg-indigo-100 rounded-full font-bold mt-3 text-center uppercase">
+            Play Now
           </p>
         </Link>
       </article>
-      <Link to="/90s">
+      <Link to="/70s">
         <article className="p-4 bg-indigo-600 w-64 aspect-video rounded-md">
           <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 90s</h1>
         </article>

@@ -287,6 +287,7 @@ function App({ showHome = true }: Props) {
           handleReducedMotionMode={handleReducedMotionMode}
         />
         <StatsModal
+          isHomePage={showHome}
           isOpen={isStatsModalOpen}
           handleClose={() => setIsStatsModalOpen(false)}
           guesses={guesses}
