@@ -45,7 +45,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         >
           Wordle
         </a>
-        , we wanted to shed light on the often unappreciated part of a song - the lyrics.
+        , we wanted to shed light on the often unappreciated part of a song -
+        the lyrics.
       </p>
 
       <p className="flex justify-center text-sm dark:text-gray-200 mb-6">
