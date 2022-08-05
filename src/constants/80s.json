@@ -120,21 +120,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-xBaUUt3pUG2u-0-large.jpg"
   },
   {
-    "id": 9,
-    "title": "Don't You Forget About Me",
-    "artist": "Simple Minds",
-    "lyrics": [
-      "Hey, hey, hey, hey",
-      "Ooh, woah",
-      "Won't you come see about me?",
-      "I'll be alone, dancing, you know it, baby",
-      "Tell me your troubles and doubts",
-      "Giving me everything inside and out and"
-    ],
-    "songLink": "https://soundcloud.com/simple-minds-official/dont-you-forget-about-me-1",
-    "artworkLink": "https://i1.sndcdn.com/artworks-ONbP8tWYw1zo-0-large.jpg"
-  },
-  {
     "id": 10,
     "title": "Rebel Yell",
     "artist": "Billy Idol",
@@ -210,21 +195,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-8T0JNxuAJ3AZ-0-large.jpg"
   },
   {
-    "id": 15,
-    "title": "A Kind Of Magic",
-    "artist": "Queen",
-    "lyrics": [
-      "It's a kind of magic",
-      "It's a kind of magic",
-      "A kind of magic",
-      "One dream, one soul",
-      "One prize, one goal",
-      "One golden glance of what should be"
-    ],
-    "songLink": "https://soundcloud.com/queen-69312/a-kind-of-magic-remastered",
-    "artworkLink": "https://i1.sndcdn.com/artworks-b6scziO0RK57-0-large.jpg"
-  },
-  {
     "id": 16,
     "title": "Dancing With Tears In My Eyes",
     "artist": "Ultravox",
@@ -239,21 +209,7 @@
     "songLink": "https://soundcloud.com/ultravoxuk/dancing-with-tears-in-my-7",
     "artworkLink": "https://i1.sndcdn.com/artworks-s1wFSPk7ifzJ-0-large.png"
   },
-  {
-    "id": 17,
-    "title": "Smalltown Boy",
-    "artist": "Bronski Beat",
-    "lyrics": [
-      "To your soul",
-      "To your soul",
-      "Cry",
-      "Cry",
-      "Cry",
-      "You leave in the morning with everything you own in a little black case"
-    ],
-    "songLink": "https://soundcloud.com/bronski-beat/smalltown-boy",
-    "artworkLink": "https://i1.sndcdn.com/artworks-rYPZ6c3vBgZQ-0-large.jpg"
-  },
+
   {
     "id": 18,
     "title": "Let's Dance",
@@ -299,21 +255,7 @@
     "songLink": "https://soundcloud.com/neworderofficial/blue-monday-2016-remaster",
     "artworkLink": "https://i1.sndcdn.com/artworks-T7N4m5IVxlRp-0-large.jpg"
   },
-  {
-    "id": 21,
-    "title": "True",
-    "artist": "Spandau Ballet",
-    "lyrics": [
-      "Huh huh uh-huh hi",
-      "Huh huh uh-huh hi",
-      "So true, funny how it seems",
-      "Always in time, but never in line for dreams",
-      "Head over heels when toe to toe",
-      "This is the sound of my soul"
-    ],
-    "songLink": "https://soundcloud.com/spandau_ballet/true-12-mix",
-    "artworkLink": "https://i1.sndcdn.com/artworks-4GgO3iqktyQ4-0-large.jpg"
-  },
+
   {
     "id": 22,
     "title": "Our House",
