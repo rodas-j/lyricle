@@ -24,7 +24,7 @@ export const Navbar = ({
 }: Props) => {
   return (
     <div className="navbar">
-      <div className="navbar-content relative px-5">
+      <div className="navbar-content relative px-2">
         <div className="flex items-center">
           {shouldHideStatsModalButton ? (
             <></>
@@ -41,15 +41,15 @@ export const Navbar = ({
             className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
             onClick={() => setIsInfoModalOpen(true)}
           />
-          <QuestionMarkCircleIcon
-            className="h-6 w-6 cursor-pointer dark:stroke-white"
-            onClick={() => setIsHowToPlayModalOpen(true)}
-          />
         </div>
         <p className="text-xl md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 font-bold dark:text-white">
           {GAME_TITLE}
         </p>
         <div className="flex">
+          <QuestionMarkCircleIcon
+            className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+            onClick={() => setIsHowToPlayModalOpen(true)}
+          />
           {shouldHideStatsModalButton ? (
             <></>
           ) : (
