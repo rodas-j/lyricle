@@ -66,6 +66,6 @@ export const getToday = () => {
   return date ? date : null
 }
 
-export const setToday = (day) => {
+export const setToday = (day: number | string) => {
   localStorage.setItem('date', String(day))
 }

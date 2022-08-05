@@ -6,6 +6,8 @@ import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
 import { getToday, setToday } from './localStorage'
 
+import { getToday, setToday } from './localStorage'
+
 let SONG_CHOICES = SONG_CHOICES_ALL
 
 switch (decadesConfig.key) {
@@ -67,5 +69,20 @@ export const getSongOfTheDay = () => {
     tomorrow: nextDay,
   }
 }
+
+if (!getToday()) {
+  const today = new Date()
+  const day = today.getDate()
+  setToday(day)
+}
+const handleRefresh = (e) => {
+  const today = new Date()
+  const todayDate = today.getDate()
+  if (getToday() !== String(todayDate)) {
+    setToday(String(todayDate))
+    window.location.reload()
+  }
+}
+document.body.addEventListener('click', handleRefresh)
 
 export const { solution, solutionIndex, tomorrow } = getSongOfTheDay()
