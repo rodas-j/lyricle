@@ -30,7 +30,16 @@ if (!getToday()) {
   setToday(day)
 }
 
-//window.location.reload()
+const handleRefresh = (e) => {
+  e.preventDefault()
+  const today = new Date()
+  const todayDate = today.getDate()
+  if (getToday() !== String(todayDate)) {
+    setToday(String(todayDate))
+    window.location.reload()
+  }
+}
+document.body.addEventListener('click', handleRefresh)
 
 export const isWinningSong = (song: string) => {
   return solution.song === song

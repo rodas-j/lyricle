@@ -29,8 +29,6 @@ import {
   getStoredIsHighContrastMode,
   getUUID,
   setUUID,
-  setToday,
-  getToday,
 } from './lib/localStorage'
 
 import './App.css'
@@ -42,18 +40,6 @@ function App() {
   if (!getUUID()) {
     setUUID()
   }
-
-  const handleRefresh = (e) => {
-    e.preventDefault()
-    console.log('Touched.')
-    const today = new Date()
-    const todayDate = today.getDate()
-    if (getToday() !== String(todayDate)) {
-      setToday(String(todayDate))
-      window.location.reload()
-    }
-  }
-  document.body.addEventListener('click', handleRefresh)
 
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
