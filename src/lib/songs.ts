@@ -1,8 +1,10 @@
 import SONG_CHOICES_ALL from '../constants/lyricle.json'
 import SONG_CHOICES_80S from '../constants/80s.json'
 import SONG_CHOICES_70s from '../constants/70s.json'
+import SONG_CHOICES_90S from '../constants/90s.json'
 import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
+import { getToday, setToday } from './localStorage'
 
 import { getToday, setToday } from './localStorage'
 
@@ -16,9 +18,30 @@ switch (decadesConfig.key) {
     SONG_CHOICES = SONG_CHOICES_80S
     break
 
+  case '90s':
+    SONG_CHOICES = SONG_CHOICES_90S
+    break
+
   default:
     SONG_CHOICES = SONG_CHOICES_ALL
 }
+
+if (!getToday()) {
+  const today = new Date()
+  const day = today.getDate()
+  setToday(day)
+}
+
+const handleRefresh = (e) => {
+  const today = new Date()
+  const todayDate = today.getDate()
+  if (getToday() !== String(todayDate)) {
+    setToday(String(todayDate))
+    window.location.reload()
+  }
+}
+document.body.addEventListener('click', handleRefresh)
+
 export const isWinningSong = (song: string) => {
   return solution.song === song
 }
@@ -28,7 +51,7 @@ export const isAValidGuess = (query: string) => {
 }
 
 export const getSongOfTheDay = () => {
-  const epochMs = new Date('April 24, 2022').valueOf()
+  const epochMs = new Date('August 4, 2022').valueOf()
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
