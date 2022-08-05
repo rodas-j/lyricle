@@ -1,24 +1,28 @@
-import THUMB_80s from '../../assets/thumbnails/80s.jpg'
-
 export const Links = () => {
   return (
     <div className="flex flex-wrap gap-4">
-      <article className="relative overflow-hidden p-4 w-64 aspect-video rounded-md flex flex-col justify-between">
-        <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 80s</h1>
-        <img
-          className="absolute inset-0 h-full w-full object-cover -z-10"
-          src={THUMB_80s}
-          alt=""
-        />
-        <a href="https://decades.lyricle.app/80s" className="">
-          <p className="p-2 bg-indigo-100 rounded-full font-bold mt-3 text-center uppercase">
-            Play Now
-          </p>
-        </a>
-      </article>
-      <a href="https://decades.lyricle.app/70s">
-        <article className="p-4 bg-indigo-600 w-64 aspect-video rounded-md">
+      <a
+        href="https://decades.lyricle.app/70s"
+        className="flex-grow hover:scale-110 hover:transition-transform"
+      >
+        <article className="flex items-center justify-center p-4 bg-gradient-to-r   from-[#C6426E]/95 to-[#642B73]/95 max-w-s aspect-video rounded-md">
           <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 70s</h1>
+        </article>
+      </a>
+      <a
+        href="https://decades.lyricle.app/80s"
+        className="flex-grow hover:scale-110 hover:transition-transform"
+      >
+        <article className="flex items-center justify-center p-4 bg-gradient-to-r  from-[#f5af19]/95 to-[#f12711]/95 max-w-s aspect-video rounded-md">
+          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 80s</h1>
+        </article>
+      </a>
+      <a
+        href="https://decades.lyricle.app/90s"
+        className="flex-grow hover:scale-110 hover:transition-transform"
+      >
+        <article className="flex items-center justify-center p-4 bg-gradient-to-r  from-[#45a247]/95 to-[#283c86]/95 max-w-s aspect-video rounded-md">
+          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 90s</h1>
         </article>
       </a>
     </div>
