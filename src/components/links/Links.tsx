@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 import THUMB_80s from '../../assets/thumbnails/80s.jpg'
 
 export const Links = () => {
@@ -12,17 +10,17 @@ export const Links = () => {
           src={THUMB_80s}
           alt=""
         />
-        <Link to="/80s" className="">
+        <a href="https://decades.lyricle.app/80s" className="">
           <p className="p-2 bg-indigo-100 rounded-full font-bold mt-3 text-center uppercase">
             Play Now
           </p>
-        </Link>
+        </a>
       </article>
-      <Link to="/70s">
+      <a href="https://decades.lyricle.app/70s">
         <article className="p-4 bg-indigo-600 w-64 aspect-video rounded-md">
           <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 70s</h1>
         </article>
-      </Link>
+      </a>
     </div>
   )
 }
