@@ -15,6 +15,7 @@ import {
 } from '../../constants/strings'
 
 type Props = {
+  isHomePage: boolean
   isOpen: boolean
   handleClose: () => void
   guesses: string[]
@@ -28,6 +29,7 @@ type Props = {
 }
 
 export const StatsModal = ({
+  isHomePage,
   isOpen,
   handleClose,
   guesses,
@@ -39,6 +41,8 @@ export const StatsModal = ({
   isHighContrastMode,
   numberOfGuessesMade,
 }: Props) => {
+  if (isHomePage) return <></>
+
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal

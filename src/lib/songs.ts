@@ -1,12 +1,30 @@
-import { VALID_GUESSES } from '../constants/validGuesses'
+import SONG_CHOICES_ALL from '../constants/lyricle.json'
+import SONG_CHOICES_80S from '../constants/80s.json'
+import SONG_CHOICES_70s from '../constants/70s.json'
+import { decadesConfig } from './config'
+import { mapArtistToSongs } from '../constants/validGuesses'
+
 import { getToday, setToday } from './localStorage'
 
+let SONG_CHOICES = SONG_CHOICES_ALL
+
+switch (decadesConfig.key) {
+  case '70s':
+    SONG_CHOICES = SONG_CHOICES_70s
+    break
+  case '80s':
+    SONG_CHOICES = SONG_CHOICES_80S
+    break
+
+  default:
+    SONG_CHOICES = SONG_CHOICES_ALL
+}
 export const isWinningSong = (song: string) => {
   return solution.song === song
 }
 
 export const isAValidGuess = (query: string) => {
-  return VALID_GUESSES.find(({ song }) => song === query)
+  return mapArtistToSongs.find((song) => song === query)
 }
 
 export const getSongOfTheDay = () => {
@@ -16,8 +34,14 @@ export const getSongOfTheDay = () => {
   const index = Math.floor((now - epochMs) / msInDay)
   const nextDay = (index + 1) * msInDay + epochMs
 
+  const songOfTheDay = SONG_CHOICES[index % SONG_CHOICES.length]
+  const solution = {
+    song: `${songOfTheDay.artist} ─ ${songOfTheDay.title}`,
+    ...songOfTheDay,
+  }
+
   return {
-    solution: VALID_GUESSES[index % VALID_GUESSES.length],
+    solution: solution,
     solutionIndex: index,
     tomorrow: nextDay,
   }

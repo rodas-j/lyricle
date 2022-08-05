@@ -48,6 +48,8 @@ const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
     .map((guess) => {
       if (guess === solution.song) {
         return tiles[0]
+      } else if (guess.split('─')[0] === solution.song.split('─')[0]) {
+        return tiles[3]
       } else if (guess !== 'skip') {
         return tiles[1]
       } else {
@@ -73,5 +75,6 @@ const getEmojiTiles = (isDarkMode: boolean, isHighContrastMode: boolean) => {
   tiles.push(isHighContrastMode ? '🟧' : '🟩')
   tiles.push(isHighContrastMode ? '🟦' : '🟥')
   tiles.push(isDarkMode ? '⬛' : '⬜')
+  tiles.push('🟨')
   return tiles
 }
