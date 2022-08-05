@@ -20,9 +20,10 @@ export const shareStatus = (
   }
 
   const textToShare =
-    `#${GAME_TITLE} #${solutionIndex}\n\n` +
+    `#${GAME_TITLE.replace(' ', '')} #${solutionIndex}\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
-    `\n\nhttps://lyricle.app`
+    `\n\n#LyricleDecades #Lyricle` +
+    `\n\nhttps://decades.lyricle.app`
 
   const shareData = { text: textToShare }
 
