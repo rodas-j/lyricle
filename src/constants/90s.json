@@ -15,21 +15,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-HOUHcxb60vLm-0-large.jpg"
   },
   {
-    "id": 2,
-    "title": "Gangsta's Paradise",
-    "artist": "Coolio",
-    "lyrics": [
-      "As I walk through the valley of the shadow of death",
-      "I take a look at my life and realize there's nothin' left",
-      "'Cause I've been blastin' and laughin' so long, that",
-      "Even my momma thinks that my mind is gone",
-      "But I ain't never crossed a man that didn't deserve it",
-      "Me be treated like a punk, you know that's unheard of"
-    ],
-    "songLink": "https://soundcloud.com/coolioofficial/coolio-gangstas-paradise-feat",
-    "artworkLink": "https://i1.sndcdn.com/artworks-aifHXgzowYCn-0-large.png"
-  },
-  {
     "id": 3,
     "title": "Fantasy",
     "artist": "Mariah Carey",
@@ -1056,6 +1041,21 @@
     ],
     "songLink": "https://soundcloud.com/aerosmith/crazy",
     "artworkLink": "https://i1.sndcdn.com/artworks-57R9uWwakJBe-0-large.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Gangsta's Paradise",
+    "artist": "Coolio",
+    "lyrics": [
+      "As I walk through the valley of the shadow of death",
+      "I take a look at my life and realize there's nothin' left",
+      "'Cause I've been blastin' and laughin' so long, that",
+      "Even my momma thinks that my mind is gone",
+      "But I ain't never crossed a man that didn't deserve it",
+      "Me be treated like a punk, you know that's unheard of"
+    ],
+    "songLink": "https://soundcloud.com/coolioofficial/coolio-gangstas-paradise-feat",
+    "artworkLink": "https://i1.sndcdn.com/artworks-aifHXgzowYCn-0-large.png"
   },
   {
     "id": 69,
