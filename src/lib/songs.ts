@@ -31,7 +31,6 @@ if (!getToday()) {
 }
 
 const handleRefresh = (e) => {
-  e.preventDefault()
   const today = new Date()
   const todayDate = today.getDate()
   if (getToday() !== String(todayDate)) {
