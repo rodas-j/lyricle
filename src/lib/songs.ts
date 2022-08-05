@@ -4,6 +4,7 @@ import SONG_CHOICES_70s from '../constants/70s.json'
 import SONG_CHOICES_90S from '../constants/90s.json'
 import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
+import { getToday, setToday } from './localStorage'
 
 let SONG_CHOICES = SONG_CHOICES_ALL
 
@@ -22,6 +23,15 @@ switch (decadesConfig.key) {
   default:
     SONG_CHOICES = SONG_CHOICES_ALL
 }
+
+if (!getToday()) {
+  const today = new Date()
+  const day = today.getDate()
+  setToday(day)
+}
+
+//window.location.reload()
+
 export const isWinningSong = (song: string) => {
   return solution.song === song
 }

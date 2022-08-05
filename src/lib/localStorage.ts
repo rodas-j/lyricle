@@ -60,3 +60,12 @@ export const getUUID = () => {
   const id = localStorage.getItem(profileKey)
   return id ? id : null
 }
+
+export const getToday = () => {
+  const date = localStorage.getItem('date')
+  return date ? date : null
+}
+
+export const setToday = (day) => {
+  localStorage.setItem('date', String(day))
+}
