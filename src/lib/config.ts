@@ -19,9 +19,14 @@ switch (pathName) {
     name = 'Lyricle 90s'
     break
 
+  case '/00s':
+    key = '00s'
+    name = 'Lyricle 00s'
+    break
+
   default:
     key = 'default'
-    name = 'Lyricle Decades'
+    name = 'Lyricle'
 }
 gameState = 'gameState'.concat(key)
 gameStats = 'gameStats'.concat(key)

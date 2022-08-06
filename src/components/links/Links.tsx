@@ -25,6 +25,14 @@ export const Links = () => {
           <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 90s</h1>
         </article>
       </a>
+      <a
+        href="https://decades.lyricle.app/00s"
+        className="flex-grow md:hover:scale-110 md:hover:transition-transform"
+      >
+        <article className="flex items-center justify-center p-4 bg-gradient-to-r  from-[#00d2ff]/95 to-[#928dab]/95 max-w-s aspect-video rounded-md">
+          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle 00s</h1>
+        </article>
+      </a>
     </div>
   )
 }
