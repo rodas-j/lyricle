@@ -26,7 +26,7 @@ switch (pathName) {
 
   default:
     key = 'default'
-    name = 'Lyricle'
+    name = 'Lyricle Decades'
 }
 gameState = 'gameState'.concat(key)
 gameStats = 'gameStats'.concat(key)
