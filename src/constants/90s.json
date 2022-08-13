@@ -120,19 +120,19 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-23MLsXWp45Z5-0-large.png"
   },
   {
-    "id": 10,
-    "title": "Still D.R.E.",
-    "artist": "Dr. Dre",
+    "id": 16,
+    "title": "Basket Case",
+    "artist": "Green Day",
     "lyrics": [
-      "Yeah, n*gga, we're still f*ckin' wit' you",
-      "Still waters run deep",
-      "Still Snoop Dogg and D.R.E.",
-      "'99, n*gga, guess who's back",
-      "Still, still doin' that shit, huh, Dre?",
-      "Oh for sho'"
+      "Do you have the time",
+      "To listen to me whine",
+      "About nothing and everything all at once?",
+      "I am one of those",
+      "Melodramatic fools",
+      "Neurotic to the bone, no doubt about it"
     ],
-    "songLink": "https://soundcloud.com/dr-dre-music/still-d-r-e",
-    "artworkLink": "https://i1.sndcdn.com/artworks-i4Icys1rEqsl-0-large.jpg"
+    "songLink": "https://soundcloud.com/greenday/basket-case",
+    "artworkLink": "https://i1.sndcdn.com/artworks-0MWhSdD2rvdw-0-large.jpg"
   },
 
   {
@@ -195,21 +195,7 @@
     "songLink": "https://soundcloud.com/thebackstreetboys/i-want-it-that-way",
     "artworkLink": "https://i1.sndcdn.com/artworks-aVW1OqZMQUcg-0-large.jpg"
   },
-  {
-    "id": 16,
-    "title": "Basket Case",
-    "artist": "Green Day",
-    "lyrics": [
-      "Do you have the time",
-      "To listen to me whine",
-      "About nothing and everything all at once?",
-      "I am one of those",
-      "Melodramatic fools",
-      "Neurotic to the bone, no doubt about it"
-    ],
-    "songLink": "https://soundcloud.com/greenday/basket-case",
-    "artworkLink": "https://i1.sndcdn.com/artworks-0MWhSdD2rvdw-0-large.jpg"
-  },
+
   {
     "id": 17,
     "title": "Bitter Sweet Symphony",
