@@ -180,21 +180,6 @@
     "songLink": "https://soundcloud.com/blink-182/all-the-small-things",
     "artworkLink": "https://i1.sndcdn.com/artworks-Wx81TpDXo8Jo-0-large.jpg"
   },
-  {
-    "id": 15,
-    "title": "I Want It That Way",
-    "artist": "Backstreet Boys",
-    "lyrics": [
-      "Yeah-eh-eh",
-      "You are my fire",
-      "The one desire",
-      "Believe when I say",
-      "I want it that way",
-      "But we are two worlds apart"
-    ],
-    "songLink": "https://soundcloud.com/thebackstreetboys/i-want-it-that-way",
-    "artworkLink": "https://i1.sndcdn.com/artworks-aVW1OqZMQUcg-0-large.jpg"
-  },
 
   {
     "id": 17,
@@ -265,7 +250,6 @@
     "title": "No Scrubs",
     "artist": "TLC",
     "lyrics": [
-      "Oh-oh",
       "A scrub is a guy that thinks he's fly",
       "And is also known as a busta",
       "Always talkin' 'bout what he wants",
@@ -286,8 +270,7 @@
       "And every kid on the whole damn street (Whoa)",
       "Was gonna make it big and not be beat",
       "Now the neighborhood's cracked and torn (Whoa)",
-      "The kids are grown up but their lives are worn (Whoa)",
-      "How can one little street"
+      "The kids are grown up but their lives are worn (Whoa)"
     ],
     "songLink": "https://soundcloud.com/offspring/the-kids-arent-alright-1",
     "artworkLink": "https://i1.sndcdn.com/artworks-fu4sa5j5Jc5z-0-large.jpg"
@@ -297,7 +280,6 @@
     "title": "Wind Of Change",
     "artist": "Scorpions",
     "lyrics": [
-      "(*Whistling*)",
       "I follow the Moskva",
       "Down to Gorky Park",
       "Listening to the wind of change",
@@ -341,22 +323,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-O1etoA9qdHJ6-0-large.jpg"
   },
   {
-    "id": 26,
-    "title": "It Wasn't Me",
-    "artist": "Shaggy",
-    "lyrics": [
-      "Yo, man",
-      "Yo",
-      "Open up, man",
-      "Yo, what you want, man?",
-      "My girl just caught me",
-      "You made her catch you?",
-      "I don't know how I let this happen"
-    ],
-    "songLink": "https://soundcloud.com/direalshaggy/it-wasnt-me",
-    "artworkLink": "https://i1.sndcdn.com/artworks-000006358409-didzwv-large.jpg"
-  },
-  {
     "id": 27,
     "title": "Santeria",
     "artist": "Sublime",
@@ -387,22 +353,6 @@
     ],
     "songLink": "https://soundcloud.com/oasisofficial/wonderwall-2",
     "artworkLink": "https://i1.sndcdn.com/artworks-j1abAxaB6y21-0-large.jpg"
-  },
-  {
-    "id": 29,
-    "title": "Mr. Jones",
-    "artist": "Counting Crows",
-    "lyrics": [
-      "Shalalala la la la",
-      "Uh huh",
-      "I was down at the New Amsterdam",
-      "Staring at this yellow-haired girl",
-      "Mr. Jones strikes up a conversation",
-      "With a black-haired flamenco dancer",
-      "You know she dances while his father plays guitar"
-    ],
-    "songLink": "https://soundcloud.com/countingcrows/mr-jones-album-version",
-    "artworkLink": "https://i1.sndcdn.com/artworks-PrpX1DFI8PCY-0-large.jpg"
   },
   {
     "id": 30,

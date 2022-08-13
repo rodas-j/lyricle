@@ -209,22 +209,6 @@
     "songLink": "https://soundcloud.com/ultravoxuk/dancing-with-tears-in-my-7",
     "artworkLink": "https://i1.sndcdn.com/artworks-s1wFSPk7ifzJ-0-large.png"
   },
-
-  {
-    "id": 18,
-    "title": "Let's Dance",
-    "artist": "David Bowie",
-    "lyrics": [
-      "Ah, ah, ah, ah",
-      "(Let's dance)",
-      "(Let's dance)",
-      "(Let's dance) put on your red shoes and dance the blues",
-      "(Let's dance) to the song they're playing on the radio",
-      "(Let's sway) while colour lights up your face"
-    ],
-    "songLink": "https://soundcloud.com/davidbowieofficial/lets-dance-1999-remastered",
-    "artworkLink": "https://i1.sndcdn.com/artworks-ItR1gbVAnlZO-0-large.jpg"
-  },
   {
     "id": 19,
     "title": "Steppin' Out",
@@ -272,21 +256,6 @@
     "artworkLink": ""
   },
   {
-    "id": 23,
-    "title": "Hungry Like the Wolf",
-    "artist": "Duran Duran",
-    "lyrics": [
-      "Ha-ha!",
-      "Darken the city, night is a wire",
-      "Steam in the subway, earth is afire",
-      "Do do do do do do do dodo dododo dodo",
-      "Woman you want me, give me a sign",
-      "And catch my breathing even closer behind"
-    ],
-    "songLink": "https://soundcloud.com/duranduran/hungry-like-the-wolf-2009",
-    "artworkLink": "https://i1.sndcdn.com/artworks-BK0QXEh2YP2X-0-large.jpg"
-  },
-  {
     "id": 24,
     "title": "Save a Prayer",
     "artist": "Duran Duran",
@@ -315,21 +284,6 @@
     ],
     "songLink": "https://soundcloud.com/yazooofficial/yazoo-only-you",
     "artworkLink": "https://i1.sndcdn.com/artworks-Gh40bn82lfie-0-large.jpg"
-  },
-  {
-    "id": 26,
-    "title": "Centerfold",
-    "artist": "The J. Geils Band",
-    "lyrics": [
-      "Come on!",
-      "Does she walk? Does she talk?",
-      "Does she come complete?",
-      "My homeroom homeroom angel",
-      "Always pulled me from my seat",
-      "She was pure like snowflakes"
-    ],
-    "songLink": "https://soundcloud.com/thejgeilsband/centerfold",
-    "artworkLink": "https://i1.sndcdn.com/artworks-S67c6UTYsl95-0-large.jpg"
   },
   {
     "id": 27,
@@ -392,21 +346,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-tsnyjmqN2CXo-0-large.jpg"
   },
   {
-    "id": 31,
-    "title": "Fade To Grey",
-    "artist": "Visage",
-    "lyrics": [
-      "Devenir gris",
-      "Devenir gris",
-      "One man on a lonely platform",
-      "One case sitting by his side",
-      "Two eyes staring cold and silent",
-      "Show fear as he turns to hide"
-    ],
-    "songLink": "https://soundcloud.com/the-real-visage/fade-to-grey",
-    "artworkLink": "https://i1.sndcdn.com/artworks-PwnQ5kS0iBF9-0-large.jpg"
-  },
-  {
     "id": 32,
     "title": "In The Air Tonight",
     "artist": "Phil Collins",
@@ -435,21 +374,6 @@
     ],
     "songLink": "https://soundcloud.com/kim-wilde-official/kids-in-america",
     "artworkLink": "https://i1.sndcdn.com/artworks-45L4tWVeKCyh-0-large.jpg"
-  },
-  {
-    "id": 34,
-    "title": "Atomic",
-    "artist": "Blondie",
-    "lyrics": [
-      "Uh-huh, make me tonight",
-      "Tonight, make it right",
-      "Uh-huh, make me tonight",
-      "Tonight",
-      "Tonight",
-      "Oh, uh-huh, make it magnificent"
-    ],
-    "songLink": "https://soundcloud.com/blondie/atomic",
-    "artworkLink": "https://i1.sndcdn.com/artworks-GrPjTlcSnKdI-0-large.jpg"
   },
   {
     "id": 35,
