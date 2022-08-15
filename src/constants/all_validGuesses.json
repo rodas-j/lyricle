@@ -48,19 +48,35 @@
   { "artist": "LMFAO", "songs": ["Party Rock Anthem", "Shots"] },
   {
     "artist": "Lady Gaga",
-    "songs": ["Born This Way", "Just Dance", "Poker Face", "LoveGame"]
+    "songs": [
+      "Born This Way",
+      "Just Dance",
+      "Poker Face",
+      "LoveGame",
+      "Shallow",
+      "Bad Romance"
+    ]
   },
   { "artist": "fun.", "songs": ["We Are Young (feat. Janelle Monáe)"] },
   { "artist": "Neon Trees", "songs": ["Animal"] },
   {
     "artist": "Mark Ronson",
-    "songs": ["Valerie (feat. Amy Winehouse) - Version Revisited"]
+    "songs": [
+      "Valerie (feat. Amy Winehouse) - Version Revisited",
+      "Uptown Funk"
+    ]
   },
   { "artist": "Leona Lewis", "songs": ["Bleeding Love"] },
   { "artist": "Taio Cruz", "songs": ["Dynamite"] },
   {
     "artist": "Shakira",
-    "songs": ["Hips Don't Lie", "Whenever, Wherever", "La Tortura", "She Wolf"]
+    "songs": [
+      "Hips Don't Lie (feat. Wyclef Jean)",
+      "Hips Don't Lie",
+      "Whenever, Wherever",
+      "La Tortura",
+      "She Wolf"
+    ]
   },
   { "artist": "Sara Bareilles", "songs": ["Love Song"] },
   { "artist": "Charli XCX", "songs": ["Boom Clap"] },
@@ -74,15 +90,33 @@
       "Pon de Replay",
       "Disturbia",
       "Umbrella",
-      "SOS"
+      "SOS",
+      "Love On The Brain"
     ]
   },
-  { "artist": "The Weeknd", "songs": ["Can't Feel My Face"] },
+  {
+    "artist": "The Weeknd",
+    "songs": [
+      "Can't Feel My Face",
+      "Call Out My Name",
+      "Starboy",
+      "The Hills",
+      "I Feel It Coming"
+    ]
+  },
   { "artist": "MAGIC!", "songs": ["Rude"] },
-  { "artist": "Shawn Mendes", "songs": ["Treat You Better"] },
+  {
+    "artist": "Shawn Mendes",
+    "songs": ["Treat You Better", "There's Nothing Holdin' Me Back", "Mercy"]
+  },
   {
     "artist": "The Chainsmokers",
-    "songs": ["Don't Let Me Down", "Something Just Like This"]
+    "songs": [
+      "Don't Let Me Down",
+      "Something Just Like This",
+      "Paris",
+      "Closer"
+    ]
   },
   {
     "artist": "Outkast",
@@ -105,7 +139,16 @@
       "They Don't Care About Us"
     ]
   },
-  { "artist": "Coldplay", "songs": ["Viva La Vida", "Fix You"] },
+  {
+    "artist": "Coldplay",
+    "songs": [
+      "Viva La Vida",
+      "Fix You",
+      "Hymn for the Weekend",
+      "Paradise",
+      "A Sky Full of Stars"
+    ]
+  },
   { "artist": "Paul Simon", "songs": ["You Can Call Me Al", "Graceland"] },
   {
     "artist": "Justin Timberlake",
@@ -114,7 +157,8 @@
       "Mirrors",
       "SexyBack",
       "Rock Your Body",
-      "Señorita"
+      "Señorita",
+      "CAN'T STOP THE FEELING!"
     ]
   },
   {
@@ -241,10 +285,14 @@
     "songs": [
       "On The Floor - Radio Edit",
       "Love Don't Cost a Thing",
-      "Jenny from the Block"
+      "Jenny from the Block",
+      "On The Floor"
     ]
   },
-  { "artist": "Ariana Grande", "songs": ["Love Me Harder"] },
+  {
+    "artist": "Ariana Grande",
+    "songs": ["Love Me Harder", "One Last Time", "7 rings", "thank u, next"]
+  },
   {
     "artist": "Swedish House Mafia",
     "songs": ["Don't You Worry Child - Radio Edit"]
@@ -254,7 +302,10 @@
     "artist": "Katy Perry",
     "songs": ["Firework", "Hot N Cold", "I Kissed A Girl"]
   },
-  { "artist": "Maroon 5", "songs": ["Payphone", "This Love"] },
+  {
+    "artist": "Maroon 5",
+    "songs": ["Payphone", "This Love", "Memories", "Maps", "Sugar", "Animals"]
+  },
   {
     "artist": "Otis Redding",
     "songs": [
@@ -264,7 +315,17 @@
     ]
   },
   { "artist": "Survivor", "songs": ["Eye of the Tiger"] },
-  { "artist": "Bruno Mars", "songs": ["The Lazy Song"] },
+  {
+    "artist": "Bruno Mars",
+    "songs": [
+      "The Lazy Song",
+      "Just the Way You Are",
+      "Locked out of Heaven",
+      "When I Was Your Man",
+      "That's What I Like",
+      "Talking to the Moon"
+    ]
+  },
   {
     "artist": "Whitney Houston",
     "songs": ["I Will Always Love You", "How Will I Know", "So Emotional"]
@@ -313,7 +374,10 @@
     "artist": "The Cure",
     "songs": ["Pictures Of You", "Boys Don't Cry", "Close To Me"]
   },
-  { "artist": "Twenty One Pilots", "songs": ["Ride"] },
+  {
+    "artist": "Twenty One Pilots",
+    "songs": ["Ride", "Stressed Out", "Heathens"]
+  },
   {
     "artist": "Madonna",
     "songs": [
@@ -383,11 +447,13 @@
       "Lose Yourself",
       "My Name Is",
       "Without Me",
-      "The Real Slim Shady"
+      "The Real Slim Shady",
+      "Love The Way You Lie",
+      "Not Afraid"
     ]
   },
   { "artist": "Supergrass", "songs": ["Alright"] },
-  { "artist": "Taylor Swift", "songs": ["Shake It Off"] },
+  { "artist": "Taylor Swift", "songs": ["Shake It Off", "Lover"] },
   { "artist": "B.o.B", "songs": ["Airplanes"] },
   {
     "artist": "Journey",
@@ -1693,7 +1759,8 @@
       "Around the World",
       "One More Time",
       "Harder, Better, Faster, Stronger",
-      "Digital Love"
+      "Digital Love",
+      "Get Lucky"
     ]
   },
   { "artist": "New Radicals", "songs": ["You Get What You Give"] },
@@ -1726,7 +1793,7 @@
   { "artist": "K-Ci & JoJo", "songs": ["All My Life"] },
   { "artist": "Boyz II Men", "songs": ["End Of The Road"] },
   { "artist": "Matchbox Twenty", "songs": ["Push"] },
-  { "artist": "Sean Paul", "songs": ["Get Busy", "Temperature"] },
+  { "artist": "Sean Paul", "songs": ["Get Busy", "Temperature", "No Lie"] },
   { "artist": "David Guetta", "songs": ["When Love Takes Over"] },
   { "artist": "Cascada", "songs": ["Everytime We Touch"] },
   { "artist": "Kesha", "songs": ["TiK ToK"] },
@@ -1770,7 +1837,13 @@
   { "artist": "Timbaland", "songs": ["If We Ever Meet Again"] },
   {
     "artist": "Pitbull",
-    "songs": ["Hotel Room Service", "I Know You Want Me"]
+    "songs": [
+      "Hotel Room Service",
+      "I Know You Want Me",
+      "Give Me Everything",
+      "Timber",
+      "Time of Our Lives"
+    ]
   },
   { "artist": "Crazy Frog", "songs": ["Axel F"] },
   { "artist": "Westlife", "songs": ["Uptown Girl"] },
@@ -1791,5 +1864,120 @@
   { "artist": "S Club 7", "songs": ["Don't Stop Movin'"] },
   { "artist": "Jamiroquai", "songs": ["Little L"] },
   { "artist": "Blue", "songs": ["All Rise"] },
-  { "artist": "DJ Sammy", "songs": ["Heaven"] }
+  { "artist": "DJ Sammy", "songs": ["Heaven"] },
+  { "artist": "Justin Bieber", "songs": ["Sorry", "Love Yourself", "Baby"] },
+  {
+    "artist": "Ed Sheeran",
+    "songs": [
+      "Thinking out Loud",
+      "Perfect",
+      "Shape of You",
+      "Photograph",
+      "Happier"
+    ]
+  },
+  {
+    "artist": "Avicii",
+    "songs": ["Wake Me Up", "The Nights", "Waiting For Love"]
+  },
+  {
+    "artist": "Billie Eilish",
+    "songs": [
+      "idontwannabeyouanymore",
+      "lovely",
+      "bad guy",
+      "when the party's over"
+    ]
+  },
+  {
+    "artist": "Sam Smith",
+    "songs": ["Stay With Me", "I'm Not The Only One"]
+  },
+  { "artist": "Ellie Goulding", "songs": ["Love Me Like You Do"] },
+  { "artist": "Khalid", "songs": ["Young Dumb & Broke"] },
+  {
+    "artist": "Post Malone",
+    "songs": [
+      "rockstar",
+      "Circles",
+      "Congratulations",
+      "Better Now",
+      "Sunflower"
+    ]
+  },
+  {
+    "artist": "Calvin Harris",
+    "songs": [
+      "One Kiss",
+      "Summer",
+      "This Is What You Came For",
+      "Feel So Close",
+      "Feels"
+    ]
+  },
+  {
+    "artist": "The Neighbourhood",
+    "songs": ["Sweater Weather", "Daddy Issues"]
+  },
+  { "artist": "Tom Odell", "songs": ["Another Love"] },
+  {
+    "artist": "Imagine Dragons",
+    "songs": ["Believer", "Thunder", "Natural", "Whatever It Takes", "Bad Liar"]
+  },
+  { "artist": "J. Cole", "songs": ["No Role Modelz"] },
+  { "artist": "WILLOW", "songs": ["Wait a Minute!"] },
+  { "artist": "Lewis Capaldi", "songs": ["Someone You Loved"] },
+  { "artist": "Harry Styles", "songs": ["Adore You", "Sign of the Times"] },
+  { "artist": "Juice WRLD", "songs": ["Lucid Dreams"] },
+  { "artist": "Alec Benjamin", "songs": ["Let Me Down Slowly"] },
+  {
+    "artist": "One Direction",
+    "songs": [
+      "What Makes You Beautiful",
+      "Story of My Life",
+      "Steal My Girl",
+      "Drag Me Down"
+    ]
+  },
+  { "artist": "Travis Scott", "songs": ["goosebumps", "SICKO MODE"] },
+  { "artist": "XXXTENTACION", "songs": ["Jocelyn Flores", "SAD!"] },
+  { "artist": "Foster The People", "songs": ["Pumped Up Kicks"] },
+  { "artist": "WALK THE MOON", "songs": ["Shut Up and Dance"] },
+  { "artist": "Drake", "songs": ["God's Plan"] },
+  { "artist": "DJ Snake", "songs": ["Let Me Love You"] },
+  { "artist": "Marshmello", "songs": ["Happier", "Silence"] },
+  { "artist": "Doja Cat", "songs": ["Streets"] },
+  { "artist": "Capital Cities", "songs": ["Safe And Sound"] },
+  { "artist": "DNCE", "songs": ["Cake By The Ocean"] },
+  { "artist": "BØRNS", "songs": ["Electric Love"] },
+  { "artist": "Lauv", "songs": ["I Like Me Better"] },
+  { "artist": "Demi Lovato", "songs": ["Cool for the Summer"] },
+  { "artist": "Lil Uzi Vert", "songs": ["XO Tour Llif3"] },
+  { "artist": "MKTO", "songs": ["Classic"] },
+  { "artist": "French Montana", "songs": ["Unforgettable"] },
+  { "artist": "Kendrick Lamar", "songs": ["All The Stars"] },
+  { "artist": "Charlie Puth", "songs": ["Attention"] },
+  {
+    "artist": "Lana Del Rey",
+    "songs": ["Young And Beautiful", "Doin' Time", "Brooklyn Baby"]
+  },
+  { "artist": "Gym Class Heroes", "songs": ["Stereo Hearts"] },
+  { "artist": "Wiz Khalifa", "songs": ["See You Again"] },
+  { "artist": "Panic! At The Disco", "songs": ["High Hopes"] },
+  { "artist": "Regard", "songs": ["Ride It"] },
+  { "artist": "Anne-Marie", "songs": ["2002"] },
+  { "artist": "Pharrell Williams", "songs": ["Happy"] },
+  { "artist": "Kodaline", "songs": ["All I Want"] },
+  { "artist": "Dua Lipa", "songs": ["New Rules", "Don't Start Now"] },
+  { "artist": "Camila Cabello", "songs": ["Havana"] },
+  { "artist": "Jonas Brothers", "songs": ["Sucker"] },
+  { "artist": "Ava Max", "songs": ["Sweet but Psycho"] },
+  { "artist": "American Authors", "songs": ["Best Day Of My Life"] },
+  { "artist": "Fall Out Boy", "songs": ["Centuries"] },
+  { "artist": "Zedd", "songs": ["The Middle"] },
+  { "artist": "Cardi B", "songs": ["I Like It"] },
+  { "artist": "Nicki Minaj", "songs": ["Super Bass"] },
+  { "artist": "Calum Scott", "songs": ["Dancing On My Own"] },
+  { "artist": "Usher", "songs": ["DJ Got Us Fallin' In Love"] },
+  { "artist": "Of Monsters and Men", "songs": ["Little Talks"] }
 ]

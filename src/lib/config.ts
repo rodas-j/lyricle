@@ -24,6 +24,11 @@ switch (pathName) {
     name = 'Lyricle 00s'
     break
 
+  case '/10s':
+    key = '10s'
+    name = 'Lyricle 10s'
+    break
+
   default:
     key = 'default'
     name = 'Lyricle Decades'

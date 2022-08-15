@@ -5,6 +5,7 @@ export const Links = () => {
       <Link era="80s" />
       <Link era="90s" />
       <Link era="00s" />
+      <Link era="10s" />
     </div>
   )
 }
@@ -15,6 +16,7 @@ const Link = ({ era }) => {
     '80s': 'from-[#C6426E]/95 to-[#642B73]/95',
     '90s': 'from-[#45a247]/95 to-[#283c86]/95',
     '00s': 'from-[#00d2ff]/95 to-[#928dab]/95',
+    '10s': 'from-[#F09819]/95 to-[#EDDE5D]/95',
   }
 
   return (
