@@ -197,21 +197,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-p1cnpdE6afsV-0-large.jpg"
   },
   {
-    "id": 14,
-    "title": "Turn Me On",
-    "artist": "Kevin Lyttle",
-    "lyrics": [
-      "Uh yeah...",
-      "Oh yeah!",
-      "Is ah big dance hall song yuh know",
-      "Madzart alongside Kevin Lyttle",
-      "You know how it is, you know how we go",
-      "You know!"
-    ],
-    "songLink": "https://soundcloud.com/kevinlyttlemusic/turn-me-on",
-    "artworkLink": "https://i1.sndcdn.com/artworks-000092843156-8jk84s-large.jpg"
-  },
-  {
     "id": 15,
     "title": "Without Me",
     "artist": "Eminem",
@@ -221,7 +206,7 @@
       "Round the outside, round the outside",
       "Two trailer park girls go round the outside",
       "Round the outside, round the outside",
-      "(Woo!) (Ooh-ooh-ooh)"
+      "Guess who's back? Back again"
     ],
     "songLink": "https://soundcloud.com/eminemofficial/without-me-album-version",
     "artworkLink": "https://i1.sndcdn.com/artworks-slLAISwhLZ3B-0-large.jpg"
@@ -246,11 +231,12 @@
     "title": "Umbrella",
     "artist": "Rihanna",
     "lyrics": [
-      "No clouds in my stones",
-      "Let it rain, I hydroplane in the bank",
-      "Coming down with the Dow Jones",
-      "When the clouds come, we gone, we Roc-A-Fella",
-      "We fly higher than weather"
+      "You have my heart",
+      "And we'll never be worlds apart",
+      "Maybe in magazines",
+      "But you'll still be my star",
+      "Baby, ‘cause in the dark",
+      "You can't see shiny cars"
     ],
     "songLink": "https://soundcloud.com/rihanna/umbrella",
     "artworkLink": "https://i1.sndcdn.com/artworks-ZklwYSQOpgee-0-large.jpg"
@@ -301,36 +287,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-EkDpPs2nNpDy-0-large.jpg"
   },
   {
-    "id": 21,
-    "title": "Low",
-    "artist": "Flo Rida",
-    "lyrics": [
-      "Let me talk to 'em, let me talk to 'em",
-      "Let it rain",
-      "Let me talk to 'em",
-      "Come on",
-      "Shawty had them Apple Bottom jeans (Jeans), boots with the fur (With the fur)",
-      "The whole club was lookin' at her"
-    ],
-    "songLink": "https://soundcloud.com/official_flo/low-feat-t-pain",
-    "artworkLink": "https://i1.sndcdn.com/artworks-uegQ7CHA7fFz-0-large.jpg"
-  },
-  {
-    "id": 22,
-    "title": "The Next Episode",
-    "artist": "Dr. Dre",
-    "lyrics": [
-      "La-da-da-da-dah",
-      "It's the motherf*ckin' D-O-double-G (Snoop Dogg!)",
-      "La-da-da-da-dah",
-      "You know I'm mobbin' with the D-R-E, yeah, yeah, yeah",
-      "You know who's back up in this motherf*cker",
-      "What? What? What? What?"
-    ],
-    "songLink": "https://soundcloud.com/dr-dre-music/the-next-episode",
-    "artworkLink": "https://i1.sndcdn.com/artworks-zC6vfDsR8INb-0-large.jpg"
-  },
-  {
     "id": 23,
     "title": "The Real Slim Shady",
     "artist": "Eminem",
@@ -361,33 +317,16 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-FjXBkYMvmfqx-0-large.jpg"
   },
   {
-    "id": 25,
-    "title": "Maneater",
-    "artist": "Nelly Furtado",
-    "lyrics": [
-      "Take it back, take it back, take it back",
-      "Oh-oh-oh-ah-oh",
-      "Oh-ah-oh-oh-oh-ah",
-      "Everybody look at me, me (Oh)",
-      "I walk in the door, you start screaming (Oh)",
-      "Come on, everybody, what you here for? (Oh)"
-    ],
-    "songLink": "https://soundcloud.com/nellyfurtado/maneater-album-version",
-    "artworkLink": "https://i1.sndcdn.com/artworks-tx7uI0hE7vkb-0-large.jpg"
-  },
-  {
     "id": 26,
     "title": "Gimme More",
     "artist": "Britney Spears",
     "lyrics": [
-      "It's Britney, bitch",
-      "I see you",
-      "And I just wanna dance with you",
-      "{Giggles}",
+      "I see you. And I just wanna dance with you",
       "Every time they turn the lights down",
       "Just wanna go that extra mile for you",
       "Your public display of affection (Oh-oh-oh)",
-      "Feels like no one else in the room (But you)"
+      "Feels like no one else in the room (But you)",
+      "We can get down like there's no one around"
     ],
     "songLink": "https://soundcloud.com/britneyspears/gimme-more",
     "artworkLink": "https://i1.sndcdn.com/artworks-wQzuW0olzfF0-0-large.jpg"
@@ -402,9 +341,7 @@
       "The chaos that controlled my mind",
       "Whispered goodbye as she got on a plane",
       "Never to return again",
-      "But always in my heart, oh",
-      "This love has taken its toll on me",
-      "She said goodbye too many times before"
+      "But always in my heart, oh"
     ],
     "songLink": "https://soundcloud.com/maroon-5/this-love",
     "artworkLink": "https://i1.sndcdn.com/artworks-gfcsVNeG94ky-0-large.jpg"
@@ -419,9 +356,7 @@
       "Who the hottest in the world right now? (Uh)",
       "Just touched down in London town (Uh)",
       "Bet they give me a pound (Uh)",
-      "Tell 'em put the money in my hand right now (Yes)",
-      "Tell the promoter we need more seats",
-      "We just sold out all the floor seats"
+      "Tell 'em put the money in my hand right now (Yes)"
     ],
     "songLink": "https://soundcloud.com/estelleofficial/american-boy-feat-kanye-west",
     "artworkLink": "https://i1.sndcdn.com/artworks-kqa8Du23qry9-0-large.jpg"
@@ -436,9 +371,7 @@
       "I think it's special, what's behind your back? (Yeah)",
       "So turn around and I'll pick up the slack (Yeah)",
       "Take it to the bridge, c'mon (Let's see)",
-      "Dirty babe (Uh-huh)",
-      "You see these shackles, baby, I'm your slave (Uh-huh)",
-      "I'll let you whip me if I misbehave (Uh-huh)"
+      "Dirty babe. You see these shackles, baby, I'm your slave (Uh-huh)"
     ],
     "songLink": "https://soundcloud.com/justintimberlake/sexyback-1",
     "artworkLink": "https://i1.sndcdn.com/artworks-wnF9ZqOKGaBK-0-large.jpg"
@@ -448,85 +381,15 @@
     "title": "Oops!...I Did It Again",
     "artist": "Britney Spears",
     "lyrics": [
-      "Mmm, yeah",
-      "Yeah, yeah, yeah, yeah, yeah, yeah",
-      "Yeah, yeah, yeah, yeah, yeah, yeah",
       "I think I did it again",
       "I made you believe we're more than just friends",
       "Oh, baby, it might seem like a crush",
       "But it doesn't mean that I'm serious",
-      "'Cause to lose all my senses"
+      "'Cause to lose all my senses",
+      "That is just so typically me"
     ],
     "songLink": "https://soundcloud.com/britneyspears/oops-i-did-it-again-album",
     "artworkLink": "https://i1.sndcdn.com/artworks-s0am4QCDy6o9-0-large.jpg"
-  },
-  {
-    "id": 32,
-    "title": "Just A Lil Bit",
-    "artist": "50 Cent",
-    "lyrics": [
-      "Yeah, Shady, Aftermath, G-Unit",
-      "Damn, baby, all I need is a lil' bit",
-      "A lil' bit of this, a lil' bit of that",
-      "Get it crackin' in the club when you hear the shit",
-      "Drop it like it's hot, get to workin' that back",
-      "Girl, shake that thang, yeah work that thang",
-      "Let me see it go up and down",
-      "Rotate that thang, I wanna touch that thang"
-    ],
-    "songLink": "https://soundcloud.com/50_cent/just-a-lil-bit-album-version",
-    "artworkLink": "https://i1.sndcdn.com/artworks-vvj1Sb2PXm89-0-large.jpg"
-  },
-  {
-    "id": 33,
-    "title": "One More Time",
-    "artist": "Daft Punk",
-    "lyrics": [
-      "One more time",
-      "One more time",
-      "One more time",
-      "We're gonna celebrate",
-      "Oh yeah, all right",
-      "Don't stop the dancing",
-      "One more time",
-      "We're gonna celebrate"
-    ],
-    "songLink": "https://soundcloud.com/daftpunkofficialmusic/one-more-time",
-    "artworkLink": "https://i1.sndcdn.com/artworks-VV4f9AU395TY-0-large.jpg"
-  },
-  {
-    "id": 34,
-    "title": "Drop It Like It's Hot",
-    "artist": "Snoop Dogg",
-    "lyrics": [
-      "Snoop",
-      "Snoop",
-      "When the pimp's in the crib, ma (Drop it like it's hot",
-      "Drop it like it's hot, drop it like it's hot)",
-      "When the pigs try to get at cha (Park it like it's hot",
-      "Park it like it's hot, park it like it's hot)",
-      "And if a hitta get a attitude (Pop it like it's hot",
-      "Pop it like it's hot, pop it like it's hot)"
-    ],
-    "songLink": "https://soundcloud.com/snoopdogg/drop-it-like-its-hot-album-1",
-    "artworkLink": "https://i1.sndcdn.com/artworks-EFr0aw9h8JtN-0-large.jpg"
-  },
-  {
-    "id": 35,
-    "title": "Salió El Sol",
-    "artist": "Don Omar",
-    "lyrics": [
-      "Platinium Studio",
-      "Respect",
-      "¡Don, Don, Don, Don, Don!",
-      "Salió el sol (Don, Don!)",
-      "Cuerpo bronceado y sus amigas buscaban acción (All the sexy—)",
-      "La canción (All my sexy ladies!)",
-      "Que causa en ellas y sus cuerpos esa sensación (More reggaeton!)",
-      "Reggaeton"
-    ],
-    "songLink": "https://soundcloud.com/donomarpr/salio-el-sol-album-version",
-    "artworkLink": "https://i1.sndcdn.com/artworks-vnz3hoUhESXX-0-large.jpg"
   },
   {
     "id": 36,
@@ -534,50 +397,14 @@
     "artist": "Justin Timberlake",
     "lyrics": [
       "Don't be so quick to walk away",
-      "Dance with me",
-      "I wanna rock your body",
-      "Please stay",
-      "Dance with me",
+      "Dance with me, I wanna rock your body",
+      "Please stay, Dance with me",
       "You don't have to admit you wanna play",
-      "Dance with me",
-      "Just let me rock you"
+      "Dance with me, Just let me rock you",
+      "Just let me rock you 'Til the break of day, Dance with me"
     ],
     "songLink": "https://soundcloud.com/justintimberlake/rock-your-body",
     "artworkLink": "https://i1.sndcdn.com/artworks-E1NLKp1D7rt4-0-large.jpg"
-  },
-  {
-    "id": 37,
-    "title": "Lose Yourself",
-    "artist": "Eminem",
-    "lyrics": [
-      "Look, if you had one shot or one opportunity",
-      "To seize everything you ever wanted in one moment",
-      "Would you capture it, or just let it slip? Yo",
-      "His palms are sweaty, knees weak, arms are heavy",
-      "There's vomit on his sweater already, mom's spaghetti",
-      "He's nervous, but on the surface he looks calm and ready",
-      "To drop bombs, but he keeps on forgetting",
-      "What he wrote down, the whole crowd goes so loud"
-    ],
-    "songLink": "https://soundcloud.com/eminemofficial/lose-yourself",
-    "artworkLink": "https://i1.sndcdn.com/artworks-A0ygQbiTzwXh-0-large.jpg"
-  },
-  {
-    "id": 38,
-    "title": "Caraluna",
-    "artist": "Bacilos",
-    "lyrics": [
-      "¿Quién dice que no duelen",
-      "Las huellas en la arena?",
-      "Tu huella el mar se la llevó",
-      "Pero la Luna sigue ahí",
-      "Pero esa Luna es mi condena",
-      "Despacio en la mañana",
-      "A gritos por la noche",
-      "Las voces vivas del recuerdo se disfrazan de intuición"
-    ],
-    "songLink": "https://soundcloud.com/bacilos-official/sets/caraluna-1",
-    "artworkLink": "https://i1.sndcdn.com/artworks-5297beeb-e1d4-4c41-ba0d-93ce4e7e30a2-0-large.jpg"
   },
   {
     "id": 39,
@@ -589,9 +416,7 @@
       "You can play brand new to all the other chicks out here",
       "But I know what you are, what you are, baby",
       "Look at you, gettin' more than just a re-up",
-      "Baby, you got all the puppets with their strings up",
-      "Fakin' like a good one, but I call 'em like I see 'em",
-      "I know what you are, what you are, baby"
+      "Baby, you got all the puppets with their strings up"
     ],
     "songLink": "https://soundcloud.com/britneyspears/womanizer",
     "artworkLink": "https://i1.sndcdn.com/artworks-oV6vRyXG8C7Q-0-large.jpg"
@@ -601,68 +426,30 @@
     "title": "Ride Wit Me",
     "artist": "Nelly",
     "lyrics": [
-      "Where they at? Where they at?",
-      "Where they at? Where they at?",
-      "Where they at? Where they at?",
-      "Where they at? Where they at?",
-      "Come on, now",
       "If you wanna go and take a ride with me",
       "We 3-wheeling in the fo' with the gold D's",
-      "Oh, why do I live this way?"
+      "Oh, why do I live this way?",
+      "(Hey, must be the money!)",
+      "If you wanna go and get high with me",
+      "Smoke a L in the back of the Benz-E"
     ],
     "songLink": "https://soundcloud.com/nelly-official/ride-wit-me",
     "artworkLink": "https://i1.sndcdn.com/artworks-3XRhcvTZTSjS-0-large.jpg"
-  },
-  {
-    "id": 41,
-    "title": "Lo Que Pasó, Pasó",
-    "artist": "Daddy Yankee",
-    "lyrics": [
-      "Ah, ah, dale mambo (Woh-oh)",
-      "Ah, dale mambo (Entre tú y yo)",
-      "Daddy (Yeah-eh)",
-      "Son cosas que pasan en el barrio fino",
-      "Esa noche contigo la pasé bien (Woh-oh)",
-      "Pero yo me enteré que te debes a alguien (Yeah-eh)",
-      "Y tú fallaste, pero ya es tarde",
-      "Y tú fallaste, pero ya es tarde"
-    ],
-    "songLink": "https://soundcloud.com/daddy-yankee-official/daddy-yankee-lo-que-paso-1",
-    "artworkLink": "https://i1.sndcdn.com/artworks-ZmrCHIlKbOQ5-0-large.jpg"
   },
   {
     "id": 42,
     "title": "Hung Up",
     "artist": "Madonna",
     "lyrics": [
-      "Time goes by so slowly",
-      "Time goes by so slowly",
-      "Time goes by so slowly",
-      "Time goes by so slowly",
-      "Time goes by so slowly",
-      "Time goes by so slowly",
+      "Time goes by so slowly (6x)",
       "Every little thing that you say or do",
-      "I'm hung up, I'm hung up on you"
+      "I'm hung up, I'm hung up on you",
+      "Time goes by so slowly for those who wait",
+      "No time to hesitate, Those who run seem to have all the fun",
+      "I'm caught up, I don't know what to do"
     ],
     "songLink": "https://soundcloud.com/madonna/hung-up-album-version",
     "artworkLink": "https://i1.sndcdn.com/artworks-DcHAC3Lp7seU-0-large.jpg"
-  },
-  {
-    "id": 43,
-    "title": "Poker Face",
-    "artist": "Lady Gaga",
-    "lyrics": [
-      "Mum mum mum mah",
-      "Mum mum mum mah",
-      "Mum mum mum mah",
-      "Mum mum mum mah",
-      "Mum mum mum mah",
-      "I wanna hold 'em like they do in Texas, please (Woo)",
-      "Fold 'em, let 'em hit me, raise it, baby, stay with me (I love it)",
-      "LoveGame intuition, play the cards with spades to start"
-    ],
-    "songLink": "https://soundcloud.com/ladygaga/poker-face",
-    "artworkLink": "https://i1.sndcdn.com/artworks-rLidwp7QwryN-0-large.jpg"
   },
   {
     "id": 44,
