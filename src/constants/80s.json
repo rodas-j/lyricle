@@ -210,21 +210,6 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-s1wFSPk7ifzJ-0-large.png"
   },
   {
-    "id": 19,
-    "title": "Steppin' Out",
-    "artist": "Joe Jackson",
-    "lyrics": [
-      "Now",
-      "The mist across the window hides the lines",
-      "But nothing hides the color of the lights that shine",
-      "Electricity so fine",
-      "Look and dry your eyes",
-      "We"
-    ],
-    "songLink": "https://soundcloud.com/officialjoejackson/steppin-out",
-    "artworkLink": "https://i1.sndcdn.com/artworks-uXfVl95skqT0-0-large.jpg"
-  },
-  {
     "id": 20,
     "title": "Blue Monday",
     "artist": "New Order",
@@ -376,31 +361,16 @@
     "artworkLink": "https://i1.sndcdn.com/artworks-45L4tWVeKCyh-0-large.jpg"
   },
   {
-    "id": 35,
-    "title": "Enola Gay",
-    "artist": "Orchestral Manoeuvres In The Dark",
-    "lyrics": [
-      "Enola Gay",
-      "You should have stayed at home yesterday",
-      "Ah-ha, words can't describe",
-      "The feeling and the way you lied",
-      "These games you play",
-      "They're gonna end in more than tears someday"
-    ],
-    "songLink": "https://soundcloud.com/orchestral-manoeuvres-in-the-dark/enola-gay-1",
-    "artworkLink": "https://i1.sndcdn.com/artworks-ciuUqW1FxYIp-0-large.jpg"
-  },
-  {
     "id": 36,
     "title": "Celebration",
     "artist": "Kool & The Gang",
     "lyrics": [
-      "Yahoo! (This is your celebration)",
-      "Yahoo! (This is your celebration)",
-      "Celebrate good times, come on (Let's celebrate)",
-      "Celebrate good times, come on (Let's celebrate)",
+      "Yahoo! (This is your celebration) (2x)",
+      "Celebrate good times, come on (Let's celebrate) (2x)",
       "There's a party goin' on right here",
-      "A celebration to last throughout the years"
+      "A celebration to last throughout the years",
+      "So bring your good times and your laughter too",
+      "We gonna celebrate your party with you, Come on now"
     ],
     "songLink": "https://soundcloud.com/koolandthegang/celebration",
     "artworkLink": "https://i1.sndcdn.com/artworks-000043871516-75i2b0-large.jpg"
@@ -410,12 +380,12 @@
     "title": "Circle In The Sand",
     "artist": "Belinda Carlisle",
     "lyrics": [
-      "Sundown all around",
-      "Walking through the summer's end",
+      "Sundown all around, Walking through the summer's end",
       "Waves crash, baby, don't look back",
       "I won't walk away again",
       "Oh, baby, anywhere you go",
-      "We are bound together"
+      "We are bound together",
+      "I begin, baby, where you end"
     ],
     "songLink": "https://soundcloud.com/belinda-carlisle-official/circle-in-the-sand-album",
     "artworkLink": "https://i1.sndcdn.com/artworks-ycAa2w8TXMOf-0-large.jpg"
@@ -428,9 +398,9 @@
       "It was a cold and wet December day",
       "When we touched the ground at J.F.K",
       "The snow was melting on the ground",
-      "On B.L.S. I heard the sound",
-      "(Of an angel)",
-      "New York like a Christmas tree"
+      "On B.L.S. I heard the sound (Of an angel)",
+      "New York like a Christmas tree",
+      "Tonight, this city belongs to me"
     ],
     "songLink": "https://soundcloud.com/u2/angel-of-harlem-live-from-u2360",
     "artworkLink": "https://i1.sndcdn.com/artworks-000037930171-ezh4cv-large.jpg"
@@ -443,9 +413,9 @@
       "And the sun is shining down on the blossoms in the avenue",
       "There's a buzzing fly hanging around the bluebells and the daisies",
       "There's a lot more loving, yeah, left in this world",
-      "Don't go",
-      "Don't leave me now, now, now",
-      "While the sun smiles"
+      "Don't go, Don't leave me now, now, now",
+      "While the sun smiles",
+      "Stick around and laugh a while, yeah"
     ],
     "songLink": "https://soundcloud.com/hothouse-flowers/dont-go-1",
     "artworkLink": "https://i1.sndcdn.com/artworks-7YHNTffFhnpP-0-large.jpg"
@@ -460,25 +430,10 @@
       "My heart is beating faster now",
       "As the traffic's slowing down",
       "And suddenly I'm all alone with you",
-      "It's so good"
+      "It's so good. Baby when you're at the wheel"
     ],
     "songLink": "https://soundcloud.com/jane-wiedlin/rush-hour",
     "artworkLink": "https://i1.sndcdn.com/artworks-Z53KUHfDYVKS-0-large.jpg"
-  },
-  {
-    "id": 41,
-    "title": "Get Outta My Dreams, Get Into My Car",
-    "artist": "Billy Ocean",
-    "lyrics": [
-      "Hey you, get in to my car! Who me?",
-      "Yes you, get in to my car",
-      "Woooooooooh. Wah! Hey",
-      "Who's that lady coming down the road",
-      "Who's that lady",
-      "Who's that woman walking through my door"
-    ],
-    "songLink": "https://soundcloud.com/billyocean-official/get-outta-my-dreams-get-into-2",
-    "artworkLink": "https://i1.sndcdn.com/artworks-qpeWqX4VTUJN-0-large.jpg"
   },
   {
     "id": 42,
@@ -487,10 +442,10 @@
     "lyrics": [
       "I try to discover",
       "A little something to make me sweeter",
-      "Oh, baby, refrain",
-      "From breaking my heart",
+      "Oh, baby, refrain. From breaking my heart",
       "I'm so in love with you",
-      "I'll be forever blue"
+      "I'll be forever blue",
+      "That you give me no reason"
     ],
     "songLink": "https://soundcloud.com/erasureofficial/erasure-a-little-respect",
     "artworkLink": "https://i1.sndcdn.com/artworks-5mRfe2UXTV6v-0-large.jpg"
@@ -500,12 +455,12 @@
     "title": "Teardrops",
     "artist": "Womack & Womack",
     "lyrics": [
-      "Whenever I hear goodbyes",
-      "(Remind me baby of you)",
-      "I break down and cry",
-      "(The next time I'll be true, yeah)",
-      "Fever for lost romance",
-      "(Remind me baby of you)"
+      "Whenever I hear goodbyes (Remind me baby of you)",
+      "I break down and cry (The next time I'll be true, yeah)",
+      "Fever for lost romance (Remind me baby of you)",
+      "I took a crazy chance (The next time I'll be true I'll be true, I'll be true)",
+      "Footsteps on the dance floor (Remind me baby of you)",
+      "Teardrops in my eyes (Next time I'll be true, yeah)"
     ],
     "songLink": "https://soundcloud.com/womackwomack/teardrops-album-version",
     "artworkLink": "https://i1.sndcdn.com/artworks-sAvBxI3ieeKc-0-large.jpg"
