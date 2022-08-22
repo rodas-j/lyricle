@@ -14,6 +14,12 @@ import {
   SHARE_TEXT,
 } from '../../constants/strings'
 
+import { ReactComponent as RedditIcon } from '../../assets/reddit.svg'
+import { ReactComponent as DiscordIcon } from '../../assets/discord.svg'
+import { ReactComponent as FacebookIcon } from '../../assets/facebook.svg'
+
+import { decadesConfig } from '../../lib/config'
+
 type Props = {
   isHomePage: boolean
   isOpen: boolean
@@ -75,6 +81,8 @@ export const StatsModal = ({
           numberOfGuessesMade={numberOfGuessesMade}
         />
 
+        {decadesConfig.key === '70s' && <JoinOurCommunities />}
+
         {(isGameLost || isGameWon) && (
           <>
             <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
@@ -101,14 +109,12 @@ export const StatsModal = ({
                 {SHARE_TEXT}
               </button>
             </div>
-
             <div className="mt-2">
               <a
                 href="https://forms.gle/C8EoeJQ2vzArGVnb7"
                 className="cursor-pointer"
               >
                 <p className="text-black underline text-sm dark:text-white">
-                  {' '}
                   📨 Wanna Improve Lyricle?
                 </p>
               </a>
@@ -117,5 +123,41 @@ export const StatsModal = ({
         )}
       </BaseModal>
     </>
+  )
+}
+
+const JoinOurCommunities = () => {
+  return (
+    <div className="flex my-3 items-center bg-indigo-600/20 border-2 border-dashed border-indigo-400 p-2">
+      <p className="text-white text-sm md:text-base">
+        Join the Lyricle community!
+      </p>
+      <div className="flex ml-auto">
+        <a
+          href="https://www.reddit.com/r/lyricle_official/"
+          target="_blank"
+          rel="noreferrer"
+          className="focus-visible:outline-none"
+        >
+          <RedditIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+        </a>
+        <a
+          href="https://discord.gg/84WNMqAT"
+          target="_blank"
+          rel="noreferrer"
+          className="focus-visible:outline-none"
+        >
+          <DiscordIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+        </a>
+        <a
+          href="https://www.facebook.com/groups/1730611307275095"
+          target="_blank"
+          rel="noreferrer"
+          className="focus-visible:outline-none"
+        >
+          <FacebookIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+        </a>
+      </div>
+    </div>
   )
 }
