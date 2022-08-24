@@ -18,8 +18,6 @@ import { ReactComponent as RedditIcon } from '../../assets/reddit.svg'
 import { ReactComponent as DiscordIcon } from '../../assets/discord.svg'
 import { ReactComponent as FacebookIcon } from '../../assets/facebook.svg'
 
-import { decadesConfig } from '../../lib/config'
-
 type Props = {
   isHomePage: boolean
   isOpen: boolean
@@ -81,7 +79,7 @@ export const StatsModal = ({
           numberOfGuessesMade={numberOfGuessesMade}
         />
 
-        {decadesConfig.key === '70s' && <JoinOurCommunities />}
+        <JoinOurCommunities />
 
         {(isGameLost || isGameWon) && (
           <>
