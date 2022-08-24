@@ -81,7 +81,7 @@ export const StatsModal = ({
           numberOfGuessesMade={numberOfGuessesMade}
         />
 
-        {decadesConfig.key === '70s' && <JoinOurCommunities />}
+        <JoinOurCommunities />
 
         {(isGameLost || isGameWon) && (
           <>
