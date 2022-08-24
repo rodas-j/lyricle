@@ -128,8 +128,8 @@ export const StatsModal = ({
 
 const JoinOurCommunities = () => {
   return (
-    <div className="flex my-3 items-center bg-indigo-600/20 border-2 border-dashed border-indigo-400 p-2">
-      <p className="text-white text-sm md:text-base">
+    <div className="flex my-3 items-center bg-indigo-200 outline-dashed outline-2 outline-indigo-900 md:hover:outline-offset-2 dark:bg-indigo-600/20 dark:outline-indigo-400 p-2">
+      <p className="dark:text-white text-sm md:text-base">
         Join the Lyricle community!
       </p>
       <div className="flex ml-auto">
@@ -139,7 +139,7 @@ const JoinOurCommunities = () => {
           rel="noreferrer"
           className="focus-visible:outline-none"
         >
-          <RedditIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+          <RedditIcon className="w-6 h-6 mx-1 fill-gray-700 hover:fill-gray-900 dark:fill-gray-100 dark:hover:fill-white" />
         </a>
         <a
           href="https://discord.gg/84WNMqAT"
@@ -147,7 +147,7 @@ const JoinOurCommunities = () => {
           rel="noreferrer"
           className="focus-visible:outline-none"
         >
-          <DiscordIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+          <DiscordIcon className="w-6 h-6 mx-1 fill-gray-700 hover:fill-gray-900 dark:fill-gray-100 dark:hover:fill-white" />
         </a>
         <a
           href="https://www.facebook.com/groups/1730611307275095"
@@ -155,7 +155,7 @@ const JoinOurCommunities = () => {
           rel="noreferrer"
           className="focus-visible:outline-none"
         >
-          <FacebookIcon className="w-6 h-6 mx-1 fill-gray-100 hover:fill-white" />
+          <FacebookIcon className="w-6 h-6 mx-1 fill-gray-700 hover:fill-gray-900 dark:fill-gray-100 dark:hover:fill-white" />
         </a>
       </div>
     </div>
