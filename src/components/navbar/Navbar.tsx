@@ -30,7 +30,7 @@ export const Navbar = ({
             <></>
           ) : (
             <a
-              href="https://decades.lyricle.app"
+              href="https://artists.lyricle.app"
               className=" bg-slate-200 p-1.5 rounded-md font-bold mr-3 cursor-pointer dark:stroke-white"
             >
               {' '}
