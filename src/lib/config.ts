@@ -4,9 +4,9 @@ let name: string
 let gameState: string
 let gameStats: string
 switch (pathName) {
-  case '/70s':
-    key = '70s'
-    name = 'Lyricle 70s'
+  case '/taylorswift':
+    key = 'taylorswift'
+    name = 'Lyricle Taylor Swift'
     break
 
   case '/80s':
@@ -31,7 +31,7 @@ switch (pathName) {
 
   default:
     key = 'default'
-    name = 'Lyricle Decades'
+    name = 'Lyricle Artists'
 }
 gameState = 'gameState'.concat(key)
 gameStats = 'gameStats'.concat(key)
