@@ -1,4 +1,4 @@
-import ARTISTS_AND_SONGS from './all_validGuesses.json'
+import ARTISTS_AND_SONGS from './taylorswift_validGuesses.json'
 
 export type LyricsField = {
   id: number

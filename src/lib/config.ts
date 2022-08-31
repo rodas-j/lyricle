@@ -9,26 +9,6 @@ switch (pathName) {
     name = 'Lyricle Taylor Swift'
     break
 
-  case '/80s':
-    key = '80s'
-    name = 'Lyricle 80s'
-    break
-
-  case '/90s':
-    key = '90s'
-    name = 'Lyricle 90s'
-    break
-
-  case '/00s':
-    key = '00s'
-    name = 'Lyricle 00s'
-    break
-
-  case '/10s':
-    key = '10s'
-    name = 'Lyricle 10s'
-    break
-
   default:
     key = 'default'
     name = 'Lyricle Artists'
