@@ -42,7 +42,7 @@ export const Navbar = ({
             onClick={() => setIsInfoModalOpen(true)}
           />
         </div>
-        <p className="text-xl md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 font-bold dark:text-white">
+        <p className="text-base md:text-xl md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 font-bold dark:text-white">
           {GAME_TITLE}
         </p>
         <div className="flex">
