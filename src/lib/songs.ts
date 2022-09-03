@@ -1,5 +1,8 @@
 import SONG_CHOICES_ALL from '../constants/lyricle.json'
 import SONG_CHOICES_TAYLORSWIFT from '../constants/taylorswift.json'
+import SONG_CHOICES_PRINCE from '../constants/prince.json'
+import SONG_CHOICES_BEATLES from '../constants/beatles.json'
+
 import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
 import { getToday, setToday } from './localStorage'
@@ -9,6 +12,14 @@ let SONG_CHOICES = SONG_CHOICES_ALL
 switch (decadesConfig.key) {
   case 'taylorswift':
     SONG_CHOICES = SONG_CHOICES_TAYLORSWIFT
+    break
+
+  case 'prince':
+    SONG_CHOICES = SONG_CHOICES_PRINCE
+    break
+
+  case 'beatles':
+    SONG_CHOICES = SONG_CHOICES_BEATLES
     break
 
   default:

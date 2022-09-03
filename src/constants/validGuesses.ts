@@ -1,5 +1,7 @@
 import TAYLORSWIFT_ARTISTS_AND_SONGS from './taylorswift_validGuesses.json'
 import PRINCE_ARTISTS_AND_SONGS from './prince_validGuesses.json'
+import BEATLES_ARTISTS_AND_SONGS from './beatles_validGuesses.json'
+
 import DEFAULT_ARTISTS_AND_SONGS from './all_validGuesses.json'
 import { decadesConfig } from '../lib/config'
 
@@ -21,6 +23,10 @@ switch (decadesConfig.key) {
 
   case 'prince':
     ARTISTS_AND_SONGS = PRINCE_ARTISTS_AND_SONGS
+    break
+
+  case 'beatles':
+    ARTISTS_AND_SONGS = BEATLES_ARTISTS_AND_SONGS
     break
 
   default:
