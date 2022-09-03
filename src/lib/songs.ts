@@ -2,6 +2,8 @@ import SONG_CHOICES_ALL from '../constants/lyricle.json'
 import SONG_CHOICES_TAYLORSWIFT from '../constants/taylorswift.json'
 import SONG_CHOICES_PRINCE from '../constants/prince.json'
 import SONG_CHOICES_BEATLES from '../constants/beatles.json'
+import SONG_CHOICES_ARIANAGRANDE from '../constants/arianagrande.json'
+import SONG_CHOICES_EDSHEERAN from '../constants/edsheeran.json'
 
 import { decadesConfig } from './config'
 import { mapArtistToSongs } from '../constants/validGuesses'
@@ -20,6 +22,14 @@ switch (decadesConfig.key) {
 
   case 'beatles':
     SONG_CHOICES = SONG_CHOICES_BEATLES
+    break
+
+  case 'arianagrande':
+    SONG_CHOICES = SONG_CHOICES_ARIANAGRANDE
+    break
+
+  case 'edsheeran':
+    SONG_CHOICES = SONG_CHOICES_EDSHEERAN
     break
 
   default:
