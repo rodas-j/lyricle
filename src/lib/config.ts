@@ -9,6 +9,11 @@ switch (pathName) {
     name = 'Lyricle Taylor Swift'
     break
 
+  case '/prince':
+    key = 'prince'
+    name = 'Lyricle Prince'
+    break
+
   default:
     key = 'default'
     name = 'Lyricle Artists'
