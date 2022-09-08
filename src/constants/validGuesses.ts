@@ -2,6 +2,7 @@ import TAYLORSWIFT_ARTISTS_AND_SONGS from './taylorswift_validGuesses.json'
 import PRINCE_ARTISTS_AND_SONGS from './prince_validGuesses.json'
 import BEATLES_ARTISTS_AND_SONGS from './beatles_validGuesses.json'
 import ARIANAGRANDE_ARTISTS_AND_SONGS from './arianagrande_validGuesses.json'
+import EDSheeran_ARTISTS_AND_SONGS from './edsheeran_validGuesses.json'
 
 import DEFAULT_ARTISTS_AND_SONGS from './all_validGuesses.json'
 import { decadesConfig } from '../lib/config'
@@ -35,7 +36,7 @@ switch (decadesConfig.key) {
     break
 
   case 'edsheeran':
-    ARTISTS_AND_SONGS = ARIANAGRANDE_ARTISTS_AND_SONGS
+    ARTISTS_AND_SONGS = EDSheeran_ARTISTS_AND_SONGS
     break
 
   default:
