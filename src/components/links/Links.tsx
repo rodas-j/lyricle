@@ -34,7 +34,7 @@ const JoinOurCommunities = () => {
           <RedditIcon className="w-6 h-6 mx-1 fill-gray-700 hover:fill-gray-900 dark:fill-gray-100 dark:hover:fill-white" />
         </a>
         <a
-          href="https://discord.gg/84WNMqAT"
+          href="https://discord.gg/Ga2rTGSqbA"
           target="_blank"
           rel="noreferrer"
           className="focus-visible:outline-none"
