@@ -9,10 +9,15 @@ export default async function getSolution(artist: string, ind: number) {
     jsonDirectory + `/artist_catalogs/${artist}/${artist}.json`,
     "utf8"
   );
+  const validGuessesFileContents = await fs.readFile(
+    jsonDirectory + `/artist_catalogs/${artist}/${artist}_validGuesses.json`,
+    "utf8"
+  );
   const data = JSON.parse(fileContents);
-
+  const validGuesses = JSON.parse(validGuessesFileContents);
   //Return the content of the data file in json format
-  return data[ind];
+  const songChoice = data[ind];
+  return { songChoice, validGuesses };
 }
 
 export async function listArtists() {

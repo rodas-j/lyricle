@@ -37,7 +37,6 @@ import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
 import { StatsModal } from "../src/components/modals/StatsModal";
-import { mapArtistToSongs } from "../src/constants/validGuesses";
 
 export type Solution = {
   id: number;
@@ -49,14 +48,22 @@ export type Solution = {
   song: string;
 };
 
-const LyricleArtist = (solution: Solution) => {
+export type ValidGuess = {
+  artist: string;
+  songs: string[];
+};
+
+const LyricleArtist = (data) => {
   if (!getUUID()) {
     setUUID();
   }
 
-  let lyrics = solution.solution.lyrics;
-  let artist = solution.solution.artist;
-  let songSolution = `${solution.solution.artist} ─ ${solution.solution.title}`;
+  let solution = data.solution;
+  let validGuesses = data.validGuesses;
+
+  let lyrics = solution.lyrics;
+  let artist = solution.artist;
+  let songSolution = `${solution.artist} ─ ${solution.title}`;
 
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
@@ -162,7 +169,7 @@ const LyricleArtist = (solution: Solution) => {
       return;
     }
     const isAValidGuess = (query: string) => {
-      return mapArtistToSongs.find((song) => song === query);
+      return validGuesses.validGuesses.find((song) => song === query);
     };
 
     if (!isAValidGuess(e.target.search.value)) {
@@ -285,7 +292,8 @@ const LyricleArtist = (solution: Solution) => {
         </div>
         <ProgressBar song={songSolution as string} guesses={guesses} />
         <SearchSong
-          solution={solution.solution}
+          solution={solution}
+          validGuesses={validGuesses}
           isGameWon={isGameWon}
           isGameLost={isGameLost}
           guesses={guesses}
@@ -311,7 +319,7 @@ const LyricleArtist = (solution: Solution) => {
           handleReducedMotionMode={handleReducedMotionMode}
         />
         <StatsModal
-          solution={solution.solution}
+          solution={solution}
           isHomePage={false}
           isOpen={isStatsModalOpen}
           handleClose={() => setIsStatsModalOpen(false)}
@@ -356,17 +364,28 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  let solution = {};
+  let solution: Solution = {
+    id: 0,
+    title: "",
+    artist: "",
+    lyrics: [],
+    songLink: "",
+    artworkLink: "",
+    song: "",
+  };
+  let validGuesses;
   if (params) {
-    solution = (await getSolution(
-      params.name as string,
-      1
-    )) as unknown as Solution;
+    let x = (await getSolution(params.name as string, 1)) as unknown as {
+      songChoice: Solution;
+      validGuesses: ValidGuess[];
+    };
+    solution = x.songChoice;
+    validGuesses = x.validGuesses;
   }
-
   return {
     props: {
       solution,
+      validGuesses,
     },
   };
 }

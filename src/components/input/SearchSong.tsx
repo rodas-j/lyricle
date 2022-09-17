@@ -1,14 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 
-import { mapArtistToSongs } from "../../constants/validGuesses";
-
 // import VALID_GUESSES from '../../constants/all_validGuesses.json'
-import { Solution } from "../../../pages/[name]";
+import { Solution, ValidGuess } from "../../../pages/[name]";
 import { ChevronDoubleRightIcon, XIcon } from "@heroicons/react/outline";
 import { isAValidGuess } from "../../lib/songs";
 
 type SearchSongProps = {
   solution: Solution;
+  validGuesses: ValidGuess[];
   isGameWon: boolean;
   isGameLost: boolean;
   handleSubmit: () => void;
@@ -18,6 +17,7 @@ type SearchSongProps = {
 
 export const SearchSong = ({
   solution,
+  validGuesses,
   isGameWon,
   isGameLost,
   handleSubmit,
@@ -27,6 +27,14 @@ export const SearchSong = ({
   const [matchInput, setMatchInput] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const mapArtistToSongs: string[] = [];
+
+  validGuesses.forEach(({ artist, songs }) => {
+    for (let song of songs) {
+      mapArtistToSongs.push(`${artist} ─ ${song}`);
+    }
+  });
 
   useEffect(() => {
     if (currentGuess && !isAValidGuess(currentGuess)) {
