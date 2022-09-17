@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-html.dark {
-  background-color: rgb(10, 16, 29);
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-
 :root {
   --animation-speed: 1000ms;
   --animation-speed-fast: 350ms;
@@ -151,4 +119,3 @@ svg.cursor-pointer {
 .demo .tooltip {
   visibility: visible;
 }
-
