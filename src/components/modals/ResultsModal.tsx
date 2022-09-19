@@ -11,6 +11,7 @@ import {
   GUESS_DISTRIBUTION_TEXT,
   NEW_SONG_TEXT,
   SHARE_TEXT,
+  WIN_MESSAGES,
 } from "../../constants/strings";
 import { Solution } from "../../../pages/[name]";
 import { SongWidget } from "../songwidget/SongWidget";
@@ -48,6 +49,8 @@ export const ResultsModal = ({
   if (isHomePage) return <></>;
   let songSolution = `${solution.artist} ─ ${solution.title}`;
   let guessesToBeMapped = [...guesses];
+  const winMessage =
+    WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)];
   guessesToBeMapped.length = 6;
   guessesToBeMapped.fill("empty", guesses.length, 6);
   return (
@@ -55,7 +58,7 @@ export const ResultsModal = ({
       <BaseModal title={"Results"} isOpen={isOpen} handleClose={handleClose}>
         <h2 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
           {" "}
-          {isGameWon ? "YOU WON!" : "YOU LOST!"}
+          {isGameWon ? winMessage : "Better Luck Next Time!"}
         </h2>
         <SongWidget
           isOpen={isOpen && (isGameWon || isGameLost)}
@@ -73,7 +76,7 @@ export const ResultsModal = ({
               return (
                 <div key={index} className="bg-emerald-500 w-8 h-2 mx-px"></div>
               );
-            } else if (guess === "skipped") {
+            } else if (guess === "skip") {
               return (
                 <div key={index} className="bg-gray-400 w-8 h-2 mx-px"></div>
               );

@@ -4,6 +4,7 @@ import { HeartIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Twitter from "../../../public/assets/twitter.svg";
 import Instagram from "../../../public/assets/instagram.svg";
+import React from "react";
 
 type Props = {
   isOpen: boolean;
@@ -50,7 +51,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             <Image
               src={Twitter}
               alt="twitter"
-              className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100"
+              className="w-6 m-2 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100"
             />
           </a>
           <a href="https://www.instagram.com/lyricle_app/">
@@ -75,17 +76,17 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         >
           react-wordle.
         </a>
-        <p>
-          &nbsp; All lyrics are provided by &nbsp;
-          <a
-            className="underline text-gray-800 dark:text-gray-300"
-            href="https://www.lyrics.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Lyrics.com
-          </a>
-        </p>
+      </p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mt-6">
+        &nbsp; All lyrics are provided by &nbsp;
+        <a
+          className="underline text-gray-800 dark:text-gray-300"
+          href="https://www.lyrics.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Lyrics.com
+        </a>
       </p>
     </BaseModal>
   );

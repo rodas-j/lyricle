@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 
 export const ProgressBar = ({ song, guesses }) => {
@@ -16,8 +17,6 @@ export const ProgressBar = ({ song, guesses }) => {
                 guesses[index]
                   ? guesses[index] === song // Correct guess
                     ? "correct"
-                    : guesses[index].split("─")[0] === song.split("─")[0] // Correct artist, wrong song
-                    ? "close"
                     : guesses[index] === "skip" // Skipped
                     ? "skipped"
                     : "wrong" //incorrect guess

@@ -1,4 +1,3 @@
-import { mapArtistToSongs } from "../constants/validGuesses";
 import { getToday, setToday } from "./localStorage";
 
 if (!getToday()) {
@@ -6,22 +5,6 @@ if (!getToday()) {
   const day = today.getDate();
   setToday(day);
 }
-
-const handleRefresh = (e) => {
-  const today = new Date();
-  const todayDate = today.getDate();
-  if (getToday() !== String(todayDate)) {
-    setToday(String(todayDate));
-    window.location.reload();
-  }
-};
-if (typeof document !== "undefined") {
-  document.body.addEventListener("click", handleRefresh);
-}
-
-export const isAValidGuess = (query: string) => {
-  return mapArtistToSongs.find((song) => song === query);
-};
 
 export const getSongOfTheDay = () => {
   const epochMs = new Date("August 31, 2022").valueOf();

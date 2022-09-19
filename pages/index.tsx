@@ -1,21 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { GAME_TITLE } from "../src/constants/strings";
 import {
-  WIN_MESSAGES,
-  CORRECT_SONG_MESSAGE,
-  GAME_COPIED_MESSAGE,
-} from "../src/constants/strings";
-import {
-  MAX_CHALLENGES,
-  REVEAL_TIME_MS,
-  WELCOME_INFO_MODAL_MS,
-  // WELCOME_INFO_MODAL_MS,
-} from "../src/constants/settings";
-
-import { addStatsForCompletedGame, loadStats } from "../src/lib/stats";
-import {
-  loadGameStateFromLocalStorage,
-  saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
   getUUID,
@@ -29,6 +15,7 @@ import Artists from "../src/components/links/Artists";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
+import React from "react";
 
 type Props = {
   showHome?: boolean;
@@ -43,8 +30,10 @@ function App({ showHome = true }: Props) {
   let prefersReducedMotion = true;
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -76,7 +65,7 @@ function App({ showHome = true }: Props) {
   );
 
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
+  const [, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false);
 
@@ -121,6 +110,7 @@ function App({ showHome = true }: Props) {
   return (
     <div className="absolute inset-0 flex flex-col">
       <Navbar
+        gameTitle={GAME_TITLE}
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}

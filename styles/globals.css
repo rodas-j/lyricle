@@ -2,38 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+
+
+
 html.dark {
-  background-color: rgb(10, 16, 29);
+  background-color: rgb(15, 23, 42);
+}
+:root {
+  --animation-speed: 1000ms;
+  --animation-speed-fast: 250ms;
+  --default-cell-bg-color: theme('colors.white');
+  --default-cell-border-color: theme('colors.black');
+  --default-cell-text-color: theme('colors.black');
+  --absent-cell-bg-color: theme('colors.slate.400');
+  --correct-cell-bg-color: theme('colors.green.400');
+  --present-cell-bg-color: theme('colors.yellow.400');
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.dark {
+  --default-cell-bg-color: theme('colors.slate.900');
+  --default-cell-border-color: theme('colors.white');
+  --default-cell-text-color: theme('colors.white');
+  --absent-cell-bg-color: theme('colors.slate.700');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.high-contrast {
+  --correct-answer-bg-color: theme('colors.orange.400');
+  --wrong-answer-bg-color: theme('colors.cyan.400');
 }
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.reduced-motion {
+  --animation-speed: 0;
+  --animation-speed-fast: 0;
+  --animation-speed-faster: 0;
 }
 
 
+.cell-fill-animation {
+  animation: onTypeCell linear;
+  animation-duration: 0.35s;
+}
+
+.cell-reveal {
+  animation-duration: 0.35s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+
+.cell-reveal.absent {
+  animation-name: revealAbsentCharCell;
+}
+
+.cell-reveal.correct {
+  animation-name: revealCorrectCharCell;
+}
+
+.cell-reveal.present {
+  animation-name: revealPresentCharCell;
+}
 :root {
   --animation-speed: 1000ms;
   --animation-speed-fast: 350ms;
@@ -50,19 +75,22 @@ a {
   --tooltip-bg-color: theme('colors.gray.600');
 }
 
-.high-contrast {
-  --correct-answer-bg-color: theme('colors.orange.400');
-  --wrong-answer-bg-color: theme('colors.cyan.400');
-}
-
-.reduced-motion {
-  --animation-speed: 0;
-  --animation-speed-fast: 0;
-  --animation-speed-faster: 0;
+.cell-reveal > .letter-container {
+  animation: offsetLetterFlip 0.35s linear;
+  animation-fill-mode: backwards;
 }
 
 svg.cursor-pointer {
-  @apply md:hover:scale-125 duration-300;
+  transition: all var(--animation-speed-fast);
+}
+
+svg.cursor-pointer:hover {
+  transform: scale(1.2);
+}
+
+.jiggle {
+  animation: jiggle linear;
+  animation-duration: var(--animation-speed-fast);
 }
 
 .navbar {
@@ -71,6 +99,8 @@ svg.cursor-pointer {
 
 .navbar-content {
   display: flex;
+  height: 3rem;
+  align-items: center;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -79,6 +109,11 @@ svg.cursor-pointer {
   max-width: 800px;
   width: 100%;
 }
+
+.right-icons {
+  display: flex;
+}
+
 
 .lyrics-input,
 .lyrics-input:hover {

@@ -7,7 +7,6 @@ import { SearchSong } from "../src/components/input/SearchSong";
 import { ProgressBar } from "../src/components/progressbar/ProgressBar";
 
 import {
-  WIN_MESSAGES,
   CORRECT_SONG_MESSAGE,
   GAME_COPIED_MESSAGE,
 } from "../src/constants/strings";
@@ -274,8 +273,6 @@ const LyricleArtist = (data) => {
 
   useEffect(() => {
     if (isGameWon) {
-      const winMessage =
-        WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)];
       const delayMs = REVEAL_TIME_MS;
 
       setIsResultsModalOpen(true);
