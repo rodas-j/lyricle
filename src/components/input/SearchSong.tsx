@@ -3,11 +3,11 @@ import { useState, useRef, useEffect } from "react";
 // import VALID_GUESSES from '../../constants/all_validGuesses.json'
 import { Solution, ValidGuess } from "../../../pages/[name]";
 import { ChevronDoubleRightIcon, XIcon } from "@heroicons/react/outline";
-import { isAValidGuess } from "../../lib/songs";
 
 type SearchSongProps = {
   solution: Solution;
   validGuesses: ValidGuess[];
+  isAValidGuess: (current: string) => boolean;
   isGameWon: boolean;
   isGameLost: boolean;
   handleSubmit: () => void;
@@ -18,6 +18,7 @@ type SearchSongProps = {
 export const SearchSong = ({
   solution,
   validGuesses,
+  isAValidGuess,
   isGameWon,
   isGameLost,
   handleSubmit,
@@ -95,6 +96,7 @@ export const SearchSong = ({
             onChange={(e) => setCurrentGuess(e.target.value)}
           />
           <SongOptions
+            solution={solution}
             matchInput={matchInput}
             guesses={guesses}
             changeInput={changeInput}
@@ -105,6 +107,7 @@ export const SearchSong = ({
           />
         </div>
         <ActionBar
+          isAValidGuess={isAValidGuess}
           isGameWon={isGameWon}
           isGameLost={isGameLost}
           currentGuess={currentGuess}
@@ -116,7 +119,7 @@ export const SearchSong = ({
   );
 };
 
-function SongOptions({ matchInput, guesses, changeInput }) {
+function SongOptions({ matchInput, guesses, changeInput, solution }) {
   const [isSSR, setIsSSR] = useState(true);
   useEffect(() => {
     setIsSSR(false);
@@ -149,6 +152,7 @@ function SongOptions({ matchInput, guesses, changeInput }) {
 }
 
 export const ActionBar = ({
+  isAValidGuess,
   isGameWon,
   isGameLost,
   currentGuess,

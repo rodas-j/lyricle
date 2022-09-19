@@ -118,14 +118,6 @@ function App({ showHome = true }: Props) {
     }
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode]);
 
-  useEffect(() => {
-    if (!loadGameStateFromLocalStorage()) {
-      setTimeout(() => {
-        setIsHowToPlayModalOpen(true);
-      }, WELCOME_INFO_MODAL_MS);
-    }
-  }, []);
-
   return (
     <div className="absolute inset-0 flex flex-col">
       <Navbar

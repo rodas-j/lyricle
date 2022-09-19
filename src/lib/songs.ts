@@ -18,9 +18,6 @@ const handleRefresh = (e) => {
 if (typeof document !== "undefined") {
   document.body.addEventListener("click", handleRefresh);
 }
-export const isWinningSong = (song: string) => {
-  return solution.song === song;
-};
 
 export const isAValidGuess = (query: string) => {
   return mapArtistToSongs.find((song) => song === query);

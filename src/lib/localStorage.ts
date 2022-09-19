@@ -1,7 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { decadesConfig } from "./config";
 
-const gameStateKey = decadesConfig.gameState;
 const highContrastKey = "highContrast";
 const profileKey = "profile";
 
@@ -10,18 +8,19 @@ type StoredGameState = {
   song: string;
 };
 
-export const saveGameStateToLocalStorage = (gameState: StoredGameState) => {
+export const saveGameStateToLocalStorage = (
+  gameStateKey: string,
+  gameState: StoredGameState
+) => {
   localStorage.setItem(gameStateKey, JSON.stringify(gameState));
 };
 
-export const loadGameStateFromLocalStorage = () => {
+export const loadGameStateFromLocalStorage = (gameStateKey: string) => {
   if (typeof localStorage !== "undefined") {
     const state = localStorage.getItem(gameStateKey);
     return state ? (JSON.parse(state) as StoredGameState) : null;
   }
 };
-
-const gameStatKey = decadesConfig.gameStats;
 
 export type GameStats = {
   winDistribution: number[];
@@ -32,11 +31,14 @@ export type GameStats = {
   successRate: number;
 };
 
-export const saveStatsToLocalStorage = (gameStats: GameStats) => {
+export const saveStatsToLocalStorage = (
+  gameStatKey: string,
+  gameStats: GameStats
+) => {
   localStorage.setItem(gameStatKey, JSON.stringify(gameStats));
 };
 
-export const loadStatsFromLocalStorage = () => {
+export const loadStatsFromLocalStorage = (gameStatKey: string) => {
   if (typeof localStorage !== "undefined") {
     const stats = localStorage.getItem(gameStatKey);
     return stats ? (JSON.parse(stats) as GameStats) : null;

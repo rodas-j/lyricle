@@ -15,7 +15,6 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
-  // WELCOME_INFO_MODAL_MS,
 } from "../src/constants/settings";
 
 import { addStatsForCompletedGame, loadStats } from "../src/lib/stats";
@@ -28,7 +27,6 @@ import {
   setUUID,
 } from "../src/lib/localStorage";
 
-import { AlertContainer } from "../src/components/alerts/AlertContainer";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
 
@@ -37,6 +35,7 @@ import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
 import { StatsModal } from "../src/components/modals/StatsModal";
+import { ResultsModal } from "../src/components/modals/ResultsModal";
 
 export type Solution = {
   id: number;
@@ -58,8 +57,21 @@ const LyricleArtist = (data) => {
     setUUID();
   }
 
-  let solution = data.solution;
-  let validGuesses = data.validGuesses;
+  const router = useRouter();
+  const artistGameState = "gameState".concat(router.query.name as string);
+  const artistGameStats = "gameStats".concat(router.query.name as string);
+
+  let solution = data.solution as Solution;
+
+  let validGuesses = data.validGuesses as ValidGuess[];
+
+  const mapArtistToSongs: string[] = [];
+
+  validGuesses.forEach(({ artist, songs }) => {
+    for (let song of songs) {
+      mapArtistToSongs.push(`${artist} ─ ${song}`);
+    }
+  });
 
   let lyrics = solution.lyrics;
   let artist = solution.artist;
@@ -101,12 +113,12 @@ const LyricleArtist = (data) => {
     getStoredIsHighContrastMode()
   );
 
-  const [stats, setStats] = useState(() => loadStats());
+  const [stats, setStats] = useState(() => loadStats(artistGameStats));
 
   const [isGameWon, setIsGameWon] = useState(false);
   const [isGameLost, setIsGameLost] = useState(false);
   const [guesses, setGuesses] = useState<string[]>(() => {
-    const loaded = loadGameStateFromLocalStorage();
+    const loaded = loadGameStateFromLocalStorage(artistGameState);
     if (loaded?.song !== songSolution) {
       return [];
     }
@@ -129,6 +141,7 @@ const LyricleArtist = (data) => {
     guesses.length ? guesses.length + 1 : 1
   );
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false);
@@ -159,18 +172,18 @@ const LyricleArtist = (data) => {
     setSliceLyrics(lyrics.length);
   };
 
+  const isAValidGuess = (query: string) => {
+    return mapArtistToSongs.find((song) => song === query);
+  };
+
   const onSubmit = (e: {
     preventDefault: () => void;
     target: { search: { value: string } };
   }) => {
-    console.log("onSubmit");
     e.preventDefault();
     if (isGameWon || isGameLost) {
       return;
     }
-    const isAValidGuess = (query: string) => {
-      return validGuesses.validGuesses.find((song) => song === query);
-    };
 
     if (!isAValidGuess(e.target.search.value)) {
       return;
@@ -179,12 +192,13 @@ const LyricleArtist = (data) => {
     setGuesses([...guesses, e.target.search.value]);
 
     const isWinningSong = (song: string) => {
-      console.log(songSolution, song);
       return songSolution === song;
     };
 
     if (isWinningSong(e.target.search.value)) {
-      setStats(addStatsForCompletedGame(stats, guesses.length));
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length)
+      );
 
       setIsGameWon(true);
       return;
@@ -212,7 +226,9 @@ const LyricleArtist = (data) => {
     revealNextLine();
 
     if (guesses.length === MAX_CHALLENGES - 1) {
-      setStats(addStatsForCompletedGame(stats, guesses.length + 1));
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length + 1)
+      );
       setIsGameLost(true);
 
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
@@ -242,7 +258,7 @@ const LyricleArtist = (data) => {
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode]);
 
   useEffect(() => {
-    if (!loadGameStateFromLocalStorage()) {
+    if (!loadGameStateFromLocalStorage(artistGameState)) {
       setTimeout(() => {
         setIsHowToPlayModalOpen(true);
       }, WELCOME_INFO_MODAL_MS);
@@ -250,7 +266,10 @@ const LyricleArtist = (data) => {
   }, []);
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, song: songSolution });
+    saveGameStateToLocalStorage(artistGameState, {
+      guesses,
+      song: songSolution,
+    });
   }, [guesses]);
 
   useEffect(() => {
@@ -259,15 +278,12 @@ const LyricleArtist = (data) => {
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)];
       const delayMs = REVEAL_TIME_MS;
 
-      showSuccessAlert(winMessage, {
-        delayMs,
-        onClose: () => setIsStatsModalOpen(true),
-      });
+      setIsResultsModalOpen(true);
     }
 
     if (isGameLost) {
       setTimeout(() => {
-        setIsStatsModalOpen(true);
+        setIsResultsModalOpen(true);
       }, REVEAL_TIME_MS);
     }
 
@@ -294,6 +310,7 @@ const LyricleArtist = (data) => {
         <SearchSong
           solution={solution}
           validGuesses={validGuesses}
+          isAValidGuess={isAValidGuess}
           isGameWon={isGameWon}
           isGameLost={isGameLost}
           guesses={guesses}
@@ -323,6 +340,20 @@ const LyricleArtist = (data) => {
           isHomePage={false}
           isOpen={isStatsModalOpen}
           handleClose={() => setIsStatsModalOpen(false)}
+          guesses={guesses}
+          gameStats={stats}
+          isGameLost={isGameLost}
+          isGameWon={isGameWon}
+          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+          isDarkMode={isDarkMode}
+          isHighContrastMode={isHighContrastMode}
+          numberOfGuessesMade={guesses.length}
+        />
+        <ResultsModal
+          solution={solution}
+          isHomePage={false}
+          isOpen={isResultsModalOpen}
+          handleClose={() => setIsResultsModalOpen(false)}
           guesses={guesses}
           gameStats={stats}
           isGameLost={isGameLost}

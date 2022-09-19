@@ -5,7 +5,6 @@ import { GameStats } from "../../lib/localStorage";
 import { shareStatus } from "../../lib/share";
 import { tomorrow } from "../../lib/songs";
 import { BaseModal } from "./BaseModal";
-import { SongModal } from "./SongModal";
 
 import {
   STATISTICS_TITLE,

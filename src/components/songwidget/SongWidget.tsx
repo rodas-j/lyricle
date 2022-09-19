@@ -8,23 +8,16 @@ import { PauseIcon, PlayIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import SoundCloudLogo from "../../../public/assets/soundcloud.svg";
 import ArrowLeft from "../../../public/assets/arrowleft.svg";
+import { Solution } from "../../../pages/[name]";
 
 type Props = {
   isOpen: boolean;
-  solution: {
-    id: number;
-    title: string;
-    artist: string;
-    song: string;
-    lyrics: Array<string>;
-    songLink?: string;
-    artworkLink?: string;
-  };
+  solution: Solution;
   variant?: "success" | "error";
   topMost?: boolean;
 };
 
-export const SongModal = ({
+export const SongWidget = ({
   isOpen,
   solution,
   variant = "error",
@@ -33,6 +26,7 @@ export const SongModal = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
   const { showError: showErrorAlert } = useAlert();
+  let songSolution = `${solution.artist} ─ ${solution.title}`;
   useEffect(() => {
     if (isOpen) {
       setIsWidgetOpen(true);
@@ -82,8 +76,8 @@ export const SongModal = ({
           {/* <p className="text-sm text-center font-medium">{message}</p> */}
           <div className="invisible">
             <ReactPlayer
-              height="0px"
-              width="0px"
+              height="1px"
+              width="1px"
               url={solution.songLink}
               playing={isPlaying}
               onEnded={() => setIsPlaying(false)}
@@ -102,19 +96,19 @@ export const SongModal = ({
                 {mediaButton}
               </div>
               <div className="flex-1 m-2 text-white truncate ">
-                <p className="text-left">{solution?.song.split("─")[0]}</p>{" "}
+                <p className="text-left">{songSolution.split("─")[0]}</p>{" "}
                 <p className="text-left text-sm  overflow-x-auto webkit opacity-75">
-                  {solution?.song.split("─")[1]}
+                  {songSolution.split("─")[1]}
                 </p>{" "}
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">
                   <span className="text-xs uppercase opacity-50 font-bold "></span>{" "}
                   <a
                     href={solution.songLink}
-                    title={LISTEN_TO_TITLE(solution?.song)}
+                    title={LISTEN_TO_TITLE(songSolution)}
                     className="no-underline focus-visible:outline-none"
                   >
                     <span className="flex focus:outline-none ">
-                      <Image src={SoundCloudLogo} alt="soundcloud logo" />
+                      <Image src={SoundCloudLogo} alt="SoundCloud Logo" />
                       <Image src={ArrowLeft} alt="arrow left" />
                     </span>
                   </a>

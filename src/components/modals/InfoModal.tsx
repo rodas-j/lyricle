@@ -13,17 +13,6 @@ type Props = {
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
-      <div className="w-full h-0 pb-[56%] relative mt-3 mb-6 pointer-events-none">
-        <iframe
-          className="giphy-embed absolute"
-          title="another-one-gif"
-          src="https://giphy.com/embed/qgri3D9sTwCUGMcT8L"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          allowFullScreen
-        ></iframe>
-      </div>
       <p className="text-sm dark:text-gray-200 mb-6">
         We're sure you're all familiar with the "-le" type games by now. We were{" "}
         <span className="decoration-double line-through">heavily</span> inspired
@@ -86,6 +75,17 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         >
           react-wordle.
         </a>
+        <p>
+          &nbsp; All lyrics are provided by &nbsp;
+          <a
+            className="underline text-gray-800 dark:text-gray-300"
+            href="https://www.lyrics.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Lyrics.com
+          </a>
+        </p>
       </p>
     </BaseModal>
   );
