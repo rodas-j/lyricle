@@ -28,7 +28,7 @@ import {
 
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
-
+import ARTIST_INFO from "../../constants/artists.json";
 import getSolution, { listArtists } from "./api";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
@@ -401,9 +401,10 @@ export async function getStaticProps({ params }) {
     artworkLink: "",
     song: "",
   };
+  const ind = getSongOfTheDay().solutionIndex;
   let validGuesses;
   if (params) {
-    let x = (await getSolution(params.name as string, 1)) as unknown as {
+    let x = (await getSolution(params.name as string, ind)) as unknown as {
       songChoice: Solution;
       validGuesses: ValidGuess[];
     };

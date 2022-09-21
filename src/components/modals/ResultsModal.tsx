@@ -15,6 +15,7 @@ import {
 } from "../../constants/strings";
 import { Solution } from "../../../pages/[name]";
 import { SongWidget } from "../songwidget/SongWidget";
+import React from "react";
 
 type Props = {
   solution: Solution;
@@ -102,7 +103,8 @@ export const ResultsModal = ({
                   guesses,
                   isDarkMode,
                   isHighContrastMode,
-                  handleShareToClipboard
+                  handleShareToClipboard,
+                  songSolution
                 );
               }}
             >

@@ -13,6 +13,7 @@ import {
   SHARE_TEXT,
 } from "../../constants/strings";
 import { Solution } from "../../../pages/[name]";
+import React from "react";
 
 type Props = {
   solution: Solution;
@@ -57,6 +58,7 @@ export const StatsModal = ({
       </BaseModal>
     );
   }
+  let songSolution = `${solution.artist} ─ ${solution.title}`;
   return (
     <>
       <BaseModal
@@ -97,7 +99,8 @@ export const StatsModal = ({
                     guesses,
                     isDarkMode,
                     isHighContrastMode,
-                    handleShareToClipboard
+                    handleShareToClipboard,
+                    songSolution
                   );
                 }}
               >
