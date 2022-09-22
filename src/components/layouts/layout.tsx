@@ -1,14 +1,17 @@
 import CookieConsent from "../banners/CookieConsent";
 import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
-export default function Layout({ children }) {
+import { ReactNode, useEffect, useState } from "react";
+
+interface Props {
+  children?: ReactNode;
+  // any props that come into the component
+}
+
+export default function Layout({ children }: Props) {
   const [showCookieConsent, setShowCookieConsent] = useState<boolean>(false);
   useEffect(() => {
-    console.log(Cookies.get("cookieConsent"));
     setShowCookieConsent(!Cookies.get("cookieConsent") ? true : false);
   }, []);
-
-  console.log("showCookieConsent", showCookieConsent);
 
   return (
     <>

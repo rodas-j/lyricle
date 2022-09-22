@@ -17,5 +17,5 @@ export default async function handler(
   const data = JSON.parse(fileContents);
 
   //Return the content of the data file in json format
-  res.status(200).json(data[parseInt(ind)]);
+  res.status(200).json(data[parseInt(ind as string)]);
 }

@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const LyricsLine = ({ lyrics, sliceLyrics }) => {
+interface Props {
+  lyrics: string[];
+  sliceLyrics: number;
+}
+
+export const LyricsLine = ({ lyrics, sliceLyrics }: Props) => {
   const [isSSR, setIsSSR] = useState(true);
 
   useEffect(() => {

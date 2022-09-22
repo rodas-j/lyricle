@@ -1,7 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-export const ProgressBar = ({ song, guesses }) => {
+interface Props {
+  song: string;
+  guesses: string[];
+}
+export const ProgressBar = ({ song, guesses }: Props) => {
   const [isSSR, setIsSSR] = useState(true);
   useEffect(() => {
     setIsSSR(false);
@@ -32,7 +36,11 @@ export const ProgressBar = ({ song, guesses }) => {
   );
 };
 
-export const ToolTip = ({ guess }) => {
+interface ToolTipProps {
+  guess: string;
+}
+
+export const ToolTip = ({ guess }: ToolTipProps) => {
   if (!guess) return <></>;
 
   return (

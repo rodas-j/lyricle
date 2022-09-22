@@ -15,7 +15,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm dark:text-gray-200 mb-6">
-        We're sure you're all familiar with the "-le" type games by now. We were{" "}
+        We`&apos;`re sure you`&apos;`re all familiar with the &quot;-le&quot;
+        type games by now. We were{" "}
         <span className="decoration-double line-through">heavily</span> inspired
         by both{" "}
         <a

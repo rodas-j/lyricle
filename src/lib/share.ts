@@ -49,7 +49,11 @@ export const shareStatus = (
   }
 };
 
-const generateEmojiGrid = (guesses: string[], tiles: string[], song) => {
+const generateEmojiGrid = (
+  guesses: string[],
+  tiles: string[],
+  song: string
+) => {
   const value = guesses
     .map((guess) => {
       if (guess === song) {

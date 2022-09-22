@@ -15,13 +15,13 @@ export function HowToPlayModal({ isOpen, handleClose }: Props) {
   return (
     <BaseModal title="How to Play" isOpen={isOpen} handleClose={handleClose}>
       <div className="wrapper flex justify-between items-center my-6">
-        <Image src={One} className="w-8 h-8 stroke-gray-400 mr-3" />
+        <Image src={One} alt="" className="w-8 h-8 stroke-gray-400 mr-3" />
         <p className="w-[45ch] text-justify text-sm dark:text-gray-200">
           Guess the song from the lyrics in as few tries as possible.
         </p>
       </div>
       <div className="wrapper flex justify-between items-center mb-6">
-        <Image src={Two} className="w-8 h-8 stroke-gray-400 mr-3" />
+        <Image src={Two} alt="" className="w-8 h-8 stroke-gray-400 mr-3" />
         <p className="w-[45ch] text-justify text-sm dark:text-gray-200">
           Each guess will reveal more lines. Click the small boxes on top of the
           search bar to see your previous attempts.
@@ -44,7 +44,7 @@ export function HowToPlayModal({ isOpen, handleClose }: Props) {
         </div>
       </div>
       <div className="wrapper flex justify-between items-center mb-10">
-        <Image src={Three} className="w-8 h-8 stroke-gray-400 mr-3" />
+        <Image src={Three} alt="" className="w-8 h-8 stroke-gray-400 mr-3" />
         <p className="w-[45ch] text-justify text-sm dark:text-gray-200">
           Share your results and come back tomorrow for the next lyricle!
         </p>

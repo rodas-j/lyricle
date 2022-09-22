@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { MouseEvent } from "react";
 
-const CookieConsent = ({ onAccept }) => {
+interface CookieConsentProps {
+  onAccept: () => void;
+}
+
+const CookieConsent = ({ onAccept }: CookieConsentProps) => {
   const onClick = (e: MouseEvent<HTMLButtonElement>) => {
     onAccept();
   };
