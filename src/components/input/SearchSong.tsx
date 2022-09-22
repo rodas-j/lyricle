@@ -10,7 +10,7 @@ type SearchSongProps = {
   isAValidGuess: (current: string) => boolean;
   isGameWon: boolean;
   isGameLost: boolean;
-  handleSubmit: () => void;
+  handleSubmit: (e: any) => void;
   handleSkip: () => void;
   guesses: string[];
 };
@@ -56,7 +56,7 @@ export const SearchSong = ({
     }
   }, [currentGuess]);
 
-  const changeInput = (e): void => {
+  const changeInput = (e: any): void => {
     setCurrentGuess(e.target.textContent);
 
     if (inputRef.current) {
@@ -119,7 +119,19 @@ export const SearchSong = ({
   );
 };
 
-function SongOptions({ matchInput, guesses, changeInput, solution }) {
+type SongOptionsProps = {
+  solution: Solution;
+  matchInput: string[];
+  guesses: string[];
+  changeInput: (e: any) => void;
+};
+
+function SongOptions({
+  matchInput,
+  guesses,
+  changeInput,
+  solution,
+}: SongOptionsProps) {
   const [isSSR, setIsSSR] = useState(true);
   useEffect(() => {
     setIsSSR(false);
@@ -150,6 +162,14 @@ function SongOptions({ matchInput, guesses, changeInput, solution }) {
     </ul>
   );
 }
+type ActionBarProps = {
+  isAValidGuess: (current: string) => boolean;
+  isGameWon: boolean;
+  isGameLost: boolean;
+  currentGuess: string;
+  handleSkip: () => void;
+  inputRef: any;
+};
 
 export const ActionBar = ({
   isAValidGuess,
@@ -158,7 +178,7 @@ export const ActionBar = ({
   currentGuess,
   handleSkip,
   inputRef,
-}) => {
+}: ActionBarProps) => {
   return (
     <div className="flex justify-end mt-3">
       <button

@@ -28,7 +28,6 @@ import {
 
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
-import ARTIST_INFO from "../../constants/artists.json";
 import getSolution, { listArtists } from "./api";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
@@ -51,7 +50,10 @@ export type ValidGuess = {
   songs: string[];
 };
 
-const LyricleArtist = (data) => {
+const LyricleArtist = (data: {
+  solution: Solution;
+  validGuesses: ValidGuess[];
+}) => {
   if (!getUUID()) {
     setUUID();
   }
@@ -172,7 +174,7 @@ const LyricleArtist = (data) => {
   };
 
   const isAValidGuess = (query: string) => {
-    return mapArtistToSongs.find((song) => song === query);
+    return mapArtistToSongs.find((song) => song === query) ? true : false;
   };
 
   const onSubmit = (e: {
@@ -311,7 +313,7 @@ const LyricleArtist = (data) => {
           isGameWon={isGameWon}
           isGameLost={isGameLost}
           guesses={guesses}
-          handleSubmit={onSubmit}
+          handleSubmit={(e: any) => onSubmit(e)}
           handleSkip={onSkip}
         />
         <InfoModal
@@ -391,7 +393,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+type Params = {
+  name: string;
+};
+
+export async function getStaticProps({ params }: { params: Params }) {
   let solution: Solution = {
     id: 0,
     title: "",
