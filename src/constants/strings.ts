@@ -1,4 +1,3 @@
-import { decadesConfig } from "../lib/config";
 export const GAME_TITLE = "Lyricle Artists";
 
 export const WIN_MESSAGES = ["Great Job!", "Awesome", "Well done!"];
