@@ -25,7 +25,7 @@ import {
   getUUID,
   setUUID,
 } from "../src/lib/localStorage";
-
+import ARTIST_INFO from "../src/constants/artists.json";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
 import getSolution, { listArtists } from "./api";
@@ -77,13 +77,14 @@ const LyricleArtist = (data: {
   let lyrics = solution.lyrics;
   let artist = solution.artist;
   let songSolution = `${solution.artist} ─ ${solution.title}`;
-
+  let gameTitle = ARTIST_INFO.find((artistInfo) => {
+    return artistInfo.name === artist;
+  })?.name;
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
 
   useEffect(() => {
     prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
     prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -294,7 +295,7 @@ const LyricleArtist = (data: {
   return (
     <div className="absolute inset-0 flex flex-col">
       <Navbar
-        gameTitle={artist}
+        gameTitle={gameTitle as string}
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
