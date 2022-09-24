@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Head from "next/head";
 import { GAME_TITLE } from "../src/constants/strings";
 import {
   setStoredIsHighContrastMode,
@@ -108,45 +108,50 @@ function App({ showHome = true }: Props) {
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode]);
 
   return (
-    <div className="absolute inset-0 flex flex-col">
-      <Navbar
-        gameTitle={GAME_TITLE}
-        setIsInfoModalOpen={setIsInfoModalOpen}
-        setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
-        setIsStatsModalOpen={setIsStatsModalOpen}
-        setIsSettingsModalOpen={setIsSettingsModalOpen}
-        shouldHideStatsModalButton={showHome}
-      />
-      <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <Artists />
-
-        {InfoModal({
-          isOpen: isInfoModalOpen,
-          handleClose: () => setIsInfoModalOpen(false),
-        })}
-
-        <InfoModal
-          isOpen={isInfoModalOpen}
-          handleClose={() => setIsInfoModalOpen(false)}
+    <>
+      <Head>
+        <title>{GAME_TITLE}</title>
+      </Head>
+      <div className="absolute inset-0 flex flex-col">
+        <Navbar
+          gameTitle={GAME_TITLE}
+          setIsInfoModalOpen={setIsInfoModalOpen}
+          setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
+          setIsStatsModalOpen={setIsStatsModalOpen}
+          setIsSettingsModalOpen={setIsSettingsModalOpen}
+          shouldHideStatsModalButton={showHome}
         />
-        <HowToPlayModal
-          isOpen={isHowToPlayModalOpen}
-          handleClose={() => setIsHowToPlayModalOpen(false)}
-        />
-        <SettingsModal
-          isOpen={isSettingsModalOpen}
-          handleClose={() => setIsSettingsModalOpen(false)}
-          isDarkMode={isDarkMode}
-          handleDarkMode={handleDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          handleHighContrastMode={handleHighContrastMode}
-          isReducedMotionMode={isReducedMotionMode}
-          handleReducedMotionMode={handleReducedMotionMode}
-        />
+        <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+          <Artists />
 
-        <AlertContainer />
+          {InfoModal({
+            isOpen: isInfoModalOpen,
+            handleClose: () => setIsInfoModalOpen(false),
+          })}
+
+          <InfoModal
+            isOpen={isInfoModalOpen}
+            handleClose={() => setIsInfoModalOpen(false)}
+          />
+          <HowToPlayModal
+            isOpen={isHowToPlayModalOpen}
+            handleClose={() => setIsHowToPlayModalOpen(false)}
+          />
+          <SettingsModal
+            isOpen={isSettingsModalOpen}
+            handleClose={() => setIsSettingsModalOpen(false)}
+            isDarkMode={isDarkMode}
+            handleDarkMode={handleDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            handleHighContrastMode={handleHighContrastMode}
+            isReducedMotionMode={isReducedMotionMode}
+            handleReducedMotionMode={handleReducedMotionMode}
+          />
+
+          <AlertContainer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import { LyricsLine } from "../src/components/lyrics/LyricsLine";
 import { SearchSong } from "../src/components/input/SearchSong";
@@ -76,10 +76,13 @@ const LyricleArtist = (data: {
 
   let lyrics = solution.lyrics;
   let artist = solution.artist;
+  console.log(artist);
   let songSolution = `${solution.artist} ─ ${solution.title}`;
-  let gameTitle = ARTIST_INFO.find((artistInfo) => {
-    return artistInfo.name === artist;
-  })?.name;
+  let gameTitle =
+    "Lyricle " +
+    ARTIST_INFO.find((artistInfo) => {
+      return artistInfo.id === router.query.name;
+    })?.name;
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
 
@@ -293,78 +296,83 @@ const LyricleArtist = (data: {
   }, [isGameWon, isGameLost, showSuccessAlert]);
 
   return (
-    <div className="absolute inset-0 flex flex-col">
-      <Navbar
-        gameTitle={gameTitle as string}
-        setIsInfoModalOpen={setIsInfoModalOpen}
-        setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
-        setIsStatsModalOpen={setIsStatsModalOpen}
-        setIsSettingsModalOpen={setIsSettingsModalOpen}
-        shouldHideStatsModalButton={false}
-      />
-      <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow">
-          <LyricsLine lyrics={lyrics} sliceLyrics={sliceLyrics} />
+    <>
+      <Head>
+        <title>{gameTitle}</title>
+      </Head>
+      <div className="absolute inset-0 flex flex-col">
+        <Navbar
+          gameTitle={gameTitle as string}
+          setIsInfoModalOpen={setIsInfoModalOpen}
+          setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
+          setIsStatsModalOpen={setIsStatsModalOpen}
+          setIsSettingsModalOpen={setIsSettingsModalOpen}
+          shouldHideStatsModalButton={false}
+        />
+        <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+          <div className="pb-6 grow">
+            <LyricsLine lyrics={lyrics} sliceLyrics={sliceLyrics} />
+          </div>
+          <ProgressBar song={songSolution as string} guesses={guesses} />
+          <SearchSong
+            solution={solution}
+            validGuesses={validGuesses}
+            isAValidGuess={isAValidGuess}
+            isGameWon={isGameWon}
+            isGameLost={isGameLost}
+            guesses={guesses}
+            handleSubmit={(e: any) => onSubmit(e)}
+            handleSkip={onSkip}
+          />
+          <InfoModal
+            isOpen={isInfoModalOpen}
+            handleClose={() => setIsInfoModalOpen(false)}
+          />
+          <HowToPlayModal
+            isOpen={isHowToPlayModalOpen}
+            handleClose={() => setIsHowToPlayModalOpen(false)}
+          />
+          <SettingsModal
+            isOpen={isSettingsModalOpen}
+            handleClose={() => setIsSettingsModalOpen(false)}
+            isDarkMode={isDarkMode}
+            handleDarkMode={handleDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            handleHighContrastMode={handleHighContrastMode}
+            isReducedMotionMode={isReducedMotionMode}
+            handleReducedMotionMode={handleReducedMotionMode}
+          />
+          <StatsModal
+            solution={solution}
+            isHomePage={false}
+            isOpen={isStatsModalOpen}
+            handleClose={() => setIsStatsModalOpen(false)}
+            guesses={guesses}
+            gameStats={stats}
+            isGameLost={isGameLost}
+            isGameWon={isGameWon}
+            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+            isDarkMode={isDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            numberOfGuessesMade={guesses.length}
+          />
+          <ResultsModal
+            solution={solution}
+            isHomePage={false}
+            isOpen={isResultsModalOpen}
+            handleClose={() => setIsResultsModalOpen(false)}
+            guesses={guesses}
+            gameStats={stats}
+            isGameLost={isGameLost}
+            isGameWon={isGameWon}
+            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+            isDarkMode={isDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            numberOfGuessesMade={guesses.length}
+          />
         </div>
-        <ProgressBar song={songSolution as string} guesses={guesses} />
-        <SearchSong
-          solution={solution}
-          validGuesses={validGuesses}
-          isAValidGuess={isAValidGuess}
-          isGameWon={isGameWon}
-          isGameLost={isGameLost}
-          guesses={guesses}
-          handleSubmit={(e: any) => onSubmit(e)}
-          handleSkip={onSkip}
-        />
-        <InfoModal
-          isOpen={isInfoModalOpen}
-          handleClose={() => setIsInfoModalOpen(false)}
-        />
-        <HowToPlayModal
-          isOpen={isHowToPlayModalOpen}
-          handleClose={() => setIsHowToPlayModalOpen(false)}
-        />
-        <SettingsModal
-          isOpen={isSettingsModalOpen}
-          handleClose={() => setIsSettingsModalOpen(false)}
-          isDarkMode={isDarkMode}
-          handleDarkMode={handleDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          handleHighContrastMode={handleHighContrastMode}
-          isReducedMotionMode={isReducedMotionMode}
-          handleReducedMotionMode={handleReducedMotionMode}
-        />
-        <StatsModal
-          solution={solution}
-          isHomePage={false}
-          isOpen={isStatsModalOpen}
-          handleClose={() => setIsStatsModalOpen(false)}
-          guesses={guesses}
-          gameStats={stats}
-          isGameLost={isGameLost}
-          isGameWon={isGameWon}
-          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
-          isDarkMode={isDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          numberOfGuessesMade={guesses.length}
-        />
-        <ResultsModal
-          solution={solution}
-          isHomePage={false}
-          isOpen={isResultsModalOpen}
-          handleClose={() => setIsResultsModalOpen(false)}
-          guesses={guesses}
-          gameStats={stats}
-          isGameLost={isGameLost}
-          isGameWon={isGameWon}
-          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
-          isDarkMode={isDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          numberOfGuessesMade={guesses.length}
-        />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,51 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60em;
+    height: 100%;
+}
+.container h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.container h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.container h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.container h4{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.container p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.container a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: #000;
+    text-decoration: underline;
+}
+
+.container a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+.container ul{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
