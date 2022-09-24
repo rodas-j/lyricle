@@ -86,15 +86,19 @@ export const SongWidget = ({
           </div>
           <div className="pb-0 flex-col items-evenly">
             <div className="flex items-stretch rounded-md overflow-hidden bg-custom-positive">
-              <div
-                style={{
-                  backgroundImage: `url(${artwork_url})`,
-                }}
-                className="w-20 bg-cover bg-center"
-              ></div>{" "}
-              <div className=" pl-1 pt-5 flex-col items-evenly">
-                {mediaButton}
-              </div>
+              {artwork_url ? (
+                <div
+                  style={{
+                    backgroundImage: `url(${artwork_url})`,
+                  }}
+                  className="w-20 bg-cover bg-center"
+                ></div>
+              ) : null}{" "}
+              {solution.songLink ? (
+                <div className=" pl-1 pt-5 flex-col items-evenly">
+                  {mediaButton}
+                </div>
+              ) : null}
               <div className="flex-1 m-2 text-white truncate ">
                 <p className="text-left">{songSolution.split("─")[0]}</p>{" "}
                 <p className="text-left text-sm  overflow-x-auto webkit opacity-75">

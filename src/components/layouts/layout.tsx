@@ -2,7 +2,18 @@ import CookieConsent from "../banners/CookieConsent";
 import Cookies from "js-cookie";
 import { ReactNode, useEffect, useState } from "react";
 import Script from "next/script";
+import { GaProvider } from "../../context/GAContext";
 
+function throwIfSSR() {
+  throw new Error("Using GA during SSR is not allowed");
+}
+
+function gaHandler(actionType: string, hitType: string, eventProps: any) {
+  console.log(actionType, hitType, eventProps);
+  if ("gtag" in window) {
+    (window as any).gtag(actionType, hitType, eventProps);
+  }
+}
 interface Props {
   children?: ReactNode;
   // any props that come into the component
@@ -10,6 +21,7 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   const [showCookieConsent, setShowCookieConsent] = useState<boolean>(false);
+  const ga = typeof window === "undefined" ? throwIfSSR : gaHandler;
   useEffect(() => {
     setShowCookieConsent(!Cookies.get("cookieConsent") ? true : false);
   }, []);
@@ -27,8 +39,7 @@ export default function Layout({ children }: Props) {
 
   gtag('config', 'G-B55DZ451GN');`}
       </Script>
-
-      {children}
+      <GaProvider value={ga}>{children}</GaProvider>
 
       {showCookieConsent ? (
         <CookieConsent

@@ -34,6 +34,7 @@ import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
 import { StatsModal } from "../src/components/modals/StatsModal";
 import { ResultsModal } from "../src/components/modals/ResultsModal";
+import { useGa } from "../src/context/GAContext";
 
 export type Solution = {
   id: number;
@@ -58,6 +59,20 @@ const LyricleArtist = (data: {
     setUUID();
   }
 
+  const ga = useGa();
+  const sendEvent = (
+    hitType: string,
+    eventCategory: string,
+    eventValue: number,
+    eventLabel: string
+  ) => {
+    const event = {
+      event_category: eventCategory,
+      event_label: eventLabel,
+      event_value: eventValue,
+    };
+    ga("event", hitType, event);
+  };
   const router = useRouter();
   const artistGameState = "gameState".concat(router.query.name as string);
   const artistGameStats = "gameStats".concat(router.query.name as string);
@@ -186,6 +201,7 @@ const LyricleArtist = (data: {
     target: { search: { value: string } };
   }) => {
     e.preventDefault();
+    sendEvent("submit", "game", 1, router.query.name + ".submit");
     if (isGameWon || isGameLost) {
       return;
     }
@@ -206,6 +222,7 @@ const LyricleArtist = (data: {
       );
 
       setIsGameWon(true);
+      sendEvent("win", "game", 1, router.query.name + ".win");
       return;
     } else {
       revealNextLine();
@@ -213,6 +230,7 @@ const LyricleArtist = (data: {
     }
     if (guesses.length === MAX_CHALLENGES - 1) {
       setIsGameLost(true);
+      sendEvent("lose", "game", 1, router.query.name + ".lose");
 
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
@@ -226,7 +244,7 @@ const LyricleArtist = (data: {
     if (isGameWon || isGameLost) {
       return;
     }
-
+    sendEvent("skip", "game", 1, router.query.name + ".skip");
     setGuesses([...guesses, "skip"]);
     revealNextLine();
 
@@ -235,7 +253,7 @@ const LyricleArtist = (data: {
         addStatsForCompletedGame(artistGameStats, stats, guesses.length + 1)
       );
       setIsGameLost(true);
-
+      sendEvent("lose", "game", 1, router.query.name + ".lose");
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
       });
@@ -281,12 +299,12 @@ const LyricleArtist = (data: {
     if (isGameWon) {
       const delayMs = REVEAL_TIME_MS;
 
-      setIsResultsModalOpen(true);
+      setIsStatsModalOpen(true);
     }
 
     if (isGameLost) {
       setTimeout(() => {
-        setIsResultsModalOpen(true);
+        setIsStatsModalOpen(true);
       }, REVEAL_TIME_MS);
     }
 

@@ -13,7 +13,10 @@ import {
   SHARE_TEXT,
 } from "../../constants/strings";
 import { Solution } from "../../../pages/[name]";
-import React from "react";
+import React, { useEffect } from "react";
+import { useGa } from "../../context/GAContext";
+import { SongWidget } from "../songwidget/SongWidget";
+import { useAlert } from "../../context/AlertContext";
 
 type Props = {
   solution: Solution;
@@ -45,6 +48,30 @@ export const StatsModal = ({
   isHighContrastMode,
   numberOfGuessesMade,
 }: Props) => {
+  const { showSuccess: showSuccessAlert } = useAlert();
+  const ga = useGa();
+  const sendEvent = (
+    hitType: string,
+    eventCategory: string,
+    eventValue: number,
+    eventLabel: string
+  ) => {
+    const event = {
+      event_category: eventCategory,
+      event_label: eventLabel,
+      event_value: eventValue,
+    };
+    ga("event", hitType, event);
+  };
+  const [isCopiedToClipboard, setIsCopiedToClipboard] = React.useState(false);
+  useEffect(() => {
+    if (isCopiedToClipboard) {
+      setTimeout(() => {
+        setIsCopiedToClipboard(false);
+      }, 2000);
+    }
+  });
+
   if (isHomePage) return <></>;
 
   if (gameStats.totalGames <= 0) {
@@ -58,7 +85,9 @@ export const StatsModal = ({
       </BaseModal>
     );
   }
+
   let songSolution = `${solution.artist} ─ ${solution.title}`;
+
   return (
     <>
       <BaseModal
@@ -66,11 +95,11 @@ export const StatsModal = ({
         isOpen={isOpen}
         handleClose={handleClose}
       >
-        {/* <SongModal
+        <SongWidget
           isOpen={isOpen && (isGameWon || isGameLost)}
           solution={solution}
           variant={isGameWon ? "success" : "error"}
-        /> */}
+        />
         <StatBar gameStats={gameStats} />
         <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
           {GUESS_DISTRIBUTION_TEXT}
@@ -95,6 +124,7 @@ export const StatsModal = ({
                 type="button"
                 className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
                 onClick={() => {
+                  setIsCopiedToClipboard(true);
                   shareStatus(
                     guesses,
                     isDarkMode,
@@ -102,9 +132,10 @@ export const StatsModal = ({
                     handleShareToClipboard,
                     songSolution
                   );
+                  sendEvent("share", "social", 1, "share button clicked");
                 }}
               >
-                {SHARE_TEXT}
+                {SHARE_TEXT} {isCopiedToClipboard && "✅"}
               </button>
             </div>
             <div className="mt-2">
