@@ -1,6 +1,7 @@
 import CookieConsent from "../banners/CookieConsent";
 import Cookies from "js-cookie";
 import { ReactNode, useEffect, useState } from "react";
+import Script from "next/script";
 
 interface Props {
   children?: ReactNode;
@@ -15,6 +16,18 @@ export default function Layout({ children }: Props) {
 
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-B55DZ451GN"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B55DZ451GN');`}
+      </Script>
+
       {children}
 
       {showCookieConsent ? (

@@ -76,7 +76,7 @@ const LyricleArtist = (data: {
 
   let lyrics = solution.lyrics;
   let artist = solution.artist;
-  console.log(artist);
+
   let songSolution = `${solution.artist} ─ ${solution.title}`;
   let gameTitle =
     "Lyricle " +
