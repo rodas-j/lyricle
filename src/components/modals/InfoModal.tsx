@@ -1,9 +1,8 @@
 import { BaseModal } from "./BaseModal";
 
 import { HeartIcon } from "@heroicons/react/solid";
-import Image from "next/image";
-import Twitter from "../../../public/assets/twitter.svg";
 import Instagram from "../../../public/assets/instagram.svg";
+import Twitter from "../../../public/assets/twitter.svg";
 import React from "react";
 
 type Props = {
@@ -15,8 +14,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm dark:text-gray-200 mb-6">
-        We`&apos;`re sure you`&apos;`re all familiar with the &quot;-le&quot;
-        type games by now. We were{" "}
+        We&apos;re sure you&apos;re all familiar with the &quot;-le&quot; type
+        games by now. We were{" "}
         <span className="decoration-double line-through">heavily</span> inspired
         by both{" "}
         <a
@@ -49,18 +48,10 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <div className="flex justify-center ">
         <div className="icon flex items-center mr-3">
           <a href="https://twitter.com/lyricle_app">
-            <Image
-              src={Twitter}
-              alt="twitter"
-              className="w-6 m-2 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100"
-            />
+            <Twitter className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100" />
           </a>
           <a href="https://www.instagram.com/lyricle_app/">
-            <Image
-              src={Instagram}
-              alt="instagram"
-              className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100"
-            />
+            <Instagram className="w-6 h-6 mx-1 fill-gray-500 hover:fill-gray-900 dark:fill-gray-300 dark:hover:fill-gray-100" />
           </a>
         </div>
         <p className="dark:text-gray-200">@lyricle_app</p>
