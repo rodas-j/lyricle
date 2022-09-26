@@ -55,10 +55,6 @@ const LyricleArtist = (data: {
   solution: Solution;
   validGuesses: ValidGuess[];
 }) => {
-  if (!getUUID()) {
-    setUUID();
-  }
-
   const ga = useGa();
   const sendEvent = (
     hitType: string,
@@ -281,9 +277,10 @@ const LyricleArtist = (data: {
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode]);
 
   useEffect(() => {
-    if (!loadGameStateFromLocalStorage(artistGameState)) {
+    if (!getUUID()) {
       setTimeout(() => {
         setIsHowToPlayModalOpen(true);
+        setUUID();
       }, WELCOME_INFO_MODAL_MS);
     }
   }, []);
