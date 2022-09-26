@@ -226,6 +226,10 @@ const LyricleArtist = (data: {
     }
     if (guesses.length === MAX_CHALLENGES - 1) {
       setIsGameLost(true);
+
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length)
+      );
       sendEvent("lose", "game", 1, router.query.name + ".lose");
 
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
