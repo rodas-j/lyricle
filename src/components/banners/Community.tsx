@@ -6,7 +6,7 @@ export const JoinOurCommunities = () => {
   return (
     <div className="flex my-3 items-center bg-indigo-200 outline-dashed outline-2 outline-indigo-900 md:hover:outline-offset-2 dark:bg-indigo-600/20 dark:outline-indigo-400 p-2">
       <p className="dark:text-white text-sm md:text-base">
-        Join the Lyricle community!
+        Request for More Artist in Our Communities
       </p>
       <div className="flex ml-auto">
         <a
