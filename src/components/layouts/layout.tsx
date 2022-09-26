@@ -29,7 +29,7 @@ export default function Layout({ children }: Props) {
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-B55DZ451GN"
+        src="https://www.googletagmanager.com/gtag/js?id=G-69K8HLVWRE"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -37,7 +37,7 @@ export default function Layout({ children }: Props) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-B55DZ451GN');`}
+  gtag('config', 'G-69K8HLVWRE');`}
       </Script>
       <GaProvider value={ga}>{children}</GaProvider>
 
