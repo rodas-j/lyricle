@@ -50,6 +50,10 @@ const Artist = ({ name, id }: ArtistProps) => {
       name: "queen",
       gradient: "from-[#00F260]/95 to-[#0575E6]/95",
     },
+    {
+      name: "rihanna",
+      gradient: "from-[#00c6ff]/95 to-[#0072ff]/95",
+    },
   ];
   // const gradientClasses = {
   //   taylorswift: "from-[#f5af19]/95 to-[#f12711]/95",
