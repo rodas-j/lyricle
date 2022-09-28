@@ -116,6 +116,13 @@ function App({ showHome = true }: Props) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="game, lyric guessing, music, lyricle" />
+        <meta
+          name="description"
+          content="Guess the Artist's Song from Their Lyrics."
+        />
+        <meta property="og:title" content={GAME_TITLE} />
         <title>{GAME_TITLE}</title>
       </Head>
       <div className="absolute inset-0 flex flex-col">

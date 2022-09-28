@@ -86,14 +86,14 @@ const LyricleArtist = (data: {
   });
 
   let lyrics = solution.lyrics;
-  let artist = solution.artist;
+  let artist = ARTIST_INFO.find((artistInfo) => {
+    return artistInfo.id === router.query.name;
+  })?.name;
 
   let songSolution = `${solution.artist} ─ ${solution.title}`;
-  let gameTitle =
-    "Lyricle " +
-    ARTIST_INFO.find((artistInfo) => {
-      return artistInfo.id === router.query.name;
-    })?.name;
+
+  let gameTitle = "Lyricle " + artist;
+
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
 
@@ -313,11 +313,15 @@ const LyricleArtist = (data: {
       revealAllLines();
     }
   }, [isGameWon, isGameLost, showSuccessAlert]);
-
+  let gameDescription = `Guess the song by ${artist} from the Lyrics!`;
+  let gameKeywords = `guess, song, lyrics, music, game, quiz, artist ${artist}`;
   return (
     <>
       <Head>
         <title>{gameTitle}</title>
+        <meta name="description" content={gameDescription} />
+        <meta property="og:title" content={gameTitle} />
+        <meta name="keywords" content={gameKeywords} />
       </Head>
       <div className="absolute inset-0 flex flex-col">
         <Navbar
