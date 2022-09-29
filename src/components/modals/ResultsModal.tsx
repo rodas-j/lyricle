@@ -48,7 +48,7 @@ export const ResultsModal = ({
   numberOfGuessesMade,
 }: Props) => {
   if (isHomePage) return <></>;
-  let songSolution = `${solution.artist} ─ ${solution.title}`;
+  let songSolution = `${solution?.artist} ─ ${solution?.title}`;
   let guessesToBeMapped = [...guesses];
   const winMessage =
     WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)];

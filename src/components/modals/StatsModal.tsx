@@ -87,7 +87,7 @@ export const StatsModal = ({
     );
   }
 
-  let songSolution = `${solution.artist} ─ ${solution.title}`;
+  let songSolution = `${solution?.artist} ─ ${solution?.title}`;
 
   return (
     <>

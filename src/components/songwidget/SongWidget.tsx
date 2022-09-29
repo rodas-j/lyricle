@@ -23,7 +23,7 @@ export const SongWidget = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
   const { showError: showErrorAlert } = useAlert();
-  let songSolution = `${solution.artist} ─ ${solution.title}`;
+  let songSolution = `${solution?.artist} ─ ${solution?.title}`;
   useEffect(() => {
     if (isOpen) {
       setIsWidgetOpen(true);
@@ -54,7 +54,7 @@ export const SongWidget = ({
   );
   var artwork_url = "";
   if (solution?.artworkLink !== undefined) {
-    artwork_url = solution.artworkLink;
+    artwork_url = solution?.artworkLink;
   }
   return (
     <Transition
@@ -75,7 +75,7 @@ export const SongWidget = ({
             <ReactPlayer
               height="1px"
               width="1px"
-              url={solution.songLink}
+              url={solution?.songLink}
               playing={isPlaying}
               onEnded={() => setIsPlaying(false)}
               onError={() => showErrorAlert(REGION_NOT_SUPPORTED)}
@@ -91,20 +91,20 @@ export const SongWidget = ({
                   className="w-20 bg-cover bg-center"
                 ></div>
               ) : null}{" "}
-              {solution.songLink ? (
+              {solution?.songLink ? (
                 <div className=" pl-1 pt-5 flex-col items-evenly">
                   {mediaButton}
                 </div>
               ) : null}
               <div className="flex-1 m-2 text-white truncate ">
-                <p className="text-left">{songSolution.split("─")[0]}</p>{" "}
+                <p className="text-left">{songSolution?.split("─")[0]}</p>{" "}
                 <p className="text-left text-sm  overflow-x-auto webkit opacity-75">
-                  {songSolution.split("─")[1]}
+                  {songSolution?.split("─")[1]}
                 </p>{" "}
                 <div className="flex overflow-hidden justify-between items-center w-full mt-1 ">
                   <span className="text-xs uppercase opacity-50 font-bold "></span>{" "}
                   <a
-                    href={solution.songLink}
+                    href={solution?.songLink}
                     title={LISTEN_TO_TITLE(songSolution)}
                     className="no-underline focus-visible:outline-none"
                   >

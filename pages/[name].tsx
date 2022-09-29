@@ -28,7 +28,7 @@ import {
 import ARTIST_INFO from "../src/constants/artists.json";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
-import getSolution, { listArtists } from "./api";
+import getValidGuesses, { listArtists } from "./api";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
@@ -72,8 +72,16 @@ const LyricleArtist = (data: {
   const router = useRouter();
   const artistGameState = "gameState".concat(router.query.name as string);
   const artistGameStats = "gameStats".concat(router.query.name as string);
-
-  let solution = data.solution as Solution;
+  const [solution, setSolution] = useState<Solution>();
+  useEffect(() => {
+    let artist = router.query.name as string;
+    const { solutionIndex, tomorrow } = getSongOfTheDay();
+    fetch(`/api/artists/?artist=${artist}&ind=${solutionIndex}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSolution(data as Solution);
+      });
+  }, []);
 
   let validGuesses = data.validGuesses as ValidGuess[];
 
@@ -85,12 +93,12 @@ const LyricleArtist = (data: {
     }
   });
 
-  let lyrics = solution.lyrics;
+  let lyrics = solution?.lyrics;
   const artist = ARTIST_INFO.find((artistInfo) => {
     return artistInfo.id === router.query.name;
   })?.name;
 
-  let songSolution = `${solution.artist} ─ ${solution.title}`;
+  let songSolution = `${solution?.artist} ─ ${solution?.title}`;
 
   let gameTitle = "Lyricle " + artist;
 
@@ -133,25 +141,25 @@ const LyricleArtist = (data: {
 
   const [isGameWon, setIsGameWon] = useState(false);
   const [isGameLost, setIsGameLost] = useState(false);
-  const [guesses, setGuesses] = useState<string[]>(() => {
-    const loaded = loadGameStateFromLocalStorage(artistGameState);
-    if (loaded?.song !== songSolution) {
-      return [];
-    }
-    const gameWasWon = loaded.guesses.includes(songSolution);
-    if (gameWasWon) {
-      setIsGameWon(true);
-    }
+  const [guesses, setGuesses] = useState<string[]>([]); //() => {
+  // const loaded = loadGameStateFromLocalStorage(artistGameState);
+  // if (loaded?.song !== songSolution) {
+  //   return [];
+  // }
+  // const gameWasWon = loaded.guesses.includes(songSolution);
+  // if (gameWasWon) {
+  //   setIsGameWon(true);
+  // }
 
-    if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
-      setIsGameLost(true);
-      showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
-        persist: false,
-      });
-    }
+  // if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+  //   setIsGameLost(true);
+  //   showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+  //     persist: false,
+  //   });
+  // }
 
-    return loaded.guesses;
-  });
+  // return loaded.guesses;
+  // });
 
   const [sliceLyrics, setSliceLyrics] = useState(
     guesses.length ? guesses.length + 1 : 1
@@ -185,7 +193,7 @@ const LyricleArtist = (data: {
   };
 
   const revealAllLines = () => {
-    setSliceLyrics(lyrics.length);
+    setSliceLyrics(lyrics?.length as number);
   };
 
   const isAValidGuess = (query: string) => {
@@ -290,11 +298,34 @@ const LyricleArtist = (data: {
   }, []);
 
   useEffect(() => {
-    saveGameStateToLocalStorage(artistGameState, {
-      guesses,
-      song: songSolution,
-    });
-  }, [guesses]);
+    if (songSolution) {
+      let loaded = loadGameStateFromLocalStorage(artistGameState);
+      loaded?.song !== songSolution
+        ? setGuesses([])
+        : setGuesses(loaded.guesses);
+      let gameWasWon = loaded?.guesses.includes(songSolution);
+      if (gameWasWon) {
+        setIsGameWon(true);
+      }
+
+      if (loaded?.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+        setIsGameLost(true);
+        showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+          persist: false,
+        });
+      }
+    }
+  }, [songSolution]);
+
+  useEffect(() => {
+    guesses.length
+      ? saveGameStateToLocalStorage(artistGameState, {
+          guesses,
+          song: songSolution,
+        })
+      : null;
+    setSliceLyrics(guesses.length ? guesses.length + 1 : 1);
+  }, [artistGameState, guesses, songSolution]);
 
   useEffect(() => {
     if (isGameWon) {
@@ -334,11 +365,14 @@ const LyricleArtist = (data: {
         />
         <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
           <div className="pb-6 grow">
-            <LyricsLine lyrics={lyrics} sliceLyrics={sliceLyrics} />
+            <LyricsLine
+              solution={solution as Solution}
+              sliceLyrics={sliceLyrics}
+            />
           </div>
           <ProgressBar song={songSolution as string} guesses={guesses} />
           <SearchSong
-            solution={solution}
+            solution={solution as Solution}
             validGuesses={validGuesses}
             isAValidGuess={isAValidGuess}
             isGameWon={isGameWon}
@@ -367,7 +401,7 @@ const LyricleArtist = (data: {
           />
           <StatsModal
             artist={artist as string}
-            solution={solution}
+            solution={solution as Solution}
             isHomePage={false}
             isOpen={isStatsModalOpen}
             handleClose={() => setIsStatsModalOpen(false)}
@@ -381,7 +415,7 @@ const LyricleArtist = (data: {
             numberOfGuessesMade={guesses.length}
           />
           <ResultsModal
-            solution={solution}
+            solution={solution as Solution}
             isHomePage={false}
             isOpen={isResultsModalOpen}
             handleClose={() => setIsResultsModalOpen(false)}
@@ -431,28 +465,16 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: { params: Params }) {
-  let solution: Solution = {
-    id: 0,
-    title: "",
-    artist: "",
-    lyrics: [],
-    songLink: "",
-    artworkLink: "",
-    song: "",
-  };
   const ind = getSongOfTheDay().solutionIndex;
   let validGuesses;
   if (params) {
-    let x = (await getSolution(params.name as string, ind)) as unknown as {
-      songChoice: Solution;
+    let x = (await getValidGuesses(params.name as string, ind)) as unknown as {
       validGuesses: ValidGuess[];
     };
-    solution = x.songChoice;
     validGuesses = x.validGuesses;
   }
   return {
     props: {
-      solution,
       validGuesses,
     },
   };
