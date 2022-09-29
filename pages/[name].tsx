@@ -413,24 +413,24 @@ export const getSongOfTheDay = () => {
   };
 };
 
-// export async function getStaticPaths() {
-//   let dirList = await listArtists();
+export async function getStaticPaths() {
+  let dirList = await listArtists();
 
-//   return {
-//     paths: dirList.map((name) => ({
-//       params: {
-//         name: name,
-//       },
-//     })),
-//     fallback: false,
-//   };
-// }
+  return {
+    paths: dirList.map((name) => ({
+      params: {
+        name: name,
+      },
+    })),
+    fallback: false,
+  };
+}
 
 type Params = {
   name: string;
 };
 
-export async function getServerSideProps({ params }: { params: Params }) {
+export async function getStaticProps({ params }: { params: Params }) {
   let solution: Solution = {
     id: 0,
     title: "",
