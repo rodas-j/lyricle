@@ -104,7 +104,8 @@ export const ResultsModal = ({
                   isDarkMode,
                   isHighContrastMode,
                   handleShareToClipboard,
-                  songSolution
+                  songSolution,
+                  "Artist"
                 );
               }}
             >
