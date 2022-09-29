@@ -86,7 +86,7 @@ const LyricleArtist = (data: {
   });
 
   let lyrics = solution.lyrics;
-  let artist = ARTIST_INFO.find((artistInfo) => {
+  const artist = ARTIST_INFO.find((artistInfo) => {
     return artistInfo.id === router.query.name;
   })?.name;
 
@@ -366,6 +366,7 @@ const LyricleArtist = (data: {
             handleReducedMotionMode={handleReducedMotionMode}
           />
           <StatsModal
+            artist={artist as string}
             solution={solution}
             isHomePage={false}
             isOpen={isStatsModalOpen}

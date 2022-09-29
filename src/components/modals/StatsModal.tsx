@@ -20,7 +20,7 @@ import { useAlert } from "../../context/AlertContext";
 
 type Props = {
   solution: Solution;
-
+  artist: string;
   isHomePage: boolean;
   isOpen: boolean;
   handleClose: () => void;
@@ -47,6 +47,7 @@ export const StatsModal = ({
   isDarkMode,
   isHighContrastMode,
   numberOfGuessesMade,
+  artist,
 }: Props) => {
   const { showSuccess: showSuccessAlert } = useAlert();
   const ga = useGa();
@@ -130,7 +131,8 @@ export const StatsModal = ({
                     isDarkMode,
                     isHighContrastMode,
                     handleShareToClipboard,
-                    songSolution
+                    songSolution,
+                    artist
                   );
                   sendEvent("share", "social", 1, "share button clicked");
                 }}

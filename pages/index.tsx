@@ -138,11 +138,6 @@ function App({ showHome = true }: Props) {
           <JoinOurCommunities />
           <Artists />
 
-          {InfoModal({
-            isOpen: isInfoModalOpen,
-            handleClose: () => setIsInfoModalOpen(false),
-          })}
-
           <InfoModal
             isOpen={isInfoModalOpen}
             handleClose={() => setIsInfoModalOpen(false)}
