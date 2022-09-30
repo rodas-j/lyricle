@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ARTIST_INFO from "../../constants/artists.json";
+import ARTIST_INFO from "../../constants/decades.json";
 
 export const Artists = () => {
   return (

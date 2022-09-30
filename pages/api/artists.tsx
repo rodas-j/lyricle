@@ -11,7 +11,7 @@ export default async function handler(
   const jsonDirectory = path.join(process.cwd(), "json");
   //Read the json data file data.json
   const fileContents = await fs.readFile(
-    jsonDirectory + `/artist_catalogs/${artist}/${artist}.json`,
+    jsonDirectory + `/decade_catalogs/${artist}/${artist}.json`,
     "utf8"
   );
   const data = JSON.parse(fileContents);

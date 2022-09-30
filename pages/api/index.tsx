@@ -6,7 +6,7 @@ export default async function getValidGuesses(artist: string, ind: number) {
   const jsonDirectory = path.join(process.cwd(), "json");
   //Read the json directory
   const validGuessesFileContents = await fs.readFile(
-    jsonDirectory + `/artist_catalogs/${artist}/${artist}_validGuesses.json`,
+    jsonDirectory + `/decade_catalogs/${artist}/${artist}_validGuesses.json`,
     "utf8"
   );
 
@@ -17,10 +17,10 @@ export default async function getValidGuesses(artist: string, ind: number) {
 }
 
 export async function listArtists() {
-  //list all the artists in the artist_catalogs directory
+  //list all the artists in the decade_catalogs directory
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContents = await fs.readdir(
-    jsonDirectory + `/artist_catalogs/`,
+    jsonDirectory + `/decade_catalogs/`,
     "utf8"
   );
   return fileContents;

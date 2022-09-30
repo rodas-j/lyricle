@@ -25,7 +25,7 @@ import {
   getUUID,
   setUUID,
 } from "../src/lib/localStorage";
-import ARTIST_INFO from "../src/constants/artists.json";
+import ARTIST_INFO from "../src/constants/decades.json";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
 import getValidGuesses, { listArtists } from "./api";

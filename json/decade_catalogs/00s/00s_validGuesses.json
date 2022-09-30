@@ -1,0 +1,149 @@
+[
+  {
+    "artist": "Shakira",
+    "songs": ["Hips Don't Lie", "Whenever, Wherever", "La Tortura", "She Wolf"]
+  },
+  {
+    "artist": "Rihanna",
+    "songs": ["Pon de Replay", "Disturbia", "Umbrella", "SOS"]
+  },
+  { "artist": "Sean Paul", "songs": ["Get Busy", "Temperature"] },
+  { "artist": "David Guetta", "songs": ["When Love Takes Over", "Sexy Bitch"] },
+  {
+    "artist": "Lady Gaga",
+    "songs": ["Just Dance", "Bad Romance", "Poker Face", "LoveGame"]
+  },
+  { "artist": "Usher", "songs": ["Yeah!"] },
+  {
+    "artist": "Timbaland",
+    "songs": ["The Way I Are", "If We Ever Meet Again"]
+  },
+  { "artist": "Katy Perry", "songs": ["Hot N Cold", "I Kissed A Girl"] },
+  {
+    "artist": "Britney Spears",
+    "songs": [
+      "Toxic",
+      "Gimme More",
+      "Oops!...I Did It Again",
+      "Womanizer",
+      "Circus"
+    ]
+  },
+  { "artist": "Cascada", "songs": ["Everytime We Touch"] },
+  { "artist": "Kesha", "songs": ["TiK ToK"] },
+  { "artist": "Flo Rida", "songs": ["Right Round", "Low"] },
+  { "artist": "Beyoncé", "songs": ["Crazy In Love"] },
+  { "artist": "Daddy Yankee", "songs": ["Gasolina", "Lo Que Pasó, Pasó"] },
+  {
+    "artist": "Outkast",
+    "songs": ["Hey Ya!", "Ms. Jackson", "The Way You Move"]
+  },
+  {
+    "artist": "Christina Aguilera",
+    "songs": ["Lady Marmalade", "Dirrty", "Candyman", "Come on over Baby"]
+  },
+  { "artist": "Nelly", "songs": ["Hot In Herre", "Ride Wit Me"] },
+  {
+    "artist": "50 Cent",
+    "songs": [
+      "In Da Club",
+      "Candy Shop",
+      "Just A Lil Bit",
+      "Disco Inferno",
+      "P.I.M.P."
+    ]
+  },
+  { "artist": "Kevin Lyttle", "songs": ["Turn Me On"] },
+  {
+    "artist": "Eminem",
+    "songs": ["Without Me", "The Real Slim Shady", "Lose Yourself"]
+  },
+  {
+    "artist": "JAY-Z",
+    "songs": ["Empire State Of Mind", "03' Bonnie & Clyde", "Numb / Encore"]
+  },
+  { "artist": "The Game", "songs": ["Hate It Or Love It"] },
+  {
+    "artist": "Kanye West",
+    "songs": ["Stronger", "Gold Digger", "Touch The Sky"]
+  },
+  { "artist": "Dr. Dre", "songs": ["The Next Episode"] },
+  { "artist": "Akon", "songs": ["Smack That"] },
+  { "artist": "Nelly Furtado", "songs": ["Maneater"] },
+  { "artist": "Maroon 5", "songs": ["This Love"] },
+  { "artist": "Estelle", "songs": ["American Boy"] },
+  {
+    "artist": "Justin Timberlake",
+    "songs": ["SexyBack", "Rock Your Body", "Señorita"]
+  },
+  {
+    "artist": "Daft Punk",
+    "songs": [
+      "One More Time",
+      "Harder, Better, Faster, Stronger",
+      "Digital Love"
+    ]
+  },
+  { "artist": "Snoop Dogg", "songs": ["Drop It Like It's Hot", "Beautiful"] },
+  { "artist": "Don Omar", "songs": ["Salió El Sol"] },
+  { "artist": "Bacilos", "songs": ["Caraluna"] },
+  { "artist": "Madonna", "songs": ["Hung Up", "4 Minutes"] },
+  { "artist": "Soulja Boy", "songs": ["Crank That"] },
+  { "artist": "Kylie Minogue", "songs": ["Can't Get You out of My Head"] },
+  { "artist": "Ne-Yo", "songs": ["Because Of You"] },
+  {
+    "artist": "Black Eyed Peas",
+    "songs": [
+      "I Gotta Feeling",
+      "Pump It",
+      "Meet Me Halfway",
+      "Shut Up",
+      "Boom Boom Pow"
+    ]
+  },
+  { "artist": "Eric Prydz", "songs": ["Call on Me"] },
+  { "artist": "Fat Joe", "songs": ["What's Luv?"] },
+  { "artist": "Juanes", "songs": ["La Camisa Negra", "A Dios Le Pido"] },
+  { "artist": "Fergie", "songs": ["Glamorous"] },
+  { "artist": "La Roux", "songs": ["Bulletproof"] },
+  { "artist": "Chamillionaire", "songs": ["Ridin'"] },
+  { "artist": "Darude", "songs": ["Sandstorm"] },
+  { "artist": "Tony Dize", "songs": ["Permitame"] },
+  {
+    "artist": "Missy Elliott",
+    "songs": ["Work It", "Get Ur Freak On", "Lose Control"]
+  },
+  { "artist": "Gwen Stefani", "songs": ["Hollaback Girl"] },
+  { "artist": "Blu Cantrell", "songs": ["Hit 'Em Up Style"] },
+  { "artist": "Busta Rhymes", "songs": ["I Know What You Want"] },
+  {
+    "artist": "Pitbull",
+    "songs": ["Hotel Room Service", "I Know You Want Me"]
+  },
+  { "artist": "LMFAO", "songs": ["Shots"] },
+  { "artist": "Crazy Frog", "songs": ["Axel F"] },
+  { "artist": "Westlife", "songs": ["Uptown Girl"] },
+  { "artist": "The Pussycat Dolls", "songs": ["Don't Cha"] },
+  { "artist": "Keri Hilson", "songs": ["Knock You Down"] },
+  {
+    "artist": "Jennifer Lopez",
+    "songs": ["Love Don't Cost a Thing", "Jenny from the Block"]
+  },
+  { "artist": "A Touch Of Class", "songs": ["Around the World"] },
+  { "artist": "Las Ketchup", "songs": ["The Ketchup Song"] },
+  { "artist": "Nina Sky", "songs": ["Move Ya Body"] },
+  { "artist": "Bob Sinclar", "songs": ["Love Generation"] },
+  { "artist": "Elvis Presley", "songs": ["A Little Less Conversation"] },
+  { "artist": "will.i.am", "songs": ["I Like To Move It"] },
+  { "artist": "Baha Men", "songs": ["Who Let The Dogs Out"] },
+  { "artist": "Ida Corr", "songs": ["Let Me Think About It"] },
+  { "artist": "Justice", "songs": ["D.A.N.C.E"] },
+  { "artist": "Lasgo", "songs": ["Something"] },
+  { "artist": "ItaloBrothers", "songs": ["Stamp On The Ground"] },
+  { "artist": "Dizzee Rascal", "songs": ["Bonkers"] },
+  { "artist": "Basshunter", "songs": ["All I Ever Wanted"] },
+  { "artist": "S Club 7", "songs": ["Don't Stop Movin'"] },
+  { "artist": "Jamiroquai", "songs": ["Little L"] },
+  { "artist": "Blue", "songs": ["All Rise"] },
+  { "artist": "DJ Sammy", "songs": ["Heaven"] }
+]
