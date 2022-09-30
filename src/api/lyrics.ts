@@ -3,7 +3,7 @@ import axios from "axios";
 async function getLyrics(artist: string, index: string) {
   var config = {
     method: "get",
-    url: `http://localhost:5001/artists/${artist}/${index}`,
+    url: `http://localhost:5001/decades/${artist}/${index}`,
     headers: {},
   };
 

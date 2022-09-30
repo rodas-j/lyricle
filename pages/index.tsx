@@ -11,7 +11,7 @@ import {
 import { AlertContainer } from "../src/components/alerts/AlertContainer";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
-import Artists from "../src/components/links/Artists";
+import Decades from "../src/components/links/Decades";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
@@ -120,7 +120,7 @@ function App({ showHome = true }: Props) {
         <meta name="keywords" content="game, lyric guessing, music, lyricle" />
         <meta
           name="description"
-          content="Guess the Artist's Song from Their Lyrics."
+          content="Guess the Decade's Song from Their Lyrics."
         />
         <meta property="og:title" content={GAME_TITLE} />
         <title>{GAME_TITLE}</title>
@@ -136,7 +136,7 @@ function App({ showHome = true }: Props) {
         />
         <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
           <JoinOurCommunities />
-          <Artists />
+          <Decades />
 
           <InfoModal
             isOpen={isInfoModalOpen}

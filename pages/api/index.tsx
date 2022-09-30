@@ -17,7 +17,7 @@ export default async function getValidGuesses(artist: string, ind: number) {
 }
 
 export async function listArtists() {
-  //list all the artists in the decade_catalogs directory
+  //list all the decades in the decade_catalogs directory
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContents = await fs.readdir(
     jsonDirectory + `/decade_catalogs/`,

@@ -105,7 +105,7 @@ export const ResultsModal = ({
                   isHighContrastMode,
                   handleShareToClipboard,
                   songSolution,
-                  "Artist"
+                  "Decade"
                 );
               }}
             >

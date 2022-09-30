@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import ARTIST_INFO from "../../constants/decades.json";
 
-export const Artists = () => {
+export const Decades = () => {
   return (
     <>
       <div className="flex flex-wrap gap-4">
         {ARTIST_INFO.map((artist, index) => (
-          <Artist key={index} name={artist.name} id={artist.id} />
+          <Decade key={index} name={artist.name} id={artist.id} />
         ))}
       </div>
     </>
@@ -19,7 +19,7 @@ type ArtistProps = {
   id: string;
 };
 
-const Artist = ({ name, id }: ArtistProps) => {
+const Decade = ({ name, id }: ArtistProps) => {
   const gradientClasses = [
     {
       name: "70s",
@@ -74,4 +74,4 @@ const Artist = ({ name, id }: ArtistProps) => {
   );
 };
 
-export default Artists;
+export default Decades;
