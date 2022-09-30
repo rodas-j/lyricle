@@ -16,16 +16,14 @@ import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
 import React from "react";
+import { WELCOME_INFO_MODAL_MS } from "../src/constants/settings";
+import { JoinOurCommunities } from "../src/components/banners/Community";
 
 type Props = {
   showHome?: boolean;
 };
 
 function App({ showHome = true }: Props) {
-  if (!getUUID()) {
-    setUUID();
-  }
-
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
 
@@ -86,6 +84,14 @@ function App({ showHome = true }: Props) {
       isReducedMotion ? "reduce" : "no-preference"
     );
   };
+  useEffect(() => {
+    if (!getUUID()) {
+      setTimeout(() => {
+        setIsHowToPlayModalOpen(true);
+        setUUID();
+      }, WELCOME_INFO_MODAL_MS);
+    }
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -110,6 +116,13 @@ function App({ showHome = true }: Props) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="game, lyric guessing, music, lyricle" />
+        <meta
+          name="description"
+          content="Guess the Artist's Song from Their Lyrics."
+        />
+        <meta property="og:title" content={GAME_TITLE} />
         <title>{GAME_TITLE}</title>
       </Head>
       <div className="absolute inset-0 flex flex-col">
@@ -122,12 +135,8 @@ function App({ showHome = true }: Props) {
           shouldHideStatsModalButton={showHome}
         />
         <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+          <JoinOurCommunities />
           <Artists />
-
-          {InfoModal({
-            isOpen: isInfoModalOpen,
-            handleClose: () => setIsInfoModalOpen(false),
-          })}
 
           <InfoModal
             isOpen={isInfoModalOpen}

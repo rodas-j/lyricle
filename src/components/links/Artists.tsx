@@ -41,6 +41,19 @@ const Artist = ({ name, id }: ArtistProps) => {
       name: "beatles",
       gradient: "from-[#C6426E]/95 to-[#642B73]/95",
     },
+    {
+      name: "michaeljackson",
+      gradient: "from-[#00d2ff]/95 to-[#928dab]/95",
+    },
+
+    {
+      name: "queen",
+      gradient: "from-[#00F260]/95 to-[#0575E6]/95",
+    },
+    {
+      name: "rihanna",
+      gradient: "from-[#00c6ff]/95 to-[#0072ff]/95",
+    },
   ];
   // const gradientClasses = {
   //   taylorswift: "from-[#f5af19]/95 to-[#f12711]/95",
@@ -62,6 +75,7 @@ const Artist = ({ name, id }: ArtistProps) => {
     <>
       <Link href={`/${id}`}>
         <a
+          href={`https://artists.lyricle.app/${id}`}
           className={`md:hover:scale-110 md:hover:transition-transform flex-grow flex-shrink-0 flex items-center justify-center w-56 h-40 bg-gradient-to-r rounded-md ${
             gradientClasses.find((obj) => obj.name === id)?.gradient
           }`}

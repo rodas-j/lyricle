@@ -86,7 +86,7 @@ export const SearchSong = ({
             className="lyrics-input relative p-2 md:p-4 w-full md:text-xl text-gray-800 dark:text-gray-200 bg-transparent group focus:outline-indigo-400"
             name="search"
             type="search"
-            value={isGameWon ? solution.song : currentGuess}
+            value={isGameWon ? solution?.song : currentGuess}
             required
             spellCheck="false"
             autoCorrect="off"
@@ -144,13 +144,13 @@ function SongOptions({
             "flex items-center p-2 md:p-4 bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700";
 
           classes +=
-            guesses.includes(song) && song !== solution.song
+            guesses.includes(song) && song !== solution?.song
               ? " pointer-events-none bg-rose-200 text-rose-800 dark:bg-rose-300 dark:text-rose-800"
               : "";
 
           return (
             <li key={index} className={classes} onClick={changeInput}>
-              {guesses.includes(song) && song !== solution.song ? (
+              {guesses.includes(song) && song !== solution?.song ? (
                 <XIcon className="h-4 w-4 dark:stroke-rose-800 mr-3" />
               ) : (
                 ""

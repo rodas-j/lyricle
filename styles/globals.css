@@ -26,10 +26,7 @@ html.dark {
   --absent-cell-bg-color: theme('colors.slate.700');
 }
 
-.high-contrast {
-  --correct-answer-bg-color: theme('colors.orange.400');
-  --wrong-answer-bg-color: theme('colors.cyan.400');
-}
+
 .reduced-motion {
   --animation-speed: 0;
   --animation-speed-fast: 0;
@@ -139,6 +136,14 @@ svg.cursor-pointer:hover {
   transition: width var(--animation-speed-fast) var(--default-cubic-bezier);
 }
 
+.high-contrast {
+  --correct-answer-bg-color: theme('colors.orange.400');
+  --wrong-answer-bg-color: theme('colors.cyan.400');
+}
+
+
+
+
 [data-check='correct']::after {
   background-color: var(--correct-answer-bg-color);
   width: 100%;
@@ -153,11 +158,11 @@ svg.cursor-pointer:hover {
   background-color: var(--wrong-answer-bg-color);
   width: 100%;
 }
-
 [data-check='close']::after {
   background-color: var(--close-answer-bg-color);
   width: 100%;
 }
+
 
 .tooltip::after {
   content: '';
@@ -186,4 +191,8 @@ svg.cursor-pointer:hover {
 .demo .tooltip {
   visibility: visible;
 }
+
+
+
+
 
