@@ -29,7 +29,7 @@ export const shareStatus = (
       song
     ) +
     `\n\n#LyricleArtists` +
-    `\n\nhttps://artists.lyricle.app`;
+    `\n\nhttps://decades.lyricle.app`;
 
   const shareData = { text: textToShare };
 

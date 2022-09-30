@@ -76,9 +76,7 @@ const LyricleArtist = (data: {
   useEffect(() => {
     let artist = router.query.name as string;
     const { solutionIndex, tomorrow } = getSongOfTheDay();
-    fetch(
-      `https://artist.lyricle.app/api/artists/?artist=${artist}&ind=${solutionIndex}`
-    )
+    fetch(`/api/artists/?artist=${artist}&ind=${solutionIndex}`)
       .then((res) => res.json())
       .then((data) => {
         setSolution(data as Solution);

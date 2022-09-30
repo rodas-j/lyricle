@@ -22,37 +22,24 @@ type ArtistProps = {
 const Artist = ({ name, id }: ArtistProps) => {
   const gradientClasses = [
     {
-      name: "taylorswift",
+      name: "70s",
       gradient: "from-[#f5af19]/95 to-[#f12711]/95",
     },
     {
-      name: "arianagrande",
-      gradient: "from-[#00d2ff]/95 to-[#928dab]/95",
-    },
-    {
-      name: "prince",
-      gradient: "from-[#45a247]/95 to-[#283c86]/95",
-    },
-    {
-      name: "edsheeran",
-      gradient: "from-[#F09819]/95 to-[#EDDE5D]/95",
-    },
-    {
-      name: "beatles",
+      name: "80s",
       gradient: "from-[#C6426E]/95 to-[#642B73]/95",
     },
     {
-      name: "michaeljackson",
+      name: "90s",
+      gradient: "from-[#45a247]/95 to-[#283c86]/95",
+    },
+    {
+      name: "00s",
       gradient: "from-[#00d2ff]/95 to-[#928dab]/95",
     },
-
     {
-      name: "queen",
-      gradient: "from-[#00F260]/95 to-[#0575E6]/95",
-    },
-    {
-      name: "rihanna",
-      gradient: "from-[#00c6ff]/95 to-[#0072ff]/95",
+      name: "10s",
+      gradient: "from-[#F09819]/95 to-[#EDDE5D]/95",
     },
   ];
   // const gradientClasses = {
@@ -75,12 +62,12 @@ const Artist = ({ name, id }: ArtistProps) => {
     <>
       <Link href={`/${id}`}>
         <a
-          href={`https://artists.lyricle.app/${id}`}
+          href={`https://decades.lyricle.app/${id}`}
           className={`md:hover:scale-110 md:hover:transition-transform flex-grow flex-shrink-0 flex items-center justify-center w-56 h-40 bg-gradient-to-r rounded-md ${
             gradientClasses.find((obj) => obj.name === id)?.gradient
           }`}
         >
-          <h1 className="text-indigo-50 text-2xl font-bold">{name}</h1>
+          <h1 className="text-indigo-50 text-2xl font-bold">Lyricle {name}</h1>
         </a>
       </Link>
     </>

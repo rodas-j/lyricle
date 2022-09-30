@@ -35,7 +35,7 @@ switch (pathName) {
 
   default:
     key = "default";
-    name = "Lyricle Artists";
+    name = "Lyricle Decades";
     selections = {
       prince: "Prince",
       taylorswift: "Taylor Swift",
