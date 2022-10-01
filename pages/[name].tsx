@@ -300,19 +300,23 @@ const LyricleArtist = (data: {
   useEffect(() => {
     if (songSolution) {
       let loaded = loadGameStateFromLocalStorage(artistGameState);
-      loaded?.song !== songSolution
-        ? setGuesses([])
-        : setGuesses(loaded.guesses);
+
       let gameWasWon = loaded?.guesses.includes(songSolution);
       if (gameWasWon) {
         setIsGameWon(true);
       }
 
-      if (loaded?.guesses.length === MAX_CHALLENGES && !gameWasWon) {
-        setIsGameLost(true);
-        showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
-          persist: false,
-        });
+      if (loaded?.song !== songSolution) {
+        setGuesses([]);
+      } else {
+        setGuesses(loaded.guesses);
+
+        if (loaded?.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+          setIsGameLost(true);
+          showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+            persist: false,
+          });
+        }
       }
     }
   }, [songSolution]);
