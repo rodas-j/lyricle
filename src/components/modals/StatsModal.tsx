@@ -122,7 +122,12 @@ export const StatsModal = ({
                     songSolution,
                     artist
                   );
-                  sendEvent("share", "social", 1, "share button clicked");
+                  sendEvent(
+                    "share",
+                    "social",
+                    songSolution,
+                    "share button clicked"
+                  );
                 }}
               >
                 {SHARE_TEXT} {isCopiedToClipboard && "✅"}

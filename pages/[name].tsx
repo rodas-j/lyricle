@@ -193,7 +193,12 @@ const LyricleArtist = (data: {
     target: { search: { value: string } };
   }) => {
     e.preventDefault();
-    sendEvent("submit", "game", 1, router.query.name + ".submit");
+    sendEvent(
+      "submit",
+      "game",
+      e.target.search.value,
+      router.query.name + ".submit"
+    );
     if (isGameWon || isGameLost) {
       return;
     }
@@ -214,7 +219,7 @@ const LyricleArtist = (data: {
       );
 
       setIsGameWon(true);
-      sendEvent("win", "game", 1, router.query.name + ".win");
+      sendEvent("win", "game", songSolution, router.query.name + ".win");
       return;
     } else {
       revealNextLine();
@@ -226,7 +231,7 @@ const LyricleArtist = (data: {
       setStats(
         addStatsForCompletedGame(artistGameStats, stats, guesses.length)
       );
-      sendEvent("lose", "game", 1, router.query.name + ".lose");
+      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
 
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
@@ -249,7 +254,7 @@ const LyricleArtist = (data: {
         addStatsForCompletedGame(artistGameStats, stats, guesses.length + 1)
       );
       setIsGameLost(true);
-      sendEvent("lose", "game", 1, router.query.name + ".lose");
+      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
       });
