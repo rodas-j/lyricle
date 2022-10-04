@@ -6,6 +6,7 @@ import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from "../../constants/strings";
 import ReactPlayer from "react-player/soundcloud";
 import { PauseIcon, PlayIcon } from "@heroicons/react/solid";
 import { Solution } from "../../../pages/[name]";
+import { useGa } from "../../context/GAContext";
 
 type Props = {
   isOpen: boolean;
@@ -20,6 +21,7 @@ export const SongWidget = ({
   variant = "error",
   topMost = false,
 }: Props) => {
+  const { sendEvent } = useGa();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
   const { showError: showErrorAlert } = useAlert();
@@ -40,7 +42,10 @@ export const SongWidget = ({
   } else {
     mediaButton = (
       <PlayIcon
-        onClick={() => setIsPlaying(true)}
+        onClick={() => {
+          setIsPlaying(true);
+          sendEvent("song_play", "media", songSolution);
+        }}
         className="w-7 h-7 mx-1 size cursor-pointer"
       ></PlayIcon>
     );

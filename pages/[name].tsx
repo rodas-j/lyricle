@@ -55,20 +55,8 @@ const LyricleArtist = (data: {
   solution: Solution;
   validGuesses: ValidGuess[];
 }) => {
-  const ga = useGa();
-  const sendEvent = (
-    hitType: string,
-    eventCategory: string,
-    eventValue: number,
-    eventLabel: string
-  ) => {
-    const event = {
-      event_category: eventCategory,
-      event_label: eventLabel,
-      event_value: eventValue,
-    };
-    ga("event", hitType, event);
-  };
+  const { sendEvent } = useGa();
+
   const router = useRouter();
   const artistGameState = "gameState".concat(router.query.name as string);
   const artistGameStats = "gameStats".concat(router.query.name as string);

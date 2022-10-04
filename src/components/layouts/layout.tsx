@@ -22,6 +22,19 @@ interface Props {
 export default function Layout({ children }: Props) {
   const [showCookieConsent, setShowCookieConsent] = useState<boolean>(false);
   const ga = typeof window === "undefined" ? throwIfSSR : gaHandler;
+  const sendEvent = (
+    hitType: string,
+    eventCategory: string,
+    eventValue: number,
+    eventLabel: string
+  ) => {
+    const event = {
+      event_category: eventCategory,
+      event_label: eventLabel,
+      event_value: eventValue,
+    };
+    ga("event", hitType, event);
+  };
   useEffect(() => {
     setShowCookieConsent(!Cookies.get("cookieConsent") ? true : false);
   }, []);
@@ -39,7 +52,7 @@ export default function Layout({ children }: Props) {
 
   gtag('config', 'G-69K8HLVWRE');`}
       </Script>
-      <GaProvider value={ga}>{children}</GaProvider>
+      <GaProvider value={{ ga, sendEvent }}>{children}</GaProvider>
 
       {showCookieConsent ? (
         <CookieConsent

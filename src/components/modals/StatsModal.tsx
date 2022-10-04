@@ -50,20 +50,8 @@ export const StatsModal = ({
   artist,
 }: Props) => {
   const { showSuccess: showSuccessAlert } = useAlert();
-  const ga = useGa();
-  const sendEvent = (
-    hitType: string,
-    eventCategory: string,
-    eventValue: number,
-    eventLabel: string
-  ) => {
-    const event = {
-      event_category: eventCategory,
-      event_label: eventLabel,
-      event_value: eventValue,
-    };
-    ga("event", hitType, event);
-  };
+  const { sendEvent } = useGa();
+
   const [isCopiedToClipboard, setIsCopiedToClipboard] = React.useState(false);
   useEffect(() => {
     if (isCopiedToClipboard) {
