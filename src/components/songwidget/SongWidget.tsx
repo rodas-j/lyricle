@@ -43,8 +43,9 @@ export const SongWidget = ({
     mediaButton = (
       <PlayIcon
         onClick={() => {
+          setIsPlaying(false);
           setIsPlaying(true);
-          sendEvent("song_play", "media", songSolution);
+          sendEvent("song_play", "media", songSolution, "song_widget");
         }}
         className="w-7 h-7 mx-1 size cursor-pointer"
       ></PlayIcon>

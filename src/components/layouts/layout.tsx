@@ -57,7 +57,7 @@ export default function Layout({ children }: Props) {
       {showCookieConsent ? (
         <CookieConsent
           onAccept={() => {
-            Cookies.set("cookieConsent", "true");
+            Cookies.set("cookieConsent", "true", { expires: 365 });
             setShowCookieConsent(false);
           }}
         />
