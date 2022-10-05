@@ -341,7 +341,7 @@ const LyricleArtist = (data: {
       revealAllLines();
     }
   }, [isGameWon, isGameLost, showSuccessAlert]);
-  let gameDescription = `Guess the song by ${artist} from the Lyrics!`;
+  let gameDescription = `Guess the ${artist}s song from the Lyrics!`;
   let gameKeywords = `guess, song, lyrics, music, game, quiz, decades ${artist}`;
   return (
     <>
