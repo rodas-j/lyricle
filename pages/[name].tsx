@@ -219,7 +219,7 @@ const LyricleArtist = (data: {
       );
 
       setIsGameWon(true);
-      sendEvent("win", "game", songSolution, router.query.name + ".win");
+      sendEvent("win", "game", songSolution, guesses.length);
       return;
     } else {
       revealNextLine();
