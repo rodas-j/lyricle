@@ -342,7 +342,7 @@ const LyricleArtist = (data: {
     }
   }, [isGameWon, isGameLost, showSuccessAlert]);
   let gameDescription = `Guess the song by ${artist} from the Lyrics!`;
-  let gameKeywords = `guess, song, lyrics, music, game, quiz, artist ${artist}`;
+  let gameKeywords = `guess, song, lyrics, music, game, quiz, decades ${artist}`;
   return (
     <>
       <Head>

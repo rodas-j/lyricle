@@ -123,6 +123,10 @@ function App({ showHome = true }: Props) {
           content="Guess the Decade's Song from Their Lyrics."
         />
         <meta property="og:title" content={GAME_TITLE} />
+        <meta
+          property="og:image"
+          content="https://decades.lyricle.app/og.png"
+        />
         <title>{GAME_TITLE}</title>
       </Head>
       <div className="absolute inset-0 flex flex-col">
