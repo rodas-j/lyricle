@@ -126,7 +126,7 @@ export const StatsModal = ({
                     "share",
                     "social",
                     songSolution,
-                    "share button clicked"
+                    isGameWon ? "win" : "lose"
                   );
                 }}
               >

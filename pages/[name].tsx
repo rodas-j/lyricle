@@ -219,7 +219,7 @@ const LyricleArtist = (data: {
       );
 
       setIsGameWon(true);
-      sendEvent("win", "game", songSolution, guesses.length);
+      sendEvent("win", "game", songSolution, guesses.length + 1);
       return;
     } else {
       revealNextLine();
@@ -432,7 +432,7 @@ const LyricleArtist = (data: {
 };
 
 export const getSongOfTheDay = () => {
-  const epochMs = new Date("August 31, 2022").valueOf();
+  const epochMs = new Date("August 4, 2022").valueOf();
   const now = Date.now();
   const msInDay = 86400000;
   const index = Math.floor((now - epochMs) / msInDay);

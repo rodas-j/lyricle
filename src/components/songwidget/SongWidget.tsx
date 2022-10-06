@@ -45,7 +45,12 @@ export const SongWidget = ({
         onClick={() => {
           setIsPlaying(false);
           setIsPlaying(true);
-          sendEvent("song_play", "media", songSolution, "song_widget");
+          sendEvent(
+            "song_play",
+            "media",
+            songSolution,
+            variant === "success" ? "win" : "lose"
+          );
         }}
         className="w-7 h-7 mx-1 size cursor-pointer"
       ></PlayIcon>

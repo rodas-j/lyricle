@@ -7,7 +7,7 @@ if (!getToday()) {
 }
 
 export const getSongOfTheDay = () => {
-  const epochMs = new Date("August 31, 2022").valueOf();
+  const epochMs = new Date("August 4, 2022").valueOf();
   const now = Date.now();
   const msInDay = 86400000;
   const index = Math.floor((now - epochMs) / msInDay);
