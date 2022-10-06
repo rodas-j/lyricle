@@ -49,7 +49,7 @@ export const SongWidget = ({
             "song_play",
             "media",
             songSolution,
-            variant === "success" ? "win" : "lose"
+            variant === "success" ? "won" : "lost"
           );
         }}
         className="w-7 h-7 mx-1 size cursor-pointer"
