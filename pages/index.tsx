@@ -32,7 +32,7 @@ import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
 import { StatsModal } from "../src/components/modals/StatsModal";
-import { ResultsModal } from "../src/components/modals/ResultsModal";
+
 import { useGa } from "../src/context/GAContext";
 import Announcement from "../src/components/banners/Announcement";
 
@@ -150,7 +150,6 @@ const LyricleArtist = (data: {
     guesses.length ? guesses.length + 1 : 1
   );
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false);
@@ -397,20 +396,6 @@ const LyricleArtist = (data: {
             isHomePage={false}
             isOpen={isStatsModalOpen}
             handleClose={() => setIsStatsModalOpen(false)}
-            guesses={guesses}
-            gameStats={stats}
-            isGameLost={isGameLost}
-            isGameWon={isGameWon}
-            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
-            isDarkMode={isDarkMode}
-            isHighContrastMode={isHighContrastMode}
-            numberOfGuessesMade={guesses.length}
-          />
-          <ResultsModal
-            solution={solution as Solution}
-            isHomePage={false}
-            isOpen={isResultsModalOpen}
-            handleClose={() => setIsResultsModalOpen(false)}
             guesses={guesses}
             gameStats={stats}
             isGameLost={isGameLost}
