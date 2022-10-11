@@ -351,12 +351,10 @@ const LyricleArtist = (data: {
       <div className="absolute inset-0 flex flex-col">
         <Announcement />
         <Navbar
-          gameTitle={gameTitle as string}
           setIsInfoModalOpen={setIsInfoModalOpen}
           setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
           setIsStatsModalOpen={setIsStatsModalOpen}
           setIsSettingsModalOpen={setIsSettingsModalOpen}
-          shouldHideStatsModalButton={false}
         />
         <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
           <div className="pb-6 grow">
