@@ -58,8 +58,8 @@ const LyricleArtist = (data: {
   const { sendEvent } = useGa();
 
   const router = useRouter();
-  const artistGameState = "gameState".concat(router.query.name as string);
-  const artistGameStats = "gameStats".concat(router.query.name as string);
+  const artistGameState = "gameState";
+  const artistGameStats = "gameStats";
   const [solution, setSolution] = useState<Solution>();
   useEffect(() => {
     let artist = router.query.name as string;
