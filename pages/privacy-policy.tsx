@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Router from "next/router";
 import styles from "../styles/PrivacyPolicy.module.css";
 export default function PrivacyPolicy() {
   return (
@@ -7,6 +8,9 @@ export default function PrivacyPolicy() {
         <Head>
           <title>Privacy Policy</title>
         </Head>
+        <a className="cursor-pointer" onClick={() => Router.back()}>
+          Go Back
+        </a>
         <h1>Privacy Policy</h1>
         <p>Last updated: August 23, 2022</p>
         <p>
@@ -463,7 +467,10 @@ export default function PrivacyPolicy() {
           the cookie which refer to the use of the website (incl. your IP
           address) to Google as well as the processing of these data by Google
           by downloading and installing the browser plug-in available under the
-          following link: https://tools.google.com/dlpage/gaoptout?hl=en.
+          following link:{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout?hl=en">
+            https://tools.google.com/dlpage/gaoptout?hl=en.
+          </a>
         </p>
         <p>
           This browser add-on notifies Google Analytics via JavaScript that no
@@ -477,7 +484,10 @@ export default function PrivacyPolicy() {
         <p>
           Additional information and the applicable privacy policy of Google may
           be downloaded from
-          <a href="https://marketingplatform.google.com/about/analytics/terms/us/">
+          <a
+            className="text-white"
+            href="https://marketingplatform.google.com/about/analytics/terms/us/"
+          >
             {" "}
             https://marketingplatform.google.com/about/analytics/terms/us/.{" "}
           </a>
