@@ -1,14 +1,13 @@
 [
   {
     "artist": "A.R. Rahman",
-    "songs": ["Jai Ho! (You Are My Destiny)", "Jai Ho!"]
+    "songs": ["Jai Ho! (You Are My Destiny)"]
   },
   {
     "artist": "Adele",
     "songs": [
-      "Rolling In The Deep",
-      "Set Fire to the Rain",
       "Hello",
+      "Set Fire to the Rain",
       "Rolling in the Deep",
       "Someone Like You"
     ]
@@ -21,12 +20,12 @@
   {
     "artist": "Aretha Franklin",
     "songs": [
-      "Respect",
       "A Natural Woman",
+      "Who's Zoomin' Who?",
       "I Never Loved A Man [The Way I Love You]",
+      "Respect",
       "Chain of Fools",
-      "Do Right Woman, Do Right Man",
-      "Who's Zoomin' Who?"
+      "Do Right Woman, Do Right Man"
     ]
   },
   { "artist": "Avril Lavigne", "songs": ["Girlfriend", "Complicated"] },
@@ -38,12 +37,12 @@
   {
     "artist": "Britney Spears",
     "songs": [
-      "Toxic",
-      "...Baby One More Time",
-      "Gimme More",
       "Oops!...I Did It Again",
-      "Womanizer",
-      "Circus"
+      "...Baby One More Time",
+      "Toxic",
+      "Gimme More",
+      "Circus",
+      "Womanizer"
     ]
   },
   { "artist": "Carly Rae Jepsen", "songs": ["Call Me Maybe"] },
@@ -54,47 +53,38 @@
   { "artist": "Carrie Underwood", "songs": ["Before He Cheats"] },
   {
     "artist": "Kelly Clarkson",
-    "songs": ["Stronger (What Doesn't Kill You)", "Since U Been Gone"]
+    "songs": ["Since U Been Gone", "Stronger (What Doesn't Kill You)"]
   },
   {
     "artist": "Kylie Minogue",
-    "songs": ["Spinning Around", "Can't Get You out of My Head"]
+    "songs": ["Can't Get You out of My Head", "Spinning Around"]
   },
   { "artist": "LMFAO", "songs": ["Party Rock Anthem", "Shots"] },
   {
     "artist": "Lady Gaga",
     "songs": [
-      "Born This Way",
-      "Just Dance",
       "Poker Face",
+      "Bad Romance",
+      "Born This Way",
       "LoveGame",
-      "Shallow",
-      "Bad Romance"
+      "Just Dance",
+      "Shallow"
     ]
   },
   {
     "artist": "fun.",
-    "songs": ["We Are Young (feat. Janelle Monáe)", "We Are Young"]
+    "songs": ["We Are Young"]
   },
   { "artist": "Neon Trees", "songs": ["Animal"] },
   {
     "artist": "Mark Ronson",
-    "songs": [
-      "Valerie (feat. Amy Winehouse) - Version Revisited",
-      "Uptown Funk"
-    ]
+    "songs": ["Valerie", "Uptown Funk"]
   },
   { "artist": "Leona Lewis", "songs": ["Bleeding Love"] },
   { "artist": "Taio Cruz", "songs": ["Dynamite"] },
   {
     "artist": "Shakira",
-    "songs": [
-      "Hips Don't Lie (feat. Wyclef Jean)",
-      "Hips Don't Lie",
-      "Whenever, Wherever",
-      "La Tortura",
-      "She Wolf"
-    ]
+    "songs": ["La Tortura", "Whenever, Wherever", "Hips Don't Lie", "She Wolf"]
   },
   { "artist": "Sara Bareilles", "songs": ["Love Song"] },
   { "artist": "Charli XCX", "songs": ["Boom Clap"] },
@@ -102,27 +92,27 @@
   { "artist": "Passenger", "songs": ["Let Her Go"] },
   {
     "artist": "The Script",
-    "songs": ["Hall of Fame (feat. will.i.am)", "Hall of Fame"]
+    "songs": ["Hall of Fame"]
   },
   {
     "artist": "Rihanna",
     "songs": [
-      "FourFiveSeconds",
-      "Pon de Replay",
-      "Disturbia",
       "Umbrella",
-      "SOS",
-      "Love On The Brain"
+      "Disturbia",
+      "Love On The Brain",
+      "Pon de Replay",
+      "FourFiveSeconds",
+      "SOS"
     ]
   },
   {
     "artist": "The Weeknd",
     "songs": [
-      "Can't Feel My Face",
-      "Call Out My Name",
-      "Starboy",
       "The Hills",
       "I Feel It Coming",
+      "Starboy",
+      "Call Out My Name",
+      "Can't Feel My Face",
       "Earned It"
     ]
   },
@@ -131,82 +121,82 @@
     "artist": "Shawn Mendes",
     "songs": [
       "Treat You Better",
-      "There's Nothing Holdin' Me Back",
+      "Stitches",
       "Mercy",
-      "Stitches"
+      "There's Nothing Holdin' Me Back"
     ]
   },
   {
     "artist": "The Chainsmokers",
     "songs": [
+      "Paris",
       "Don't Let Me Down",
       "Something Just Like This",
-      "Paris",
       "Closer"
     ]
   },
   {
     "artist": "Outkast",
-    "songs": ["Ms. Jackson", "Hey Ya!", "The Way You Move"]
+    "songs": ["The Way You Move", "Ms. Jackson", "Hey Ya!"]
   },
   { "artist": "Oasis", "songs": ["Wonderwall", "Don't Look Back In Anger"] },
   {
     "artist": "Michael Jackson",
     "songs": [
-      "Billie Jean",
-      "Beat It",
-      "The Way You Make Me Feel",
-      "Smooth Criminal",
-      "Rock with You",
-      "Thriller",
-      "Bad",
       "Man in the Mirror",
-      "Dirty Diana",
+      "Beat It",
+      "Rock with You",
+      "Billie Jean",
+      "Smooth Criminal",
+      "The Way You Make Me Feel",
+      "Earth Song",
+      "Thriller",
       "Don't Stop 'Til You Get Enough",
+      "Dirty Diana",
       "They Don't Care About Us",
-      "Earth Song"
+      "Bad"
     ]
   },
   {
     "artist": "Coldplay",
     "songs": [
-      "Viva La Vida",
-      "Fix You",
-      "Hymn for the Weekend",
       "Paradise",
-      "A Sky Full of Stars"
+      "Hymn for the Weekend",
+      "A Sky Full of Stars",
+      "Fix You",
+      "Viva La Vida"
     ]
   },
-  { "artist": "Paul Simon", "songs": ["You Can Call Me Al", "Graceland"] },
+  { "artist": "Paul Simon", "songs": ["Graceland", "You Can Call Me Al"] },
   {
     "artist": "Justin Timberlake",
     "songs": [
-      "What Goes Around.../...Comes Around (Interlude)",
-      "Mirrors",
       "SexyBack",
       "Rock Your Body",
+      "CAN'T STOP THE FEELING!",
       "Señorita",
-      "CAN'T STOP THE FEELING!"
+      "Mirrors",
+      "What Goes Around.../...Comes Around (Interlude)"
     ]
   },
   {
     "artist": "Steve Winwood",
-    "songs": ["Higher Love", "Roll With It", "Valerie"]
+    "songs": ["Valerie", "Roll With It", "Higher Love"]
   },
   {
     "artist": "Prince",
     "songs": [
-      "Purple Rain",
-      "Let's Go Crazy",
-      "Kiss",
-      "1999",
-      "Little Red Corvette",
-      "Raspberry Beret",
-      "Sign 'O' the Times",
       "U Got the Look",
+      "Kiss",
       "When Doves Cry",
       "Alphabet St.",
-      "I Would Die 4 U"
+      "1999",
+      "Raspberry Beret",
+      "I Would Die 4 U",
+      "Little Red Corvette",
+      "Purple Rain",
+      "Let's Go Crazy",
+      "Sign 'O' the Times"
     ]
   },
   { "artist": "Far East Movement", "songs": ["Rocketeer"] },
@@ -218,10 +208,10 @@
   {
     "artist": "Bon Jovi",
     "songs": [
-      "It's My Life",
-      "Livin' On A Prayer",
       "Bad Medicine",
       "Always",
+      "Livin' On A Prayer",
+      "It's My Life",
       "Bed Of Roses"
     ]
   },
@@ -230,29 +220,29 @@
   {
     "artist": "Elton John",
     "songs": [
-      "I'm Still Standing",
-      "Rocket Man (I Think It's Going To Be A Long Long Time)",
+      "Sad Songs",
+      "Tiny Dancer",
+      "Don't Go Breaking My Heart",
+      "Sacrifice",
+      "Goodbye Yellow Brick Road",
+      "Bennie And The Jets",
       "Your Song",
       "Candle In The Wind",
-      "Goodbye Yellow Brick Road",
-      "Tiny Dancer",
       "I Guess That's Why They Call It The Blues",
-      "Sad Songs",
+      "Rocket Man (I Think It's Going To Be A Long Long Time)",
       "Nikita",
-      "Sacrifice",
-      "Don't Go Breaking My Heart",
-      "Bennie And The Jets"
+      "I'm Still Standing"
     ]
   },
   {
     "artist": "Nirvana",
     "songs": [
       "Smells Like Teen Spirit",
+      "All Apologies",
       "In Bloom",
       "Come As You Are",
-      "All Apologies",
-      "Heart-Shaped Box",
-      "The Man Who Sold The World"
+      "The Man Who Sold The World",
+      "Heart-Shaped Box"
     ]
   },
   { "artist": "Gotye", "songs": ["Somebody That I Used To Know"] },
@@ -260,24 +250,24 @@
   {
     "artist": "Bob Dylan",
     "songs": [
-      "Like a Rolling Stone",
-      "Blowin' in the Wind",
-      "The Times They Are A-Changin'",
       "Tangled Up In Blue",
-      "Mr. Tambourine Man",
-      "Desolation Row",
+      "Visions Of Johanna",
       "Knockin' On Heaven's Door",
-      "Highway 61 Revisited",
-      "Visions Of Johanna"
+      "Mr. Tambourine Man",
+      "Blowin' in the Wind",
+      "Desolation Row",
+      "Like a Rolling Stone",
+      "The Times They Are A-Changin'",
+      "Highway 61 Revisited"
     ]
   },
   {
     "artist": "Men At Work",
-    "songs": ["Down Under", "It's a Mistake", "Who Can It Be Now?"]
+    "songs": ["It's a Mistake", "Who Can It Be Now?", "Down Under"]
   },
   {
     "artist": "Tina Turner",
-    "songs": ["The Best", "What's Love Got To Do WIth It"]
+    "songs": ["What's Love Got To Do WIth It", "The Best"]
   },
   {
     "artist": "Daryl Hall & John Oates",
@@ -287,39 +277,39 @@
   {
     "artist": "ABBA",
     "songs": [
-      "Mamma Mia",
-      "Dancing Queen",
+      "Chiquitita",
       "Gimme! Gimme! Gimme!",
       "Angeleyes",
-      "Chiquitita"
+      "Dancing Queen",
+      "Mamma Mia"
     ]
   },
   {
     "artist": "The Police",
     "songs": [
-      "Message In A Bottle - Remastered 2003",
       "Every Breath You Take",
-      "King Of Pain",
+      "Don't Stand So Close To Me",
+      "Every Little Thing She Does Is Magic",
+      "Message In A Bottle",
+      "So Lonely",
       "Roxanne",
       "Message In A Bottle",
-      "Every Little Thing She Does Is Magic",
-      "So Lonely",
-      "Don't Stand So Close To Me",
+      "King Of Pain",
       "De Do Do Do, De Da Da Da"
     ]
   },
   {
     "artist": "Jennifer Lopez",
     "songs": [
-      "On The Floor - Radio Edit",
-      "Love Don't Cost a Thing",
       "Jenny from the Block",
-      "On The Floor"
+      "On The Floor",
+      "On The Floor - Radio Edit",
+      "Love Don't Cost a Thing"
     ]
   },
   {
     "artist": "Ariana Grande",
-    "songs": ["Love Me Harder", "One Last Time", "7 rings", "thank u, next"]
+    "songs": ["One Last Time", "Love Me Harder", "7 rings", "thank u, next"]
   },
   {
     "artist": "Swedish House Mafia",
@@ -328,153 +318,144 @@
   { "artist": "K'NAAN", "songs": ["Bang Bang"] },
   {
     "artist": "Katy Perry",
-    "songs": ["Firework", "Hot N Cold", "I Kissed A Girl", "Teenage Dream"]
+    "songs": ["Teenage Dream", "Firework", "Hot N Cold", "I Kissed A Girl"]
   },
   {
     "artist": "Maroon 5",
     "songs": [
-      "Payphone",
+      "One More Night",
       "This Love",
-      "Memories",
       "Maps",
       "Sugar",
-      "Animals",
-      "One More Night"
+      "Payphone",
+      "Memories",
+      "Animals"
     ]
   },
   {
     "artist": "Otis Redding",
     "songs": [
       "(Sittin' On) the Dock of the Bay",
-      "the Dock of the Bay",
-      "Try a Little Tenderness"
+      "Try a Little Tenderness",
+      "the Dock of the Bay"
     ]
   },
   { "artist": "Survivor", "songs": ["Eye of the Tiger"] },
   {
     "artist": "Bruno Mars",
     "songs": [
-      "The Lazy Song",
-      "Just the Way You Are",
-      "Locked out of Heaven",
-      "When I Was Your Man",
-      "That's What I Like",
       "Talking to the Moon",
+      "The Lazy Song",
+      "When I Was Your Man",
+      "Grenade",
+      "Just the Way You Are",
+      "That's What I Like",
       "24K Magic",
-      "Grenade"
+      "Locked out of Heaven"
     ]
   },
   {
     "artist": "Whitney Houston",
-    "songs": ["I Will Always Love You", "How Will I Know", "So Emotional"]
+    "songs": ["So Emotional", "I Will Always Love You", "How Will I Know"]
   },
   {
     "artist": "Bob Marley & The Wailers",
     "songs": [
-      "Is This Love",
-      "No Woman No Cry",
       "Redemption Song",
+      "No Woman No Cry",
+      "Jamming",
+      "One Love / People Get Ready",
       "Buffalo Soldier",
       "Three Little Birds",
-      "Jamming",
-      "One Love / People Get Ready"
+      "Is This Love?"
     ]
   },
   {
     "artist": "Phil Collins",
     "songs": [
-      "In The Air Tonight",
-      "Another Day In Paradise",
-      "Sussudio",
-      "Two Hearts",
       "I Wish It Would Rain Down",
-      "Don't Lose My Number",
-      "Something Happened On The Way To Heaven",
-      "Do You Remember",
-      "Take Me Home",
       "You Can't Hurry Love",
-      "You'll Be In My Heart"
+      "In The Air Tonight",
+      "Two Hearts",
+      "Another Day In Paradise",
+      "Don't Lose My Number",
+      "You'll Be In My Heart",
+      "Take Me Home",
+      "Do You Remember",
+      "Something Happened On The Way To Heaven",
+      "Sussudio"
     ]
   },
   {
     "artist": "Blondie",
     "songs": [
       "Call Me",
-      "Heart Of Glass",
-      "One Way Or Another",
-      "The Tide Is High",
       "Atomic",
-      "Rapture"
+      "Rapture",
+      "Heart Of Glass",
+      "The Tide Is High",
+      "One Way Or Another"
     ]
   },
   { "artist": "Destiny's Child", "songs": ["Survivor"] },
   {
     "artist": "The Cure",
-    "songs": [
-      "Pictures Of You",
-      "Boys Don't Cry",
-      "Close To Me",
-      "Pictures of You"
-    ]
+    "songs": ["Pictures of You", "Boys Don't Cry", "Close To Me"]
   },
   {
     "artist": "Twenty One Pilots",
-    "songs": ["Ride", "Stressed Out", "Heathens"]
+    "songs": ["Ride", "Heathens", "Stressed Out"]
   },
   {
     "artist": "Madonna",
     "songs": [
-      "Material Girl",
-      "Like a Prayer",
+      "Open Your Heart",
       "Into the Groove",
+      "Like a Prayer",
       "Crazy for You",
       "Papa Don't Preach",
-      "Open Your Heart",
-      "True Blue",
       "Hung Up",
-      "4 Minutes"
+      "Material Girl",
+      "4 Minutes",
+      "True Blue"
     ]
   },
   {
     "artist": "Stevie Wonder",
     "songs": [
-      "Higher Ground",
-      "Superstition",
+      "Signed, Sealed, Delivered",
+      "Part-Time Lover",
+      "Master Blaster",
       "Living For The City",
       "You Are The Sunshine Of My Life",
       "I Just Called To Say I Love You",
-      "Part-Time Lover",
-      "Master Blaster",
-      "Signed, Sealed, Delivered",
-      "Sir Duke"
+      "Sir Duke",
+      "Higher Ground",
+      "Superstition"
     ]
   },
   { "artist": "Jeff Buckley", "songs": ["Hallelujah"] },
   {
     "artist": "Radiohead",
     "songs": [
-      "Paranoid Android",
       "Creep",
       "Fake Plastic Trees",
-      "Karma Police",
-      "High and Dry"
+      "Paranoid Android",
+      "High and Dry",
+      "Karma Police"
     ]
   },
   {
     "artist": "Dusty Springfield",
-    "songs": [
-      "Son Of A Preacher Man",
-      "You Don't Have To Say You Love Me",
-      "Son of a Preacher Man"
-    ]
+    "songs": ["Son of a Preacher Man", "You Don't Have To Say You Love Me"]
   },
   {
     "artist": "Eagles",
     "songs": [
-      "Hotel California",
       "Take It Easy",
-      "Life in the Fast Lane",
-      "One of These Nights"
+      "Hotel California",
+      "One of These Nights",
+      "Life in the Fast Lane"
     ]
   },
   { "artist": "Steve Harley", "songs": ["Make Me Smile"] },
@@ -482,8 +463,8 @@
   {
     "artist": "Sam Cooke",
     "songs": [
-      "Wonderful World",
       "A Change Is Gonna Come",
+      "Wonderful World",
       "You Send Me",
       "Cupid"
     ]
@@ -491,13 +472,13 @@
   {
     "artist": "Eminem",
     "songs": [
-      "Lose Yourself",
-      "My Name Is",
-      "Without Me",
-      "The Real Slim Shady",
-      "Love The Way You Lie",
       "Not Afraid",
-      "Stan"
+      "My Name Is",
+      "Love The Way You Lie",
+      "Stan",
+      "Without Me",
+      "Lose Yourself",
+      "The Real Slim Shady"
     ]
   },
   { "artist": "Supergrass", "songs": ["Alright"] },
@@ -509,41 +490,36 @@
   },
   {
     "artist": "Van Morrison",
-    "songs": [
-      "Into the Mystic",
-      "Brown Eyed Girl",
-      "Moondance",
-      "Into The Mystic"
-    ]
+    "songs": ["Brown Eyed Girl", "Moondance", "Into The Mystic"]
   },
   {
     "artist": "Black Eyed Peas",
     "songs": [
-      "Meet Me Halfway",
-      "I Gotta Feeling",
+      "Boom Boom Pow",
       "Pump It",
       "Shut Up",
-      "Boom Boom Pow"
+      "Meet Me Halfway",
+      "I Gotta Feeling"
     ]
   },
   {
     "artist": "The Rolling Stones",
     "songs": [
-      "Sympathy For The Devil",
-      "Satisfaction",
-      "Gimme Shelter",
-      "You Can't Always Get What You Want",
       "Jumpin' Jack Flash",
-      "Paint It Black",
-      "Street Fighting Man",
-      "Ruby Tuesday",
-      "Wild Horses",
       "Tumbling Dice",
+      "Street Fighting Man",
       "Beast Of Burden",
-      "Brown Sugar",
-      "Miss You",
+      "Satisfaction",
+      "Angie",
+      "You Can't Always Get What You Want",
+      "Ruby Tuesday",
       "Start Me Up",
-      "Angie"
+      "Gimme Shelter",
+      "Paint It Black",
+      "Sympathy For The Devil",
+      "Miss You",
+      "Wild Horses",
+      "Brown Sugar"
     ]
   },
   { "artist": "John Legend", "songs": ["All of Me"] },
@@ -552,32 +528,32 @@
   {
     "artist": "Elvis Presley",
     "songs": [
-      "Blue Suede Shoes",
-      "Hound Dog",
-      "Heartbreak Hotel",
-      "Jailhouse Rock",
-      "Mystery Train",
-      "Suspicious Minds",
       "I Can't Stop Loving You",
-      "Don't Be Cruel",
+      "Heartbreak Hotel",
       "All Shook Up",
       "Can't Help Falling In Love",
-      "Love Me Tender",
+      "Hound Dog",
+      "Suspicious Minds",
+      "Jailhouse Rock",
+      "Blue Suede Shoes",
+      "A Little Less Conversation",
+      "Mystery Train",
       "Burning Love",
-      "Always On My Mind",
-      "A Little Less Conversation"
+      "Don't Be Cruel",
+      "Always on My Mind",
+      "Love Me Tender"
     ]
   },
-  { "artist": "Lynyrd Skynyrd", "songs": ["Sweet Home Alabama", "Free Bird"] },
+  { "artist": "Lynyrd Skynyrd", "songs": ["Free Bird", "Sweet Home Alabama"] },
   { "artist": "Backstreet Boys", "songs": ["I Want It That Way"] },
   {
     "artist": "Christina Aguilera",
     "songs": [
+      "Candyman",
       "Genie In a Bottle",
       "Lady Marmalade",
-      "Dirrty",
-      "Candyman",
-      "Come on over Baby"
+      "Come on over Baby",
+      "Dirrty"
     ]
   },
   { "artist": "Nickelback", "songs": ["How You Remind Me"] },
@@ -585,20 +561,20 @@
   {
     "artist": "Marvin Gaye",
     "songs": [
+      "Sexual Healing",
       "What's Going On",
-      "I Heard It Through The Grapevine",
-      "Sexual Healing"
+      "I Heard It Through The Grapevine"
     ]
   },
   {
     "artist": "The Beach Boys",
     "songs": [
-      "Good Vibrations",
-      "God Only Knows",
       "California Girls",
+      "God Only Knows",
       "Don't Worry Baby",
       "Caroline, No",
       "Sloop John B",
+      "Good Vibrations",
       "Kokomo"
     ]
   },
@@ -606,24 +582,24 @@
   {
     "artist": "Chuck Berry",
     "songs": [
+      "Brown Eyed Handsome Man",
       "Johnny B. Goode",
-      "Maybellene",
       "Roll Over Beethoven",
       "Sweet Little Sixteen",
-      "Brown Eyed Handsome Man"
+      "Maybellene"
     ]
   },
   {
     "artist": "David Bowie",
     "songs": [
+      "Changes",
+      "Ziggy Stardust",
+      "Life on Mars?",
+      "Starman",
+      "Young Americans",
       "Heroes",
       "Let's Dance",
       "Where Are We Now?",
-      "Life on Mars?",
-      "Starman",
-      "Changes",
-      "Ziggy Stardust",
-      "Young Americans",
       "China Girl",
       "Rebel Rebel"
     ]
@@ -631,60 +607,59 @@
   {
     "artist": "The Beatles",
     "songs": [
-      "Let It Be",
-      "While My Guitar Gently Weeps",
       "Eleanor Rigby",
+      "While My Guitar Gently Weeps",
       "A Hard Day's Night",
-      "All You Need Is Love"
+      "All You Need Is Love",
+      "Let It Be"
     ]
   },
   {
     "artist": "Ray Charles",
     "songs": [
-      "What'd I Say, Pt. 1 & 2",
+      "I've Got a Woman",
       "Georgia On My Mind",
-      "I've Got a Woman"
+      "What'd I Say, Pt. 1 & 2"
     ]
   },
   {
     "artist": "The Doors",
     "songs": [
-      "Riders on the Storm",
-      "Light My Fire",
-      "L.A. Woman",
       "The End",
-      "Break on Through"
+      "L.A. Woman",
+      "Riders on the Storm",
+      "Break on Through",
+      "Light My Fire"
     ]
   },
   {
     "artist": "The Who",
     "songs": [
-      "My Generation",
-      "I Can See For Miles",
       "Baba O'Riley",
+      "I Can See For Miles",
+      "My Generation",
       "Behind Blue Eyes"
     ]
   },
   {
     "artist": "The Clash",
     "songs": [
-      "London Calling",
-      "Should I Stay Or Should I Go",
+      "Should I Stay or Should I Go",
       "Train In Vain",
-      "Complete Control",
       "Rock the Casbah",
-      "Should I Stay or Should I Go"
+      "Complete Control",
+      "London Calling"
     ]
   },
   {
     "artist": "Jimi Hendrix",
     "songs": [
-      "Purple Haze",
       "All Along the Watchtower",
-      "Voodoo Child",
       "Foxey Lady",
-      "Hey Joe",
-      "Little Wing"
+      "Voodoo Child",
+      "Little Wing",
+      "Purple Haze",
+      "Hey Joe"
     ]
   },
   {
@@ -695,35 +670,30 @@
   { "artist": "Blue Swede", "songs": ["Hooked On A Feeling"] },
   {
     "artist": "a-ha",
-    "songs": [
-      "Take on Me",
-      "Cry Wolf",
-      "Take On Me",
-      "The Sun Always Shines on T.V."
-    ]
+    "songs": ["Cry Wolf", "Take On Me", "The Sun Always Shines on T.V."]
   },
   {
     "artist": "Fleetwood Mac",
     "songs": [
-      "Everywhere",
-      "Go Your Own Way",
       "Rhiannon",
+      "Landslide",
+      "Go Your Own Way",
+      "Don't Stop",
+      "Everywhere",
       "Little Lies",
       "Dreams",
-      "The Chain",
-      "Landslide",
-      "Don't Stop"
+      "The Chain"
     ]
   },
   {
     "artist": "Led Zeppelin",
     "songs": [
+      "Immigrant Song",
       "Stairway to Heaven",
-      "Rock and Roll",
       "Whole Lotta Love",
       "Kashmir",
-      "Black Dog",
-      "Immigrant Song"
+      "Rock and Roll",
+      "Black Dog"
     ]
   },
   {
@@ -734,45 +704,38 @@
     "artist": "Bruce Springsteen",
     "songs": [
       "Born to Run",
-      "Thunder Road",
-      "Born In The U.S.A.",
-      "Dancing In the Dark",
       "Born in the U.S.A.",
+      "Thunder Road",
+      "Dancing In the Dark",
       "Streets of Philadelphia"
     ]
   },
-  { "artist": "The Ronettes", "songs": ["Be My Baby", "Walking In The Rain"] },
-  { "artist": "Spandau Ballet", "songs": ["Only When You Leave", "True"] },
+  { "artist": "The Ronettes", "songs": ["Walking In The Rain", "Be My Baby"] },
+  { "artist": "Spandau Ballet", "songs": ["True", "Only When You Leave"] },
   { "artist": "Alanis Morissette", "songs": ["Ironic"] },
-  { "artist": "Blur", "songs": ["Song 2", "Parklife"] },
+  { "artist": "Blur", "songs": ["Parklife", "Song 2"] },
   { "artist": "The Impressions", "songs": ["People Get Ready"] },
   {
     "artist": "Talking Heads",
     "songs": [
-      "Once in a Lifetime",
       "And She Was",
-      "Road to Nowhere",
       "Psycho Killer",
-      "Take Me to the River",
-      "Once In A Lifetime",
-      "Wild Wild Life"
+      "Wild Wild Life",
+      "Take Me To The River",
+      "Road to Nowhere",
+      "Once In A Lifetime"
     ]
   },
   {
     "artist": "The Smiths",
     "songs": [
-      "There Is a Light That Never Goes Out",
-      "William, It Was Really Nothing"
+      "William, It Was Really Nothing",
+      "There Is a Light That Never Goes Out"
     ]
   },
   {
     "artist": "Johnny Cash",
-    "songs": [
-      "I Walk The Line",
-      "Ring Of Fire",
-      "Folsom Prison Blues",
-      "I Walk the Line"
-    ]
+    "songs": ["I Walk the Line", "Ring Of Fire", "Folsom Prison Blues"]
   },
   { "artist": "Grateful Dead", "songs": ["Sugar Magnolia"] },
   { "artist": "Ike & Tina Turner", "songs": ["River Deep"] },
@@ -783,20 +746,20 @@
   {
     "artist": "Sting",
     "songs": [
-      "Fields Of Gold",
       "If You Love Somebody Set Them Free",
+      "Fields Of Gold",
       "We'll Be Together"
     ]
   },
   {
     "artist": "U2",
     "songs": [
-      "One",
-      "I Still Haven't Found What I'm Looking For",
-      "Sunday Bloody Sunday",
       "Pride",
       "New Year's Day",
+      "One",
+      "I Still Haven't Found What I'm Looking For",
       "Angel Of Harlem",
+      "Sunday Bloody Sunday",
       "Two Hearts Beat As One"
     ]
   },
@@ -804,9 +767,9 @@
     "artist": "Pretenders",
     "songs": [
       "Brass in Pocket",
-      "Don't Get Me Wrong",
       "Back on the Chain Gang",
-      "I'll Stand by You"
+      "I'll Stand by You",
+      "Don't Get Me Wrong"
     ]
   },
   {
@@ -821,17 +784,16 @@
   },
   {
     "artist": "Little Richard",
-    "songs": ["Tutti Frutti", "Long Tall Sally", "Good Golly Miss Molly"]
+    "songs": ["Tutti Frutti", "Good Golly Miss Molly", "Long Tall Sally"]
   },
   { "artist": "Johnny Marr", "songs": ["Easy Money"] },
   {
     "artist": "Simon & Garfunkel",
     "songs": [
-      "Bridge over Troubled Water",
+      "Bridge Over Troubled Water",
       "The Boxer",
-      "The Sound of Silence",
       "Cecilia",
-      "Bridge Over Troubled Water"
+      "The Sound of Silence"
     ]
   },
   {
@@ -853,35 +815,35 @@
   { "artist": "The Kingsmen", "songs": ["Louie Louie"] },
   {
     "artist": "Sex Pistols",
-    "songs": ["Anarchy In The UK", "God Save The Queen"]
+    "songs": ["God Save The Queen", "Anarchy In The UK"]
   },
   { "artist": "Procol Harum", "songs": ["A Whiter Shade Of Pale"] },
   {
     "artist": "Al Green",
-    "songs": ["Let's Stay Together", "Love And Happiness"]
+    "songs": ["Love And Happiness", "Let's Stay Together"]
   },
   {
     "artist": "Jerry Lee Lewis",
-    "songs": ["Whole Lotta Shakin' Goin' On", "Great Balls of Fire"]
+    "songs": ["Great Balls of Fire", "Whole Lotta Shakin' Goin' On"]
   },
   { "artist": "Bo Diddley", "songs": ["Bo Diddley", "Who Do You Love"] },
   { "artist": "Buffalo Springfield", "songs": ["For What It's Worth"] },
   { "artist": "Tracy Chapman", "songs": ["Fast Car"] },
   {
     "artist": "Roy Orbison",
-    "songs": ["Crying", "Oh, Pretty Woman", "In Dreams", "You Got It"]
+    "songs": ["Oh, Pretty Woman", "In Dreams", "Crying", "You Got It"]
   },
-  { "artist": "CHIC", "songs": ["Good Times", "Le Freak"] },
+  { "artist": "CHIC", "songs": ["Le Freak", "Good Times"] },
   {
     "artist": "Eddie Cochran",
-    "songs": ["Summertime Blues", "C’Mon Everybody"]
+    "songs": ["C’Mon Everybody", "Summertime Blues"]
   },
   {
     "artist": "The Byrds",
     "songs": [
       "Mr. Tambourine Man",
-      "Eight Miles High",
-      "I'll Feel a Whole Lot Better"
+      "I'll Feel a Whole Lot Better",
+      "Eight Miles High"
     ]
   },
   { "artist": "Fats Domino", "songs": ["Blueberry Hill"] },
@@ -890,32 +852,32 @@
   { "artist": "The Mamas & The Papas", "songs": ["California Dreamin'"] },
   {
     "artist": "Ramones",
-    "songs": ["Blitzkrieg Bop", "I Wanna Be Sedated", "Baby, I Love You"]
+    "songs": ["Baby, I Love You", "I Wanna Be Sedated", "Blitzkrieg Bop"]
   },
   {
     "artist": "Creedence Clearwater Revival",
     "songs": [
-      "Fortunate Son",
-      "Proud Mary",
-      "Who'll Stop The Rain",
       "Bad Moon Rising",
       "Have You Ever Seen The Rain",
-      "Down On The Corner"
+      "Who'll Stop The Rain",
+      "Down On The Corner",
+      "Fortunate Son",
+      "Proud Mary"
     ]
   },
   { "artist": "Gene Vincent", "songs": ["Be Bop a Lula"] },
-  { "artist": "Donna Summer", "songs": ["Hot Stuff", "I Feel Love"] },
+  { "artist": "Donna Summer", "songs": ["I Feel Love", "Hot Stuff"] },
   {
     "artist": "Hank Williams",
-    "songs": ["I'm So Lonesome I Could Cry", "Your Cheatin' Heart"]
+    "songs": ["Your Cheatin' Heart", "I'm So Lonesome I Could Cry"]
   },
   {
     "artist": "The Drifters",
     "songs": [
-      "Up on the Roof",
-      "Save the Last Dance for Me",
+      "Under the Boardwalk",
       "There Goes My Baby",
-      "Under the Boardwalk"
+      "Up on the Roof",
+      "Save the Last Dance for Me"
     ]
   },
   {
@@ -923,17 +885,13 @@
     "songs": ["Da Doo Ron Ron", "He's A Rebel", "Then He Kissed Me"]
   },
   { "artist": "The Commitments", "songs": ["Take Me To The River"] },
-  {
-    "artist": "Ben E. King",
-    "songs": ["Stand By Me", "Spanish Harlem", "Stand by Me"]
-  },
+  { "artist": "Ben E. King", "songs": ["Spanish Harlem", "Stand by Me"] },
   {
     "artist": "The Animals",
     "songs": [
-      "House of the Rising Sun",
-      "We Gotta Get Out of This Place",
+      "House Of The Rising Sun",
       "Don't Let Me Be Misunderstood",
-      "House Of The Rising Sun"
+      "We Gotta Get Out of This Place"
     ]
   },
   {
@@ -947,13 +905,13 @@
   {
     "artist": "The Everly Brothers",
     "songs": [
-      "All I Have to Do Is Dream",
-      "Cathy's Clown",
       "Bye Bye Love",
-      "Wake up Little Susie"
+      "Wake up Little Susie",
+      "All I Have to Do Is Dream",
+      "Cathy's Clown"
     ]
   },
-  { "artist": "Iggy Pop", "songs": ["Lust For Life", "The Passenger"] },
+  { "artist": "Iggy Pop", "songs": ["The Passenger", "Lust For Life"] },
   { "artist": "Janis Joplin", "songs": ["Me and Bobby McGee"] },
   { "artist": "The Flamingos", "songs": ["I Only Have Eyes For You"] },
   { "artist": "Bill Haley", "songs": ["Rock Around The Clock"] },
@@ -961,47 +919,46 @@
     "artist": "The Velvet Underground",
     "songs": ["I'm Waiting For The Man", "Sweet Jane", "Heroin"]
   },
-  { "artist": "Public Enemy", "songs": ["Bring The Noise", "Fight The Power"] },
+  { "artist": "Public Enemy", "songs": ["Fight The Power", "Bring The Noise"] },
   {
     "artist": "Queen",
     "songs": [
       "Bohemian Rhapsody",
-      "We Will Rock You",
       "A Kind Of Magic",
       "Another One Bites The Dust",
-      "Crazy Little Thing Called Love",
       "Radio Ga Ga",
-      "Don't Stop Me Now"
+      "Crazy Little Thing Called Love",
+      "Don't Stop Me Now",
+      "We Will Rock You"
     ]
   },
   {
     "artist": "Joni Mitchell",
-    "songs": ["Both Sides Now", "Help Me", "Free Man in Paris"]
+    "songs": ["Help Me", "Both Sides Now", "Free Man in Paris"]
   },
   {
     "artist": "Aerosmith",
     "songs": [
-      "Dream On",
-      "Walk This Way",
-      "Love In An Elevator",
-      "Janie's Got A Gun",
       "Dude",
       "Rag Doll",
+      "Walk This Way",
       "Sweet Emotion",
-      "Crazy",
+      "Cryin'",
       "I Don't Want to Miss a Thing",
-      "Cryin'"
+      "Dream On",
+      "Janie's Got A Gun",
+      "Love In An Elevator",
+      "Crazy"
     ]
   },
   {
     "artist": "Pink Floyd",
     "songs": [
       "Comfortably Numb",
-      "Another Brick In The Wall, Pt. 2",
       "Wish You Were Here",
+      "Learning to Fly",
       "Money",
-      "Another Brick in the Wall, Pt. 2",
-      "Learning to Fly"
+      "Another Brick in the Wall, Pt. 2"
     ]
   },
   { "artist": "Big Star", "songs": ["September Gurls"] },
@@ -1011,54 +968,50 @@
   {
     "artist": "Bee Gees",
     "songs": [
-      "Stayin' Alive",
-      "How Deep Is Your Love",
       "You Should Be Dancing",
-      "You Win Again",
-      "Stayin Alive"
+      "How Deep Is Your Love",
+      "Stayin Alive",
+      "You Win Again"
     ]
   },
   {
     "artist": "Glen Campbell",
-    "songs": ["Wichita Lineman", "By The Time I Get To Phoenix"]
+    "songs": ["By The Time I Get To Phoenix", "Wichita Lineman"]
   },
   { "artist": "The Chantels", "songs": ["Maybe"] },
   { "artist": "Parliament", "songs": ["Flash Light"] },
   { "artist": "Beck", "songs": ["Loser"] },
   {
     "artist": "New Order",
-    "songs": ["Bizarre Love Triangle", "Blue Monday", "True Faith '94"]
+    "songs": ["True Faith '94", "Blue Monday", "Bizarre Love Triangle"]
   },
   {
     "artist": "Bill Withers",
-    "songs": ["Lean on Me", "Ain't No Sunshine", "Lovely Day"]
+    "songs": ["Ain't No Sunshine", "Lovely Day", "Lean on Me"]
   },
   {
     "artist": "Four Tops",
     "songs": [
-      "Reach Out, I'll Be There",
       "Baby I Need Your Loving",
+      "Reach Out, I'll Be There",
       "Standing In The Shadows Of Love"
     ]
   },
   { "artist": "Them", "songs": ["Gloria"] },
-  { "artist": "Dolly Parton", "songs": ["Jolene", "9 to 5"] },
+  { "artist": "Dolly Parton", "songs": ["9 to 5", "Jolene"] },
   { "artist": "John Lee Hooker", "songs": ["Boom Boom"] },
-  {
-    "artist": "Lou Reed",
-    "songs": ["Walk on the Wild Side", "Walk On the Wild Side"]
-  },
+  { "artist": "Lou Reed", "songs": ["Walk On the Wild Side"] },
   {
     "artist": "Muddy Waters",
     "songs": [
       "I'm Your Hoochie Coochie Man",
-      "Got My Mojo Working",
-      "Rollin' Stone"
+      "Rollin' Stone",
+      "Got My Mojo Working"
     ]
   },
-  { "artist": "James Taylor", "songs": ["Fire And Rain", "Fire and Rain"] },
+  { "artist": "James Taylor", "songs": ["Fire and Rain"] },
   { "artist": "The Spencer Davis Group", "songs": ["Gimme Some Lovin'"] },
-  { "artist": "Black Sabbath", "songs": ["Paranoid", "Iron Man"] },
+  { "artist": "Black Sabbath", "songs": ["Iron Man", "Paranoid"] },
   { "artist": "Mott The Hoople", "songs": ["All the Young Dudes"] },
   { "artist": "The Troggs", "songs": ["Wild Thing"] },
   { "artist": "The Dells", "songs": ["Oh What A Night"] },
@@ -1074,17 +1027,17 @@
   },
   {
     "artist": "Elvis Costello",
-    "songs": ["Peace, Love, & Understanding", "Watching The Detectives"]
+    "songs": ["Watching The Detectives", "Peace, Love, & Understanding"]
   },
   { "artist": "Pavement", "songs": ["Summer Babe"] },
   { "artist": "The Zombies", "songs": ["She's Not There"] },
   {
     "artist": "The Wailers",
-    "songs": ["Get Up, Stand Up", "I Shot The Sheriff"]
+    "songs": ["I Shot The Sheriff", "Get Up, Stand Up"]
   },
   {
     "artist": "Willie Nelson",
-    "songs": ["Blue Eyes Crying in the Rain", "On The Road Again"]
+    "songs": ["On The Road Again", "Blue Eyes Crying in the Rain"]
   },
   { "artist": "Ringo Starr", "songs": ["With A Little Help From My Friends"] },
   { "artist": "The Jam", "songs": ["That's Entertainment"] },
@@ -1094,11 +1047,11 @@
     "artist": "Jimmy Cliff",
     "songs": ["Many Rivers To Cross", "The Harder They Come"]
   },
-  { "artist": "Alice Cooper", "songs": ["School's Out", "I'm Eighteen"] },
+  { "artist": "Alice Cooper", "songs": ["I'm Eighteen", "School's Out"] },
   { "artist": "Patti Smith", "songs": ["Dancing Barefoot"] },
   {
     "artist": "The Supremes",
-    "songs": ["Baby Love", "You Keep Me Hangin' On", "Where Did Our Love Go"]
+    "songs": ["You Keep Me Hangin On", "Baby Love", "Where Did Our Love Go"]
   },
   { "artist": "Jerry Butler", "songs": ["For Your Precious Love"] },
   { "artist": "Bonnie Raitt", "songs": ["I Can't Make You Love Me"] },
@@ -1110,41 +1063,41 @@
   { "artist": "The Platters", "songs": ["The Great Pretender"] },
   {
     "artist": "Eric Clapton",
-    "songs": ["Tears in Heaven", "Wonderful Tonight"]
+    "songs": ["Wonderful Tonight", "Tears in Heaven"]
   },
-  { "artist": "Whitesnake", "songs": ["Here I Go Again", "Is This Love"] },
+  { "artist": "Whitesnake", "songs": ["Here I Go Again", "Is This Love?"] },
   { "artist": "Roberta Flack", "songs": ["Killing Me Softly With His Song"] },
   { "artist": "The Waterboys", "songs": ["The Whole Of The Moon"] },
   { "artist": "The Miracles", "songs": ["Shop Around"] },
-  { "artist": "ZZ Top", "songs": ["Gimme All Your Lovin'", "La Grange"] },
+  { "artist": "ZZ Top", "songs": ["La Grange", "Gimme All Your Lovin'"] },
   {
     "artist": "Foreigner",
     "songs": [
-      "Cold as Ice",
       "I Want to Know What Love Is",
+      "Cold as Ice",
       "Waiting for a Girl like You"
     ]
   },
-  { "artist": "Dexys Midnight Runners", "songs": ["Geno", "Come On Eileen"] },
+  { "artist": "Dexys Midnight Runners", "songs": ["Come On Eileen", "Geno"] },
   { "artist": "Cream", "songs": ["White Room"] },
   {
     "artist": "Depeche Mode",
-    "songs": ["Personal Jesus", "Just Can't Get Enough", "Enjoy the Silence"]
+    "songs": ["Enjoy the Silence", "JUST CAN'T GET ENOUGH", "Personal Jesus"]
   },
   { "artist": "My Chemical Romance", "songs": ["Welcome to the Black Parade"] },
   {
     "artist": "The Doobie Brothers",
     "songs": [
-      "Long Train Runnin'",
+      "What a Fool Believes",
       "Listen to the Music",
-      "What a Fool Believes"
+      "Long Train Runnin'"
     ]
   },
   {
     "artist": "R.E.M.",
     "songs": [
-      "Radio Free Europe",
       "It's The End Of The World As We Know It",
+      "Radio Free Europe",
       "Orange Crush"
     ]
   },
@@ -1153,12 +1106,12 @@
   { "artist": "Eric B. & Rakim", "songs": ["I Know You Got Soul"] },
   { "artist": "Biffy Clyro", "songs": ["Many of Horror"] },
   { "artist": "Freda Payne", "songs": ["Band Of Gold"] },
-  { "artist": "The Shangri-Las", "songs": ["Remember", "Leader Of The Pack"] },
+  { "artist": "The Shangri-Las", "songs": ["Leader Of The Pack", "Remember"] },
   { "artist": "Happy Mondays", "songs": ["Step On"] },
   { "artist": "Blue Öyster Cult", "songs": ["The Reaper"] },
   {
     "artist": "Talk Talk",
-    "songs": ["It's My Life", "Life's What You Make It"]
+    "songs": ["Life's What You Make It", "It's My Life"]
   },
   { "artist": "The Shirelles", "songs": ["Tonight's The Night"] },
   { "artist": "The Monkees", "songs": ["I'm a Believer"] },
@@ -1168,28 +1121,28 @@
     "artist": "Duran Duran",
     "songs": [
       "Ordinary World",
-      "Union of the Snake",
-      "The Reflex",
       "Hungry Like the Wolf",
-      "Save a Prayer",
-      "Girls on Film",
       "Rio",
-      "Planet Earth",
-      "A View to a Kill",
+      "The Reflex",
+      "Save a Prayer",
       "New Moon on Monday",
-      "The Wild Boys"
+      "The Wild Boys",
+      "A View to a Kill",
+      "Union of the Snake",
+      "Girls on Film",
+      "Planet Earth"
     ]
   },
   { "artist": "Bobbie Gentry", "songs": ["Ode To Billie Joe"] },
   {
     "artist": "Eurythmics",
     "songs": [
-      "Here Comes the Rain Again",
+      "Would I Lie To You?",
       "Miracle of Love",
-      "Love Is A Stranger",
-      "Sisters Are Doin' It for Themselves",
       "Thorn in My Side",
-      "Would I Lie To You?"
+      "Love Is A Stranger",
+      "Here Comes the Rain Again",
+      "Sisters Are Doin' It for Themselves"
     ]
   },
   { "artist": "The Cars", "songs": ["My Best Friend's Girl", "Drive"] },
@@ -1199,18 +1152,18 @@
   {
     "artist": "Billy Joel",
     "songs": [
-      "Piano Man",
-      "It's Still Rock And Roll To Me",
-      "Tell Her About It",
-      "We Didn't Start The Fire",
-      "Uptown Girl",
+      "She's Always a Woman",
       "The Longest Time",
+      "It's Still Rock And Roll To Me",
+      "My Life",
+      "Uptown Girl",
+      "Just the Way You Are",
+      "We Didn't Start The Fire",
+      "Piano Man",
       "Only the Good Die Young",
       "Movin' Out",
-      "Vienna",
-      "She's Always a Woman",
-      "My Life",
-      "Just the Way You Are"
+      "Tell Her About It",
+      "Vienna"
     ]
   },
   { "artist": "Seal", "songs": ["Kiss from a Rose"] },
@@ -1223,21 +1176,21 @@
   { "artist": "Love", "songs": ["Alone Again Or"] },
   {
     "artist": "The Stooges",
-    "songs": ["I Wanna Be Your Dog", "Search and Destroy"]
+    "songs": ["Search and Destroy", "I Wanna Be Your Dog"]
   },
   {
     "artist": "John Mellencamp",
-    "songs": ["Pink Houses", "Small Town", "Jack & Diane", "Hurts So Good"]
+    "songs": ["Jack & Diane", "Small Town", "Pink Houses", "Hurts So Good"]
   },
   { "artist": "The Del-Vikings", "songs": ["Come Go With Me"] },
   { "artist": "Toots & The Maytals", "songs": ["Pressure Drop"] },
   {
     "artist": "Missy Elliott",
-    "songs": ["Get Ur Freak On", "Work It", "Lose Control"]
+    "songs": ["Work It", "Get Ur Freak On", "Lose Control"]
   },
   {
     "artist": "Ultravox",
-    "songs": ["Vienna", "Dancing With Tears In My Eyes"]
+    "songs": ["Dancing With Tears In My Eyes", "Vienna"]
   },
   { "artist": "Chubby Checker", "songs": ["Let's Twist Again"] },
   {
@@ -1256,12 +1209,12 @@
     "artist": "Pet Shop Boys",
     "songs": [
       "West End Girls",
-      "It's A Sin",
-      "Suburbia",
-      "What Have I Done to Deserve This?",
-      "Heart",
       "Opportunities",
-      "Always on My Mind"
+      "It's A Sin",
+      "What Have I Done to Deserve This?",
+      "Suburbia",
+      "Always on My Mind",
+      "Heart"
     ]
   },
   { "artist": "Gloria Gaynor", "songs": ["I Will Survive"] },
@@ -1274,54 +1227,54 @@
   { "artist": "Thin Lizzy", "songs": ["The Boys Are Back In Town"] },
   {
     "artist": "Erasure",
-    "songs": ["Sometimes", "A Little Respect", "Oh l'amour"]
+    "songs": ["Oh l'amour", "Sometimes", "A Little Respect"]
   },
   {
     "artist": "Tears For Fears",
     "songs": [
-      "Everybody Wants To Rule The World",
       "Shout",
-      "Sowing The Seeds Of Love",
-      "Head Over Heels"
+      "Everybody Wants To Rule The World",
+      "Head Over Heels",
+      "Sowing The Seeds Of Love"
     ]
   },
   {
     "artist": "Simple Minds",
     "songs": [
-      "Alive And Kicking",
-      "Don't You Forget About Me",
-      "Waterfront",
       "Promised You A Miracle",
-      "Don't You"
+      "Waterfront",
+      "Don't You",
+      "Don't You Forget About Me",
+      "Alive And Kicking"
     ]
   },
   { "artist": "Nik Kershaw", "songs": ["The Riddle", "Wouldn't It Be Good"] },
-  { "artist": "Frankie Goes To Hollywood", "songs": ["Two Tribes", "Relax"] },
+  { "artist": "Frankie Goes To Hollywood", "songs": ["Relax", "Two Tribes"] },
   {
     "artist": "Billy Idol",
     "songs": [
-      "Rebel Yell",
-      "White Wedding",
       "Eyes Without A Face",
+      "Rebel Yell",
       "Flesh For Fantasy",
-      "Hot In The City",
-      "Dancing With Myself"
+      "Dancing With Myself",
+      "White Wedding",
+      "Hot In The City"
     ]
   },
   { "artist": "Bronski Beat", "songs": ["Smalltown Boy"] },
   { "artist": "Joe Jackson", "songs": ["Steppin' Out"] },
   { "artist": "Madness", "songs": ["Our House"] },
   { "artist": "Yazoo", "songs": ["Only You"] },
-  { "artist": "The J. Geils Band", "songs": ["Centerfold", "Freeze-Frame"] },
-  { "artist": "Roxy Music", "songs": ["More Than This", "Love Is The Drug"] },
+  { "artist": "The J. Geils Band", "songs": ["Freeze-Frame", "Centerfold"] },
+  { "artist": "Roxy Music", "songs": ["Love Is The Drug", "More Than This"] },
   {
     "artist": "The Human League",
-    "songs": ["Love Action", "Don't You Want Me", "Fascination", "Human"]
+    "songs": ["Fascination", "Human", "Don't You Want Me", "Love Action"]
   },
   { "artist": "Visage", "songs": ["Fade To Grey"] },
   {
     "artist": "Kim Wilde",
-    "songs": ["Kids In America", "You Keep Me Hangin On"]
+    "songs": ["You Keep Me Hangin On", "Kids In America"]
   },
   {
     "artist": "Orchestral Manoeuvres In The Dark",
@@ -1331,17 +1284,17 @@
   {
     "artist": "Belinda Carlisle",
     "songs": [
-      "Circle In The Sand",
+      "Heaven Is a Place On Earth",
       "Live Your Life Be Free",
-      "Leave a Light On",
-      "Heaven Is a Place On Earth"
+      "Circle In The Sand",
+      "Leave a Light On"
     ]
   },
   { "artist": "Hothouse Flowers", "songs": ["Don't Go"] },
   { "artist": "Jane Wiedlin", "songs": ["Rush Hour"] },
   {
     "artist": "Billy Ocean",
-    "songs": ["Get Outta My Dreams, Get Into My Car", "Loverboy"]
+    "songs": ["Loverboy", "Get Outta My Dreams, Get Into My Car"]
   },
   { "artist": "Womack & Womack", "songs": ["Teardrops"] },
   { "artist": "Neneh Cherry", "songs": ["Buffalo Stance"] },
@@ -1353,15 +1306,15 @@
   { "artist": "Bobby McFerrin", "songs": ["Don't Worry Be Happy"] },
   {
     "artist": "Fine Young Cannibals",
-    "songs": ["She Drives Me Crazy", "Good Thing"]
+    "songs": ["Good Thing", "She Drives Me Crazy"]
   },
   { "artist": "Paula Abdul", "songs": ["Straight Up"] },
   { "artist": "Steve Miller Band", "songs": ["Abracadabra", "The Joker"] },
-  { "artist": "George Michael", "songs": ["Faith", "Monkey", "Father Figure"] },
+  { "artist": "George Michael", "songs": ["Faith", "Father Figure", "Monkey"] },
   { "artist": "The Escape Club", "songs": ["Wild Wild West"] },
   { "artist": "Swing Out Sister", "songs": ["Breakout"] },
   { "artist": "Bryan Ferry", "songs": ["Slave To Love"] },
-  { "artist": "Laura Branigan", "songs": ["Self Control", "Gloria"] },
+  { "artist": "Laura Branigan", "songs": ["Gloria", "Self Control"] },
   { "artist": "Young MC", "songs": ["Bust A Move", "Know How"] },
   { "artist": "Debbie Harry", "songs": ["I Want That Man"] },
   {
@@ -1371,17 +1324,17 @@
   {
     "artist": "Paul Young",
     "songs": [
-      "Come Back and Stay",
       "Every Time You Go Away",
       "Love of the Common People",
+      "Come Back and Stay",
       "Wherever I Lay My Hat"
     ]
   },
   { "artist": "Godley & Creme", "songs": ["Cry"] },
-  { "artist": "Kenny Loggins", "songs": ["Danger Zone", "Footloose"] },
+  { "artist": "Kenny Loggins", "songs": ["Footloose", "Danger Zone"] },
   {
     "artist": "The Pointer Sisters",
-    "songs": ["Neutron Dance", "Jump", "I'm So Excited"]
+    "songs": ["Jump", "Neutron Dance", "I'm So Excited"]
   },
   { "artist": "Suzanne Vega", "songs": ["Luka"] },
   { "artist": "Falco", "songs": ["Rock Me Amadeus"] },
@@ -1401,7 +1354,7 @@
   { "artist": "Bruce Hornsby", "songs": ["The Way It Is"] },
   {
     "artist": "Howard Jones",
-    "songs": ["Things Can Only Get Better", "What Is Love?"]
+    "songs": ["What Is Love", "Things Can Only Get Better"]
   },
   { "artist": "The Vapors", "songs": ["Turning Japanese"] },
   { "artist": "Boy Meets Girl", "songs": ["Waiting For A Star To Fall"] },
@@ -1409,7 +1362,7 @@
   { "artist": "Cameo", "songs": ["Word Up"] },
   {
     "artist": "Hot Chocolate",
-    "songs": ["You Sexy Thing", "Every 1's a Winner"]
+    "songs": ["Every 1's a Winner", "You Sexy Thing"]
   },
   { "artist": "Kajagoogoo", "songs": ["Too Shy"] },
   { "artist": "Feargal Sharkey", "songs": ["A Good Heart"] },
@@ -1421,13 +1374,13 @@
   { "artist": "Climie Fisher", "songs": ["Love Changes"] },
   {
     "artist": "Robert Palmer",
-    "songs": ["Addicted To Love", "Simply Irresistible"]
+    "songs": ["Simply Irresistible", "Addicted To Love"]
   },
   { "artist": "Yello", "songs": ["Oh Yeah"] },
   { "artist": "Grace Jones", "songs": ["Pull Up To The Bumper"] },
   {
     "artist": "ABC",
-    "songs": ["When Smokey Sings", "Poison Arrow", "All Of My Heart"]
+    "songs": ["All Of My Heart", "When Smokey Sings", "Poison Arrow"]
   },
   { "artist": "The Hooters", "songs": ["And We Danced"] },
   { "artist": "Thomas Dolby", "songs": ["She Blinded Me With Science"] },
@@ -1436,7 +1389,7 @@
   { "artist": "Miami Sound Machine", "songs": ["Dr. Beat", "Falling In Love"] },
   {
     "artist": "The Jacksons",
-    "songs": ["Can You Feel It", "Blame It on the Boogie"]
+    "songs": ["Blame It on the Boogie", "Can You Feel It"]
   },
   {
     "artist": "Bonnie Tyler",
@@ -1449,7 +1402,7 @@
   { "artist": "Bucks Fizz", "songs": ["The Land of Make Believe"] },
   { "artist": "Fairground Attraction", "songs": ["Perfect"] },
   { "artist": "Christopher Cross", "songs": ["Sailing"] },
-  { "artist": "Diana Ross", "songs": ["Upside Down", "I'm Coming Out"] },
+  { "artist": "Diana Ross", "songs": ["I'm Coming Out", "Upside Down"] },
   { "artist": "Eddie Rabbitt", "songs": ["I Love a Rainy Night"] },
   {
     "artist": "Kim Carnes",
@@ -1462,7 +1415,7 @@
   { "artist": "Ray Parker Jr.", "songs": ["Ghostbusters"] },
   {
     "artist": "Bryan Adams",
-    "songs": ["Heaven", "Somebody", "Summer Of '69", "I Do It For You"]
+    "songs": ["I Do It For You", "Heaven", "Summer Of '69", "Somebody"]
   },
   { "artist": "Lionel Richie", "songs": ["Say You, Say Me"] },
   {
@@ -1476,29 +1429,29 @@
   { "artist": "Bill Medley", "songs": ["The Time Of My Life"] },
   {
     "artist": "INXS",
-    "songs": ["Need You Tonight", "This Time", "The One Thing"]
+    "songs": ["Need You Tonight", "The One Thing", "This Time"]
   },
   {
     "artist": "Rick Astley",
-    "songs": ["Never Gonna Give You Up", "Together Forever"]
+    "songs": ["Together Forever", "Never Gonna Give You Up"]
   },
   { "artist": "Poison", "songs": ["Every Rose Has Its Thorn"] },
   {
     "artist": "Roxette",
     "songs": [
-      "The Look",
-      "Listen To Your Heart",
       "Dressed For Success",
+      "Listen To Your Heart",
+      "The Look",
       "It Must Have Been Love"
     ]
   },
   {
     "artist": "Richard Marx",
-    "songs": ["Right Here Waiting", "Hazard", "Endless Summer Nights"]
+    "songs": ["Endless Summer Nights", "Hazard", "Right Here Waiting"]
   },
   {
     "artist": "Crowded House",
-    "songs": ["Don't Dream It's Over", "Something So Strong"]
+    "songs": ["Something So Strong", "Don't Dream It's Over"]
   },
   { "artist": "LISA STANSFIELD", "songs": ["ALL AROUND THE WORLD"] },
   { "artist": "Culture Club", "songs": ["Karma Chameleon"] },
@@ -1507,12 +1460,12 @@
   { "artist": "Missing Persons", "songs": ["Destination Unknown"] },
   {
     "artist": "ICEHOUSE",
-    "songs": ["Electric Blue", "Great Southern Land", "Hey, Little Girl"]
+    "songs": ["Electric Blue", "Hey, Little Girl", "Great Southern Land"]
   },
   { "artist": "The Fixx", "songs": ["One Thing Leads to Another"] },
   { "artist": "DEPECHE MODE", "songs": ["JUST CAN'T GET ENOUGH"] },
   { "artist": "Opus", "songs": ["Live Is Life"] },
-  { "artist": "Alphaville", "songs": ["Big In Japan", "Big in Japan"] },
+  { "artist": "Alphaville", "songs": ["Big in Japan"] },
   { "artist": "The Boomtown Rats", "songs": ["I Don't Like Mondays"] },
   { "artist": "BRYAN FERRY", "songs": ["DON'T STOP THE DANCE"] },
   { "artist": "BIG COUNTRY", "songs": ["IN A BIG COUNTRY"] },
@@ -1523,13 +1476,13 @@
   },
   { "artist": "Murray Head", "songs": ["One Night In Bangkok"] },
   { "artist": "GARY NUMAN", "songs": ["CARS"] },
-  { "artist": "DEVO", "songs": ["WHIP IT", "Whip It"] },
-  { "artist": "The Cult", "songs": ["Wild Flower", "She Sells Sanctuary"] },
+  { "artist": "DEVO", "songs": ["Whip It"] },
+  { "artist": "The Cult", "songs": ["She Sells Sanctuary", "Wild Flower"] },
   { "artist": "Berlin", "songs": ["No More Words"] },
   { "artist": "Adam Ant", "songs": ["Goody Two Shoes"] },
   {
     "artist": "Alison Moyet",
-    "songs": ["Invisible", "All Cried Out", "Is This Love?"]
+    "songs": ["All Cried Out", "Is This Love?", "Invisible"]
   },
   { "artist": "MEN AT WORK", "songs": ["OVERKILL"] },
   { "artist": "Soft Cell", "songs": ["Tainted Love"] },
@@ -1545,7 +1498,7 @@
   },
   {
     "artist": "Loverboy",
-    "songs": ["Turn Me Loose", "Working for the Weekend"]
+    "songs": ["Working for the Weekend", "Turn Me Loose"]
   },
   { "artist": "Quiet Riot", "songs": ["Cum on Feel the Noize"] },
   { "artist": "Noiseworks", "songs": ["Touch"] },
@@ -1554,10 +1507,10 @@
   { "artist": "Steve Perry", "songs": ["Oh Sherrie"] },
   { "artist": "The Fabulous Thunderbirds", "songs": ["Tuff Enuff"] },
   { "artist": "The Alan Parsons Project", "songs": ["Eye In The Sky"] },
-  { "artist": "Go West", "songs": ["Call Me", "We Close Our Eyes"] },
+  { "artist": "Go West", "songs": ["We Close Our Eyes", "Call Me"] },
   {
     "artist": "The Romantics",
-    "songs": ["Talking in Your Sleep", "What I Like About You"]
+    "songs": ["What I Like About You", "Talking in Your Sleep"]
   },
   { "artist": "Thompson Twins", "songs": ["Hold Me Now", "Doctor! Doctor!"] },
   { "artist": "The Proclaimers", "songs": ["I'm Gonna Be"] },
@@ -1565,7 +1518,7 @@
   { "artist": "Mr. Mister", "songs": ["Broken Wings"] },
   {
     "artist": "The Bangles",
-    "songs": ["Walk Like an Egyptian", "Eternal Flame", "Manic Monday"]
+    "songs": ["Eternal Flame", "Manic Monday", "Walk Like an Egyptian"]
   },
   { "artist": "Transvision Vamp", "songs": ["I Want Your Love"] },
   { "artist": "Martika", "songs": ["Toy Soldiers"] },
@@ -1583,10 +1536,10 @@
     "artist": "Midnight Oil",
     "songs": [
       "Beds Are Burning",
-      "Blue Sky Mine",
-      "Forgotten Years",
       "The Dead Heart",
-      "Power And The Passion"
+      "Power And The Passion",
+      "Blue Sky Mine",
+      "Forgotten Years"
     ]
   },
   { "artist": "Chris Isaak", "songs": ["Wicked Game"] },
@@ -1601,14 +1554,14 @@
   { "artist": "Paul McCartney", "songs": ["Say Say Say"] },
   { "artist": "Peter Gabriel", "songs": ["Sledgehammer", "Big Time"] },
   { "artist": "Asia", "songs": ["Heat Of The Moment"] },
-  { "artist": "John Farnham", "songs": ["Age of Reason", "You're the Voice"] },
+  { "artist": "John Farnham", "songs": ["You're the Voice", "Age of Reason"] },
   { "artist": "Europe", "songs": ["The Final Countdown"] },
   {
     "artist": "Olivia Newton-John",
-    "songs": ["Physical", "Hopelessly Devoted To You"]
+    "songs": ["Hopelessly Devoted To You", "Physical"]
   },
   { "artist": "Black Box", "songs": ["Ride on Time"] },
-  { "artist": "Bobby Brown", "songs": ["My Prerogative", "Every Little Step"] },
+  { "artist": "Bobby Brown", "songs": ["Every Little Step", "My Prerogative"] },
   { "artist": "The Housemartins", "songs": ["Caravan Of Love"] },
   { "artist": "Robbie Nevil", "songs": ["C'est La Vie"] },
   { "artist": "Alannah Myles", "songs": ["Black Velvet"] },
@@ -1638,7 +1591,7 @@
   { "artist": "The Outfield", "songs": ["Your Love"] },
   { "artist": "Cher", "songs": ["If I Could Turn Back Time", "Believe"] },
   { "artist": "The Weather Girls", "songs": ["It's Raining Men"] },
-  { "artist": "Inner Circle", "songs": ["Bad Boys", "Sweat"] },
+  { "artist": "Inner Circle", "songs": ["Sweat", "Bad Boys"] },
   { "artist": "Kenny Rogers", "songs": ["Islands In The Stream"] },
   { "artist": "Eric Carmen", "songs": ["Hungry Eyes"] },
   { "artist": "Mike Oldfield", "songs": ["Moonlight Shadow"] },
@@ -1653,26 +1606,26 @@
   { "artist": "Meat Loaf", "songs": ["Paradise By the Dashboard Light"] },
   {
     "artist": "AC/DC",
-    "songs": ["Highway to Hell", "T.N.T.", "Thunderstruck"]
+    "songs": ["T.N.T.", "Highway to Hell", "Thunderstruck"]
   },
   {
     "artist": "KISS",
     "songs": [
       "I Was Made For Lovin' You",
-      "Rock And Roll All Nite",
-      "Detroit Rock City"
+      "Detroit Rock City",
+      "Rock And Roll All Nite"
     ]
   },
   {
     "artist": "Electric Light Orchestra",
-    "songs": ["Mr. Blue Sky", "Don't Bring Me Down"]
+    "songs": ["Don't Bring Me Down", "Mr. Blue Sky"]
   },
   { "artist": "Boston", "songs": ["More Than a Feeling"] },
   { "artist": "Don McLean", "songs": ["American Pie"] },
   { "artist": "Kansas", "songs": ["Dust in the Wind"] },
   {
     "artist": "John Travolta",
-    "songs": ["You're The One That I Want", "Summer Nights"]
+    "songs": ["Summer Nights", "You're The One That I Want"]
   },
   { "artist": "Stealers Wheel", "songs": ["Stuck In The Middle With You"] },
   { "artist": "Redbone", "songs": ["Come and Get Your Love"] },
@@ -1704,40 +1657,40 @@
   { "artist": "Spice Girls", "songs": ["Wannabe"] },
   {
     "artist": "Shania Twain",
-    "songs": ["Man! I Feel Like A Woman!", "You're Still The One"]
+    "songs": ["You're Still The One", "Man! I Feel Like A Woman!"]
   },
   { "artist": "2Pac", "songs": ["California Love", "Changes"] },
   { "artist": "Dr. Dre", "songs": ["Still D.R.E.", "The Next Episode"] },
   {
     "artist": "Red Hot Chili Peppers",
-    "songs": ["Californication", "Otherside", "Scar Tissue", "Give It Away"]
+    "songs": ["Give It Away", "Otherside", "Scar Tissue", "Californication"]
   },
-  { "artist": "The Cranberries", "songs": ["Zombie", "Linger"] },
+  { "artist": "The Cranberries", "songs": ["Linger", "Zombie"] },
   {
     "artist": "blink-182",
-    "songs": ["All The Small Things", "What's My Age Again?"]
+    "songs": ["What's My Age Again?", "All The Small Things"]
   },
   {
     "artist": "Green Day",
     "songs": [
-      "Basket Case",
+      "Boulevard of Broken Dreams",
       "Good Riddance",
-      "When I Come Around",
-      "Boulevard of Broken Dreams"
+      "Basket Case",
+      "When I Come Around"
     ]
   },
   { "artist": "Smash Mouth", "songs": ["All Star"] },
-  { "artist": "TLC", "songs": ["No Scrubs", "Waterfalls"] },
+  { "artist": "TLC", "songs": ["Waterfalls", "No Scrubs"] },
   {
     "artist": "The Offspring",
-    "songs": ["The Kids Aren't Alright", "Self Esteem"]
+    "songs": ["Self Esteem", "The Kids Aren't Alright"]
   },
   { "artist": "Shaggy", "songs": ["It Wasn't Me"] },
   { "artist": "Sublime", "songs": ["Santeria"] },
   { "artist": "Counting Crows", "songs": ["Mr. Jones"] },
   { "artist": "Gala", "songs": ["Freed From Desire"] },
   { "artist": "Blackstreet", "songs": ["No Diggity"] },
-  { "artist": "Metallica", "songs": ["Enter Sandman", "Nothing Else Matters"] },
+  { "artist": "Metallica", "songs": ["Nothing Else Matters", "Enter Sandman"] },
   {
     "artist": "Fugees",
     "songs": ["Killing Me Softly With His Song", "Ready or Not"]
@@ -1747,15 +1700,15 @@
   { "artist": "Foo Fighters", "songs": ["Learn to Fly"] },
   { "artist": "No Doubt", "songs": ["Don't Speak"] },
   { "artist": "Mazzy Star", "songs": ["Fade Into You"] },
-  { "artist": "Pearl Jam", "songs": ["Even Flow", "Alive"] },
+  { "artist": "Pearl Jam", "songs": ["Alive", "Even Flow"] },
   { "artist": "Blind Melon", "songs": ["No Rain"] },
   { "artist": "Semisonic", "songs": ["Closing Time"] },
   {
     "artist": "Lenny Kravitz",
     "songs": [
+      "It Ain't Over 'Til It's Over",
       "Are You Gonna Go My Way",
-      "Fly Away",
-      "It Ain't Over 'Til It's Over"
+      "Fly Away"
     ]
   },
   { "artist": "Mark Morrison", "songs": ["Return of the Mack"] },
@@ -1765,10 +1718,10 @@
     "artist": "Daft Punk",
     "songs": [
       "Around the World",
-      "One More Time",
       "Harder, Better, Faster, Stronger",
+      "Get Lucky",
       "Digital Love",
-      "Get Lucky"
+      "One More Time"
     ]
   },
   { "artist": "New Radicals", "songs": ["You Get What You Give"] },
@@ -1801,7 +1754,7 @@
   { "artist": "K-Ci & JoJo", "songs": ["All My Life"] },
   { "artist": "Boyz II Men", "songs": ["End Of The Road"] },
   { "artist": "Matchbox Twenty", "songs": ["Push"] },
-  { "artist": "Sean Paul", "songs": ["Get Busy", "Temperature", "No Lie"] },
+  { "artist": "Sean Paul", "songs": ["Get Busy", "No Lie", "Temperature"] },
   { "artist": "David Guetta", "songs": ["When Love Takes Over"] },
   { "artist": "Cascada", "songs": ["Everytime We Touch"] },
   { "artist": "Kesha", "songs": ["TiK ToK"] },
@@ -1809,11 +1762,11 @@
   {
     "artist": "50 Cent",
     "songs": [
+      "Disco Inferno",
+      "P.I.M.P.",
       "In Da Club",
       "Candy Shop",
-      "Just A Lil Bit",
-      "Disco Inferno",
-      "P.I.M.P."
+      "Just A Lil Bit"
     ]
   },
   { "artist": "Kevin Lyttle", "songs": ["Turn Me On"] },
@@ -1824,7 +1777,7 @@
   { "artist": "The Game", "songs": ["Hate It Or Love It"] },
   { "artist": "Nelly Furtado", "songs": ["Maneater"] },
   { "artist": "Estelle", "songs": ["American Boy"] },
-  { "artist": "Snoop Dogg", "songs": ["Drop It Like It's Hot", "Beautiful"] },
+  { "artist": "Snoop Dogg", "songs": ["Beautiful", "Drop It Like It's Hot"] },
   { "artist": "Don Omar", "songs": ["Salió El Sol"] },
   { "artist": "Bacilos", "songs": ["Caraluna"] },
   { "artist": "Nelly", "songs": ["Ride Wit Me"] },
@@ -1833,7 +1786,7 @@
   { "artist": "Ne-Yo", "songs": ["Because Of You"] },
   { "artist": "Eric Prydz", "songs": ["Call on Me"] },
   { "artist": "Fat Joe", "songs": ["What's Luv?"] },
-  { "artist": "Juanes", "songs": ["La Camisa Negra", "A Dios Le Pido"] },
+  { "artist": "Juanes", "songs": ["A Dios Le Pido", "La Camisa Negra"] },
   { "artist": "Fergie", "songs": ["Glamorous"] },
   { "artist": "La Roux", "songs": ["Bulletproof"] },
   { "artist": "Chamillionaire", "songs": ["Ridin'"] },
@@ -1847,10 +1800,10 @@
     "artist": "Pitbull",
     "songs": [
       "Hotel Room Service",
-      "I Know You Want Me",
-      "Give Me Everything",
       "Timber",
-      "Time of Our Lives"
+      "I Know You Want Me",
+      "Time of Our Lives",
+      "Give Me Everything"
     ]
   },
   { "artist": "Crazy Frog", "songs": ["Axel F"] },
@@ -1877,29 +1830,29 @@
   {
     "artist": "Ed Sheeran",
     "songs": [
+      "Happier",
       "Thinking out Loud",
       "Perfect",
       "Shape of You",
-      "Photograph",
-      "Happier"
+      "Photograph"
     ]
   },
   {
     "artist": "Avicii",
-    "songs": ["Wake Me Up", "The Nights", "Waiting For Love"]
+    "songs": ["The Nights", "Waiting For Love", "Wake Me Up"]
   },
   {
     "artist": "Billie Eilish",
     "songs": [
-      "idontwannabeyouanymore",
-      "lovely",
       "bad guy",
-      "when the party's over"
+      "lovely",
+      "when the party's over",
+      "idontwannabeyouanymore"
     ]
   },
   {
     "artist": "Sam Smith",
-    "songs": ["Stay With Me", "I'm Not The Only One", "Lay Me Down"]
+    "songs": ["Lay Me Down", "I'm Not The Only One", "Stay With Me"]
   },
   { "artist": "Ellie Goulding", "songs": ["Love Me Like You Do", "Your Song"] },
   { "artist": "Khalid", "songs": ["Young Dumb & Broke"] },
@@ -1907,36 +1860,36 @@
     "artist": "Post Malone",
     "songs": [
       "rockstar",
-      "Circles",
       "Congratulations",
       "Better Now",
-      "Sunflower"
+      "Sunflower",
+      "Circles"
     ]
   },
   {
     "artist": "Calvin Harris",
     "songs": [
-      "One Kiss",
-      "Summer",
       "This Is What You Came For",
       "Feel So Close",
-      "Feels"
+      "Feels",
+      "Summer",
+      "One Kiss"
     ]
   },
   {
     "artist": "The Neighbourhood",
-    "songs": ["Sweater Weather", "Daddy Issues"]
+    "songs": ["Daddy Issues", "Sweater Weather"]
   },
   { "artist": "Tom Odell", "songs": ["Another Love"] },
   {
     "artist": "Imagine Dragons",
     "songs": [
-      "Believer",
+      "Bad Liar",
       "Thunder",
       "Natural",
-      "Whatever It Takes",
-      "Bad Liar",
-      "Demons"
+      "Demons",
+      "Believer",
+      "Whatever It Takes"
     ]
   },
   { "artist": "J. Cole", "songs": ["No Role Modelz"] },
@@ -1948,14 +1901,14 @@
   {
     "artist": "One Direction",
     "songs": [
-      "What Makes You Beautiful",
+      "Drag Me Down",
       "Story of My Life",
       "Steal My Girl",
-      "Drag Me Down"
+      "What Makes You Beautiful"
     ]
   },
-  { "artist": "Travis Scott", "songs": ["goosebumps", "SICKO MODE"] },
-  { "artist": "XXXTENTACION", "songs": ["Jocelyn Flores", "SAD!"] },
+  { "artist": "Travis Scott", "songs": ["SICKO MODE", "goosebumps"] },
+  { "artist": "XXXTENTACION", "songs": ["SAD!", "Jocelyn Flores"] },
   { "artist": "Foster The People", "songs": ["Pumped Up Kicks"] },
   { "artist": "WALK THE MOON", "songs": ["Shut Up and Dance"] },
   { "artist": "Drake", "songs": ["God's Plan"] },
@@ -1974,7 +1927,7 @@
   { "artist": "Charlie Puth", "songs": ["Attention"] },
   {
     "artist": "Lana Del Rey",
-    "songs": ["Young And Beautiful", "Doin' Time", "Brooklyn Baby"]
+    "songs": ["Young And Beautiful", "Brooklyn Baby", "Doin' Time"]
   },
   { "artist": "Gym Class Heroes", "songs": ["Stereo Hearts"] },
   { "artist": "Wiz Khalifa", "songs": ["See You Again"] },
@@ -1983,7 +1936,7 @@
   { "artist": "Anne-Marie", "songs": ["2002"] },
   { "artist": "Pharrell Williams", "songs": ["Happy"] },
   { "artist": "Kodaline", "songs": ["All I Want"] },
-  { "artist": "Dua Lipa", "songs": ["New Rules", "Don't Start Now", "IDGAF"] },
+  { "artist": "Dua Lipa", "songs": ["Don't Start Now", "IDGAF", "New Rules"] },
   { "artist": "Camila Cabello", "songs": ["Havana"] },
   { "artist": "Jonas Brothers", "songs": ["Sucker"] },
   { "artist": "Ava Max", "songs": ["Sweet but Psycho"] },
