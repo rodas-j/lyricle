@@ -13,8 +13,7 @@ export const shareStatus = (
   isDarkMode: boolean,
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void,
-  song: string,
-  artist: string
+  song: string
 ) => {
   // To add ⬛/⬜ at the end if song solved in under MAX_CHALLENGES guesses
   while (guesses.length < MAX_CHALLENGES) {
@@ -22,14 +21,13 @@ export const shareStatus = (
   }
 
   const textToShare =
-    `#Lyricle #${artist.replaceAll(" ", "")} #${solutionIndex}\n\n` +
+    `#Lyricle #${solutionIndex}\n\n` +
     generateEmojiGrid(
       guesses,
       getEmojiTiles(isDarkMode, isHighContrastMode),
       song
     ) +
-    `\n\n#LyricleArtists` +
-    `\n\nhttps://decades.lyricle.app`;
+    `\n\nhttps://lyricle.app`;
 
   const shareData = { text: textToShare };
 

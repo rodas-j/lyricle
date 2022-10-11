@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Solution } from "../../../pages/[name]";
+import { Solution } from "../../../pages/";
 
 interface Props {
   solution: Solution;

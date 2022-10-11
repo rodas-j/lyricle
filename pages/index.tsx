@@ -1,37 +1,97 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
-import { GAME_TITLE } from "../src/constants/strings";
+import { useState, useEffect } from "react";
+import { LyricsLine } from "../src/components/lyrics/LyricsLine";
+import { SearchSong } from "../src/components/input/SearchSong";
+import { ProgressBar } from "../src/components/progressbar/ProgressBar";
+
 import {
+  CORRECT_SONG_MESSAGE,
+  GAME_COPIED_MESSAGE,
+} from "../src/constants/strings";
+import {
+  MAX_CHALLENGES,
+  REVEAL_TIME_MS,
+  WELCOME_INFO_MODAL_MS,
+} from "../src/constants/settings";
+
+import { addStatsForCompletedGame, loadStats } from "../src/lib/stats";
+import {
+  loadGameStateFromLocalStorage,
+  saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
   getUUID,
   setUUID,
 } from "../src/lib/localStorage";
-
-import { AlertContainer } from "../src/components/alerts/AlertContainer";
 import { Navbar } from "../src/components/navbar/Navbar";
 import { useAlert } from "../src/context/AlertContext";
-import Decades from "../src/components/links/Decades";
+import getValidGuesses, { listArtists } from "./api";
 import { InfoModal } from "../src/components/modals/InfoModal";
 import { HowToPlayModal } from "../src/components/modals/HowToPlayModal";
 import { SettingsModal } from "../src/components/modals/SettingsModal";
-import React from "react";
-import { WELCOME_INFO_MODAL_MS } from "../src/constants/settings";
-import { JoinOurCommunities } from "../src/components/banners/Community";
+import { StatsModal } from "../src/components/modals/StatsModal";
+import { ResultsModal } from "../src/components/modals/ResultsModal";
+import { useGa } from "../src/context/GAContext";
+import Announcement from "../src/components/banners/Announcement";
 
-type Props = {
-  showHome?: boolean;
+export type Solution = {
+  id: number;
+  title: string;
+  artist: string;
+  lyrics: string[];
+  songLink: string;
+  artworkLink: string;
+  song: string;
 };
 
-function App({ showHome = true }: Props) {
+export type ValidGuess = {
+  artist: string;
+  songs: string[];
+};
+
+const LyricleArtist = (data: {
+  solution: Solution;
+  validGuesses: ValidGuess[];
+}) => {
+  const { sendEvent } = useGa();
+
+  const router = useRouter();
+  const artistGameState = "gameState".concat(router.query.name as string);
+  const artistGameStats = "gameStats".concat(router.query.name as string);
+  const [solution, setSolution] = useState<Solution>();
+  useEffect(() => {
+    let artist = router.query.name as string;
+    const { solutionIndex, tomorrow } = getSongOfTheDay();
+    fetch(`/api/main/?artist=${artist}&ind=${solutionIndex}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSolution(data as Solution);
+      });
+  }, []);
+
+  let validGuesses = data.validGuesses as ValidGuess[];
+
+  const mapArtistToSongs: string[] = [];
+
+  validGuesses.forEach(({ artist, songs }) => {
+    for (let song of songs) {
+      mapArtistToSongs.push(`${artist} ─ ${song}`);
+    }
+  });
+
+  let lyrics = solution?.lyrics;
+
+  let songSolution = `${solution?.artist} ─ ${solution?.title}`;
+
+  let gameTitle = "Lyricle";
+
   let prefersDarkMode = true;
   let prefersReducedMotion = true;
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -62,8 +122,36 @@ function App({ showHome = true }: Props) {
     getStoredIsHighContrastMode()
   );
 
+  const [stats, setStats] = useState(() => loadStats(artistGameStats));
+
+  const [isGameWon, setIsGameWon] = useState(false);
+  const [isGameLost, setIsGameLost] = useState(false);
+  const [guesses, setGuesses] = useState<string[]>([]); //() => {
+  // const loaded = loadGameStateFromLocalStorage(artistGameState);
+  // if (loaded?.song !== songSolution) {
+  //   return [];
+  // }
+  // const gameWasWon = loaded.guesses.includes(songSolution);
+  // if (gameWasWon) {
+  //   setIsGameWon(true);
+  // }
+
+  // if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+  //   setIsGameLost(true);
+  //   showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+  //     persist: false,
+  //   });
+  // }
+
+  // return loaded.guesses;
+  // });
+
+  const [sliceLyrics, setSliceLyrics] = useState(
+    guesses.length ? guesses.length + 1 : 1
+  );
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [, setIsStatsModalOpen] = useState(false);
+  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
+  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false);
 
@@ -84,14 +172,91 @@ function App({ showHome = true }: Props) {
       isReducedMotion ? "reduce" : "no-preference"
     );
   };
-  useEffect(() => {
-    if (!getUUID()) {
-      setTimeout(() => {
-        setIsHowToPlayModalOpen(true);
-        setUUID();
-      }, WELCOME_INFO_MODAL_MS);
+
+  const revealNextLine = () => {
+    setSliceLyrics(sliceLyrics + 1);
+  };
+
+  const revealAllLines = () => {
+    setSliceLyrics(lyrics?.length as number);
+  };
+
+  const isAValidGuess = (query: string) => {
+    return mapArtistToSongs.find((song) => song === query) ? true : false;
+  };
+
+  const onSubmit = (e: {
+    preventDefault: () => void;
+    target: { search: { value: string } };
+  }) => {
+    e.preventDefault();
+    sendEvent(
+      "submit",
+      "game",
+      e.target.search.value,
+      router.query.name + ".submit"
+    );
+    if (isGameWon || isGameLost) {
+      return;
     }
-  }, []);
+
+    if (!isAValidGuess(e.target.search.value)) {
+      return;
+    }
+
+    setGuesses([...guesses, e.target.search.value]);
+
+    const isWinningSong = (song: string) => {
+      return songSolution === song;
+    };
+
+    if (isWinningSong(e.target.search.value)) {
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length)
+      );
+
+      setIsGameWon(true);
+      sendEvent("win", "game", songSolution, guesses.length + 1);
+      return;
+    } else {
+      revealNextLine();
+      e.target.search.value = "";
+    }
+    if (guesses.length === MAX_CHALLENGES - 1) {
+      setIsGameLost(true);
+
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length)
+      );
+      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
+
+      showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+        persist: false,
+      });
+
+      return;
+    }
+  };
+
+  const onSkip = () => {
+    if (isGameWon || isGameLost) {
+      return;
+    }
+    sendEvent("skip", "game", 1, router.query.name + ".skip");
+    setGuesses([...guesses, "skip"]);
+    revealNextLine();
+
+    if (guesses.length === MAX_CHALLENGES - 1) {
+      setStats(
+        addStatsForCompletedGame(artistGameStats, stats, guesses.length + 1)
+      );
+      setIsGameLost(true);
+      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
+      showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+        persist: false,
+      });
+    }
+  };
 
   useEffect(() => {
     if (isDarkMode) {
@@ -113,35 +278,104 @@ function App({ showHome = true }: Props) {
     }
   }, [isDarkMode, isHighContrastMode, isReducedMotionMode]);
 
+  useEffect(() => {
+    if (!getUUID()) {
+      setTimeout(() => {
+        setIsHowToPlayModalOpen(true);
+        setUUID();
+      }, WELCOME_INFO_MODAL_MS);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (songSolution) {
+      let loaded = loadGameStateFromLocalStorage(artistGameState);
+
+      let gameWasWon = loaded?.guesses.includes(songSolution);
+      if (gameWasWon) {
+        setIsGameWon(true);
+      }
+
+      if (loaded?.song !== songSolution) {
+        setGuesses([]);
+      } else {
+        setGuesses(loaded.guesses);
+
+        if (loaded?.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+          setIsGameLost(true);
+          showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
+            persist: false,
+          });
+        }
+      }
+    }
+  }, [songSolution]);
+
+  useEffect(() => {
+    guesses.length
+      ? saveGameStateToLocalStorage(artistGameState, {
+          guesses,
+          song: songSolution,
+        })
+      : null;
+    setSliceLyrics(guesses.length ? guesses.length + 1 : 1);
+  }, [artistGameState, guesses, songSolution]);
+
+  useEffect(() => {
+    if (isGameWon) {
+      const delayMs = REVEAL_TIME_MS;
+
+      setIsStatsModalOpen(true);
+    }
+
+    if (isGameLost) {
+      setTimeout(() => {
+        setIsStatsModalOpen(true);
+      }, REVEAL_TIME_MS);
+    }
+
+    if (isGameWon || isGameLost) {
+      revealAllLines();
+    }
+  }, [isGameWon, isGameLost, showSuccessAlert]);
+  let gameDescription = `Guess the song from the Lyrics!`;
+  let gameKeywords = `guess, song, lyrics, music, game, quiz`;
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="game, lyric guessing, music, lyricle" />
-        <meta
-          name="description"
-          content="Guess the Decade's Song from Their Lyrics."
-        />
-        <meta property="og:title" content={GAME_TITLE} />
-        <meta
-          property="og:image"
-          content="https://decades.lyricle.app/og.png"
-        />
-        <title>{GAME_TITLE}</title>
+        <title>{gameTitle}</title>
+        <meta name="description" content={gameDescription} />
+        <meta property="og:title" content={gameTitle} />
+        <meta name="keywords" content={gameKeywords} />
       </Head>
       <div className="absolute inset-0 flex flex-col">
+        <Announcement />
         <Navbar
-          gameTitle={GAME_TITLE}
+          gameTitle={gameTitle as string}
           setIsInfoModalOpen={setIsInfoModalOpen}
           setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
           setIsStatsModalOpen={setIsStatsModalOpen}
           setIsSettingsModalOpen={setIsSettingsModalOpen}
-          shouldHideStatsModalButton={showHome}
+          shouldHideStatsModalButton={false}
         />
         <div className="pt-2 px-2 pb-2 md:pb-8 w-full max-w-[800px] mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-          <JoinOurCommunities />
-          <Decades />
-
+          <div className="pb-6 grow">
+            <LyricsLine
+              solution={solution as Solution}
+              sliceLyrics={sliceLyrics}
+            />
+          </div>
+          <ProgressBar song={songSolution as string} guesses={guesses} />
+          <SearchSong
+            solution={solution as Solution}
+            validGuesses={validGuesses}
+            isAValidGuess={isAValidGuess}
+            isGameWon={isGameWon}
+            isGameLost={isGameLost}
+            guesses={guesses}
+            handleSubmit={(e: any) => onSubmit(e)}
+            handleSkip={onSkip}
+          />
           <InfoModal
             isOpen={isInfoModalOpen}
             handleClose={() => setIsInfoModalOpen(false)}
@@ -160,12 +394,78 @@ function App({ showHome = true }: Props) {
             isReducedMotionMode={isReducedMotionMode}
             handleReducedMotionMode={handleReducedMotionMode}
           />
-
-          <AlertContainer />
+          <StatsModal
+            solution={solution as Solution}
+            isHomePage={false}
+            isOpen={isStatsModalOpen}
+            handleClose={() => setIsStatsModalOpen(false)}
+            guesses={guesses}
+            gameStats={stats}
+            isGameLost={isGameLost}
+            isGameWon={isGameWon}
+            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+            isDarkMode={isDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            numberOfGuessesMade={guesses.length}
+          />
+          <ResultsModal
+            solution={solution as Solution}
+            isHomePage={false}
+            isOpen={isResultsModalOpen}
+            handleClose={() => setIsResultsModalOpen(false)}
+            guesses={guesses}
+            gameStats={stats}
+            isGameLost={isGameLost}
+            isGameWon={isGameWon}
+            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+            isDarkMode={isDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            numberOfGuessesMade={guesses.length}
+          />
         </div>
       </div>
     </>
   );
+};
+
+export const getSongOfTheDay = () => {
+  const epochMs = new Date("April 24, 2022").valueOf();
+  const now = Date.now();
+  const msInDay = 86400000;
+  const index = Math.floor((now - epochMs) / msInDay);
+  const nextDay = (index + 1) * msInDay + epochMs;
+
+  return {
+    solutionIndex: index,
+    tomorrow: nextDay,
+  };
+};
+
+// export async function getStaticPaths() {
+//   let dirList = await listArtists();
+
+//   return {
+//     paths: dirList.map((name) => ({
+//       params: {
+//         name: name,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// }
+
+// type Params = {
+//   name: string;
+// };
+
+export async function getStaticProps() {
+  let validGuesses = (await getValidGuesses()) as unknown as ValidGuess[];
+
+  return {
+    props: {
+      validGuesses,
+    },
+  };
 }
 
-export default App;
+export default LyricleArtist;

@@ -12,7 +12,7 @@ import {
   NEW_SONG_TEXT,
   SHARE_TEXT,
 } from "../../constants/strings";
-import { Solution } from "../../../pages/[name]";
+import { Solution } from "../../../pages/";
 import React, { useEffect } from "react";
 import { useGa } from "../../context/GAContext";
 import { SongWidget } from "../songwidget/SongWidget";
@@ -20,7 +20,6 @@ import { useAlert } from "../../context/AlertContext";
 
 type Props = {
   solution: Solution;
-  artist: string;
   isHomePage: boolean;
   isOpen: boolean;
   handleClose: () => void;
@@ -47,7 +46,6 @@ export const StatsModal = ({
   isDarkMode,
   isHighContrastMode,
   numberOfGuessesMade,
-  artist,
 }: Props) => {
   const { showSuccess: showSuccessAlert } = useAlert();
   const { sendEvent } = useGa();
@@ -119,8 +117,7 @@ export const StatsModal = ({
                     isDarkMode,
                     isHighContrastMode,
                     handleShareToClipboard,
-                    songSolution,
-                    artist
+                    songSolution
                   );
                   sendEvent(
                     "share",

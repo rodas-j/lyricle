@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 // import VALID_GUESSES from '../../constants/all_validGuesses.json'
-import { Solution, ValidGuess } from "../../../pages/[name]";
+import { Solution, ValidGuess } from "../../../pages/";
 import { ChevronDoubleRightIcon, XIcon } from "@heroicons/react/outline";
 
 type SearchSongProps = {

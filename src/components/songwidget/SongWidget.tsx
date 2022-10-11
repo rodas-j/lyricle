@@ -5,7 +5,7 @@ import { useAlert } from "../../context/AlertContext";
 import { LISTEN_TO_TITLE, REGION_NOT_SUPPORTED } from "../../constants/strings";
 import ReactPlayer from "react-player/soundcloud";
 import { PauseIcon, PlayIcon } from "@heroicons/react/solid";
-import { Solution } from "../../../pages/[name]";
+import { Solution } from "../../../pages/";
 import { useGa } from "../../context/GAContext";
 
 type Props = {

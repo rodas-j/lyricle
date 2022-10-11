@@ -36,7 +36,7 @@ export const Navbar = ({
             <Link href="/">
               <a className=" bg-slate-200 p-1.5 text-black rounded-md font-bold mr-3 cursor-pointer dark:stroke-white">
                 {" "}
-                Decades
+                More Games
               </a>
             </Link>
           )}

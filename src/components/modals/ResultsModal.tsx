@@ -13,7 +13,7 @@ import {
   SHARE_TEXT,
   WIN_MESSAGES,
 } from "../../constants/strings";
-import { Solution } from "../../../pages/[name]";
+import { Solution } from "../../../pages/";
 import { SongWidget } from "../songwidget/SongWidget";
 import React from "react";
 
