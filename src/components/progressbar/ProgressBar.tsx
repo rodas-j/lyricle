@@ -21,6 +21,8 @@ export const ProgressBar = ({ song, guesses }: Props) => {
                 guesses[index]
                   ? guesses[index] === song // Correct guess
                     ? "correct"
+                    : guesses[index].split("─")[0] === song.split("─")[0] // Correct artist, wrong song
+                    ? "close"
                     : guesses[index] === "skip" // Skipped
                     ? "skipped"
                     : "wrong" //incorrect guess
