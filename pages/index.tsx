@@ -227,7 +227,7 @@ const LyricleArtist = (data: {
       setStats(
         addStatsForCompletedGame(artistGameStats, stats, guesses.length)
       );
-      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
+      sendEvent("lose", "game", songSolution, "Lyricle.lose");
 
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
@@ -241,7 +241,7 @@ const LyricleArtist = (data: {
     if (isGameWon || isGameLost) {
       return;
     }
-    sendEvent("skip", "game", 1, router.query.name + ".skip");
+    sendEvent("skip", "game", 1, "Lyricle.skip");
     setGuesses([...guesses, "skip"]);
     revealNextLine();
 
@@ -250,7 +250,7 @@ const LyricleArtist = (data: {
         addStatsForCompletedGame(artistGameStats, stats, guesses.length + 1)
       );
       setIsGameLost(true);
-      sendEvent("lose", "game", songSolution, router.query.name + ".lose");
+      sendEvent("lose", "game", songSolution, "Lyricle.lose");
       showErrorAlert(CORRECT_SONG_MESSAGE(songSolution), {
         persist: false,
       });
