@@ -343,9 +343,25 @@ const LyricleArtist = (data: {
     <>
       <Head>
         <title>{gameTitle}</title>
+
+        <meta charSet="utf-8" />
+        <link rel="icon" href="https://www.lyricle.app/Lyricle.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
         <meta name="description" content={gameDescription} />
-        <meta property="og:title" content={gameTitle} />
+        <meta name="thumbnail" content="https://www.lyricle.app/og.png" />
         <meta name="keywords" content={gameKeywords} />
+
+        <meta property="og:title" content={gameTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.lyricle.app" />
+        <meta property="og:description" content={gameDescription} />
+        <meta property="og:image" content="https://www.lyricle.app/og.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={gameTitle} />
+        <meta name="twitter:description" content={gameDescription} />
+        <meta name="twitter:image" content="https://www.lyricle.app/og.png" />
       </Head>
       <div className="absolute inset-0 flex flex-col">
         <Announcement />
