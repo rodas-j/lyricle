@@ -40,7 +40,7 @@ export default function Layout({ children }: Props) {
   }, []);
 
   return (
-    <>
+    <div className="absolute inset-0 flex flex-col h-screen">
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-69K8HLVWRE"
         strategy="afterInteractive"
@@ -62,6 +62,6 @@ export default function Layout({ children }: Props) {
           }}
         />
       ) : null}
-    </>
+    </div>
   );
 }
