@@ -44,11 +44,17 @@ export const SearchSong = ({
           .filter((song) =>
             song
               .replaceAll("'", "")
+              .replaceAll(",", "")
               .split("─")
               .join("")
               .replace("  ", " ")
               .toLowerCase()
-              .includes(currentGuess.toLowerCase().replaceAll("'", ""))
+              .includes(
+                currentGuess
+                  .toLowerCase()
+                  .replaceAll("'", "")
+                  .replaceAll(",", "")
+              )
           )
           .slice(0, 5)
       );
