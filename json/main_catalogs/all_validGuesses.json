@@ -1,8 +1,5 @@
 [
-  {
-    "artist": "A.R. Rahman",
-    "songs": ["Jai Ho! (You Are My Destiny)"]
-  },
+  { "artist": "A.R. Rahman", "songs": ["Jai Ho! (You Are My Destiny)"] },
   {
     "artist": "Adele",
     "songs": [
@@ -71,15 +68,9 @@
       "Shallow"
     ]
   },
-  {
-    "artist": "fun.",
-    "songs": ["We Are Young"]
-  },
+  { "artist": "fun.", "songs": ["We Are Young"] },
   { "artist": "Neon Trees", "songs": ["Animal"] },
-  {
-    "artist": "Mark Ronson",
-    "songs": ["Valerie", "Uptown Funk"]
-  },
+  { "artist": "Mark Ronson", "songs": ["Valerie", "Uptown Funk"] },
   { "artist": "Leona Lewis", "songs": ["Bleeding Love"] },
   { "artist": "Taio Cruz", "songs": ["Dynamite"] },
   {
@@ -90,10 +81,7 @@
   { "artist": "Charli XCX", "songs": ["Boom Clap"] },
   { "artist": "Vance Joy", "songs": ["Riptide"] },
   { "artist": "Passenger", "songs": ["Let Her Go"] },
-  {
-    "artist": "The Script",
-    "songs": ["Hall of Fame"]
-  },
+  { "artist": "The Script", "songs": ["Hall of Fame"] },
   {
     "artist": "Rihanna",
     "songs": [
@@ -318,7 +306,13 @@
   { "artist": "K'NAAN", "songs": ["Bang Bang"] },
   {
     "artist": "Katy Perry",
-    "songs": ["Teenage Dream", "Firework", "Hot N Cold", "I Kissed A Girl"]
+    "songs": [
+      "Teenage Dream",
+      "Firework",
+      "Hot N Cold",
+      "I Kissed A Girl",
+      "Roar"
+    ]
   },
   {
     "artist": "Maroon 5",
@@ -553,7 +547,8 @@
       "Genie In a Bottle",
       "Lady Marmalade",
       "Come on over Baby",
-      "Dirrty"
+      "Dirrty",
+      "Reflection"
     ]
   },
   { "artist": "Nickelback", "songs": ["How You Remind Me"] },
@@ -1766,7 +1761,8 @@
       "P.I.M.P.",
       "In Da Club",
       "Candy Shop",
-      "Just A Lil Bit"
+      "Just A Lil Bit",
+      "21 Questions"
     ]
   },
   { "artist": "Kevin Lyttle", "songs": ["Turn Me On"] },
@@ -1962,5 +1958,8 @@
   { "artist": "Luke Combs", "songs": ["Forever After All"] },
   { "artist": "All Saints", "songs": ["Never Ever"] },
   { "artist": "Train", "songs": ["Hey, Soul Sister"] },
-  { "artist": "Owl City", "songs": ["Fireflies"] }
+  { "artist": "Owl City", "songs": ["Fireflies"] },
+  { "artist": "The Band Perry", "songs": ["If I Die Young"] },
+  { "artist": "Wolf Alice", "songs": ["Don't Delete The Kisses"] },
+  { "artist": "Jason Derulo", "songs": ["Want to Want Me"] }
 ]
