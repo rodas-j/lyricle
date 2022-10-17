@@ -35,6 +35,8 @@ import { StatsModal } from "../src/components/modals/StatsModal";
 
 import { useGa } from "../src/context/GAContext";
 import Announcement from "../src/components/banners/Announcement";
+import { getInterview, setInterview } from "../src/lib/cookies";
+import { InverviewInvitationModal } from "../src/components/modals/InterviewInvitation";
 
 export type Solution = {
   id: number;
@@ -153,6 +155,14 @@ const LyricleArtist = (data: {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isHowToPlayModalOpen, setIsHowToPlayModalOpen] = useState(false);
+  const [isInterviewInvitationModalOpen, setIsInterviewInvitationModalOpen] =
+    useState(false);
+
+  useEffect(() => {
+    if (stats && getInterview() === null) {
+      stats.totalGames > 20 ? setIsInterviewInvitationModalOpen(true) : null;
+    }
+  }, [stats]);
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark);
@@ -392,6 +402,42 @@ const LyricleArtist = (data: {
           <InfoModal
             isOpen={isInfoModalOpen}
             handleClose={() => setIsInfoModalOpen(false)}
+          />
+          <InverviewInvitationModal
+            handleSurvey={() => {
+              setInterview("survey");
+              setIsInterviewInvitationModalOpen(false);
+              sendEvent(
+                "survey",
+                "invitation",
+                stats.totalGames,
+                stats.successRate
+              );
+              window.open("https://forms.gle/poJ5wcihUU15ZmbU8");
+            }}
+            handleReject={() => {
+              setInterview("false");
+              setIsInterviewInvitationModalOpen(false);
+              sendEvent(
+                "reject",
+                "invitation",
+                stats.totalGames,
+                stats.successRate
+              );
+            }}
+            handleAccept={() => {
+              setInterview("true");
+              setIsInterviewInvitationModalOpen(false);
+              sendEvent(
+                "accept",
+                "invitation",
+                stats.totalGames,
+                stats.successRate
+              );
+              window.open("https://calendly.com/seek2speak/lyricle");
+            }}
+            isOpen={isInterviewInvitationModalOpen}
+            handleClose={() => setIsInterviewInvitationModalOpen(false)}
           />
           <HowToPlayModal
             isOpen={isHowToPlayModalOpen}
