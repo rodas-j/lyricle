@@ -1,10 +1,17 @@
+
+const securityHeaders = [{
+  key: 'X-Frame-Options',
+  value: 'SAMEORIGIN'
+}]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async headers() {
     return [
       {
-        key: 'X-Frame-Options',
-        value: 'SAMEORIGIN'
+        // Apply these headers to all routes in your application.
+        source: '/:path*',
+        headers: securityHeaders,
       },
     ]
   },
