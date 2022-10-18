@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        key: 'X-Frame-Options',
+        value: 'SAMEORIGIN'
+      },
+    ]
+  },
   reactStrictMode: true,
   swcMinify: true,
   webpack (config) {
