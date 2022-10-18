@@ -1,5 +1,20 @@
+
+const securityHeaders = [{
+  key: 'X-Frame-Options',
+  value: 'SAMEORIGIN'
+}]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: '/:path*',
+        headers: securityHeaders,
+      },
+    ]
+  },
   reactStrictMode: true,
   swcMinify: true,
   webpack (config) {
