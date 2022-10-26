@@ -6,7 +6,8 @@
       "Hello",
       "Set Fire to the Rain",
       "Rolling in the Deep",
-      "Someone Like You"
+      "Someone Like You",
+      "Skyfall"
     ]
   },
   {
@@ -1753,7 +1754,6 @@
   { "artist": "David Guetta", "songs": ["When Love Takes Over"] },
   { "artist": "Cascada", "songs": ["Everytime We Touch"] },
   { "artist": "Kesha", "songs": ["TiK ToK"] },
-  { "artist": "Flo Rida", "songs": ["Right Round", "Low"] },
   {
     "artist": "50 Cent",
     "songs": [
@@ -1961,5 +1961,8 @@
   { "artist": "Owl City", "songs": ["Fireflies"] },
   { "artist": "The Band Perry", "songs": ["If I Die Young"] },
   { "artist": "Wolf Alice", "songs": ["Don't Delete The Kisses"] },
-  { "artist": "Jason Derulo", "songs": ["Want to Want Me"] }
+  { "artist": "Jason Derulo", "songs": ["Want to Want Me"] },
+  { "artist": "Pink", "songs": ["Get the Party Started"] },
+  { "artist": "Flo Rida, T-Pain", "songs": ["Low"] },
+  { "artist": "Lil Mosey, Lunay", "songs": ["Top Gone"] }
 ]
