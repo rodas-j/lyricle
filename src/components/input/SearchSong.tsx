@@ -43,17 +43,13 @@ export const SearchSong = ({
         mapArtistToSongs
           .filter((song) =>
             song
-              .replaceAll("'", "")
-              .replaceAll(",", "")
+              .replace(/[^a-zA-Z0-9 ]/g, "")
               .split("─")
               .join("")
               .replace("  ", " ")
               .toLowerCase()
               .includes(
-                currentGuess
-                  .toLowerCase()
-                  .replaceAll("'", "")
-                  .replaceAll(",", "")
+                currentGuess.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "")
               )
           )
           .slice(0, 5)
