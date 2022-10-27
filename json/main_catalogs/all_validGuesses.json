@@ -71,7 +71,14 @@
   },
   { "artist": "fun.", "songs": ["We Are Young"] },
   { "artist": "Neon Trees", "songs": ["Animal"] },
-  { "artist": "Mark Ronson", "songs": ["Valerie", "Uptown Funk"] },
+  {
+    "artist": "Mark Ronson",
+    "songs": [
+      "Valerie",
+      "Uptown Funk",
+      "Valerie (feat. Amy Winehouse) - Version Revisited"
+    ]
+  },
   { "artist": "Leona Lewis", "songs": ["Bleeding Love"] },
   { "artist": "Taio Cruz", "songs": ["Dynamite"] },
   {
@@ -362,7 +369,7 @@
       "One Love / People Get Ready",
       "Buffalo Soldier",
       "Three Little Birds",
-      "Is This Love?"
+      "Is This Love"
     ]
   },
   {
@@ -485,7 +492,12 @@
   },
   {
     "artist": "Van Morrison",
-    "songs": ["Brown Eyed Girl", "Moondance", "Into The Mystic"]
+    "songs": [
+      "Brown Eyed Girl",
+      "Moondance",
+      "Into The Mystic",
+      "Into the Mystic"
+    ]
   },
   {
     "artist": "Black Eyed Peas",
@@ -1965,5 +1977,5 @@
   { "artist": "Pink", "songs": ["Get the Party Started"] },
   { "artist": "Flo Rida, T-Pain", "songs": ["Low"] },
   { "artist": "Lil Mosey, Lunay", "songs": ["Top Gone"] },
-  { "artist": "M.I.A", "songs": ["Paper Planes"] }
+  { "artist": "M.I.A.", "songs": ["Paper Planes"] }
 ]
