@@ -79,7 +79,7 @@
       "Valerie (feat. Amy Winehouse) - Version Revisited"
     ]
   },
-  { "artist": "Leona Lewis", "songs": ["Bleeding Love"] },
+  { "artist": "Leona Lewis", "songs": ["Bleeding Love", "Run"] },
   { "artist": "Taio Cruz", "songs": ["Dynamite"] },
   {
     "artist": "Shakira",
@@ -212,7 +212,7 @@
     ]
   },
   { "artist": "Gnarls Barkley", "songs": ["Crazy"] },
-  { "artist": "OneRepublic", "songs": ["Counting Stars"] },
+  { "artist": "OneRepublic", "songs": ["Counting Stars", "Apologize"] },
   {
     "artist": "Elton John",
     "songs": [
@@ -263,7 +263,11 @@
   },
   {
     "artist": "Tina Turner",
-    "songs": ["What's Love Got To Do WIth It", "The Best"]
+    "songs": [
+      "What's Love Got To Do WIth It",
+      "The Best",
+      "What's Love Got to Do with It"
+    ]
   },
   {
     "artist": "Daryl Hall & John Oates",
@@ -358,7 +362,12 @@
   },
   {
     "artist": "Whitney Houston",
-    "songs": ["So Emotional", "I Will Always Love You", "How Will I Know"]
+    "songs": [
+      "So Emotional",
+      "I Will Always Love You",
+      "How Will I Know",
+      "I Wanna Dance with Somebody"
+    ]
   },
   {
     "artist": "Bob Marley & The Wailers",
@@ -369,6 +378,7 @@
       "One Love / People Get Ready",
       "Buffalo Soldier",
       "Three Little Birds",
+      "Is This Love?",
       "Is This Love"
     ]
   },
@@ -461,7 +471,7 @@
     ]
   },
   { "artist": "Steve Harley", "songs": ["Make Me Smile"] },
-  { "artist": "Jessie J", "songs": ["Domino"] },
+  { "artist": "Jessie J", "songs": ["Domino", "Flashlight"] },
   {
     "artist": "Sam Cooke",
     "songs": [
@@ -1791,7 +1801,7 @@
   { "artist": "Nelly", "songs": ["Ride Wit Me"] },
   { "artist": "Daddy Yankee", "songs": ["Lo Que Pasó, Pasó"] },
   { "artist": "Soulja Boy", "songs": ["Crank That"] },
-  { "artist": "Ne-Yo", "songs": ["Because Of You"] },
+  { "artist": "Ne-Yo", "songs": ["Because Of You", "So Sick"] },
   { "artist": "Eric Prydz", "songs": ["Call on Me"] },
   { "artist": "Fat Joe", "songs": ["What's Luv?"] },
   { "artist": "Juanes", "songs": ["A Dios Le Pido", "La Camisa Negra"] },
@@ -1977,5 +1987,11 @@
   { "artist": "Pink", "songs": ["Get the Party Started"] },
   { "artist": "Flo Rida, T-Pain", "songs": ["Low"] },
   { "artist": "Lil Mosey, Lunay", "songs": ["Top Gone"] },
-  { "artist": "M.I.A.", "songs": ["Paper Planes"] }
+  { "artist": "M.I.A.", "songs": ["Paper Planes"] },
+  { "artist": "Brandy, Monica", "songs": ["The Boy Is Mine"] },
+  { "artist": "Idina Menzel", "songs": ["Let It Go"] },
+  { "artist": "Coldplay, Selena Gomez", "songs": ["Let Somebody Go"] },
+  { "artist": "Halsey", "songs": ["Without Me"] },
+  { "artist": "Bastille", "songs": ["Pompeii"] },
+  { "artist": "Bebe Rexha, Florida Georgia Line", "songs": ["Meant to Be"] }
 ]
