@@ -374,7 +374,6 @@ const LyricleArtist = (data: {
         <meta name="twitter:image" content="https://www.lyricle.app/og.png" />
       </Head>
       <div className="absolute inset-0 flex flex-col">
-        <Announcement />
         <Navbar
           setIsInfoModalOpen={setIsInfoModalOpen}
           setIsHowToPlayModalOpen={setIsHowToPlayModalOpen}
