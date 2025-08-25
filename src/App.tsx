@@ -1,31 +1,30 @@
 import { useState, useEffect } from 'react'
-import { Grid } from './components/grid/Grid'
-import { Keyboard } from './components/keyboard/Keyboard'
+import { DishDisplay } from './components/dish/DishDisplay'
+import { IngredientInput } from './components/input/IngredientInput'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
   WIN_MESSAGES,
   GAME_COPIED_MESSAGE,
-  NOT_ENOUGH_LETTERS_MESSAGE,
-  WORD_NOT_FOUND_MESSAGE,
-  CORRECT_WORD_MESSAGE,
+  INGREDIENT_NOT_FOUND_MESSAGE,
+  CORRECT_DISH_MESSAGE,
   HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
-  MAX_WORD_LENGTH,
+  MAX_INGREDIENTS,
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
   WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 import {
-  isWordInWordList,
-  isWinningWord,
-  solution,
+  isIngredientValid,
+  isWinningIngredient,
+  currentDish,
   findFirstUnusedReveal,
-  unicodeLength,
 } from './lib/words'
+import { isGameWon } from './lib/statuses'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   loadGameStateFromLocalStorage,
@@ -33,7 +32,6 @@ import {
   setStoredIsHighContrastMode,
   getStoredIsHighContrastMode,
 } from './lib/localStorage'
-import { default as GraphemeSplitter } from 'grapheme-splitter'
 
 import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
@@ -48,11 +46,10 @@ function App() {
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
     useAlert()
   const [currentGuess, setCurrentGuess] = useState('')
-  const [isGameWon, setIsGameWon] = useState(false)
+  const [isGameWonState, setIsGameWonState] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
-  const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
@@ -67,18 +64,21 @@ function App() {
   const [isRevealing, setIsRevealing] = useState(false)
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
-    if (loaded?.solution !== solution) {
+    if (loaded?.solution !== currentDish.name) {
       return []
     }
-    const gameWasWon = loaded.guesses.includes(solution)
+    const gameWasWon = isGameWon(loaded.guesses)
     if (gameWasWon) {
-      setIsGameWon(true)
+      setIsGameWonState(true)
     }
     if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
       setIsGameLost(true)
-      showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
-        persist: true,
-      })
+      showErrorAlert(
+        CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
+        {
+          persist: true,
+        }
+      )
     }
     return loaded.guesses
   })
@@ -134,19 +134,15 @@ function App() {
     setStoredIsHighContrastMode(isHighContrast)
   }
 
-  const clearCurrentRowClass = () => {
-    setCurrentRowClass('')
-  }
-
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution })
+    saveGameStateToLocalStorage({ guesses, solution: currentDish.name })
   }, [guesses])
 
   useEffect(() => {
-    if (isGameWon) {
+    if (isGameWonState) {
       const winMessage =
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
-      const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
+      const delayMs = REVEAL_TIME_MS * MAX_INGREDIENTS
 
       showSuccessAlert(winMessage, {
         delayMs,
@@ -159,84 +155,53 @@ function App() {
         setIsStatsModalOpen(true)
       }, GAME_LOST_INFO_DELAY)
     }
-  }, [isGameWon, isGameLost, showSuccessAlert])
+  }, [isGameWonState, isGameLost, showSuccessAlert])
 
-  const onChar = (value: string) => {
-    if (
-      unicodeLength(`${currentGuess}${value}`) <= MAX_WORD_LENGTH &&
-      guesses.length < MAX_CHALLENGES &&
-      !isGameWon
-    ) {
-      setCurrentGuess(`${currentGuess}${value}`)
-    }
-  }
-
-  const onDelete = () => {
-    setCurrentGuess(
-      new GraphemeSplitter().splitGraphemes(currentGuess).slice(0, -1).join('')
-    )
-  }
-
-  const onEnter = () => {
-    if (isGameWon || isGameLost) {
+  const onSubmitGuess = () => {
+    if (isGameWonState || isGameLost) {
       return
     }
 
-    if (!(unicodeLength(currentGuess) === MAX_WORD_LENGTH)) {
-      setCurrentRowClass('jiggle')
-      return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
-        onClose: clearCurrentRowClass,
-      })
+    if (!currentGuess.trim()) {
+      return showErrorAlert('Please enter an ingredient')
     }
 
-    if (!isWordInWordList(currentGuess)) {
-      setCurrentRowClass('jiggle')
-      return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
-        onClose: clearCurrentRowClass,
-      })
+    if (!isIngredientValid(currentGuess)) {
+      return showErrorAlert(INGREDIENT_NOT_FOUND_MESSAGE)
     }
 
-    // enforce hard mode - all guesses must contain all previously revealed letters
-    if (isHardMode) {
-      const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
-      if (firstMissingReveal) {
-        setCurrentRowClass('jiggle')
-        return showErrorAlert(firstMissingReveal, {
-          onClose: clearCurrentRowClass,
-        })
-      }
+    // Check if already guessed
+    if (guesses.includes(currentGuess.toUpperCase())) {
+      return showErrorAlert('Already guessed this ingredient')
     }
 
     setIsRevealing(true)
-    // turn this back off after all
-    // chars have been revealed
     setTimeout(() => {
       setIsRevealing(false)
-    }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
+    }, REVEAL_TIME_MS * 2)
 
-    const winningWord = isWinningWord(currentGuess)
+    const newGuesses = [...guesses, currentGuess.toUpperCase()]
+    setGuesses(newGuesses)
+    setCurrentGuess('')
 
-    if (
-      unicodeLength(currentGuess) === MAX_WORD_LENGTH &&
-      guesses.length < MAX_CHALLENGES &&
-      !isGameWon
-    ) {
-      setGuesses([...guesses, currentGuess])
-      setCurrentGuess('')
+    // Check if game is won
+    if (isGameWon(newGuesses)) {
+      setStats(addStatsForCompletedGame(stats, newGuesses.length))
+      setIsGameWonState(true)
+      return
+    }
 
-      if (winningWord) {
-        setStats(addStatsForCompletedGame(stats, guesses.length))
-        return setIsGameWon(true)
-      }
-
-      if (guesses.length === MAX_CHALLENGES - 1) {
-        setStats(addStatsForCompletedGame(stats, guesses.length + 1))
-        setIsGameLost(true)
-        showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
+    // Check if game is lost
+    if (newGuesses.length === MAX_CHALLENGES) {
+      setStats(addStatsForCompletedGame(stats, newGuesses.length))
+      setIsGameLost(true)
+      showErrorAlert(
+        CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
+        {
           persist: true,
-          delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
-        })
-      }
+          delayMs: REVEAL_TIME_MS * 2 + 1,
+        }
+      )
     }
   }
 
@@ -249,20 +214,17 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
-          <Grid
-            guesses={guesses}
-            currentGuess={currentGuess}
-            isRevealing={isRevealing}
-            currentRowClassName={currentRowClass}
+          <DishDisplay guesses={guesses} isRevealing={isRevealing} />
+        </div>
+        <div className="pb-4">
+          <IngredientInput
+            value={currentGuess}
+            onChange={setCurrentGuess}
+            onSubmit={onSubmitGuess}
+            disabled={isGameWonState || isGameLost}
+            placeholder="Guess an ingredient..."
           />
         </div>
-        <Keyboard
-          onChar={onChar}
-          onDelete={onDelete}
-          onEnter={onEnter}
-          guesses={guesses}
-          isRevealing={isRevealing}
-        />
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
@@ -273,7 +235,7 @@ function App() {
           guesses={guesses}
           gameStats={stats}
           isGameLost={isGameLost}
-          isGameWon={isGameWon}
+          isGameWon={isGameWonState}
           handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
           isHardMode={isHardMode}
           isDarkMode={isDarkMode}

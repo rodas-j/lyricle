@@ -1,56 +1,23 @@
-import { WORDS } from '../constants/wordlist'
-import { VALID_GUESSES } from '../constants/validGuesses'
+import { DISHES, ALL_INGREDIENTS, getIngredientInfo } from '../constants/dishes'
 import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
 import { getGuessStatuses } from './statuses'
 import { default as GraphemeSplitter } from 'grapheme-splitter'
 
-export const isWordInWordList = (word: string) => {
-  return (
-    WORDS.includes(localeAwareLowerCase(word)) ||
-    VALID_GUESSES.includes(localeAwareLowerCase(word))
-  )
+export const isIngredientValid = (ingredient: string) => {
+  return ALL_INGREDIENTS.includes(ingredient.toUpperCase())
 }
 
-export const isWinningWord = (word: string) => {
-  return solution === word
+export const isWinningIngredient = (ingredient: string) => {
+  return currentDish.coreIngredients.includes(ingredient.toUpperCase())
 }
 
-// build a set of previously revealed letters - present and correct
-// guess must use correct letters in that space and any other revealed letters
-// also check if all revealed instances of a letter are used (i.e. two C's)
-export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
-  if (guesses.length === 0) {
-    return false
-  }
-
-  const lettersLeftArray = new Array<string>()
-  const guess = guesses[guesses.length - 1]
-  const statuses = getGuessStatuses(guess)
-  const splitWord = unicodeSplit(word)
-  const splitGuess = unicodeSplit(guess)
-
-  for (let i = 0; i < splitGuess.length; i++) {
-    if (statuses[i] === 'correct' || statuses[i] === 'present') {
-      lettersLeftArray.push(splitGuess[i])
-    }
-    if (statuses[i] === 'correct' && splitWord[i] !== splitGuess[i]) {
-      return WRONG_SPOT_MESSAGE(splitGuess[i], i + 1)
-    }
-  }
-
-  // check for the first unused letter, taking duplicate letters
-  // into account - see issue #198
-  let n
-  for (const letter of splitWord) {
-    n = lettersLeftArray.indexOf(letter)
-    if (n !== -1) {
-      lettersLeftArray.splice(n, 1)
-    }
-  }
-
-  if (lettersLeftArray.length > 0) {
-    return NOT_CONTAINED_MESSAGE(lettersLeftArray[0])
-  }
+// For Foodle, we don't need hard mode restrictions like Wordle
+// But we keep this function for compatibility, always returning false
+export const findFirstUnusedReveal = (
+  ingredient: string,
+  guesses: string[]
+) => {
+  // Foodle doesn't use hard mode constraints
   return false
 }
 
@@ -76,7 +43,7 @@ export const localeAwareUpperCase = (text: string) => {
     : text.toUpperCase()
 }
 
-export const getWordOfDay = () => {
+export const getDishOfDay = () => {
   // January 1, 2022 Game Epoch
   const epochMs = new Date(2022, 0).valueOf()
   const now = Date.now()
@@ -85,10 +52,10 @@ export const getWordOfDay = () => {
   const nextday = (index + 1) * msInDay + epochMs
 
   return {
-    solution: localeAwareUpperCase(WORDS[index % WORDS.length]),
-    solutionIndex: index,
+    dish: DISHES[index % DISHES.length],
+    dishIndex: index,
     tomorrow: nextday,
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+export const { dish: currentDish, dishIndex, tomorrow } = getDishOfDay()

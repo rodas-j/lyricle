@@ -1,4 +1,4 @@
-import { Cell } from '../grid/Cell'
+import { IngredientCard } from '../cards/IngredientCard'
 import { BaseModal } from './BaseModal'
 
 type Props = {
@@ -8,65 +8,73 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the word in 6 tries. After each guess, the color of the tiles will
-        change to show how close your guess was to the word.
-      </p>
+    <BaseModal
+      title="How to Play Foodle"
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
+      <div className="text-left">
+        <p className="text-sm text-gray-500 dark:text-gray-300 mb-4">
+          Guess the core ingredients of the featured dish in 6 tries or fewer.
+          After each guess, you'll get feedback to help you find the right
+          ingredients.
+        </p>
 
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell
-          isRevealing={true}
-          isCompleted={true}
-          value="W"
-          status="correct"
-        />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
+        <div className="mb-4">
+          <p className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Example: Today's dish is "PESTO GENOVESE"
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
+            <IngredientCard
+              ingredient="PECORINO ROMANO"
+              status="correct"
+              message="Correct ingredient!"
+            />
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-300 mb-4">
+            🟩 <strong>Green:</strong> Correct core ingredient!
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
+            <IngredientCard
+              ingredient="PARMESAN"
+              status="present"
+              message="Right category, wrong item (Cheese)"
+            />
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-300 mb-4">
+            🟨 <strong>Yellow:</strong> Right category or common substitute
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
+            <IngredientCard
+              ingredient="CREAM"
+              status="absent"
+              message="Not a core ingredient"
+            />
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-300 mb-4">
+            ⬜ <strong>Gray:</strong> Not a core ingredient
+          </p>
+        </div>
+
+        <div className="border-t pt-4">
+          <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Features:
+          </h4>
+          <ul className="text-xs text-gray-500 dark:text-gray-300 space-y-1">
+            <li>• Type ingredients and get smart autocomplete suggestions</li>
+            <li>• Get detailed feedback with helpful tooltips</li>
+            <li>• New dish every day with shareable results</li>
+            <li>• Track your culinary knowledge with statistics</li>
+          </ul>
+        </div>
+
+        <p className="mt-4 text-xs text-gray-400 dark:text-gray-500 text-center">
+          A culinary twist on the word guessing game we all love! 🍽️
+        </p>
       </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
-        <Cell
-          isRevealing={true}
-          isCompleted={true}
-          value="L"
-          status="present"
-        />
-        <Cell value="O" />
-        <Cell value="T" />
-      </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
-        <Cell value="G" />
-        <Cell isRevealing={true} isCompleted={true} value="U" status="absent" />
-        <Cell value="E" />
-      </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
-      </p>
-
-      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-        This is an open source version of the word guessing game we all know and
-        love -{' '}
-        <a
-          href="https://github.com/cwackerfuss/react-wordle"
-          className="underline font-bold"
-        >
-          check out the code here
-        </a>{' '}
-      </p>
     </BaseModal>
   )
 }

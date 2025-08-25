@@ -1,8 +1,19 @@
-# React Wordle
+# Guessipe
 
-This is a clone project of the popular word guessing game we all know and love. Made using React, Typescript, and Tailwind.
+A culinary twist on the popular word guessing game! Guess the core ingredients of famous dishes in 6 tries or fewer. Made using React, TypeScript, and Tailwind.
 
-[**Try out the demo!**](https://reactle.vercel.app/)
+## How to Play
+
+1. **See the dish name** displayed at the top (e.g., "PESTO GENOVESE")
+2. **Guess ingredients** using the autocomplete input field
+3. **Get multi-layered feedback**:
+   - 🟩 **Green**: Correct core ingredient!
+   - 🟨 **Yellow**: Right category, wrong item OR common substitute
+   - ⬜ **Gray**: Not a core ingredient
+4. **Fill all ingredient slots** to win!
+5. **Share your results** with a spoiler-free emoji grid
+
+[**Try out Guessipe!**](https://foodle.vercel.app/)
 
 ## Build and run
 
@@ -10,19 +21,31 @@ This is a clone project of the popular word guessing game we all know and love. 
 
 Clone the repository and perform the following command line actions:
 
+#### With Bun (recommended):
+
 ```bash
-$> cd react-wordle
+$> cd foodle
 $> bun install
-$> bun run start
+$> bun run dev
 ```
+
+#### With npm:
+
+```bash
+$> cd foodle
+$> npm install
+$> npm run dev
+```
+
+**Note**: This project now uses Vite for much faster development and build times!
 
 ### To build/run docker container:
 
 #### Development
 
 ```bash
-$> docker build -t reactle:dev -f docker/Dockerfile .
-$> docker run -d -p 3000:3000 --name reactle-dev reactle:dev
+$> docker build -t foodle:dev -f docker/Dockerfile .
+$> docker run -d -p 3000:3000 --name foodle-dev foodle:dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in browser.
@@ -30,11 +53,44 @@ Open [http://localhost:3000](http://localhost:3000) in browser.
 #### Production
 
 ```bash
-$> docker build --target=prod -t reactle:prod -f docker/Dockerfile .
-$> docker run -d -p 80:8080  --name reactle-prod reactle:prod
+$> docker build --target=prod -t foodle:prod -f docker/Dockerfile .
+$> docker run -d -p 80:8080  --name foodle-prod foodle:prod
 ```
 
 Open [http://localhost](http://localhost) in browser.
+
+## Featured Dishes
+
+Foodle currently includes 10 carefully selected dishes with widely agreed-upon core ingredients:
+
+1. **Pesto Genovese** 🌿 - Classic Italian herb sauce
+2. **Margherita Pizza** 🍕 - Traditional Neapolitan pizza
+3. **Caesar Salad** 🥗 - Roman salad with rich dressing
+4. **Guacamole** 🥑 - Traditional Mexican avocado dip
+5. **Hummus** 🧆 - Middle Eastern chickpea spread
+6. **Carbonara** 🍝 - Roman pasta with eggs and cured pork
+7. **Caprese Salad** 🍅 - Simple Italian tomato and mozzarella
+8. **Greek Salad** 🫒 - Mediterranean village salad
+9. **Classic Chili** 🌶️ - Hearty American stew
+10. **French Omelette** 🥚 - Classic French egg preparation
+
+## Game Features
+
+- **Intelligent Feedback System**: Beyond simple right/wrong, get category hints and substitute suggestions
+- **Autocomplete Input**: Search through 100+ ingredients with smart suggestions
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Dark Mode Support**: Easy on the eyes for late-night cooking inspiration
+- **Daily Dishes**: New dish every day with shareable results
+- **Statistics Tracking**: Track your culinary knowledge over time
+
+## Technical Details
+
+This project transforms the original Wordle concept into a culinary guessing game:
+
+- **Variable Ingredient Counts**: Dishes can have 4-6 core ingredients
+- **Ingredient Database**: Categorized ingredients with substitute relationships
+- **Smart Validation**: Autocomplete prevents invalid ingredient guesses
+- **Enhanced Sharing**: Emoji grids with dish-specific emojis
 
 ## Projects built using this repo
 

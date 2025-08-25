@@ -1,5 +1,5 @@
-import { getGuessStatuses } from './statuses'
-import { solutionIndex, unicodeSplit } from './words'
+import { getIngredientFeedback } from './statuses'
+import { dishIndex, currentDish } from './words'
 import { GAME_TITLE } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
 import { UAParser } from 'ua-parser-js'
@@ -17,11 +17,18 @@ export const shareStatus = (
   isHighContrastMode: boolean,
   handleShareToClipboard: () => void
 ) => {
+  const correctCount = guesses.filter((guess) =>
+    currentDish.coreIngredients.includes(guess.toUpperCase())
+  ).length
+
+  const dishEmoji = getDishEmoji(currentDish.name)
+
   const textToShare =
-    `${GAME_TITLE} ${solutionIndex} ${
+    `${GAME_TITLE} #${dishIndex}: ${currentDish.name} ${dishEmoji} ${
       lost ? 'X' : guesses.length
-    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
-    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode))
+    }/${MAX_CHALLENGES}\n\n` +
+    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
+    `\n\nWhat are the ingredients? guessipe.app`
 
   const shareData = { text: textToShare }
 
@@ -45,23 +52,35 @@ export const shareStatus = (
 export const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
   return guesses
     .map((guess) => {
-      const status = getGuessStatuses(guess)
-      const splitGuess = unicodeSplit(guess)
+      const feedback = getIngredientFeedback(guess)
 
-      return splitGuess
-        .map((_, i) => {
-          switch (status[i]) {
-            case 'correct':
-              return tiles[0]
-            case 'present':
-              return tiles[1]
-            default:
-              return tiles[2]
-          }
-        })
-        .join('')
+      switch (feedback.status) {
+        case 'correct':
+          return tiles[0]
+        case 'present':
+          return tiles[1]
+        default:
+          return tiles[2]
+      }
     })
-    .join('\n')
+    .join('')
+}
+
+const getDishEmoji = (dishName: string): string => {
+  const emojiMap: { [key: string]: string } = {
+    'PESTO GENOVESE': '🌿',
+    'MARGHERITA PIZZA': '🍕',
+    'CAESAR SALAD': '🥗',
+    GUACAMOLE: '🥑',
+    HUMMUS: '🧆',
+    CARBONARA: '🍝',
+    'CAPRESE SALAD': '🍅',
+    'GREEK SALAD': '🫒',
+    'CLASSIC CHILI': '🌶️',
+    'FRENCH OMELETTE': '🥚',
+  }
+
+  return emojiMap[dishName] || '🍽️'
 }
 
 const attemptShare = (shareData: object) => {
