@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useQuery } from 'convex/react'
+import { api } from '../convex/_generated/api'
 import { DishDisplay } from './components/dish/DishDisplay'
 import { IngredientInput } from './components/input/IngredientInput'
 import { InfoModal } from './components/modals/InfoModal'
@@ -12,18 +14,11 @@ import {
   HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
-  MAX_INGREDIENTS,
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  GAME_LOST_INFO_DELAY,
   WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
-import {
-  isIngredientValid,
-  isWinningIngredient,
-  currentDish,
-  findFirstUnusedReveal,
-} from './lib/words'
+import { findFirstUnusedReveal } from './lib/words'
 import { isGameWon } from './lib/statuses'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
@@ -45,6 +40,24 @@ function App() {
 
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
     useAlert()
+
+  // Get current dish from Convex
+  const dishOfDay = useQuery(api.gameData.getDishOfDay)
+  const currentDish = dishOfDay?.dish
+  const allIngredients = useQuery(api.gameData.getAllIngredients) || []
+  const MAX_INGREDIENTS = currentDish?.coreIngredients.length || 5
+
+  // Helper functions
+  const isIngredientValid = (ingredient: string) => {
+    return allIngredients.includes(ingredient.toUpperCase())
+  }
+
+  const isWinningIngredient = (ingredient: string) => {
+    return (
+      currentDish?.coreIngredients.includes(ingredient.toUpperCase()) || false
+    )
+  }
+
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWonState, setIsGameWonState] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -62,16 +75,23 @@ function App() {
     getStoredIsHighContrastMode(),
   )
   const [isRevealing, setIsRevealing] = useState(false)
-  const [guesses, setGuesses] = useState<string[]>(() => {
+  const [guesses, setGuesses] = useState<string[]>([])
+
+  // Initialize guesses when currentDish is loaded
+  useEffect(() => {
+    if (!currentDish) return
+
     const loaded = loadGameStateFromLocalStorage()
     if (loaded?.solution !== currentDish.name) {
-      return []
+      setGuesses([])
+      return
     }
-    const gameWasWon = isGameWon(loaded.guesses)
+
+    const gameWasWon = isGameWon(loaded.guesses, currentDish)
     if (gameWasWon) {
       setIsGameWonState(true)
     }
-    if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
+    if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon && currentDish) {
       setIsGameLost(true)
       showErrorAlert(
         CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
@@ -80,8 +100,8 @@ function App() {
         },
       )
     }
-    return loaded.guesses
-  })
+    setGuesses(loaded.guesses)
+  }, [currentDish, MAX_CHALLENGES])
 
   const [stats, setStats] = useState(() => loadStats())
 
@@ -135,8 +155,10 @@ function App() {
   }
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution: currentDish.name })
-  }, [guesses])
+    if (currentDish) {
+      saveGameStateToLocalStorage({ guesses, solution: currentDish.name })
+    }
+  }, [guesses, currentDish])
 
   useEffect(() => {
     if (isGameWonState) {
@@ -151,6 +173,7 @@ function App() {
     }
 
     if (isGameLost) {
+      const GAME_LOST_INFO_DELAY = (MAX_INGREDIENTS + 1) * REVEAL_TIME_MS
       setTimeout(() => {
         setIsStatsModalOpen(true)
       }, GAME_LOST_INFO_DELAY)
@@ -185,7 +208,7 @@ function App() {
     setCurrentGuess('')
 
     // Check if game is won
-    if (isGameWon(newGuesses)) {
+    if (currentDish && isGameWon(newGuesses, currentDish)) {
       setStats(addStatsForCompletedGame(stats, newGuesses.length))
       setIsGameWonState(true)
       return
@@ -195,13 +218,15 @@ function App() {
     if (newGuesses.length === MAX_CHALLENGES) {
       setStats(addStatsForCompletedGame(stats, newGuesses.length))
       setIsGameLost(true)
-      showErrorAlert(
-        CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
-        {
-          persist: true,
-          delayMs: REVEAL_TIME_MS * 2 + 1,
-        },
-      )
+      if (currentDish) {
+        showErrorAlert(
+          CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
+          {
+            persist: true,
+            delayMs: REVEAL_TIME_MS * 2 + 1,
+          },
+        )
+      }
     }
   }
 
@@ -214,7 +239,13 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
-          <DishDisplay guesses={guesses} isRevealing={isRevealing} />
+          {currentDish && (
+            <DishDisplay 
+              guesses={guesses} 
+              isRevealing={isRevealing} 
+              currentDish={currentDish}
+            />
+          )}
         </div>
         <div className="pb-4">
           <IngredientInput
@@ -229,19 +260,24 @@ function App() {
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
         />
-        <StatsModal
-          isOpen={isStatsModalOpen}
-          handleClose={() => setIsStatsModalOpen(false)}
-          guesses={guesses}
-          gameStats={stats}
-          isGameLost={isGameLost}
-          isGameWon={isGameWonState}
-          handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
-          isHardMode={isHardMode}
-          isDarkMode={isDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          numberOfGuessesMade={guesses.length}
-        />
+        {currentDish && dishOfDay && (
+          <StatsModal
+            isOpen={isStatsModalOpen}
+            handleClose={() => setIsStatsModalOpen(false)}
+            guesses={guesses}
+            gameStats={stats}
+            isGameLost={isGameLost}
+            isGameWon={isGameWonState}
+            handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
+            isHardMode={isHardMode}
+            isDarkMode={isDarkMode}
+            isHighContrastMode={isHighContrastMode}
+            numberOfGuessesMade={guesses.length}
+            currentDish={currentDish}
+            dishIndex={dishOfDay.dishIndex}
+            tomorrow={dishOfDay.tomorrow}
+          />
+        )}
         <SettingsModal
           isOpen={isSettingsModalOpen}
           handleClose={() => setIsSettingsModalOpen(false)}

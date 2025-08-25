@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import { ALL_INGREDIENTS } from '../../constants/dishes'
+import { useQuery } from 'convex/react'
+import { api } from '../../../convex/_generated/api'
 
 interface Props {
   value: string
@@ -17,26 +18,26 @@ export const IngredientInput = ({
   placeholder = 'Enter an ingredient...',
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [filteredIngredients, setFilteredIngredients] = useState<string[]>([])
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLUListElement>(null)
 
+  // Use Convex query for ingredient search
+  const filteredIngredients =
+    useQuery(api.gameData.searchIngredients, {
+      searchTerm: value,
+      limit: 10,
+    }) || []
+
   useEffect(() => {
     if (!value.trim()) {
-      setFilteredIngredients([])
       setIsOpen(false)
       return
     }
 
-    const filtered = ALL_INGREDIENTS.filter((ingredient) =>
-      ingredient.toLowerCase().includes(value.toLowerCase())
-    ).slice(0, 10) // Limit to 10 suggestions
-
-    setFilteredIngredients(filtered)
-    setIsOpen(filtered.length > 0)
+    setIsOpen(filteredIngredients.length > 0)
     setSelectedIndex(-1)
-  }, [value])
+  }, [value, filteredIngredients])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value)
@@ -55,13 +56,13 @@ export const IngredientInput = ({
       case 'ArrowDown':
         e.preventDefault()
         setSelectedIndex((prev) =>
-          prev < filteredIngredients.length - 1 ? prev + 1 : 0
+          prev < filteredIngredients.length - 1 ? prev + 1 : 0,
         )
         break
       case 'ArrowUp':
         e.preventDefault()
         setSelectedIndex((prev) =>
-          prev > 0 ? prev - 1 : filteredIngredients.length - 1
+          prev > 0 ? prev - 1 : filteredIngredients.length - 1,
         )
         break
       case 'Enter':

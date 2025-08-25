@@ -1,8 +1,13 @@
 import { getIngredientFeedback } from './statuses'
-import { dishIndex, currentDish } from './words'
 import { GAME_TITLE } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
 import { UAParser } from 'ua-parser-js'
+
+interface Dish {
+  name: string
+  coreIngredients: string[]
+  description?: string
+}
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
@@ -15,7 +20,9 @@ export const shareStatus = (
   isHardMode: boolean,
   isDarkMode: boolean,
   isHighContrastMode: boolean,
-  handleShareToClipboard: () => void
+  handleShareToClipboard: () => void,
+  currentDish: Dish,
+  dishIndex: number
 ) => {
   const correctCount = guesses.filter((guess) =>
     currentDish.coreIngredients.includes(guess.toUpperCase())
@@ -27,7 +34,7 @@ export const shareStatus = (
     `${GAME_TITLE} #${dishIndex}: ${currentDish.name} ${dishEmoji} ${
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}\n\n` +
-    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
+    generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode), currentDish) +
     `\n\nWhat are the ingredients? guessipe.app`
 
   const shareData = { text: textToShare }
@@ -49,10 +56,10 @@ export const shareStatus = (
   }
 }
 
-export const generateEmojiGrid = (guesses: string[], tiles: string[]) => {
+export const generateEmojiGrid = (guesses: string[], tiles: string[], currentDish: Dish) => {
   return guesses
     .map((guess) => {
-      const feedback = getIngredientFeedback(guess)
+      const feedback = getIngredientFeedback(guess, currentDish)
 
       switch (feedback.status) {
         case 'correct':

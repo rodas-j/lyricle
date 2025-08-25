@@ -3,7 +3,6 @@ import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
-import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
   STATISTICS_TITLE,
@@ -11,6 +10,12 @@ import {
   NEW_DISH_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
+
+interface Dish {
+  name: string
+  coreIngredients: string[]
+  description?: string
+}
 
 type Props = {
   isOpen: boolean
@@ -24,6 +29,9 @@ type Props = {
   isDarkMode: boolean
   isHighContrastMode: boolean
   numberOfGuessesMade: number
+  currentDish: Dish
+  dishIndex: number
+  tomorrow: number
 }
 
 export const StatsModal = ({
@@ -38,6 +46,9 @@ export const StatsModal = ({
   isDarkMode,
   isHighContrastMode,
   numberOfGuessesMade,
+  currentDish,
+  dishIndex,
+  tomorrow,
 }: Props) => {
   if (gameStats.totalGames <= 0) {
     return (
@@ -85,6 +96,8 @@ export const StatsModal = ({
                 isDarkMode,
                 isHighContrastMode,
                 handleShareToClipboard,
+                currentDish,
+                dishIndex,
               )
             }}
           >

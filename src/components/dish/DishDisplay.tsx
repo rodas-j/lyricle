@@ -1,13 +1,19 @@
-import { currentDish } from '../../lib/words'
 import { IngredientCard } from '../cards/IngredientCard'
 import { getIngredientFeedback } from '../../lib/statuses'
+
+interface Dish {
+  name: string
+  coreIngredients: string[]
+  description?: string
+}
 
 interface Props {
   guesses: string[]
   isRevealing?: boolean
+  currentDish: Dish
 }
 
-export const DishDisplay = ({ guesses, isRevealing = false }: Props) => {
+export const DishDisplay = ({ guesses, isRevealing = false, currentDish }: Props) => {
   const correctGuesses = guesses.filter((guess) =>
     currentDish.coreIngredients.includes(guess.toUpperCase())
   )
@@ -71,7 +77,7 @@ export const DishDisplay = ({ guesses, isRevealing = false }: Props) => {
           </h3>
           <div className="flex flex-wrap justify-center gap-2">
             {incorrectGuesses.map((guess, index) => {
-              const feedback = getIngredientFeedback(guess)
+              const feedback = getIngredientFeedback(guess, currentDish)
               return (
                 <IngredientCard
                   key={`${guess}-${index}`}

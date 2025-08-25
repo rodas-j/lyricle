@@ -1,4 +1,3 @@
-import { currentDish } from './words'
 import {
   getIngredientInfo,
   isSubstitute,
@@ -12,8 +11,15 @@ export interface IngredientFeedback {
   message?: string
 }
 
+interface Dish {
+  name: string
+  coreIngredients: string[]
+  description?: string
+}
+
 export const getIngredientStatuses = (
-  guesses: string[]
+  guesses: string[],
+  currentDish: Dish
 ): { [key: string]: IngredientStatus } => {
   const ingredientObj: { [key: string]: IngredientStatus } = {}
 
@@ -48,7 +54,8 @@ export const getIngredientStatuses = (
 }
 
 export const getIngredientFeedback = (
-  ingredient: string
+  ingredient: string,
+  currentDish: Dish
 ): IngredientFeedback => {
   const upperIngredient = ingredient.toUpperCase()
 
@@ -85,7 +92,7 @@ export const getIngredientFeedback = (
 }
 
 // Check if the game is won (all core ingredients guessed)
-export const isGameWon = (guesses: string[]): boolean => {
+export const isGameWon = (guesses: string[], currentDish: Dish): boolean => {
   const correctGuesses = guesses.filter((guess) =>
     currentDish.coreIngredients.includes(guess.toUpperCase())
   )
@@ -93,7 +100,7 @@ export const isGameWon = (guesses: string[]): boolean => {
 }
 
 // Get remaining ingredients to be guessed
-export const getRemainingIngredients = (guesses: string[]): string[] => {
+export const getRemainingIngredients = (guesses: string[], currentDish: Dish): string[] => {
   const correctGuesses = guesses
     .map((guess) => guess.toUpperCase())
     .filter((guess) => currentDish.coreIngredients.includes(guess))
