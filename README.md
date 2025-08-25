@@ -13,7 +13,7 @@ A culinary twist on the popular word guessing game! Guess the core ingredients o
 4. **Fill all ingredient slots** to win!
 5. **Share your results** with a spoiler-free emoji grid
 
-[**Try out Guessipe!**](https://foodle.vercel.app/)
+[**Try out Guessipe!**](https://guessipe.vercel.app/)
 
 ## Build and run
 
@@ -24,7 +24,7 @@ Clone the repository and perform the following command line actions:
 #### With Bun (recommended):
 
 ```bash
-$> cd foodle
+$> cd guessipe
 $> bun install
 $> bun run dev
 ```
@@ -32,7 +32,7 @@ $> bun run dev
 #### With npm:
 
 ```bash
-$> cd foodle
+$> cd guessipe
 $> npm install
 $> npm run dev
 ```
@@ -44,8 +44,8 @@ $> npm run dev
 #### Development
 
 ```bash
-$> docker build -t foodle:dev -f docker/Dockerfile .
-$> docker run -d -p 3000:3000 --name foodle-dev foodle:dev
+$> docker build -t guessipe:dev -f docker/Dockerfile .
+$> docker run -d -p 3000:3000 --name guessipe-dev guessipe:dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in browser.
@@ -53,15 +53,15 @@ Open [http://localhost:3000](http://localhost:3000) in browser.
 #### Production
 
 ```bash
-$> docker build --target=prod -t foodle:prod -f docker/Dockerfile .
-$> docker run -d -p 80:8080  --name foodle-prod foodle:prod
+$> docker build --target=prod -t guessipe:prod -f docker/Dockerfile .
+$> docker run -d -p 80:8080  --name guessipe-prod guessipe:prod
 ```
 
 Open [http://localhost](http://localhost) in browser.
 
 ## Featured Dishes
 
-Foodle currently includes 10 carefully selected dishes with widely agreed-upon core ingredients:
+Guessipe currently includes 10 carefully selected dishes with widely agreed-upon core ingredients:
 
 1. **Pesto Genovese** 🌿 - Classic Italian herb sauce
 2. **Margherita Pizza** 🍕 - Traditional Neapolitan pizza

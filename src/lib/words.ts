@@ -11,13 +11,13 @@ export const isWinningIngredient = (ingredient: string) => {
   return currentDish.coreIngredients.includes(ingredient.toUpperCase())
 }
 
-// For Foodle, we don't need hard mode restrictions like Wordle
+// For Guessipe, we don't need hard mode restrictions like Wordle
 // But we keep this function for compatibility, always returning false
 export const findFirstUnusedReveal = (
   ingredient: string,
-  guesses: string[]
+  guesses: string[],
 ) => {
-  // Foodle doesn't use hard mode constraints
+  // Guessipe doesn't use hard mode constraints
   return false
 }
 
@@ -30,14 +30,18 @@ export const unicodeLength = (word: string) => {
 }
 
 export const localeAwareLowerCase = (text: string) => {
-  const localeString = import.meta.env.VITE_LOCALE_STRING || import.meta.env.REACT_APP_LOCALE_STRING
+  const localeString =
+    import.meta.env.VITE_LOCALE_STRING ||
+    import.meta.env.REACT_APP_LOCALE_STRING
   return localeString
     ? text.toLocaleLowerCase(localeString)
     : text.toLowerCase()
 }
 
 export const localeAwareUpperCase = (text: string) => {
-  const localeString = import.meta.env.VITE_LOCALE_STRING || import.meta.env.REACT_APP_LOCALE_STRING
+  const localeString =
+    import.meta.env.VITE_LOCALE_STRING ||
+    import.meta.env.REACT_APP_LOCALE_STRING
   return localeString
     ? text.toLocaleUpperCase(localeString)
     : text.toUpperCase()

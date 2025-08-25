@@ -9,7 +9,7 @@ type Props = {
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal
-      title="How to Play Foodle"
+      title="How to Play Guessipe"
       isOpen={isOpen}
       handleClose={handleClose}
     >
