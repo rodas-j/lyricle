@@ -40,7 +40,7 @@ import { Navbar } from './components/navbar/Navbar'
 
 function App() {
   const prefersDarkMode = window.matchMedia(
-    '(prefers-color-scheme: dark)'
+    '(prefers-color-scheme: dark)',
   ).matches
 
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
@@ -55,11 +55,11 @@ function App() {
     localStorage.getItem('theme')
       ? localStorage.getItem('theme') === 'dark'
       : prefersDarkMode
-      ? true
-      : false
+        ? true
+        : false,
   )
   const [isHighContrastMode, setIsHighContrastMode] = useState(
-    getStoredIsHighContrastMode()
+    getStoredIsHighContrastMode(),
   )
   const [isRevealing, setIsRevealing] = useState(false)
   const [guesses, setGuesses] = useState<string[]>(() => {
@@ -77,7 +77,7 @@ function App() {
         CORRECT_DISH_MESSAGE(currentDish.name, currentDish.coreIngredients),
         {
           persist: true,
-        }
+        },
       )
     }
     return loaded.guesses
@@ -88,7 +88,7 @@ function App() {
   const [isHardMode, setIsHardMode] = useState(
     localStorage.getItem('gameMode')
       ? localStorage.getItem('gameMode') === 'hard'
-      : false
+      : false,
   )
 
   useEffect(() => {
@@ -200,7 +200,7 @@ function App() {
         {
           persist: true,
           delayMs: REVEAL_TIME_MS * 2 + 1,
-        }
+        },
       )
     }
   }
@@ -245,12 +245,8 @@ function App() {
         <SettingsModal
           isOpen={isSettingsModalOpen}
           handleClose={() => setIsSettingsModalOpen(false)}
-          isHardMode={isHardMode}
-          handleHardMode={handleHardMode}
           isDarkMode={isDarkMode}
           handleDarkMode={handleDarkMode}
-          isHighContrastMode={isHighContrastMode}
-          handleHighContrastMode={handleHighContrastMode}
         />
         <AlertContainer />
       </div>

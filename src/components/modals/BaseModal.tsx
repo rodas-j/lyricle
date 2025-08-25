@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { XCircleIcon } from '@heroicons/react/outline'
+import { IconX } from '@tabler/icons-react'
 
 type Props = {
   title: string
@@ -54,7 +54,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                   onClick={() => handleClose()}
                   aria-label="Close modal"
                 >
-                  <XCircleIcon className="h-6 w-6" aria-hidden="true" />
+                  <IconX className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
               <div>
