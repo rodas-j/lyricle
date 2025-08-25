@@ -63,14 +63,16 @@ export const unicodeLength = (word: string) => {
 }
 
 export const localeAwareLowerCase = (text: string) => {
-  return process.env.REACT_APP_LOCALE_STRING
-    ? text.toLocaleLowerCase(process.env.REACT_APP_LOCALE_STRING)
+  const localeString = import.meta.env.VITE_LOCALE_STRING || import.meta.env.REACT_APP_LOCALE_STRING
+  return localeString
+    ? text.toLocaleLowerCase(localeString)
     : text.toLowerCase()
 }
 
 export const localeAwareUpperCase = (text: string) => {
-  return process.env.REACT_APP_LOCALE_STRING
-    ? text.toLocaleUpperCase(process.env.REACT_APP_LOCALE_STRING)
+  const localeString = import.meta.env.VITE_LOCALE_STRING || import.meta.env.REACT_APP_LOCALE_STRING
+  return localeString
+    ? text.toLocaleUpperCase(localeString)
     : text.toUpperCase()
 }
 

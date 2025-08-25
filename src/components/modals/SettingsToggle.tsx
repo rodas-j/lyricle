@@ -37,9 +37,16 @@ export const SettingsToggle = ({
             </p>
           )}
         </div>
-        <div className={toggleHolder} onClick={() => handleFlag(!flag)}>
+        <button
+          type="button"
+          className={toggleHolder}
+          onClick={() => handleFlag(!flag)}
+          role="switch"
+          aria-checked={flag}
+          aria-label={`Toggle ${settingName}`}
+        >
           <div className={toggleButton} />
-        </div>
+        </button>
       </div>
     </>
   )

@@ -12,8 +12,8 @@ Clone the repository and perform the following command line actions:
 
 ```bash
 $> cd react-wordle
-$> npm install
-$> npm run start
+$> bun install
+$> bun run start
 ```
 
 ### To build/run docker container:
